@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+/**Scrolling*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*Heading*/
+nav {
+    height: 90px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 3.5);
+}
+
+.logo {
+    padding: 0 0rem;
+}
+
+/*My Work Play About-->*/
+nav a {
+    text-decoration: none;
+    color: #383636;
+    padding: 0 1.5rem;
+    margin-inline-end: 1rem;
+}
+
+nav a:hover {
+    color: #718B8C;
+}
+
+
+/*Beige background-->*/
+.intro {
+    background: #E4DAD0;
+}
+
+/*
+.intro-containter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    padding: 100rem calc((100vw - 1300 px) / 2);
+}
+*/
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #383636;
+    padding: 0rem 2rem;
+}
+
+.middle h1 {
+    padding-top: 5rem;
+    font-size: 2.35rem;
+    padding-left: 450px;
+    padding-bottom: 0.8rem;
+}
+
+
+.middle h2 {
+    font-size: 1.5rem;
+    padding-left: 450px;
+}
+
+.middle h3 {
+    font-size: 1.5rem;
+    padding-left: 450px;
+    padding-bottom: 1rem;
+}
+
+.middle p {
+    padding-left: 490px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* If the screen size is 768px wide or more, set the font-size of <div> to 80px */
+
+
+@media screen and (max-width: 1536px) {
+    .middle h1 {
+        padding-top: 5rem;
+        font-size: 2.35rem;
+        padding-left: 300px;
+        padding-bottom: 0.8rem;
+    }
+
+
+    .middle h2 {
+        font-size: 1.5rem;
+        padding-left: 300px;
+
+    }
+
+    .middle h3 {
+        font-size: 1.5rem;
+        padding-left: 300px;
+        padding-bottom: 1rem;
+    }
+
+    .middle p {
+        padding-top: 1rem;
+        padding-left: 340px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1152px) {
+    .middle h1 {
+        padding-top: 5rem;
+        font-size: 2.35rem;
+        padding-left: 200px;
+        padding-bottom: 0.8rem;
+    }
+
+    .middle h2 {
+        font-size: 1.5rem;
+        padding-left: 200px;
+
+    }
+
+    .middle h3 {
+        font-size: 1.5rem;
+        padding-left: 200px;
+        padding-bottom: 1rem;
+    }
+
+    .middle p {
+        padding-top: 1rem;
+        padding-left: 240px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .middle h1 {
+        padding-top: 5rem;
+        font-size: 2.35rem;
+        padding-left: 150px;
+        padding-bottom: 0.8rem;
+    }
+
+
+    .middle h2 {
+        font-size: 1.5rem;
+        padding-left: 150px;
+
+    }
+
+    .middle h3 {
+        font-size: 1.5rem;
+        padding-left: 150px;
+        padding-bottom: 1rem;
+    }
+
+    .middle p {
+        padding-top: 1rem;
+        padding-left: 190px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .middle h1 {
+        padding-top: 5rem;
+        font-size: 2.35rem;
+        padding-left: 20px;
+        padding-bottom: 0.8rem;
+    }
+
+
+    .middle h2 {
+        font-size: 1.5rem;
+        padding-left: 20px;
+    }
+
+    .middle h3 {
+        font-size: 1.5rem;
+        padding-left: 60px;
+        padding-bottom: 1rem;
+    }
+
+    .middle p {
+        padding-left: 60px;
+        font-size: 1rem;
+    }
+}
+
+
+a {
+    color: #383636;
+}
+
+a:hover {
+    color: #718B8C;
+}
+
+
+
+/*
+.column-left {
+    flex-direction: column;
+    justify-content: flex-start;
+    color: black;
+    padding: 0rem 2rem;
+}
+*/
+
+.container-button {
+    height: 150px;
+    position: relative;
+}
+
+.container-button button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    background-color: #383636;
+    border-radius: 70px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+}
+
+.container-button button:hover {
+    border: 1px solid 383636;
+    background: #D4E1DF;
+    color: 383636;
+    cursor: pointer;
+
+}
+
+.my-work {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/** portfolio section main page ------------------------------------------------------*/
+
+.portfolio-section {
+    width: 80%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 100px;
+}
+
+.portfolio-section img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.portfolio-section h1 {
+    font-size: 2.0rem;
+    text-decoration: dotted;
+
+}
+
+.portfolio-section a {
+    text-decoration: none;
+}
+
+.portfolio-section p {
+    font-size: 1.3rem;
+}
+
+.portfolio .Fusion-of-Cultures img {
+    border-radius: 30px;
+
+}
+
+/**
+fusionOfCultures ---------------------------------------------------------------------
+*/
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery .images {
+    max-width: 95%;
+    /*margin-top: 40px;*/
+    columns: 5 340px;
+    list-style: none;
+}
+
+.images img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/**
+shadow
+*/
+
+.images .artPiece {
+    display: flex;
+    /** hides overflow of text*/
+    overflow: hidden;
+    position: relative;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.images .artPiece .title {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    transition: bottom 0.4s ease;
+    background: linear-gradient(to top, black, transparent);
+    color: white;
+    border-radius: 5px;
+}
+
+
+.artPiece .title button {
+    cursor: pointer;
+    padding: 3px 5px;
+    font-size: 1.1 rem;
+    background: white;
+}
+
+
+.images .artPiece:hover .title {
+    bottom: 0;
+}
+
+/** About page */
+.about-me {
+    font-size: 1.5rem;
+}
+
+.about {
+    width: 80%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 100px;
+}
+
+.about img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.about h1 {
+    font-size: 2.0rem;
+    text-decoration: dotted;
+
+}
+
+.about p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+.about h2 {
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+
+.connect-with-me {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.connect-with-me .socials {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+/** Individual Work Pages -----------------------------------------------*/
+.individual {
+    width: 60%;
+    margin: 0px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 80px;
+}
+
+.individual img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.individual h1 {
+    font-size: 2.0rem;
+    text-decoration: dotted;
+}
+
+.portfolio-section a {
+    text-decoration: none;
+}
+
+.description {
+    margin-top: 30%;
+
+}
+
+.individual p {
+    font-size: 1.3rem;
+}
+
+.individual .Fusion-of-Cultures img {
+    border-radius: 30px;
+
+}
+
+.backArrow {
+    font-size: 4rem;
+    width: 65%;
+    margin: 0px auto 20px;
+}
+
+.images .artPiece .title {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    transition: bottom 0.4s ease;
+    background: linear-gradient(to top, black, transparent);
+    color: white;
+    border-radius: 5px;
+}
+
+/** Individual Work Pages Horizontal-----------------------------------------------*/
+
+.backArrowHor {
+    font-size: 4rem;
+    width: 65%;
+    margin: 0px auto 0px;
+}
+
+.titleOfPhoto h1 {
+    font-size: 35px;
+}
+
+.individualHorizontal img {
+    height: 500px;
+}
+
+.individualHorizontal {
+    margin-top: 40px;
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+
+.software {
+
+    font-size: 1.3rem;
+    margin-top: 40px;
+    margin-bottom: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+/** Fix a Leak -----------------------------------------------*/
+
+.title-header {
+    width: 50%;
+    margin: 50px auto 50px;
+}
+
+.title-header h1 {
+    margin-top: 5rem;
+    font-size: 50px;
+
+}
+
+.title-header h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 2.0rem;
+}
+
+.overview {
+    width: 50%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 100px;
+}
+
+.overview h1 {
+    font-size: 50px;
+}
+
+.overview h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 5rem;
+
+}
+
+.overview h5 {
+    font-size: 22px;
+    margin-top: 1rem;
+}
+
+.overviewRight {
+    margin-top: 0rem;
+}
+
+.summary {
+    width: 50%;
+    margin: 50px auto 50px;
+    display: grid;
+
+}
+
+.summary p {
+    margin-bottom: 10px;
+}
+
+.summary img {
+    width: 100%;
+}
+
+.cover-image img {
+    width: 100%;
+
+}
+
+summary ol{
+    margin-left: 10px;
+}
