@@ -32,6 +32,8 @@ nav {
     transition: 1s ease;
 }
 
+
+
 /*My Work Play About-->*/
 nav a {
     text-decoration: none;
@@ -44,19 +46,16 @@ nav a:hover {
     color: #718B8C;
 }
 
+@media screen and (max-width: 530px) {
+    nav a {
+        padding: 0 0rem;
+    }
+}
+
 /*Beige background-->*/
 .intro {
     background: #E4DAD0;
 }
-
-/*
-.intro-containter {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100vh;
-    padding: 100rem calc((100vw - 1300 px) / 2);
-}
-*/
 
 .middle {
     display: flex;
@@ -74,7 +73,6 @@ nav a:hover {
     padding-bottom: 0.8rem;
 }
 
-
 .middle h2 {
     font-size: 1.5rem;
     padding-left: 450px;
@@ -89,11 +87,8 @@ nav a:hover {
 .middle p {
     padding-left: 490px;
     margin-bottom: 20px;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
-
-/* If the screen size is 768px wide or more, set the font-size of <div> to 80px */
-
 
 @media screen and (max-width: 1536px) {
     .middle h1 {
@@ -207,7 +202,6 @@ nav a:hover {
     }
 }
 
-
 a {
     color: #383636;
 }
@@ -249,7 +243,7 @@ a:hover {
 .container-button button:hover {
     border: 1px solid 383636;
     /*background: #D4E1DF;*/
-    box-shadow:  0 0 10px #383636;
+    box-shadow: 0 0 10px #383636;
     color: 383636;
     cursor: pointer;
 
@@ -279,7 +273,7 @@ a:hover {
 }
 
 .portfolio-section img:hover {
-    box-shadow:  0 0 5px #383636;
+    box-shadow: 0 0 5px #383636;
 
 }
 
@@ -297,9 +291,9 @@ a:hover {
     font-size: 1.3rem;
 }
 
+
 .portfolio .Fusion-of-Cultures img {
     border-radius: 30px;
-
 }
 
 /**
@@ -324,7 +318,7 @@ fusionOfCultures ---------------------------------------------------------------
 }
 
 /**
-shadow
+shadow ------
 */
 
 .images .artPiece {
@@ -452,20 +446,6 @@ shadow
     margin: 0px auto 20px;
 }
 
-.images .artPiece .title {
-    position: absolute;
-    bottom: -100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
-    transition: bottom 0.4s ease;
-    background: linear-gradient(to top, black, transparent);
-    color: white;
-    border-radius: 5px;
-}
-
 /** Individual Work Pages Horizontal-----------------------------------------------*/
 
 .backArrowHor {
@@ -503,7 +483,6 @@ shadow
 }
 
 /** Fix a Leak -----------------------------------------------*/
-
 .title-header {
     width: 50%;
     margin: 50px auto 50px;
@@ -512,7 +491,7 @@ shadow
 .title-header h1 {
     margin-top: 5rem;
     font-size: 50px;
-    font: #111F44;
+    color: #2D375D;
 
 }
 
@@ -544,6 +523,8 @@ shadow
 .overview h5 {
     font-size: 22px;
     margin-top: 1rem;
+    color: #2D375D;
+
 }
 
 .overviewRight {
@@ -554,6 +535,34 @@ shadow
     width: 50%;
     margin: 50px auto 50px;
     display: grid;
+
+}
+
+.summary h2 {
+    color: #2D375D;
+    margin-top: 2rem;
+
+}
+
+.summary h3 {
+    color: #2D375D;
+    margin-top: 1rem;
+    font-size: 22px;
+
+
+}
+
+.summary h4 {
+    color: #787874;
+    margin-top: 1rem;
+    font-size: 20px;
+
+
+}
+
+.summary h5 {
+    color: #787874;
+    font-size: 18px;
 
 }
 
@@ -570,6 +579,6 @@ shadow
 
 }
 
-summary ol{
+summary ol {
     margin-left: 10px;
 }
