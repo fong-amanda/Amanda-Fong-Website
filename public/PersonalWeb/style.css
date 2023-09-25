@@ -241,7 +241,8 @@ a:hover {
 
 .container-button button:hover {
     border: 1px solid 383636;
-    background: #D4E1DF;
+    /*background: #D4E1DF;*/
+    box-shadow:  0 0 10px #383636;
     color: 383636;
     cursor: pointer;
 
