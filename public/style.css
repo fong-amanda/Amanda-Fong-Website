@@ -176,6 +176,62 @@ nav a:hover {
     }
 }
 
+
+@media screen and (max-width: 768px) {
+    .middle h1 {
+        padding-top: 5rem;
+        font-size: 2.35rem;
+        padding-left: 100px;
+        padding-bottom: 0.8rem;
+    }
+
+
+    .middle h2 {
+        font-size: 1.5rem;
+        padding-left: 100px;
+
+    }
+
+    .middle h3 {
+        font-size: 1.5rem;
+        padding-left: 100px;
+        padding-bottom: 1rem;
+    }
+
+    .middle p {
+        padding-top: 1rem;
+        padding-left: 140px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .middle h1 {
+        padding-top: 5rem;
+        font-size: 2.35rem;
+        padding-left: 50px;
+        padding-bottom: 0.8rem;
+    }
+
+
+    .middle h2 {
+        font-size: 1.5rem;
+        padding-left: 50px;
+    }
+
+    .middle h3 {
+        font-size: 1.5rem;
+        padding-left: 50px;
+        padding-bottom: 1rem;
+    }
+
+    .middle p {
+        padding-left: 90px;
+        font-size: 1rem;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .middle h1 {
         padding-top: 5rem;
