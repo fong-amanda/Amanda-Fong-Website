@@ -1,0 +1,72 @@
+img {
+    max-width: 100%;
+    max-height: 100%;
+    border:none;
+}
+
+.carousel {
+    width: 80%;
+    margin: auto;
+
+}
+
+@media screen and (min-width:400px) {
+    .carousel-inner {
+        display: flex;
+    }
+
+    .carousel-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/3);
+    }
+
+}
+
+.carousel-inner {
+    padding-right: 1em;
+}
+
+.image {
+    border-radius: 0;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, .18);
+
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 6vh;
+    height: 6vh;
+    color: white;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* .carousel-control-prev:hover,
+.carousel-control-next:hover {
+} */
+
+#carouselSem1Controls, #carouselSem2Controls, #carouselSeattleControls {
+    width: 1008px;
+    height: 420px;
+    margin: auto;
+    overflow: hidden; /* Hide any content that exceeds the maximum height */
+
+}
+
+
+
+/* Semester 2 */
+#carouselSem2Controls .carousel-control-prev,
+#carouselSem2Controls .carousel-control-next {
+    margin-top: -3vh;
+}
+
+/* Seattle Semester */
+#carouselSeattleControls .carousel-control-prev,
+#carouselSeattleControls .carousel-control-next {
+    margin-top: -3vh;
+}
+
+
