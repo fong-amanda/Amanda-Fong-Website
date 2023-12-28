@@ -274,7 +274,7 @@ nav a:hover {
 
 /** portfolio section main page ------------------------------------------------------*/
 
-.portfolio-section {
+.my-work {
     width: 80%;
     margin: 50px auto 50px;
     display: grid;
@@ -283,19 +283,19 @@ nav a:hover {
 
 }
 
-.portfolio-section img {
+.my-work img {
     width: 100%;
     cursor: pointer;
     border-radius: 5px;
 
 }
 
-.portfolio-section img:hover {
+.my-work img:hover {
     box-shadow: 0 0 5px #383636;
 
 }
 
-.portfolio-section h1 {
+.my-work h1 {
     font-size: 2.0rem;
     text-decoration: dotted;
     color: #4D453E;
@@ -303,11 +303,11 @@ nav a:hover {
 
 }
 
-.portfolio-section a {
+.my-work a {
     text-decoration: none;
 }
 
-.portfolio-section p {
+.my-work p {
     font-size: 1.3rem;
     color: #4D453E;
 }
@@ -316,7 +316,7 @@ nav a:hover {
     border-radius: 30px;
 }
 
-.portfolio-section .Disrupt img {
+.my-work .Disrupt img {
     border-style: solid;
     border-width: 1px;
     border-color: black

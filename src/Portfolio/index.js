@@ -6,12 +6,12 @@ import Disrupt from "./Projects/Disrupt/index"
 function Portfolio() {
   return (
 
-    <div id="myWork" className="my-work">
+    <div id="myWork" className="my-work-section">
       <h1 className="myWorkHeader">
         <center>My Work !</center>
       </h1>
 
-      <div className="portfolio-section">
+      <div className="my-work">
         <FixLeak />
         <Spotify />
         <FusionCultures />

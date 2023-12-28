@@ -8,9 +8,9 @@ function Home() {
     useEffect(() => {
         // Check for a hash in the URL
         const hash = window.location.hash.substring(1);
-        if (hash === "portfolio-section") {
+        if (hash === "my-work") {
           // Scroll to the "portfolio-section" element after the component mounts
-          scroller.scrollTo("portfolio-section", {
+          scroller.scrollTo("my-work", {
             duration: 800,
             delay: 0,
             smooth: "easeInOutQuart",
@@ -33,8 +33,8 @@ function Home() {
                             rel="noopener noreferrer">Hermes Telehealth</a>.
                     </p>
 
-                    <p>✧ Studying Computer Science & Interaction Design @
-                        <a href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer">Northeastern
+                    <p>✧ Studying Computer Science & Interaction Design @ 
+                        <a href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer"> Northeastern
                             University</a>
                     </p>
                     <div className="container-button">
@@ -43,7 +43,7 @@ function Home() {
                 </div>
                 <br />
             </div>
-            <Element name="portfolio-section" className="portfolio-section">
+            <Element name="my-work" className="my-work">
                 <Portfolio />
             </Element>
 

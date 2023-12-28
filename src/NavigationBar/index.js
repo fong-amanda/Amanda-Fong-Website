@@ -11,15 +11,15 @@ function Nav() {
   const handleScrollToPortfolio = () => {
     const path = window.location.pathname;
 
-    if (path === "/home") {
-      scroller.scrollTo("portfolio-section", {
+    if (path === "/Home") {
+      scroller.scrollTo("my-work", {
         duration: 800,
         delay: 0,
         smooth: "easeInOutQuart",
       });
     } else {
 
-      window.location.href = "/home#portfolio-section";
+      window.location.href = "/Home#my-work";
     }
   };
   useEffect(() => {
@@ -41,7 +41,7 @@ function Nav() {
     }
 
   }, [activeLink]);
-  
+
   return (
 
     <nav className="logo nav">
