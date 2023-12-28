@@ -8,7 +8,6 @@ import FixLeakProcess from './Portfolio/Projects/FixLeak/fix-a-leak'
 import SpotifyProcess from './Portfolio/Projects/Spotify/spotify'
 import FusionCulturesProjects from './Portfolio/Projects/FusionCultures/fusion-of-cultures'
 import DisruptProcess from './Portfolio/Projects/Disrupt/disrupt'
-import ChinatownIndividual from './Portfolio/Projects/FusionCultures/fusion-of-cultures/chinatown';
 
 
 function App() {
