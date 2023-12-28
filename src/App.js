@@ -17,6 +17,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/home/my-work" element={<Home />} />
+
         <Route path="/scrapbook" element={<Scrapbook />} />
         <Route path="/about" element={<About />} />
         <Route path="/play" element={<Play />} />
@@ -24,8 +26,7 @@ function App() {
         <Route path="/spotify" element={<SpotifyProcess />} />
         <Route path="/fusion-of-cultures" element={<FusionCulturesProjects />} />
         <Route path="/disrupt" element={<DisruptProcess />} />
-        
-        <Route path="/chinatown" element={<ChinatownIndividual />} />
+
 
 
       </Routes>
