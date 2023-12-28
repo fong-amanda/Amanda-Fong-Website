@@ -6,7 +6,7 @@ function FusionCultures() {
                 <img src="fusionOfCulturesIndividual/fusionOfCulturesPhotos/Cover.jpg" alt="Fusion-of-Cultures-Cover" />
             </Link>
             <Link to="/fusion-of-cultures">
-                <h1>Fusion of Cultures</h1>
+                <h2>Fusion of Cultures</h2>
             </Link>
             <p>
                 Sustained Investigation exploring and fusing American and Chinese/Taiwanese cultures together into art

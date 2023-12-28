@@ -6,7 +6,7 @@ function FixLeak() {
         <img src="fixALeak Images/Cover Page.jpg" alt="Fix A Leak Cover Page" />
       </Link>
       <Link to="/fix-a-leak">
-        <h1>Fix-A-Leak</h1>
+        <h2>Fix-A-Leak</h2>
       </Link>
       <p>
         Designed an app that would allow residents to easily report any mechanical issues they encountered in a

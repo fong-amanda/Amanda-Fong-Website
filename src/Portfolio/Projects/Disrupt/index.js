@@ -6,7 +6,7 @@ function Disrupt() {
                 <img src="disruptImages/cover.jpg" alt="Disrupt" />
             </Link>
             <Link to="/disrupt">
-                <h1>Disrupt</h1>
+                <h2>Disrupt</h2>
             </Link>
             <p>Revamped website and rebrand of Northeastern's Fintech Club, Disrupt.</p>
         </div>

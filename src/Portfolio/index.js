@@ -70,19 +70,19 @@ function Portfolio() {
         <center>My Work !</center>
       </h1>
       <div className="my-work">
-        <div ref={fixRef} className={`fade-in ${fixVisible ? "visible" : ""}`}>
+        <div ref={fixRef} className={`fade-in projectProcess ${fixVisible ? "visible" : ""}`}>
           <FixLeak />
         </div>
 
-        <div ref={spotifyRef} className={`fade-in ${spotifyVisible ? "visible" : ""}`}>
+        <div ref={spotifyRef} className={`fade-in projectProcess ${spotifyVisible ? "visible" : ""}`}>
           <Spotify />
         </div>
 
-        <div ref={fusionRef} className={`fade-in ${fusionVisible ? "visible" : ""}`}>
+        <div ref={fusionRef} className={`fade-in projectProcess ${fusionVisible ? "visible" : ""}`}>
           <FusionCultures />
         </div>
 
-        <div ref={disruptRef} className={`fade-in ${disruptVisible ? "visible" : ""}`}>
+        <div ref={disruptRef} className={`fade-in projectProcess ${disruptVisible ? "visible" : ""}`}>
           <Disrupt />
         </div>
       </div>
