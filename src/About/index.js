@@ -55,7 +55,8 @@ function About() {
                 <div className="about">
                     <div className="aboutMePhoto">
                         <img className={`fade-in ${aboutPhotoVisible ? "visible" : ""}`}
-                            ref={aboutPhotoRef} src="Images/AboutMeImage.JPG" alt="About Me" />
+                            ref={aboutPhotoRef} src="./AboutMeImage.jpg"
+                            alt="About Me" />
                     </div>
                     <div className="aboutMeText">
                         <h1
