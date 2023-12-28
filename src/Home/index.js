@@ -1,44 +1,45 @@
 import React, { useEffect } from "react";
 import Nav from "../NavigationBar";
 import Portfolio from "../Portfolio";
-import { Element, scroller } from 'react-scroll';
+import { Element, scroller } from 'react-scroll'; 
+import { Link } from "react-router-dom"
 import "../style.css";
 
 function Home() {
     useEffect(() => {
-        // Check for a hash in the URL
         const hash = window.location.hash.substring(1);
         if (hash === "my-work") {
-          // Scroll to the "portfolio-section" element after the component mounts
-          scroller.scrollTo("my-work", {
-            duration: 800,
-            delay: 0,
-            smooth: "easeInOutQuart",
-          });
+            scroller.scrollTo("my-work", {
+                duration: 800,
+                delay: 0,
+                smooth: "easeInOutQuart",
+            });
         }
-      }, []);
+    }, []);
     return (
         <div>
             <Nav />
 
             <div className="intro-container">
                 <div className="middle">
-                    <h1>Hey, I'm <span className="amanda">Amanda!</span>*:･ﾟ✧*:･ﾟ✧</h1>
-                    <h2>Driven by a passion for both design and software development.</h2>
-                    <h3>Striving to create a digital world that welcomes and empowers all users.</h3>
-                    <p>✧ Incoming IT Co-Op @ <a href="https://www.coverys.com/" target="_blank"
+                    <h1 className="fade1">Hey, I'm <span className="amanda">Amanda!</span>*:･ﾟ✧*:･ﾟ✧</h1>
+                    <h2 className="fade2">Driven by a passion for both design and software development.</h2>
+                    <h3 className="fade2">Striving to create a digital world that welcomes and empowers all users.</h3>
+                    <p className="fade3">✧ Incoming IT Co-Op @ <a href="https://www.coverys.com/" target="_blank"
                         rel="noopener noreferrer">Coverys</a> | UI/UX Studio Designer @ <a
                             href="https://scout.camd.northeastern.edu/" target="_blank" rel="noopener noreferrer">Scout</a> |
                         Marketing Designer @ <a href="https://www.freetelehealth.org/" target="_blank"
                             rel="noopener noreferrer">Hermes Telehealth</a>.
                     </p>
 
-                    <p>✧ Studying Computer Science & Interaction Design @ 
+                    <p className="fade3">✧ Studying Computer Science & Interaction Design @
                         <a href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer"> Northeastern
                             University</a>
                     </p>
-                    <div className="container-button">
-                        <a href="about.html"><button>More About Me!</button></a>
+                    <div className="container-button fade4">
+                        <Link to="/About">
+                            <button>More About Me!</button>
+                        </Link>
                     </div>
                 </div>
                 <br />
