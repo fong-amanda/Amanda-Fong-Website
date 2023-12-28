@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Element, Link } from 'react-scroll';
 import Home from './Home';
 import About from './About';
 import Play from './Play';

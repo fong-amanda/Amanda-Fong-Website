@@ -1,12 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import homeImage from "../Images/AFongLogo.png";
-import { Element, scroller } from 'react-scroll';
-
+import { scroller } from 'react-scroll';
 import "./nav.css";
-import { withRouter } from 'react-router-dom';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
 function Nav() {
   const [activeLink, setActiveLink] = useState("Home");
@@ -15,19 +12,16 @@ function Nav() {
     const path = window.location.pathname;
 
     if (path === "/home") {
-      // If on the home page, use smooth scroll
       scroller.scrollTo("portfolio-section", {
         duration: 800,
         delay: 0,
         smooth: "easeInOutQuart",
       });
     } else {
-      // If on another page, use regular navigation
-      // Adjust the path as needed
+
       window.location.href = "/home#portfolio-section";
     }
   };
-
   useEffect(() => {
     const path = window.location.pathname;
 
@@ -39,14 +33,15 @@ function Nav() {
     } else if (path === "/scrapbook") {
       setActiveLink("Scrapbook");
     } else if (path === "/play") {
-      setActiveLink("Play")
+      setActiveLink("Play");
     } else if (path === "/about") {
-      setActiveLink("About")
+      setActiveLink("About");
     } else {
       setActiveLink(null);
     }
-  }, [window.location.pathname]);
 
+  }, [activeLink]);
+  
   return (
 
     <nav className="logo nav">

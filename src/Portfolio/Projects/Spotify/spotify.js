@@ -26,7 +26,7 @@ function SpotifyProcess() {
                         <h5>
                             <a
                                 href="https://www.figma.com/proto/ENyrd84vC2k7ORePWwdnO6/TAmandaFong?type=design&node-id=52-576&t=xKPmaVLKoFW6xSRC-1&scaling=min-zoom&page-id=52%3A575&starting-point-node-id=52%3A576&mode=design"
-                                target="_blank"
+                                target="_blank" rel="noreferrer"
                             >
                                 High-Fidelity Prototype
                             </a>
@@ -114,7 +114,7 @@ function SpotifyProcess() {
                 <h3>Low-Fidelity Wireframes</h3>
                 <h>
                     <a href="https://www.figma.com/proto/ENyrd84vC2k7ORePWwdnO6/TAmandaFong?page-id=0%3A1&type=design&node-id=139-14444&viewport=-580%2C-262%2C0.25&t=N8Hj994fimAg25o3-1&scaling=min-zoom&starting-point-node-id=1%3A330&mode=design"
-                        target="_blank">
+                        target="_blank" rel="noreferrer">
                         Click Here to see Lo-Fis!
                     </a>
                 </h>
@@ -128,7 +128,7 @@ function SpotifyProcess() {
                 <h>
                     <a
                         href="https://www.figma.com/proto/ENyrd84vC2k7ORePWwdnO6/TAmandaFong?type=design&node-id=52-576&t=xKPmaVLKoFW6xSRC-1&scaling=min-zoom&page-id=52%3A575&starting-point-node-id=52%3A576&mode=design"
-                        target="_blank"
+                        target="_blank" rel="noreferrer"
                     >
                         Click Here to see High-Fis!
                     </a>
@@ -142,14 +142,14 @@ function SpotifyProcess() {
                     See{' '}
                     <a
                         href="https://drive.google.com/file/d/1H5ZfD6c3Q6S-0OE4NgofEz_E5AI5_orq/view?usp=sharing"
-                        target="_blank"
+                        target="_blank" rel="noreferrer"
                     >
                         process portfolio
                     </a>{' '}
                     and{' '}
                     <a
                         href="https://drive.google.com/file/d/1BIyfmgu20gQJ5XqA4X1mhuQ7g1pn60_b/view?usp=sharing"
-                        target="_blank"
+                        target="_blank" rel="noreferrer"
                     >
                         this video
                     </a>{' '}

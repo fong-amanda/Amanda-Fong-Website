@@ -11,7 +11,7 @@ function FixLeakProcess() {
             <section className="cover-image">
                 <div className="image-background">
                     <div className="image-background-container">
-                        <img src="fixALeak Images/Cover2Landscape.jpg" alt="Cover Image" />
+                        <img src="fixALeak Images/Cover2Landscape.jpg" alt="Cover" />
                     </div>
                 </div>
             </section>
@@ -38,7 +38,7 @@ function FixLeakProcess() {
                             app's design process and presents the specifics of our evaluation, including
                             results and recommendations for future enhancements.
                         </p>
-                        <h5><a href="https://ihlp9w.axshare.com/?id=h5upi9&p=intro" target="_blank">High-Fidelity Prototype</a></h5>
+                        <h5><a href="https://ihlp9w.axshare.com/?id=h5upi9&p=intro" target="_blank" rel="noreferrer">High-Fidelity Prototype</a></h5>
                     </div>
                     <div className="overviewRight">
                         <h5>Role</h5>
