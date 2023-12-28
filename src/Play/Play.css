@@ -14,7 +14,6 @@
 .fade1 {
     animation: fadeIn 2s ease-out forwards;
 }
-
 /**End of Fade*/
 
 .playHeading h1 {
@@ -25,4 +24,44 @@
     align-items: center;
     text-align: center;
     margin-bottom: 40px;
+}
+
+
+/**
+shadow ------
+*/
+
+.images .artPiece {
+    display: flex;
+    /** hides overflow of text*/
+    overflow: hidden;
+    position: relative;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.images .artPiece .title {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    transition: bottom 0.4s ease;
+    background: linear-gradient(to top, black, transparent);
+    color: white;
+    border-radius: 5px;
+}
+
+
+.artPiece .title button {
+    cursor: pointer;
+    padding: 3px 5px;
+    font-size: 1.1 rem;
+    background: white;
+}
+
+.images .artPiece:hover .title {
+    bottom: 0;
 }

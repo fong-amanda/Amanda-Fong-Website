@@ -1,3 +1,66 @@
 .gallery {
     margin-top: 30px;
 }
+
+/**
+fusionOfCultures ---------------------------------------------------------------------
+*/
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.gallery .images {
+    max-width: 95%;
+    /*margin-top: 40px;*/
+    columns: 5 340px;
+    list-style: none;
+}
+
+.images img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+/**
+shadow ------
+*/
+
+.images .artPiece {
+    display: flex;
+    /** hides overflow of text*/
+    overflow: hidden;
+    position: relative;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.images .artPiece .title {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    transition: bottom 0.4s ease;
+    background: linear-gradient(to top, black, transparent);
+    color: white;
+    border-radius: 5px;
+}
+
+
+.artPiece .title button {
+    cursor: pointer;
+    padding: 3px 5px;
+    font-size: 1.1 rem;
+    background: white;
+}
+
+.images .artPiece:hover .title {
+    bottom: 0;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "../../../NavigationBar";
+import "./spotify.css";
 
 function SpotifyProcess() {
     return (

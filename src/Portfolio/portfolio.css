@@ -1,10 +1,64 @@
 .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 500ms ease-in, transform 500ms ease-in;
-  }
-  
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/** portfolio section main page ------------------------------------------------------*/
+
+.my-work {
+  width: 80%;
+  margin: 50px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 100px;
+
+}
+
+.my-work img {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+.fade-in:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.0);
+  transform: scale(1.1);
+  transition: 1s ease;
+
+}
+
+.my-work h1 {
+  font-size: 2.0rem;
+  text-decoration: dotted;
+  color: #4D453E;
+  font-weight: 400;
+
+}
+
+.my-work a {
+  text-decoration: none;
+}
+
+.my-work p {
+  font-size: 1.3rem;
+  color: #4D453E;
+}
+
+.portfolio .Fusion-of-Cultures img {
+  border-radius: 30px;
+}
+
+.my-work .Disrupt img {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black
+}

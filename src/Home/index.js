@@ -3,7 +3,7 @@ import Nav from "../NavigationBar";
 import Portfolio from "../Portfolio";
 import { Element, scroller } from 'react-scroll'; 
 import { Link } from "react-router-dom"
-import "../style.css";
+import "./home.css";
 
 function Home() {
     useEffect(() => {

@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import "./spotify.css";
+
 function Spotify() {
     return (
         <div className="Spotify">

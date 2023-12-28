@@ -55,3 +55,75 @@
 .sem1, .seattle {
   margin-top: -70px;
 }
+
+
+
+
+/**Scrapbook*/
+.scrapbook img {
+  align-items: center;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.scrapbook h1 {
+  text-align: center;
+
+}
+
+.scrapbook h7 {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+
+}
+
+.scrapbook-text {
+  margin-bottom: 20px;
+}
+
+.scrapbook-text h1 {
+  margin-bottom: 10px;
+}
+
+
+.scrapbook h1 {
+  font-size: 2.0rem;
+  text-decoration: dotted;
+
+}
+
+.scrapbookIndividual {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 92.5%;
+}
+
+.scrapbookIndividual img {
+  width: 160px;
+  height: 160px;
+}
+
+.scrapbookIndividual .seattleScrapbook {
+  display: flex;
+}
+
+.scrapbookIndividual .semester2Scrapbook {
+  display: flex;
+}
+
+.scrapbookIndividual .semester1Scrapbook {
+  display: flex;
+}

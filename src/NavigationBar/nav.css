@@ -9,15 +9,15 @@ html {
     scroll-behavior: smooth;
 }
 
-/* .nav {
+.nav {
     height: 90px;
     background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0rem calc((100vw - 1300px) / 3.5);
-    color:#4D453E;
-} */
+    color: #4D453E;
+}
 
 
 .logo img {
@@ -71,5 +71,6 @@ nav a:hover {
 
 @media screen and (max-width: 720px) {
     .nav {
-flex-wrap: nowrap;    }
+        flex-wrap: nowrap;
+    }
 }
