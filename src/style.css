@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+/**Scrolling*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*Heading*/
+nav {
+    height: 90px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 3.5);
+}
+
+.logo img {
+    padding: 0 0rem;
+    transition: 0.3s ease;
+
+
+}
+
+.logo img:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+}
+
+
+
+/*My Work Play About-->*/
+nav a {
+    text-decoration: none;
+    color: #4D453E;
+    padding: 0 1.5rem;
+    margin-inline-end: 1rem;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+nav a:hover {
+    color: #60946E;
+    font-size: 1.13em;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+}
+
+@media screen and (max-width: 530px) {
+    nav a {
+        padding: 0 0rem;
+    }
+}
+
+/*Beige background-->*/
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #4D453E;
+    padding: 0rem 2rem;
+}
+
+
+.middle h1 {
+    padding-top: 220px;
+    font-size: 2.35rem;
+    padding-left: 450px;
+    padding-bottom: 0.8rem;
+    color: #4D453E;
+    font-size: 45px;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.middle .amanda {
+    color: #60946E;
+    font-size: 45px;
+    font-family: Lexend;
+    font-weight: 400;
+    word-wrap: break-word
+}
+
+.middle h2 {
+    font-size: 1.5rem;
+    padding-left: 450px;
+    color: #4D453E;
+    font-size: 20px;
+    font-weight: 500;
+    word-wrap: break-word
+}
+
+.middle h3 {
+    font-size: 1.5rem;
+    padding-left: 450px;
+    padding-bottom: 1rem;
+    color: #4D453E;
+    font-size: 20px;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+.middle p {
+    padding-left: 490px;
+    margin-bottom: 10px;
+    color: #4D453E;
+    font-size: 15px;
+    font-family: Lexend;
+    font-weight: 300;
+    word-wrap: break-word
+}
+
+.middle p a {
+    color: #60946E;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    word-wrap: break-word
+}
+
+.middle p a:hover {
+    font-weight: 750;
+}
+
+.container-button {
+    padding-left: 450px;
+    margin-top: 18px;
+    margin-bottom: 360px;
+
+}
+
+.container-button button {
+    text-decoration: none;
+    background-color: rgba(126, 106, 88, 0);
+    border-radius: 55px;
+    color: #4D453E;
+    text-align: center;
+    font-size: 18px;
+    border-width: 1.30px;
+    border-style: solid;
+    width: 134px;
+    height: 35px;
+    font-size: 14px;
+    font-weight: 400;
+    word-wrap: break-word;
+    transition: transform 1s ease;
+}
+
+.container-button button:hover {
+    color: #F7F7ED;
+    background-color: #4D453E;
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1.5s ease;
+}
+
+@media screen and (max-width: 1536px) {
+
+    .middle h1,
+    .middle h2,
+    .middle h3,
+    .middle p,
+    .container-button {
+        padding-left: 300px;
+    }
+
+    .middle p {
+        padding-left: 340px;
+    }
+
+}
+
+@media screen and (max-width: 1152px) {
+    .middle h1,
+    .middle h2,
+    .middle h3,
+    .middle p,
+    .container-button {
+        padding-left: 200px;
+    }
+    .middle p {
+        padding-left: 240px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .middle h1,
+    .middle h2,
+    .middle h3,
+    .middle p,
+    .container-button {
+        padding-left: 150px;
+    }
+
+    .middle p {
+        padding-left: 190px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .middle h1,
+    .middle h2,
+    .middle h3,
+    .middle p,
+    .container-button {
+        padding-left: 100px;
+    }
+
+    .middle p {
+        padding-left: 140px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .middle h1,
+    .middle h2,
+    .middle h3,
+    .middle p,
+    .container-button {
+        padding-left: 50px;
+    }
+
+    .middle p {
+        padding-left: 90px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .middle h1,
+    .middle h2,
+    .middle h3,
+    .middle p,
+    .container-button {
+        padding-left: 20px;
+    }
+
+    .middle p {
+        padding-left: 60px;
+    }
+
+}
+
+.myWorkHeader {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2.0rem;
+    font-weight: 500;
+    align-items: center;
+    color: #4D453E;
+
+}
+
+/** portfolio section main page ------------------------------------------------------*/
+
+.portfolio-section {
+    width: 80%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 100px;
+
+}
+
+.portfolio-section img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.portfolio-section img:hover {
+    box-shadow: 0 0 5px #383636;
+
+}
+
+.portfolio-section h1 {
+    font-size: 2.0rem;
+    text-decoration: dotted;
+    color: #4D453E;
+    font-weight: 400;
+
+}
+
+.portfolio-section a {
+    text-decoration: none;
+}
+
+.portfolio-section p {
+    font-size: 1.3rem;
+    color: #4D453E;
+}
+
+.portfolio .Fusion-of-Cultures img {
+    border-radius: 30px;
+}
+
+.portfolio-section .Disrupt img {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black
+}
+
+/**
+fusionOfCultures ---------------------------------------------------------------------
+*/
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+.gallery .images {
+    max-width: 95%;
+    /*margin-top: 40px;*/
+    columns: 5 340px;
+    list-style: none;
+}
+
+.images img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/**
+shadow ------
+*/
+
+.images .artPiece {
+    display: flex;
+    /** hides overflow of text*/
+    overflow: hidden;
+    position: relative;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.images .artPiece .title {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    transition: bottom 0.4s ease;
+    background: linear-gradient(to top, black, transparent);
+    color: white;
+    border-radius: 5px;
+}
+
+
+.artPiece .title button {
+    cursor: pointer;
+    padding: 3px 5px;
+    font-size: 1.1 rem;
+    background: white;
+}
+
+.images .artPiece:hover .title {
+    bottom: 0;
+}
+
+/** About page */
+.aboutMe h1 {
+    font-size: 2.0rem;
+    font-weight: 500;
+
+}
+
+.about {
+    width: 80%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 100px;
+}
+
+.about img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.about h1 {
+    font-size: 2.0rem;
+    text-decoration: dotted;
+
+}
+
+.about p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+.about h2 {
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+
+
+
+
+/** Individual Work Pages -----------------------------------------------*/
+.individual {
+    width: 60%;
+    margin: 0px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 80px;
+}
+
+.individual img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.individual h1 {
+    font-size: 2.0rem;
+    text-decoration: dotted;
+}
+
+.portfolio-section a {
+    text-decoration: none;
+}
+
+.description {
+    margin-top: 30%;
+
+}
+
+.individual p {
+    font-size: 1.3rem;
+}
+
+.individual .Fusion-of-Cultures img {
+    border-radius: 30px;
+
+}
+
+.backArrow {
+    font-size: 4rem;
+    width: 65%;
+    margin: 0px auto 20px;
+}
+
+/** Individual Work Pages Horizontal-----------------------------------------------*/
+
+.backArrowHor {
+    font-size: 4rem;
+    width: 65%;
+    margin: 0px auto 0px;
+}
+
+.titleOfPhoto h1 {
+    font-size: 35px;
+}
+
+.individualHorizontal img {
+    height: 500px;
+}
+
+.individualHorizontal {
+    margin-top: 40px;
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+
+.software {
+
+    font-size: 1.3rem;
+    margin-top: 40px;
+    margin-bottom: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+/** Fix a Leak -----------------------------------------------*/
+.title-header {
+    width: 50%;
+    margin: 50px auto 50px;
+}
+
+.title-header h1 {
+    margin-top: 5rem;
+    font-size: 50px;
+    color: #2D375D;
+
+}
+
+.title-header h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 2.0rem;
+}
+
+.overview {
+    width: 50%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 100px;
+}
+
+.overview h1 {
+    font-size: 50px;
+}
+
+.overview h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 5rem;
+
+}
+
+.overview h5 {
+    font-size: 22px;
+    margin-top: 1rem;
+    color: #2D375D;
+
+}
+
+.overviewRight {
+    margin-top: 0rem;
+}
+
+.summary {
+    width: 50%;
+    margin: 50px auto 50px;
+    display: grid;
+}
+
+.summary h2 {
+    margin-top: 2rem;
+}
+
+.leak h2 {
+    color: #2D375D;
+}
+
+.summary h3 {
+    margin-top: 1rem;
+    font-size: 22px;
+}
+
+.leak h3 {
+    color: #3F4F7A;
+}
+
+.summary h4 {
+    margin-top: 1rem;
+    font-size: 20px;
+}
+
+.leak h4 {
+    color: #4C5F9B;
+}
+
+
+.summary h5 {
+    font-size: 18px;
+
+}
+
+.leak h5 {
+    color: #4C5F9B;
+    font-size: 18px;
+}
+
+.summary p {
+    margin-bottom: 10px;
+}
+
+.summary img {
+    width: 100%;
+}
+
+.cover-image img {
+    width: 100%;
+}
+
+summary ol {
+    margin-left: 10px;
+}
+
+/**Spotify*/
+.spotify h1 {
+    color: #195b32;
+}
+
+.spotify h2 {
+    color: #195b32;
+}
+
+.spotify h3 {
+    color: #247f44;
+}
+
+.spotify h4 {
+    color: #2e994f;
+}
+
+.spotify h5 {
+    color: #2e994f;
+}
+
+/**Scrapbook*/
+.scrapbook img {
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.scrapbook h1 {
+    text-align: center;
+
+}
+
+.scrapbook h7 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+
+}
+
+.scrapbook-text {
+    margin-bottom: 20px;
+}
+
+.scrapbook-text h1 {
+    margin-bottom: 10px;
+}
+
+
+.scrapbook h1 {
+    font-size: 2.0rem;
+    text-decoration: dotted;
+
+}
+
+.scrapbookIndividual {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 92.5%;
+}
+
+.scrapbookIndividual img {
+    width: 160px;
+    height: 160px;
+}
+
+.scrapbookIndividual .seattleScrapbook {
+    display: flex;
+}
+
+.scrapbookIndividual .semester2Scrapbook {
+    display: flex;
+}
+
+.scrapbookIndividual .semester1Scrapbook {
+    display: flex;
+}

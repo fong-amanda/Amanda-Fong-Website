@@ -2,21 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/0356f84f86.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/0356f84f86.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!--
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -25,103 +29,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Amanda Fong</title>
+  <title>Amanda Fong</title>
 </head>
 
 <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <!DOCTYPE html>
-    <html lang="en">
-    <link rel="stylesheet" href="style.css">
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="Images/AFongLogo.png" alt="Amanda Fong's Logo" width="120px"
-                    height="120px"></a>
-        </div>
-        <div class="header-right">
-            <a href="#myWork">My Work</a>
-            <a href="scrapbook.html">Scrapbooking</a>
-            <a href="play.html">Play</a>
-            <a href="about.html">About</a>
-        </div>
-    </nav>
-    <section class="intro">
-        <div class="intro-container">
-            <div class="middle">
-                <h1>Hey, I'm <span class="amanda">Amanda!</span>*:･ﾟ✧*:･ﾟ✧</h1>
-                <h2>Driven by a passion for both design and software development.
-                </h2>
-                <h3>Striving to create a digital world
-                    that welcomes and empowers all users.</h3>
-                <p>✧ Incoming IT Co-Op @ <a href="https://www.coverys.com/" target="_blank"
-                        rel="noopener noreferrer">Coverys</a> | UI/UX Studio Designer @ <a
-                        href="https://scout.camd.northeastern.edu/" target="_blank" rel="noopener noreferrer">Scout</a> |
-                    Marketing Designer @ <a href="https://www.freetelehealth.org/" target="_blank"
-                        rel="noopener noreferrer">Hermes Telehealth</a>.
-                </p>
-
-                <p>✧ Studying Computer Science & Interaction Design @
-                    <a href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer">Northeastern
-                        University</a>
-                </p>
-                <p>
-                <div class="container-button">
-                    <a href="about.html"><button>More About Me!</button></a>
-
-                </div>
-            </div>
-
-            </br>
-
-        </div>
-    </section>
-
-    <section id="myWork" class="my-work">
-        <h1 class="myWorkHeader">
-            <center>My Work !</center>
-        </h1>
-
-        <div class="portfolio-section">
-            <div class="Fix-A-Leak">
-                <a href="fixALeak.html"><img src="fixALeak Images/Cover Page.jpg" alt="Northeastern Logo">
-                    <a href="fixALeak.html">
-                        <h1>Fix-A-Leak</h1>
-                    </a>
-                    <p>Designed an app that would allow residents to easily report any mechanical issues they
-                        encountered
-                        in
-                        a building.</p>
-            </div>
-            <div class="Spotify">
-                <a href="spotify.html"><img src="spotifyImages/cover.jpg" alt="Social-Spotify-Cover"></a>
-                <a href="spotify.html">
-                    <h1>Social Spotify</h1>
-                </a>
-                <p>Designed a new social feature within Spotify's UI that evokes nostalgia.</p>
-            </div>
-            <div class="Fusion-of-Cultures">
-                <a href="fusionOfCultures.html"><img src="fusionOfCulturesIndividual/fusionOfCulturesPhotos/Cover.jpg"
-                        alt="Fusion-of-Cultures-Cover""></a>
-                <a href=" fusionOfCultures.html">
-                    <h1>Fusion of Cultures</h1>
-                </a>
-                <p>Sustained Investigation exploring and fusing American and Chinese/Taiwanese cultures together into
-                    art pieces.</p>
-            </div>
-            <div class="Disrupt">
-                <a href="Disrupt.html"><img src="disruptImages/cover.jpg" alt="Disrupt"></a>
-                <a href="Disrupt.html">
-                    <h1>Disrupt</h1>
-                </a>
-                <p>Revamped website and rebrand of Northeastern's Fintech Club, Disrupt.</p>
-            </div>
-
-        </div>
-    </section>
-    </br>
-    </br>
-    </br>
-
+  <div id="root"></div>
 </body>
 
 </html>

@@ -1,0 +1,44 @@
+/** About page */
+.aboutMe h1 {
+    font-size: 2.0rem;
+    font-weight: 500;
+    color: #4D453E;
+}
+
+.aboutHeading {
+    margin-top: 30px;
+
+}
+
+.about {
+    width: 80%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 100px;
+    color: #4D453E;
+
+}
+
+.about img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.about h1 {
+    font-size: 2.0rem;
+    text-decoration: dotted;
+
+}
+
+.about p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+.about h2 {
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+

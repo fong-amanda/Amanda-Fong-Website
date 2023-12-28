@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+/**Scrolling*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* .nav {
+    height: 90px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 3.5);
+    color:#4D453E;
+} */
+
+
+.logo img {
+    padding: 0 0rem;
+    transition: 0.3s ease;
+
+
+}
+
+.logo img:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+}
+
+/*My Work Play About-->*/
+nav a {
+    text-decoration: none;
+    color: #4D453E;
+    padding: 0 1.5rem;
+    margin-inline-end: 1rem;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+nav a:hover {
+    color: #60946E;
+    font-size: 1.13em;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+}
+
+.navBar {
+    background-color: #FAFAED;
+    font-family: 'Lexend', sans-serif;
+    border-bottom: 1.5px solid #4D453E;
+}
+
+.nav a {
+    color: #4D453E;
+}
+
+.nav a.active {
+    color: #60946E;
+}
+
+
+
+
+@media screen and (max-width: 720px) {
+    .nav {
+flex-wrap: nowrap;    }
+}

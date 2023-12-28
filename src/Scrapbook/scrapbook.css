@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.slider {
+  margin: 0 0px;
+  overflow: "hidden";
+  padding: 2rem 0;
+}
+
+.slider img {
+  width: 100%;
+}
+
+.react-multi-carousel-list {
+  padding: 0rem 0 2rem 0;
+}
+
+.parent {
+  margin: 30px;
+}
+
+.scrapbook {
+  color: #4D453E;
+  margin-top: 30px;
+}
+
+.sem3 {
+  margin-top: -15px;
+}
+
+.sem1, .seattle {
+  margin-top: -70px;
+}
