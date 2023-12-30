@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
+import React, { useEffect } from "react";
 function FusionCultures() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="Fusion-of-Cultures">
             <Link to="/fusion-of-cultures">

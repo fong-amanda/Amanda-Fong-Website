@@ -1,9 +1,12 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "../../../NavigationBar";
 import './disrupt.css';
 
 function DisruptProcess() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <>
             <Nav />

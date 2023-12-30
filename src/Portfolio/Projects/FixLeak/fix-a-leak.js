@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import "./fixLeak.css";
 import Nav from "../../../NavigationBar";
 
 
 function FixLeakProcess() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
+
         <div>
             <Nav />
-            <br/>
+            <br />
             <section className="cover-image">
                 <div className="image-background">
                     <div className="image-background-container">
