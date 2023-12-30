@@ -4,7 +4,6 @@ import Seattle from './seattle';
 import Sem1 from './sem1';
 import Sem3 from './sem3';
 import { useState, useRef } from "react";
-
 import "./scrapbook.css";
 
 const Scrapbook = () => {

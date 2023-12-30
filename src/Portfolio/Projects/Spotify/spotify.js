@@ -6,6 +6,8 @@ function SpotifyProcess() {
     return (
         <>
             <Nav />
+            <br />
+
             <section className="cover-image">
                 <div className="image-background">
                     <div className="image-background-container">
