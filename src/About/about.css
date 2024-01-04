@@ -17,7 +17,7 @@
 
 /**End of Fade*/
 /** About page */
-.aboutMe h1 {
+h1 {
     font-size: 2.0rem;
     font-weight: 500;
     color: #4D453E;
@@ -39,22 +39,47 @@
 }
 
 .about img {
+    display: block;
+    margin: 0 auto;
     width: 100%;
+    max-width: 400px;
     border-radius: 5px;
 }
 
-.about h1 {
-    font-size: 2.0rem;
-    text-decoration: dotted;
-
-}
 
 .about p {
     margin-top: 10px;
-    font-size: 1.3rem;
+    font-size: 17px;
 }
 
-.about h2 {
+.about h3 {
     margin-top: 15px;
-    font-size: 1.3rem;
+    font-size: 18px;
+}
+
+.moreAbout {
+    width: 80%;
+    margin: 50px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 100px;
+    color: #4D453E;
+
+}
+
+.skills {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+a {
+    color:
+        #60946E;
+}
+
+a:hover {
+    font-weight: 700;
 }

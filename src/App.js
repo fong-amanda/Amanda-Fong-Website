@@ -8,7 +8,7 @@ import FixLeakProcess from './Portfolio/Projects/FixLeak/fix-a-leak'
 import SpotifyProcess from './Portfolio/Projects/Spotify/spotify'
 import FusionCulturesProjects from './Portfolio/Projects/FusionCultures/fusion-of-cultures'
 import DisruptProcess from './Portfolio/Projects/Disrupt/disrupt'
-
+import FinancesProcess from './Portfolio/Projects/YouthfulFinaces/finances'
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
         <Route path="/spotify" element={<SpotifyProcess />} />
         <Route path="/fusion-of-cultures" element={<FusionCulturesProjects />} />
         <Route path="/disrupt" element={<DisruptProcess />} />
+        <Route path="/youthful-finances" element={<FinancesProcess />} />
 
 
 

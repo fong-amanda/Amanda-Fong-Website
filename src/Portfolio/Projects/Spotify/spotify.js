@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Nav from "../../../NavigationBar";
 import "./spotify.css";
 import Footer from "../../../Footer/footer";
+
 function SpotifyProcess() {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -68,9 +69,14 @@ function SpotifyProcess() {
                         <li>To be able to connect with friends/others who love the same music as you.</li>
                     </ul>
                 </p>
-                <h3>Discussion Guide</h3>
+                <h3>User Interviews</h3>
+                <img src="spotifyImages/userInterviews.png" alt="userInterviews" />
+
+                <h4>Discussion Guide</h4>
                 <img src="spotifyImages/discussionGuide.png" alt="Discussion Guide" />
-                <h3>Interview Takeaways</h3>
+                <h3></h3>
+
+                <h4>Interview Takeaways</h4>
                 <p>
                     <ol>
                         <li>People mainly use the app to make playlists of their favorite songs</li>
@@ -106,13 +112,19 @@ function SpotifyProcess() {
                 <h3>Idea 1</h3>
                 <h5>Feature on Spotify where you can change the view of playlists, so then the new view you can see the
                     playlists in mixtape form</h5>
+                <h6>Storyboard</h6>
                 <img src="spotifyImages/idea1StoryBoard.png" alt="Idea 1 Storyboard" />
+                <h6>Paper Wireframes</h6>
                 <img src="spotifyImages/idea1Flow.png" alt="Idea 1 Flow" />
                 <h3>Idea 2</h3>
                 <h5>Feature on Spotify that takes the music you’ve listened to and creates playlist based on time period or
                     vibes/aesthetic. Then allows you to pick pictures, that creates a collage for the cover of the playlist in
                     CD form.</h5>
+                <h6>Storyboard</h6>
+
                 <img src="spotifyImages/idea2StoryBoard.png" alt="Idea 2 Storyboard" />
+                <h6>Paper Wireframes</h6>
+
                 <img src="spotifyImages/idea2Flow.png" alt="Idea 2 Flow" />
 
                 <p></p>

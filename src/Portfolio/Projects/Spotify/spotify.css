@@ -1,4 +1,9 @@
 /**Spotify*/
+.overviewLeft a:hover {
+    color: #195b32;
+    font-weight: bold;
+
+}
 
 .spotify h1 {
     color: #195b32;
@@ -18,4 +23,15 @@
 
 .spotify h5 {
     color: #2e994f;
+}
+
+.spotify h6 {
+    color: #2e994f;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.spotify a:hover {
+    color: #195b32;
+
 }

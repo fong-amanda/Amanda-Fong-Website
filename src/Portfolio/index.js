@@ -5,6 +5,7 @@ import FusionCultures from "./Projects/FusionCultures/index";
 import Disrupt from "./Projects/Disrupt/index"
 import "./portfolio.css";
 import { useState, useRef } from "react";
+import Finances from "./Projects/YouthfulFinaces";
 
 function Portfolio() {
   const [headerVisible, setHeaderVis] = useState(false);
@@ -21,6 +22,9 @@ function Portfolio() {
 
   const [disruptVisible, setDisruptVis] = useState(false);
   const disruptRef = useRef();
+
+  const [financesVisible, setFinancesVis] = useState(false);
+  const financesRef = useRef();
 
   React.useEffect(() => {
     const headerObserver = new IntersectionObserver(entries => {
@@ -58,6 +62,12 @@ function Portfolio() {
     disruptObserver.observe(disruptRef.current);
   }, [disruptRef]);
 
+  React.useEffect(() => {
+    const financesObserver = new IntersectionObserver(entries => {
+      setFinancesVis(entries[0].isIntersecting);
+    });
+    financesObserver.observe(financesRef.current);
+  }, [financesRef]);
 
   // Create other observers
 
@@ -80,10 +90,13 @@ function Portfolio() {
         <div ref={spotifyRef} className={`fade-in projectProcess ${spotifyVisible ? "visible" : ""}`}>
           <Spotify />
         </div>
-
+        <div ref={financesRef} className={`fade-in projectProcess ${financesVisible ? "visible" : ""}`}>
+          <Finances />
+        </div>
         <div ref={fusionRef} className={`fade-in projectProcess ${fusionVisible ? "visible" : ""}`}>
           <FusionCultures />
         </div>
+
 
 
       </div>
