@@ -5,7 +5,6 @@ import { IoMail } from "react-icons/io5";
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState, useEffect } from "react";
 import "./footer.css";
 
 function Footer() {
