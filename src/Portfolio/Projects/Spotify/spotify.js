@@ -25,7 +25,7 @@ function SpotifyProcess() {
             </section>
             <section id="overview-section" className="overview-section">
                 <div className="overview">
-                    <div className="overviewLeft">
+                    <div className="overviewLeft spotify">
                         <h5 style={{ color: "#195b32" }}>Project Overview</h5>
                         <p>
                             To make Spotify a more social app that evokes nostalgia, I implemented a feature that takes the music the user has listened to and creates playlists based on time period. It then allows the user to pick photos, which creates a collage for the cover of the playlist in CD form. The user can then share this throwback playlist, evoking a feeling of nostalgia in themselves and others the playlist is shared to.

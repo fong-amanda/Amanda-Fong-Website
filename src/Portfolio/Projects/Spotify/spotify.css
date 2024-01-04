@@ -1,5 +1,5 @@
 /**Spotify*/
-.overviewLeft a:hover {
+.overviewLeft .spotify a:hover {
     color: #195b32;
     font-weight: bold;
 
