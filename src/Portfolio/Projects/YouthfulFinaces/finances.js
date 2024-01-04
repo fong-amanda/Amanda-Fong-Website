@@ -184,7 +184,6 @@ function FinacesProcess() {
 
                 <h4>Discussion Guide</h4>
                 <img src="financesImages/discussionGuide.jpg" alt="Discussion Guide" />
-                <h3></h3>
 
                 <h4>Interview Takeaways</h4>
                 <p>

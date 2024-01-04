@@ -115,22 +115,22 @@ function About() {
                     <div className='extracirriculars' ref={extracurricularsRef}>
                         <h2 className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>What I'm Involved In</h2>
                         <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
-                            ✧ IT Co-Op @ <a href="https://www.coverys.com/" target="_blank">Coverys</a>
+                            ✧ IT Co-Op @ <a href="https://www.coverys.com/" target="_blank" rel="noreferrer">Coverys</a>
                         </p>
                         <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
-                            ✧ UI/UX Studio Designer @ <a href="https://scout.camd.northeastern.edu/" target="_blank">Scout</a>
+                            ✧ UI/UX Studio Designer @ <a href="https://scout.camd.northeastern.edu/" target="_blank" rel="noreferrer">Scout</a>
                         </p>
                         <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
                             ✧ Product Designer @ <a href="https://www.c4cneu.com/" target="_blank">Code4Community</a>
                         </p>
                         <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
-                            ✧ Newsletter Media Specialist @ <a href="https://www.instagram.com/nu_tasa/" target="_blank">NEU Taiwanese American Student Association</a>
+                            ✧ Newsletter Media Specialist @ <a href="https://www.instagram.com/nu_tasa/" target="_blank" rel="noreferrer">NEU Taiwanese American Student Association</a>
                         </p>
                         <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
-                            ✧ Graphic Designer @ <a href="https://www.hackrahmedia.org/" target="_blank">Hackrah Media</a>
+                            ✧ Graphic Designer @ <a href="https://www.hackrahmedia.org/" target="_blank" rel="noreferrer">Hackrah Media</a>
                         </p>
                         <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
-                            ✧ Marketing Designer @ <a href="https://www.freetelehealth.org/" target="_blank">Hermes Telehealth</a>
+                            ✧ Marketing Designer @ <a href="https://www.freetelehealth.org/" target="_blank" rel="noreferrer">Hermes Telehealth</a>
                         </p>
                     </div>
                 </div>
