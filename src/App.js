@@ -25,7 +25,7 @@ function App() {
         <Route path="/spotify" element={<SpotifyProcess />} />
         <Route path="/fusion-of-cultures" element={<FusionCulturesProjects />} />
         <Route path="/disrupt" element={<DisruptProcess />} />
-        <Route path="/youthful-finances" element={<FinancesProcess />} />
+        <Route path="/cosmic-finances" element={<FinancesProcess />} />
 
 
 

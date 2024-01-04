@@ -19,7 +19,7 @@ function FinacesProcess() {
                 </div>
             </section>
             <section id="header" className="title-header">
-                <h1 style={{ color: "#D32B6D" }}>Youthful Finances</h1>
+                <h1 style={{ color: "#D32B6D" }}>Cosmic Finances</h1>
                 <h2>Web Design, UX Research, Prototyping, User Testing, User Interviews</h2>
             </section>
             <section id="overview-section" className="overview-section">
