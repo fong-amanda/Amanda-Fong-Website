@@ -10,7 +10,7 @@ function Finances() {
             <Link to="/Youthful-Finances">
                 <h2>Youthful Finances</h2>
             </Link>
-            <p>Designed a way for users to clearly see and be able to track their spending easily</p>
+            <p>Designed a way for users to clearly view and be able to track their spending easily</p>
         </div>
 
     )
