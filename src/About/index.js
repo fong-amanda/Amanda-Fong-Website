@@ -24,7 +24,7 @@ function About() {
     const [extracurricularsVisible, setExtracurricularsVis] = useState(false);
     const extracurricularsRef = useRef();
 
-    
+
 
     React.useEffect(() => {
         const headerObserver = new IntersectionObserver(entries => {
@@ -102,7 +102,7 @@ function About() {
                     </div>
                 </div>
                 <div className='moreAbout'>
-                <div className='skills' ref={skillsRef}>
+                    <div className='skills' ref={skillsRef}>
                         <h2 className={`fade-in ${skillsVisible ? "visible" : ""}`}>Skills</h2>
                         <p className={`fade-in ${skillsVisible ? "visible" : ""}`}>
                             <h5>Languages:</h5> Java | HTML | CSS | Python | Racket | JavaScript
@@ -121,7 +121,7 @@ function About() {
                             ✧ UI/UX Studio Designer @ <a href="https://scout.camd.northeastern.edu/" target="_blank" rel="noreferrer">Scout</a>
                         </p>
                         <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
-                            ✧ Product Designer @ <a href="https://www.c4cneu.com/" target="_blank">Code4Community</a>
+                            ✧ Product Designer @ <a href="https://www.c4cneu.com/" target="_blank" rel="noreferrer">Code4Community</a>
                         </p>
                         <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
                             ✧ Newsletter Media Specialist @ <a href="https://www.instagram.com/nu_tasa/" target="_blank" rel="noreferrer">NEU Taiwanese American Student Association</a>
