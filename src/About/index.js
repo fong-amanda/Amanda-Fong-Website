@@ -4,6 +4,7 @@ import "./about.css";
 import "../style.css";
 import { useState, useRef } from "react";
 import Footer from '../Footer/footer';
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 function About() {
     const [headerVisible, setHeaderVis] = useState(false);
@@ -90,16 +91,24 @@ function About() {
                         </h2>
                         <p className={`fade-in ${aboutParagraphVisible ? "visible" : ""}`}
                             ref={aboutParagraphRef}>
-                            Currently, I’m a sophomore at Northeastern University studying Computer Science & Design with a 
-                            concentration in interaction design. All my life, I’ve had a love for art, but since coming to Northeastern, I’ve explored the intersection of technology and design leading to my passion in UI/UX design. Previously, I used my art to express myself and as an outlet to destress. Now I strive to create work that streamlines tasks and adds more enjoyment to people's lives. Growing up, I’ve always loved helping others and through my clubs at college, I’m still actively able to engage in this. As a studio designer in Scout and a product designer in Code4Community, I work on UI/UX projects that I’m passionate about, where I’m able to make an impact in the community. Through my work, I hope to <span style={{ color: "green" }}>create a digital world that welcomes and empowers all users.</span> In my free time, you can find me digitally painting, scrapbooking, trying new brunch places, playing water polo, or reading!
+                            Currently, I’m a sophomore at Northeastern University studying Computer Science & Design with a
+                            concentration in interaction design. All my life, I’ve had a love for art, but since coming to Northeastern, I’ve explored the intersection of technology and design leading to my passion in UI/UX design. Previously, I used my art to express myself and as an outlet to destress. Now I strive to create work that streamlines tasks and adds more enjoyment to people's lives. Growing up, I’ve always loved helping others and through my clubs at college, I’m still actively able to engage in this. As a studio designer in Scout and a product designer in Code4Community, I work on UI/UX projects that I’m passionate about, where I’m able to make an impact in the community simultaneously. Through my work, I hope to <span style={{ color: "green" }}>create a digital world that welcomes and empowers all users.</span> In my free time, you can find me digitally painting, scrapbooking, trying new brunch places, playing water polo, or reading!
                         </p>
                         <div>
 
                         </div>
 
-                        <h3 className={`fade-in ${contactVisible ? "visible" : ""}`}
-                            ref={contactRef}>I'm always looking for new opportunities! <br />
-                            Contact me: fong.am@northeastern.edu</h3>
+                        <div className={`fade-in links ${contactVisible ? "visible" : ""}`} ref={contactRef}>
+                            <h3>I'm always looking for new opportunities!</h3>
+                            <h3>Contact me:</h3>
+                            <h3><a className="mail" href="mailto:fong.am@northeastern.edu" target="_blank" rel="noopener noreferrer">fong.am@northeastern.edu</a></h3>
+                            <h3><a href="https://www.linkedin.com/in/amanda-fong-217a04260/" target="_blank" rel="noopener noreferrer">LinkedIn <FaExternalLinkAlt />
+                            </a></h3>
+
+                            <h3><a href="https://github.com/fong-amanda" target="_blank" rel="noopener noreferrer">GitHub <FaExternalLinkAlt />
+                            </a></h3>
+                        </div>
+
                     </div>
                 </div>
                 <div className='moreAbout'>

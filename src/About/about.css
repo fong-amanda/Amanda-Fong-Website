@@ -83,3 +83,11 @@ a {
 a:hover {
     font-weight: 700;
 }
+
+.mail {
+    margin-top: 10px;
+}
+.links a {
+    font-style: normal;
+    text-decoration: none;
+}
