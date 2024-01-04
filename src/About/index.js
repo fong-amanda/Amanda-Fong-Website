@@ -118,7 +118,7 @@ function About() {
                             ✧ IT Co-Op @ <a href="https://www.coverys.com/" target="_blank" rel="noreferrer">Coverys</a>
                         </p>
                         <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
-                            ✧ UI/UX Studio Designer @ <a href="https://scout.camd.northeastern.edu/" target="_blank" rel="noreferrer">Scout</a>
+                            ✧ Designer & Developer @ <a href="https://scout.camd.northeastern.edu/" target="_blank" rel="noreferrer">Scout</a>
                         </p>
                         <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
                             ✧ Product Designer @ <a href="https://www.c4cneu.com/" target="_blank" rel="noreferrer">Code4Community</a>

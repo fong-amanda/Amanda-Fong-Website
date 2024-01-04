@@ -27,7 +27,7 @@ function Home() {
                         <h2 className="fade2">Driven by a passion for both design and software development.</h2>
                         <h3 className="fade3">Striving to create a digital world that welcomes and empowers all users.</h3>
                     <p className="fade3">✧ Incoming IT Co-Op @ <a href="https://www.coverys.com/" target="_blank"
-                        rel="noopener noreferrer">Coverys</a> | UI/UX Studio Designer @ <a
+                        rel="noopener noreferrer">Coverys</a> | Designer & Developer @ <a
                             href="https://scout.camd.northeastern.edu/" target="_blank" rel="noopener noreferrer">Scout</a> |
                         Product Designer @ <a href="https://www.c4cneu.com/" target="_blank"
                             rel="noopener noreferrer">Code4Community</a>.
