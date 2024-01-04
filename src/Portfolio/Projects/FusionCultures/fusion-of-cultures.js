@@ -13,6 +13,7 @@ import SnackCover from "./Pieces/snackCover";
 import StreetFoodCover from "./Pieces/street-foodCover";
 import TeaTimeCover from "./Pieces/tea-timeCover";
 import TouringCover from "./Pieces/touringCover";
+import Footer from "../../../Footer/footer";
 function FusionCulturesProjects() {
   return (
     <>
@@ -32,7 +33,10 @@ function FusionCulturesProjects() {
           <TeaTimeCover />
           <TouringCover />
         </ul>
+
       </section>
+      <Footer />
+
     </>
   )
 }

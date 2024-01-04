@@ -5,6 +5,7 @@ import Sem1 from './sem1';
 import Sem3 from './sem3';
 import { useState, useRef } from "react";
 import "./scrapbook.css";
+import Footer from '../Footer/footer';
 
 const Scrapbook = () => {
   const [sem3Visible, setSem3Vis] = useState(false);
@@ -35,7 +36,7 @@ const Scrapbook = () => {
     });
     sem1Observer.observe(sem1Ref.current);
   }, [sem1Ref]);
-  
+
   return (
     <div>
       <Nav />
@@ -58,8 +59,10 @@ const Scrapbook = () => {
       <div className='sem1'>
         <div ref={sem1Ref} className={`fade-in ${sem1Visible ? "visible" : ""}`}>
           <Sem1 />
-        </div>      </div>
+        </div>      </div>            <Footer />
+
     </div>
+
   );
 };
 

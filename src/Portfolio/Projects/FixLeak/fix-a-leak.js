@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import "./fixLeak.css";
 import Nav from "../../../NavigationBar";
-
-
+import Footer from "../../../Footer/footer";
 function FixLeakProcess() {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -295,6 +294,8 @@ function FixLeakProcess() {
                     exist already. By revising our app to fix these things, we believe that we will have an efficient, effective,
                     and usable product that can be scaled to represent a broader scope of buildings.</p>
             </section>
+            <Footer />
+
         </div>
     );
 }

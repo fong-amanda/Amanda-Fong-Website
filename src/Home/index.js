@@ -4,6 +4,7 @@ import Portfolio from "../Portfolio";
 import { Element, scroller } from 'react-scroll'; 
 import { Link } from "react-router-dom"
 import "./home.css";
+import Footer from "../Footer/footer";
 
 function Home() {
     useEffect(() => {
@@ -47,6 +48,7 @@ function Home() {
             <Element name="my-work" className="my-work">
                 <Portfolio />
             </Element>
+            <Footer/>
 
         </div>
     );

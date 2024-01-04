@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Nav from "../../../NavigationBar";
 import "./spotify.css";
-
+import Footer from "../../../Footer/footer";
 function SpotifyProcess() {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -164,6 +164,7 @@ function SpotifyProcess() {
 
             </section >
 
+            <Footer />
 
         </>
     );

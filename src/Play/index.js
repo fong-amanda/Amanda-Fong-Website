@@ -14,7 +14,7 @@ import Nostalgia from './Pieces/NostalgiaCover';
 import SneakersStamp from './Pieces/SneakersStampCover';
 import RainbowCookies from './Pieces/RainbowCookiesCover';
 import { useState, useRef } from "react";
-
+import Footer from '../Footer/footer';
 import "./Play.css";
 
 
@@ -203,7 +203,8 @@ function Play() {
 
 
                 </ul>
-            </section></div>
+            </section>            <Footer />
+        </div>
     );
 
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import "./spotify.css";
-
 function Spotify() {
     return (
         <div className="Spotify">
@@ -13,6 +12,7 @@ function Spotify() {
             </Link>
             <p>Designed a new social feature within Spotify's UI that evokes nostalgia.</p>
         </div>
+
     )
 }
 export default Spotify;

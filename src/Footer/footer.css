@@ -1,0 +1,38 @@
+.footer {
+    margin-bottom: 30px;
+    padding: 30px;
+
+}
+
+.text {
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.text p {
+    margin: 0;
+}
+
+.icon-container {
+    display: flex;
+    margin-right: 20px;
+}
+
+.icon-container a {
+    color: #4D453E;
+
+}
+
+.icon-container a:hover {
+    color: #60946E;
+
+}
+
+.icon-container svg {
+    margin-right: 10px;
+    font-size: 24px;
+}

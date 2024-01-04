@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Nav from "../../../NavigationBar";
 import './disrupt.css';
+import Footer from "../../../Footer/footer";
 
 function DisruptProcess() {
     useEffect(() => {
@@ -27,7 +28,7 @@ function DisruptProcess() {
 
             <section id="overview-section" className="overview-section">
                 <div className="overview">
-                    <div className="overviewLeft">
+                    <div className="overviewLeft disrupt">
                         <h5 style={{ color: "#1C1A1A" }}>Project Overview</h5>
                         <p>
                             Northeastern’s Fintech Club,
@@ -448,6 +449,8 @@ function DisruptProcess() {
                 </p>
                 <br />
             </section>
+            <Footer/>
+
         </>
     )
 }

@@ -3,7 +3,7 @@ import Nav from '../NavigationBar';
 import "./about.css";
 import "../style.css";
 import { useState, useRef } from "react";
-
+import Footer from '../Footer/footer';
 
 function About() {
     const [headerVisible, setHeaderVis] = useState(false);
@@ -78,6 +78,8 @@ function About() {
                     </div>
                 </div>
             </section>
+            <Footer />
+
         </div>
     );
 }

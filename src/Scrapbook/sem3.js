@@ -11,7 +11,6 @@ import six from "../Scrapbook/scrapbookImages/sem3/6sem3.jpg"
 import seven from "../Scrapbook/scrapbookImages/sem3/7sem3.jpg"
 import eight from "../Scrapbook/scrapbookImages/sem3/8sem3.jpg"
 import nine from "../Scrapbook/scrapbookImages/sem3/9sem3.jpg"
-import ten from "../Scrapbook/scrapbookImages/sem3/10sem3.jpg"
 
 const responsive = {
   desktop: {
@@ -31,7 +30,7 @@ const responsive = {
   }
 };
 const sliderImageUrl = [  one,
-  two, three, four, five, six, seven, eight, nine, ten,
+  two, three, four, five, six, seven, eight, nine,
 ];
 const Sem1 = () => {
   return (
