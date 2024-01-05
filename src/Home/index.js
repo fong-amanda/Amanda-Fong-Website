@@ -24,8 +24,8 @@ function Home() {
             <div className="intro-container">
                 <div className="middle">
                     <h1 className="fade1">Hey, I'm <span className="amanda">Amanda!</span>*:･ﾟ✧*:･ﾟ✧</h1>
-                        <h2 className="fade2">Driven by a passion for both design and software development.</h2>
-                        <h3 className="fade3">Striving to create a digital world that welcomes and empowers all users.</h3>
+                    <h2 className="fade2">Driven by a passion for both design and software development.</h2>
+                    <h3 className="fade3">Striving to create a digital world that welcomes and empowers all users.</h3>
                     <p className="fade3">✧ Incoming IT Co-Op @ <a href="https://www.coverys.com/" target="_blank"
                         rel="noopener noreferrer">Coverys</a> | Designer & Developer @ <a
                             href="https://scout.camd.northeastern.edu/" target="_blank" rel="noopener noreferrer">Scout</a> |
@@ -37,6 +37,8 @@ function Home() {
                         <a href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer"> Northeastern
                             University</a>
                     </p>
+                    <p className="fade3">✧ Based In Boston, MA & Long Island, NY.
+                    </p>                    
                     <div className="container-button fade4">
                         <Link to="/About">
                             <button>More About Me!</button>
