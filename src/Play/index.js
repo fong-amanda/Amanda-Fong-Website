@@ -155,9 +155,9 @@ function Play() {
             <div className='playHeading'>
                 <h1 className="fade1">Play !</h1>
             </div>
-            <section className="gallery">
+            <section className="gallery container grid grid-cols-3 gap-2 mx-auto">
                 <ul className="images">
-                    <div ref={taiwanRef} className={`fade-in ${taiwanVisible ? "visible" : ""}`}>
+                    <div ref={taiwanRef} className={`fade-in w-full rounded ${taiwanVisible ? "visible" : ""}`}>
                         <TaiwanPostcard />
                     </div>
                     <div ref={northeasternCapRef} className={`fade-in ${northeasternCapVisible ? "visible" : ""}`}>
