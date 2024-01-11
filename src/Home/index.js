@@ -23,7 +23,7 @@ function Home() {
 
             <div className="intro-container">
                 <div className="middle">
-                    <h1 className="fade1">Hey, I'm <span className="amanda">Amanda!</span>*:･ﾟ✧*:･ﾟ✧</h1>
+                    <h1 className="fade1">Hey, I'm <span className="amanda">Amanda!</span> *:･ﾟ⊹˚ʚ</h1>
                     <h2 className="fade2">Driven by a passion for both design and software development.</h2>
                     <h3 className="fade3">Striving to create a digital world that welcomes and empowers all users.</h3>
                     <p className="fade3">✧ Information Technology Co-Op @ <a href="https://www.coverys.com/" target="_blank"
