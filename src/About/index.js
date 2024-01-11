@@ -119,7 +119,7 @@ function About() {
                             <br />
                         </p>
                         <p className={`fade-in ${skillsVisible ? "visible" : ""}`}>
-                            <h5>Tools & Frame:</h5> Eclipse | Intellij | React | Bootstrap | Visual Studio | Microsoft Office Suite | Adobe Illustrator | Adobe Photoshop | Adobe InDesign | Figma | Axure | Procreate | Mailchimp Adobe After Effects | Adobe Premiere | AutoCAD | Balsamiq | Rhino
+                            <h5>Tools & Frame:</h5> Eclipse | Intellij | React | Bootstrap | Visual Studio | Microsoft Office Suite | Adobe Illustrator | Adobe Photoshop | Adobe InDesign | Figma | Axure | Procreate | Mailchimp | Adobe After Effects | Adobe Premiere | AutoCAD | Balsamiq | Rhino
                         </p>
                     </div>
                     <div className='extracirriculars' ref={extracurricularsRef}>
@@ -132,6 +132,9 @@ function About() {
                         </p>
                         <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
                             ✧ Product Designer @ <a href="https://www.c4cneu.com/" target="_blank" rel="noreferrer">Code4Community</a>
+                        </p>
+                        <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
+                            ✧ Software Designer @ <a href="https://generatenu.com/" target="_blank" rel="noreferrer">Generate</a>
                         </p>
                         <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
                             ✧ Newsletter Media Specialist @ <a href="https://www.instagram.com/nu_tasa/" target="_blank" rel="noreferrer">NEU Taiwanese American Student Association</a>
