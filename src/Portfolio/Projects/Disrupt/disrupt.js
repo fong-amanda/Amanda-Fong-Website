@@ -52,7 +52,7 @@ function DisruptProcess() {
                         </h5>
                         <h5 className="disrupt">
                             <a
-                                href="https://disrupt.netlify.app/"
+                                href="https://www.disruptneu.com/"
                                 target="_blank" rel="noreferrer"
                             >
                                 Deployed Site
@@ -435,7 +435,7 @@ function DisruptProcess() {
                 <p>
                     See the deployed site {' '}
                     <a
-                        href="https://disrupt.netlify.app/"
+                        href="https://www.disruptneu.com/"
                         target="_blank" rel="noreferrer"
                     >
                         here
