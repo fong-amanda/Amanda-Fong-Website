@@ -119,7 +119,7 @@ function About() {
                             <br />
                         </p>
                         <p className={`fade-in ${skillsVisible ? "visible" : ""}`}>
-                            <h5>Tools & Frame:</h5> Eclipse | Intellij | React | Bootstrap | Visual Studio | Microsoft Office Suite | Adobe Illustrator | Adobe Photoshop | Adobe InDesign | Figma | Axure | Procreate | Mailchimp | Adobe After Effects | Adobe Premiere | AutoCAD | Balsamiq | Rhino
+                            <h5>Tools & Frame:</h5> Eclipse | Intellij | React | Bootstrap | Visual Studio | Microsoft Office Suite | Adobe Illustrator | Adobe Photoshop | Adobe InDesign | Figma | Axure | Procreate | Mailchimp | Adobe After Effects | Adobe Premiere | AutoCAD | Balsamiq 
                         </p>
                     </div>
                     <div className='extracirriculars' ref={extracurricularsRef}>
