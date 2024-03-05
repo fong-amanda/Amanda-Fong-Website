@@ -6,6 +6,7 @@ import Disrupt from "./Projects/Disrupt/index"
 import "./portfolio.css";
 import { useState, useRef } from "react";
 import Finances from "./Projects/YouthfulFinaces";
+import Sac from "./Projects/Sac";
 
 function Portfolio() {
   const [headerVisible, setHeaderVis] = useState(false);
@@ -25,6 +26,9 @@ function Portfolio() {
 
   const [financesVisible, setFinancesVis] = useState(false);
   const financesRef = useRef();
+
+  const [sacVisible, setSacVis] = useState(false);
+  const sacRef = useRef();
 
   React.useEffect(() => {
     const headerObserver = new IntersectionObserver(entries => {
@@ -69,7 +73,12 @@ function Portfolio() {
     financesObserver.observe(financesRef.current);
   }, [financesRef]);
 
-  // Create other observers
+  // React.useEffect(() => {
+  //   const sacObserver = new IntersectionObserver(entries => {
+  //     setFinancesVis(entries[0].isIntersecting);
+  //   });
+  //   sacObserver.observe(sacRef.current);
+  // }, [sacRef]);
 
   return (
     <div id="myWork" className="my-work-section">
@@ -97,6 +106,14 @@ function Portfolio() {
           <FusionCultures />
         </div>
 
+      </div>
+      <div>
+        <h1
+          className={`fade-in ${headerVisible ? "visible" : ""}`}
+          ref={headerRef}
+        >
+          {/* <center>Works In Progress...</center> */}
+        </h1>
 
 
       </div>

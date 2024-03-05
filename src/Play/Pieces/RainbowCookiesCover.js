@@ -1,8 +1,9 @@
 import React from 'react';
+import "./../Play.css";
 
 function RainbowCookies() {
     return (
-        <div className="artPiece">
+        <div className="artPieceIndividual artPiece">
                 <img src="PlayIndividual/PlayImages/rainbowCookies.jpg" alt="Rainbow Cookies" />
                 <div className="title">
                     <span>Rainbow Cookies</span>

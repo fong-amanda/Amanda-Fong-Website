@@ -1,8 +1,9 @@
 import React from 'react';
+import "./../Play.css";
 
 function Envision() {
     return (
-        <div className="artPiece">
+        <div className="artPieceIndividual artPiece">
                 <img src="PlayIndividual/PlayImages/envision.jpg" alt="Envision" />
                 <div className="title">
                     <span>Envision</span>

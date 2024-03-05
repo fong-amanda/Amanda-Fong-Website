@@ -30,11 +30,11 @@ function Home() {
                         rel="noopener noreferrer">Coverys</a>
                     </p>
                     <p className="fade3">✧ Designer & Developer @ <a
-                            href="https://scout.camd.northeastern.edu/" target="_blank" rel="noopener noreferrer">Scout</a> |
+                        href="https://scout.camd.northeastern.edu/" target="_blank" rel="noopener noreferrer">Scout</a> |
+                        Software Designer @ <a href="https://generatenu.com/" target="_blank"
+                            rel="noopener noreferrer">Generate</a> |
                         Product Designer @ <a href="https://www.c4cneu.com/" target="_blank"
-                            rel="noopener noreferrer">Code4Community</a> |
-                            Software Designer @ <a href="https://generatenu.com/" target="_blank"
-                                rel="noopener noreferrer">Generate</a>
+                            rel="noopener noreferrer">Code4Community</a>
                     </p>
 
                     <p className="fade3">✧ Studying Computer Science & Interaction Design @
@@ -42,7 +42,7 @@ function Home() {
                             University</a>
                     </p>
                     <p className="fade3">✧ Based In Boston, MA & Long Island, NY.
-                    </p>                    
+                    </p>
                     <div className="container-button fade4">
                         <Link to="/About">
                             <button>More About Me!</button>
