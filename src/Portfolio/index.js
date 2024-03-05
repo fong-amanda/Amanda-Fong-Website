@@ -6,7 +6,7 @@ import Disrupt from "./Projects/Disrupt/index"
 import "./portfolio.css";
 import { useState, useRef } from "react";
 import Finances from "./Projects/YouthfulFinaces";
-import Sac from "./Projects/Sac";
+// import Sac from "./Projects/Sac";
 
 function Portfolio() {
   const [headerVisible, setHeaderVis] = useState(false);
@@ -27,8 +27,8 @@ function Portfolio() {
   const [financesVisible, setFinancesVis] = useState(false);
   const financesRef = useRef();
 
-  const [sacVisible, setSacVis] = useState(false);
-  const sacRef = useRef();
+  // const [sacVisible, setSacVis] = useState(false);
+  // const sacRef = useRef();
 
   React.useEffect(() => {
     const headerObserver = new IntersectionObserver(entries => {
