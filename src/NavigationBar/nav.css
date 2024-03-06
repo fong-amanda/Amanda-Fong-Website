@@ -4,6 +4,7 @@
     font-family: 'Lexend', sans-serif;
 }
 
+
 /**Scrolling*/
 html {
     scroll-behavior: smooth;
@@ -19,12 +20,13 @@ html {
     color: #4D453E;
 }
 
+.logo {
+    padding: 0rem calc((100vw - 1300px) / 3.5);
+}
 
 .logo img {
     padding: 0 0rem;
     transition: 0.3s ease;
-
-
 }
 
 .logo img:hover {
@@ -34,7 +36,18 @@ html {
     transition: 1s ease;
 }
 
+/*toggle*/
+.navbar-toggler {
+    position: relative;
+    right:20px;
+    border-color: #60946E;
+}
+
 /*My Work Play About-->*/
+.navbar-nav {
+    padding: 0rem calc((100vw - 1300px) / 3.5);
+}
+
 nav a {
     text-decoration: none;
     color: #4D453E;
@@ -69,6 +82,13 @@ nav a:hover {
 @media screen and (max-width: 720px) {
     .nav {
         flex-wrap: nowrap;
-        
+
+    }
+}
+
+@media screen and (max-width: 663px) {
+    .nav {
+        flex-wrap: nowrap;
+
     }
 }
