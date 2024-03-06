@@ -3,11 +3,9 @@ import React, { useState } from "react";
 import Nav from "../../../NavigationBar";
 import './disrupt.css';
 import Footer from "../../../Footer/footer";
-import { useRef } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
-import Captions from "yet-another-react-lightbox/plugins/captions";
 
 function DisruptProcess() {
     // useEffect(() => {
