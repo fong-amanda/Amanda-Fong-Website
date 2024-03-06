@@ -91,19 +91,18 @@ function FusionCulturesProjects() {
     "touring.jpg",]
 
   const photoRef = {
-    taiwanRef: useRef(),
-    northeasternCapRef: useRef(),
-    steampunkRef: useRef(),
-    geometricRef: useRef(),
-    envisionRef: useRef(),
-    taylorRef: useRef(),
-    memorialHallRef: useRef(),
-    cornellRef: useRef(),
-    soakingRef: useRef(),
-    dogRef: useRef(),
-    nostalgiaRef: useRef(),
-    sneakersRef: useRef(),
-    rainbowCookiesRef: useRef()
+    chinatownRef: useRef(),
+    cityLifeRef: useRef(),
+    culturalImmersionRef: useRef(),
+    brunchOrLunchRef: useRef(),
+    culturalReflectionRef: useRef(),
+    gatewayRef: useRef(),
+    festivitiesRef: useRef(),
+    hotPotOrChowderRef: useRef(),
+    snackRef: useRef(),
+    streetFoodRef: useRef(),
+    teatimeRef: useRef(),
+    touringRef: useRef(),
   };
 
   const sources = [

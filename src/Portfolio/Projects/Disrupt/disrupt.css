@@ -1,3 +1,16 @@
+img {
+  cursor: pointer;
+}
+
+.flex-images {
+  display: flex;
+}
+
+.flex-images img {
+  width: calc(33.333% - 10px);
+  max-width: 100%;
+  height: auto;
+}
 
 /* twoColumns.css */
 .two-columns-container {
@@ -10,11 +23,13 @@
   flex: 1;
   padding: 10px;
 }
+
 /* threeColumns.css */
 .three-columns-container {
   display: flex;
   margin-left: -10px;
   margin-bottom: -20px;
+  width: 100%;
 }
 
 .column {

@@ -1,13 +1,21 @@
 
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Nav from "../../../NavigationBar";
 import './disrupt.css';
 import Footer from "../../../Footer/footer";
+import { useRef } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/captions.css";
+import Captions from "yet-another-react-lightbox/plugins/captions";
 
 function DisruptProcess() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, []);
+    const [open, setOpen] = React.useState(false);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
     return (
         <>
             <Nav />
@@ -15,7 +23,7 @@ function DisruptProcess() {
             <section className="cover-image">
                 <div className="image-background">
                     <div className="image-background-container">
-                        <img src="disruptImages/disruptLandscape.jpg" alt="Disrupt Landscape" />
+                        <img style={{cursor: "auto"}} src="disruptImages/disruptLandscape.jpg" alt="Disrupt Landscape" />
                     </div>
                 </div>
             </section>
@@ -113,28 +121,100 @@ function DisruptProcess() {
                     It was important for us to understand how Disrupt wants their club to be portrayed to students on campus.</p>
                 <h3>Personality Levels</h3>
                 <p>Brands need to have a clear personality in order for consumers to easily interact and identify with them. In this activity, our client and team indicated where they believe that the client’s company falls (or think that it should fall) within the following sets of traits. This exercise was very helpful in establishing a thoughtful brand identity. </p>
-                <img src="disruptImages/personalityLevels.jpg" alt="User Story Brainstorm" />
+                <div className="lightbox-images">
+                    <img
+                        src="disruptImages/personalityLevels.jpg"
+                        alt="User Story Brainstorm"
+                        onClick={() => {
+                            setOpen(true);
+                            setSelectedImageIndex(0);
+                        }}
+                    />
+                </div>
                 <h3>Moodboarding</h3>
-                <img src="disruptImages/moodboarding.png" alt="Hi-fi" />
+                <div className="lightbox-images flex-images">
+                    <img
+                        src="disruptImages/moodboarding.jpg"
+                        alt="Moodboard"
+                        onClick={() => {
+                            setOpen(true);
+                            setSelectedImageIndex(1);
+                        }}
+                    />
+                    <img
+                        src="disruptImages/moodboarding2.jpg"
+                        alt="Moodboard"
+                        onClick={() => {
+                            setOpen(true);
+                            setSelectedImageIndex(2);
+                        }}
+                    />
+                    <img
+                        src="disruptImages/moodboarding3.jpg"
+                        alt="Moodboard"
+                        onClick={() => {
+                            setOpen(true);
+                            setSelectedImageIndex(3);
+                        }}
+                    />
+                </div>
+
                 <h3>UI Concepts</h3>
                 <p>In our design approach, we crafted UI concepts with various color iterations to explore visual possibilities and align the chosen palette with our brand identity. These UIs don't represent the final homepage design; rather, they serve as a dynamic exploration, allowing for flexibility and feedback incorporation in the iterative design process. This method also enables us to prioritize user-centric design, gathering feedback to enhance both aesthetic appeal and overall user experience.
                 </p>
-                <img src="disruptImages/lofis.png" alt="lo-fi" />
+                <img
+                    src="disruptImages/lofis.png" alt="lo-fi"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(4);
+                    }}
+                />
                 <br />
-                <img src="disruptImages/lofis2.png" alt="lo-fi" />
-                <h3>Logo Iteration</h3>
-                <img src="disruptImages/logo1.png" alt="logo iterations" />
+                <img
+                    src="disruptImages/lofis2.png" alt="lo-fi"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(5);
+                    }}
+                />                <h3>Logo Iteration</h3>
+                <img
+                    src="disruptImages/logo1.png"
+                    alt="logo iterations"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(6);
+                    }}
+                />
                 <br />
-                <img src="disruptImages/logo2.png" alt="logo iterations" />
-                <br />
+                <img
+                    src="disruptImages/logo2.png"
+                    alt="logo iterations"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(7);
+                    }}
+                />                <br />
 
-                <img src="disruptImages/logo3.png" alt="logo iterations" />
-
+                <img
+                    src="disruptImages/logo3.png"
+                    alt="logo iterations"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(8);
+                    }}
+                />
                 <h2>Creating an Identity</h2>
                 <h3>Color Palette</h3>
                 <div className="two-columns-container">
                     <div className="column">
-                        <img src="disruptImages/colorScheme.png" alt="Hi-fi" />
+                        <img
+                            src="disruptImages/colorScheme.png"
+                            alt="color scheme"
+                            onClick={() => {
+                                setOpen(true);
+                                setSelectedImageIndex(9);
+                            }}
+                        />
 
                     </div>
                     <div className="column disrupt">
@@ -148,11 +228,24 @@ function DisruptProcess() {
                 <h3>Typeface</h3>
                 <div className="two-columns-container">
                     <div className="column">
-                        <img src="disruptImages/type1.png" alt="Type" />
-
+                        <img
+                            src="disruptImages/type1.png"
+                            alt="type"
+                            onClick={() => {
+                                setOpen(true);
+                                setSelectedImageIndex(10);
+                            }}
+                        />
                     </div>
                     <div className="column disrupt">
-                        <img src="disruptImages/type2.png" alt="Type" />
+                        <img
+                            src="disruptImages/type2.png"
+                            alt="type"
+                            onClick={() => {
+                                setOpen(true);
+                                setSelectedImageIndex(11);
+                            }}
+                        />
                     </div>
                 </div>
                 <br />
@@ -160,22 +253,56 @@ function DisruptProcess() {
                 <div className="two-columns-container">
                     <div className="column">
                         <h4>Primary Identifiers</h4>
-                        <img src="disruptImages/finallogo.png" alt="Type" />
-
+                        <img
+                            src="disruptImages/finallogo.png"
+                            alt="final logo"
+                            onClick={() => {
+                                setOpen(true);
+                                setSelectedImageIndex(12);
+                            }}
+                        />
                     </div>
                     <div className="column disrupt">
                         <h4>Exclusion Zones</h4>
-                        <img src="disruptImages/logofinal1.png" alt="Type" />
-
+                        <img
+                            src="disruptImages/logofinal1.png"
+                            alt="final logo"
+                            onClick={() => {
+                                setOpen(true);
+                                setSelectedImageIndex(13);
+                            }}
+                        />
                     </div>
                 </div>
                 <br />
                 <h3 style={{ marginBottom: 18 }}>Social Media Templates</h3>
 
-                <img src="disruptImages/socialmedia.png" alt="Social Media" />
-
+                <img
+                    src="disruptImages/socialmedia.png"
+                    alt="social media templates"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(14);
+                    }}
+                />
                 <br />
+                <img
+                    src="disruptImages/socialmedia2.png"
+                    alt="social media templates"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(15);
+                    }}
+                />
                 <br />
+                <img
+                    src="disruptImages/socialmedia3.png"
+                    alt="social media templates"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(16);
+                    }}
+                />
                 <br /><br />
                 <br /><br />
 
@@ -184,9 +311,23 @@ function DisruptProcess() {
                 <h2>UX Research</h2>
                 <h3>Brainstorming</h3>
                 <h4>User Story Brainstorm</h4>
-                <img src="disruptImages/userStoryBrainstorm.jpg" alt="User Story Brainstorm" />
+                <img
+                    src="disruptImages/userStoryBrainstorm.jpg"
+                    alt="User Story Brainstorm"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(17);
+                    }}
+                />
                 <h4>Features Brainstorm</h4>
-                <img src="disruptImages/FeatureBrainstorm.jpg" alt="Feature Brainstorm" />
+                <img
+                    src="disruptImages/FeatureBrainstorm.jpg"
+                    alt="Features Brainstorm"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(18);
+                    }}
+                />
                 <h3>Competitor Analysis</h3>
 
                 <h4>Rev</h4>
@@ -388,29 +529,87 @@ function DisruptProcess() {
                 <h2>Make</h2>
                 <h3>Sitemap</h3>
 
-                <img src="disruptImages/sitemap.jpg" alt="Paper Sketches" />
+                <img
+                    src="disruptImages/sitemap.jpg"
+                    alt="site map"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(19);
+                    }}
+                />
                 <h3>Paper Sketches</h3>
-
-                <img src="disruptImages/paperSketch1.jpg" alt="Paper Sketches" />
-                <img src="disruptImages/paperSketch2.jpg" alt="Paper Sketches" />
+                <img
+                    src="disruptImages/paperSketch1.jpg"
+                    alt="Paper Sketches"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(20);
+                    }}
+                />
+                <img
+                    src="disruptImages/paperSketch2.jpg"
+                    alt="Paper Sketches"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(21);
+                    }}
+                />
 
                 <h2>Design</h2>
                 <h3>Low-Fidelity Wireframes</h3>
-                <img src="disruptImages/lofi1.png" alt="Lo-fi" />
+                <img
+                    src="disruptImages/lofi1.png"
+                    alt="lo-fi"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(22);
+                    }}
+                />
                 <br />
-                <img src="disruptImages/lofi2.png" alt="Lo-fi" />
-                <br />
+                <img
+                    src="disruptImages/lofi2.png"
+                    alt="lo-fi"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(23);
+                    }}
+                />                <br />
 
-                <img src="disruptImages/lofi3.png" alt="Lo-fi" />
-
+                <img
+                    src="disruptImages/lofi3.png"
+                    alt="lo-fi"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(24);
+                    }}
+                />
                 <br />
                 <h3>Mid-Fidelity Wireframes</h3>
-                <img src="disruptImages/midfi1.png" alt="Lo-fi" />
-                <br />
-                <img src="disruptImages/midfi2.png" alt="Lo-fi" />
-                <br />
+                <img
+                    src="disruptImages/midfi1.png"
+                    alt="mid-fi"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(25);
+                    }}
+                />                <br />
+                <img
+                    src="disruptImages/midfi2.png"
+                    alt="mid-fi"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(26);
+                    }}
+                />                <br />
 
-                <img src="disruptImages/midfi3.png" alt="Lo-fi" />
+                <img
+                    src="disruptImages/midfi3.png"
+                    alt="mid-fi"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(27);
+                    }}
+                />
                 <h3>High-Fidelity Wireframes</h3>
 
                 <h>
@@ -422,14 +621,34 @@ function DisruptProcess() {
                     </a>
                 </h>
                 <h4>Home and About Pages</h4>
-                <img src="disruptImages/hifiHomeAbout.png" alt="Hi-fi" />
+                <img
+                    src="disruptImages/hifiHomeAbout.png"
+                    alt="hi-fi"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(28);
+                    }}
+                />
                 <br />
                 <h4>Venture Pages</h4>
-
-                <img src="disruptImages/hifiVentures.png" alt="Hi-fi" />
+                <img
+                    src="disruptImages/hifiVentures.png"
+                    alt="hi-fi"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(29);
+                    }}
+                />
                 <br />
                 <h4>Consulting, Events, Newsroom, and Navigation Bar Pages</h4>
-                <img src="disruptImages/hifiConsultingEventsNewsroom.png" alt="Hi-fi" />
+                <img
+                    src="disruptImages/hifiConsultingEventsNewsroom.png"
+                    alt="hi-fi"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(30);
+                    }}
+                />
                 <br />
                 <h2>Presentation</h2>
                 <p>
@@ -449,7 +668,71 @@ function DisruptProcess() {
                 </p>
                 <br />
             </section>
-            <Footer/>
+            <button type="button" onClick={() => setOpen(true)}>
+                Open Lightbox
+            </button>
+
+            <Lightbox
+                open={open}
+                close={() => setOpen(false)}
+
+                // opens associated image lightbox
+                index={selectedImageIndex}
+                slides={[
+                    { src: "/disruptImages/personalityLevels.jpg" },
+                    { src: "/disruptImages/moodboarding.jpg" },
+                    { src: "/disruptImages/moodboarding2.jpg" },
+                    { src: "/disruptImages/moodboarding3.jpg" },
+                    { src: "/disruptImages/lofis.png" },
+                    { src: "/disruptImages/lofis2.png" },
+                    { src: "/disruptImages/logo1.png" },
+                    { src: "/disruptImages/logo2.png" },
+                    { src: "/disruptImages/logo3.png" },
+                    { src: "/disruptImages/colorscheme.png" },
+                    { src: "/disruptImages/type1.png" },
+                    { src: "/disruptImages/type2.png" },
+
+                    // 12
+                    { src: "/disruptImages/finallogo.png" },
+                    { src: "/disruptImages/logofinal1.png" },
+
+                    // 14
+                    { src: "/disruptImages/socialmedia.png" },
+                    { src: "/disruptImages/socialmedia2.png" },
+                    { src: "/disruptImages/socialmedia3.png" },
+
+                    // 17
+                    { src: "/disruptImages/userStoryBrainstorm.jpg" },
+                    { src: "/disruptImages/FeatureBrainstorm.jpg" },
+
+                    // 19
+                    { src: "/disruptImages/sitemap.jpg" },
+
+                    // 20
+                    { src: "/disruptImages/paperSketch1.jpg" },
+                    { src: "/disruptImages/paperSketch2.jpg" },
+
+                    // 22
+                    { src: "/disruptImages/lofi1.png" },
+                    { src: "/disruptImages/lofi2.png" },
+                    { src: "/disruptImages/lofi3.png" },
+
+
+                    // 25
+                    { src: "/disruptImages/midfi1.png" },
+                    { src: "/disruptImages/midfi2.png" },
+                    { src: "/disruptImages/midfi3.png" },
+
+                    // 28
+                    { src: "/disruptImages/hifiHomeAbout.png" },
+                    { src: "/disruptImages/hifiVentures.png" },
+                    { src: "/disruptImages/hifiConsultingEventsNewsroom.png" },
+
+
+
+                ]}
+            />
+            <Footer />
 
         </>
     )
