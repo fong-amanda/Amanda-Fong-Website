@@ -1,11 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "../../../NavigationBar";
 import "./finances.css";
 import Footer from "../../../Footer/footer";
-function FinacesProcess() {
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/captions.css";
+function FinancesProcess() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    const [open, setOpen] = React.useState(false);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
     return (
         <>
             <Nav />
@@ -53,12 +59,40 @@ function FinacesProcess() {
                 <h2>UX Research</h2>
                 <h3>Social-UX task analysis</h3>
                 <h4>Money Manager:</h4>
-                <img src="financesImages/moneyManagerAudit.png" alt="Task Analysis Money Manager" />
+                <img
+                    src="financesImages/moneyManagerAudit.png"
+                    alt="Task Analysis Money Manager"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(0);
+                    }}
+                />
                 <h4>Mint:</h4>
-                <img src="financesImages/mintAudit.png" alt="Task Analysis Mint" />
+                <img
+                    src="financesImages/mintAudit.png"
+                    alt="Task Analysis Mint"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(1);
+                    }}
+                />
                 <h4>Monarch Money:</h4>
-                <img src="financesImages/monarchAudit2.png" alt="Task Analysis Mint" />
-                <img src="financesImages/monarchAudit.png" alt="Task Analysis Mint" />
+                <img
+                    src="financesImages/monarchAudit2.png"
+                    alt="Task Analysis Monarch Money"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(2);
+                    }}
+                />
+                <img
+                    src="financesImages/monarchAudit.png"
+                    alt="Task Analysis Monarch Money"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(3);
+                    }}
+                />
                 <h4>Audit Overview</h4>
                 <table class="table table-bordered">
                     <thead>
@@ -178,10 +212,24 @@ function FinacesProcess() {
                     </ul>
                 </p>
                 <h3>User Interviews</h3>
-                <img src="financesImages/userInterviews.png" alt="userInterviews" />
+                <img
+                    src="financesImages/userInterviews.png"
+                    alt="User Interviews"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(4);
+                    }}
+                />
 
                 <h4>Discussion Guide</h4>
-                <img src="financesImages/discussionGuide.jpg" alt="Discussion Guide" />
+                <img
+                    src="financesImages/discussionGuide.jpg"
+                    alt="Discussion Guide"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(5);
+                    }}
+                />
 
                 <h4>Interview Takeaways</h4>
                 <p>
@@ -206,9 +254,31 @@ function FinacesProcess() {
                 <h5>“Create a way for users to clearly see and be able to track their spending easily?”
                 </h5>
                 <h3>Personas</h3>
-                <img src="financesImages/persona1.jpg" alt="Persona" />
-                <img src="financesImages/persona2.jpg" alt="Persona" />
-                <img src="financesImages/persona3.jpg" alt="Persona" />
+                <img
+                    src="financesImages/persona1.jpg"
+                    alt="Persona"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(6);
+                    }}
+                />
+                <img
+                    src="financesImages/persona2.jpg"
+                    alt="Persona"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(7);
+                    }}
+                />
+                <img
+                    src="financesImages/persona3.jpg"
+                    alt="Persona"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(8);
+                    }}
+                />
+
 
 
                 <h4>Refine Statements</h4>
@@ -226,35 +296,94 @@ function FinacesProcess() {
                 <h5>Spreadsheet-driven Website
                 </h5>
                 <h6>Storyboard</h6>
-                <img src="financesImages/idea1Storyboard.png" alt="Idea 1 Storyboard" />
+
+                <img
+                    src="financesImages/idea1Storyboard.png"
+                    alt="Idea 1 Storyboard"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(9);
+                    }}
+                />
                 <h6>Paper Wireframes</h6>
                 <p>There will be a way for users to sign up for the first time, where they enter their card information. From there, the program automatically adds their card transactions and can see multiple cards under their account, even if they’re from different banks. Users can view their monthly and yearly expenses in a variety of graph forms.
                 </p>
-                <img src="financesImages/paperWireframeIdea1.png" alt="Idea 1 Flow" />
+
+                <img
+                    src="financesImages/paperWireframeIdea1.png"
+                    alt="Idea 1 Flow"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(10);
+                    }}
+                />
                 <h3>Idea 2</h3>
                 <h5>SpendShare - Social Budgeting App
                 </h5>
                 <h6>Storyboard</h6>
-                <img src="financesImages/idea2StoryBoard.png" alt="Idea 2 Storyboard" />
+
+
+                <img
+                    src="financesImages/idea2Storyboard.png"
+                    alt="Idea 2 Storyboard"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(11);
+                    }}
+                />
                 <h6>Paper Wireframes</h6>
                 <p>There will be a way for users to sign up and login. They there will be 3 options to track your shared expenses with others and personal expenses. Each one will take you to a page where you can manage the difference expenses and will let you know if you paid the expense already or not.
                 </p>
-                <img src="financesImages/paperWireframeIdea2.png" alt="Idea 2 Flow" />
+                <img
+                    src="financesImages/paperWireframeIdea2.png"
+                    alt="Idea 1 Flow"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(12);
+                    }}
+                />
 
                 <p></p>
                 <h2>Design</h2>
                 <h3>Low-Fidelity Wireframes</h3>
 
                 <br />
-                <img src="financesImages/lowFis.png" alt="Low-Fidelity Wireframes" />
+                <img
+                    src="financesImages/lowFis.png"
+                    alt="Low-Fidelity Wireframes"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(13);
+                    }}
+                />
                 <h3>Mid-Fidelity Wireframes</h3>
                 <br />
-                <img src="financesImages/midfi1.png" alt="Mid-Fidelity Wireframes" />
+                <img
+                    src="financesImages/midfi1.png"
+                    alt="Mid-Fidelity Wireframes"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(14);
+                    }}
+                />
                 <br />
-                <img src="financesImages/midfi2.png" alt="Mid-Fidelity Wireframes" />
+                <img
+                    src="financesImages/midfi2.png"
+                    alt="Mid-Fidelity Wireframes"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(15);
+                    }}
+                />
                 <br />
-                <img src="financesImages/midfi3.png" alt="Mid-Fidelity Wireframes" />
-
+                <img
+                    src="financesImages/midfi3.png"
+                    alt="Mid-Fidelity Wireframes"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(16);
+                    }}
+                />
 
                 <h3>High-Fidelity Wireframes</h3>
                 <h>
@@ -267,14 +396,42 @@ function FinacesProcess() {
                 </h>
                 <br />
                 <h4>Login/Signup Pages</h4>
-                <img src="financesImages/login.png" alt="High-Fidelity Wireframes" />
+                <img
+                    src="financesImages/login.png"
+                    alt="High-Fidelity Wireframes"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(17);
+                    }}
+                />
                 <br />
                 <h4>Monthly Pages</h4>
-                <img src="financesImages/monthlyHifi.png" alt="High-Fidelity Wireframes" />
+                <img
+                    src="financesImages/monthlyHifi.png"
+                    alt="High-Fidelity Wireframes"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(18);
+                    }}
+                />
                 <h4>Yearly Pages</h4>
-                <img src="financesImages/yearlyHifi.png" alt="High-Fidelity Wireframes" />
+                <img
+                    src="financesImages/yearlyHifi.png"
+                    alt="High-Fidelity Wireframes"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(19);
+                    }}
+                />
                 <h4>Spreadsheet Pages</h4>
-                <img src="financesImages/spreadsheetHifi.png" alt="High-Fidelity Wireframes" />
+                <img
+                    src="financesImages/spreadsheetHifi.png"
+                    alt="High-Fidelity Wireframes"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(20);
+                    }}
+                />
                 <h2>Presentation</h2>
                 <p>
                     See{' '}
@@ -289,11 +446,57 @@ function FinacesProcess() {
                 </p>
 
             </section >
+            <Lightbox
+                open={open}
+                close={() => setOpen(false)}
 
+                // opens associated image lightbox
+                index={selectedImageIndex}
+                slides={[
+
+                    // 1
+                    { src: "/financesImages/moneyManagerAudit.png" },
+                    { src: "/financesImages/mintAudit.png" },
+                    { src: "/financesImages/monarchAudit2.png" },
+                    { src: "/financesImages/monarchAudit.png" },
+
+                    // 5
+                    { src: "/financesImages/userInterviews.png" },
+                    { src: "/financesImages/discussionGuide.jpg" },
+
+                    // 7
+                    { src: "/financesImages/persona1.jpg" },
+                    { src: "/financesImages/persona2.jpg" },
+                    { src: "/financesImages/persona3.jpg" },
+
+                    // 8
+                    { src: "/financesImages/idea1Storyboard.png" },
+                    { src: "/financesImages/paperWireframeIdea1.png" },
+
+                    { src: "/financesImages/idea2Storyboard.png" },
+                    { src: "/financesImages/paperWireframeIdea2.png" },
+
+                    { src: "/financesImages/lowFis.png" },
+                    { src: "/financesImages/midfi1.png" },
+                    { src: "/financesImages/midfi2.png" },
+                    { src: "/financesImages/midfi3.png" },
+
+                    { src: "/financesImages/login.png" },
+                    { src: "/financesImages/monthlyHifi.png" },
+                    { src: "/financesImages/yearlyHifi.png" },
+                    { src: "/financesImages/spreadsheetHifi.png" },
+
+
+
+
+
+
+                ]}
+            />
             <Footer />
 
         </>
     );
 }
 
-export default FinacesProcess;
+export default FinancesProcess;
