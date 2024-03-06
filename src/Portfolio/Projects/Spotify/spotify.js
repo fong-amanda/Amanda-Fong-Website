@@ -1,12 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "../../../NavigationBar";
 import "./spotify.css";
 import Footer from "../../../Footer/footer";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/captions.css";
 
 function SpotifyProcess() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    const [open, setOpen] = React.useState(false);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     return (
         <>
             <Nav />
@@ -15,6 +20,7 @@ function SpotifyProcess() {
             <section className="cover-image">
                 <div className="image-background">
                     <div className="image-background-container">
+
                         <img src="spotifyImages/spotifycoverLandscape.jpg" alt="Spotify Cover Landscape" />
                     </div>
                 </div>
@@ -55,11 +61,32 @@ function SpotifyProcess() {
                 <h2>UX Research</h2>
                 <h3>Social-UX task analysis</h3>
                 <h4>Instagram:</h4>
-                <img src="spotifyImages/taskAnalysisInstagram.png" alt="Task Analysis Instagram" />
+                <img
+                    src="spotifyImages/taskAnalysisInstagram.png"
+                    alt="Task Analysis Instagram"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(0);
+                    }}
+                />
                 <h4>Spotify:</h4>
-                <img src="spotifyImages/taskAnalysisSpotify.png" alt="Task Analysis Spotify" />
+                <img
+                    src="spotifyImages/taskAnalysisSpotify.png"
+                    alt="Task Analysis Spotify"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(1);
+                    }}
+                />
                 <h4>Pinterest:</h4>
-                <img src="spotifyImages/taskAnalysisPinterest.png" alt="Task Analysis Pinterest" />
+                <img
+                    src="spotifyImages/taskAnalysisPinterest.png"
+                    alt="Task Analysis Pinterest"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(2);
+                    }}
+                />
                 <h4>What is Social?</h4>
                 <p>
                     <ul>
@@ -70,10 +97,24 @@ function SpotifyProcess() {
                     </ul>
                 </p>
                 <h3>User Interviews</h3>
-                <img src="spotifyImages/userInterviews.png" alt="userInterviews" />
+                <img
+                    src="spotifyImages/userInterviews.png"
+                    alt="userInterviews"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(3);
+                    }}
+                />
 
                 <h4>Discussion Guide</h4>
-                <img src="spotifyImages/discussionGuide.png" alt="Discussion Guide" />
+                <img
+                    src="spotifyImages/discussionGuide.png"
+                    alt="Discussion Guide"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(4);
+                    }}
+                />
 
                 <h4>Interview Takeaways</h4>
                 <p>
@@ -95,9 +136,23 @@ function SpotifyProcess() {
                 </p>
                 <h2>Interpret</h2>
                 <h3>“How Might We...”</h3>
-                <img src="spotifyImages/hmw.png" alt="How Might We" />
+                <img
+                    src="spotifyImages/hmw.png"
+                    alt="How Might We"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(5);
+                    }}
+                />
                 <h3>Persona</h3>
-                <img src="spotifyImages/Kira.png" alt="Persona - Kira" />
+                <img
+                    src="spotifyImages/Kira.png"
+                    alt="Persona -- Kira"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(6);
+                    }}
+                />
                 <h4>Refine Statements</h4>
                 <ol>
                     <li>As a secretary at a Fintech company, Kira has a very busy schedule and wants an easy way to connect with
@@ -112,19 +167,51 @@ function SpotifyProcess() {
                 <h5>Feature on Spotify where you can change the view of playlists, so then the new view you can see the
                     playlists in mixtape form</h5>
                 <h6>Storyboard</h6>
-                <img src="spotifyImages/idea1StoryBoard.png" alt="Idea 1 Storyboard" />
+
+                <img
+                    src="spotifyImages/idea1StoryBoard.png"
+                    alt="Idea 1 Storyboard"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(7);
+                    }}
+                />
                 <h6>Paper Wireframes</h6>
-                <img src="spotifyImages/idea1Flow.png" alt="Idea 1 Flow" />
+
+                <img
+                    src="spotifyImages/idea1Flow.png"
+                    alt="Idea 1 Flow"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(8);
+                    }}
+                />
                 <h3>Idea 2</h3>
                 <h5>Feature on Spotify that takes the music you’ve listened to and creates playlist based on time period or
                     vibes/aesthetic. Then allows you to pick pictures, that creates a collage for the cover of the playlist in
                     CD form.</h5>
                 <h6>Storyboard</h6>
 
-                <img src="spotifyImages/idea2StoryBoard.png" alt="Idea 2 Storyboard" />
+
+                <img
+                    src="spotifyImages/idea2StoryBoard.png"
+                    alt="Idea 2 Storyboard"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(9);
+                    }}
+                />
                 <h6>Paper Wireframes</h6>
 
-                <img src="spotifyImages/idea2Flow.png" alt="Idea 2 Flow" />
+
+                <img
+                    src="spotifyImages/idea2Flow.png"
+                    alt="Idea 2 Flow"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(10);
+                    }}
+                />
 
                 <p></p>
                 <h2>Design</h2>
@@ -136,10 +223,24 @@ function SpotifyProcess() {
                     </a>
                 </h>
                 <br />
-                <img src="spotifyImages/lowfi.png" alt="Low-Fidelity Wireframes" />
+                <img
+                    src="spotifyImages/lowfi.png"
+                    alt="Low-Fidelity Wireframes"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(11);
+                    }}
+                />
                 <h3>Mid-Fidelity Wireframes</h3>
                 <br />
-                <img src="spotifyImages/midfi.png" alt="Mid-Fidelity Wireframes" />
+                <img
+                    src="spotifyImages/midfi.png"
+                    alt="Mid-Fidelity Wireframes"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(12);
+                    }}
+                />
 
                 <h3>High-Fidelity Wireframes</h3>
                 <h>
@@ -151,8 +252,22 @@ function SpotifyProcess() {
                     </a>
                 </h>
                 <br />
-                <img src="spotifyImages/highfi1.png" alt="High-Fidelity Wireframe 1" />
-                <img src="spotifyImages/highfi2.png" alt="High-Fidelity Wireframe 2" />
+                <img
+                    src="spotifyImages/highfi1.png"
+                    alt="High-Fidelity Wireframe 1"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(13);
+                    }}
+                />
+                <img
+                    src="spotifyImages/highfi2.png"
+                    alt="High-Fidelity Wireframe 2"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(14);
+                    }}
+                />
 
                 <h2>Presentation</h2>
                 <p>
@@ -174,7 +289,43 @@ function SpotifyProcess() {
                 </p>
 
             </section >
+            <Lightbox
+                open={open}
+                close={() => setOpen(false)}
 
+                // opens associated image lightbox
+                index={selectedImageIndex}
+                slides={[
+                    { src: "/spotifyImages/taskAnalysisInstagram.png" },
+                    { src: "/spotifyImages/taskAnalysisSpotify.png" },
+                    { src: "/spotifyImages/taskAnalysisPinterest.png" },
+
+                    // 3
+                    { src: "/spotifyImages/userInterviews.png" },
+
+                    { src: "/spotifyImages/discussionGuide.png" },
+
+                    // 5
+                    { src: "/spotifyImages/hmw.png" },
+                    { src: "/spotifyImages/Kira.png" },
+
+                    //7
+                    { src: "/spotifyImages/idea1StoryBoard.png" },
+                    { src: "/spotifyImages/idea1Flow.png" },
+                    { src: "/spotifyImages/idea2StoryBoard.png" },
+                    { src: "/spotifyImages/idea2Flow.png" },
+
+                    // 11
+                    { src: "/spotifyImages/lowfi.png" },
+                    { src: "/spotifyImages/midfi.png" },
+                    { src: "/spotifyImages/highfi1.png" },
+                    { src: "/spotifyImages/highfi2.png" },
+
+
+
+
+                ]}
+            />
             <Footer />
 
         </>
