@@ -39,9 +39,14 @@ html {
 
 /*toggle*/
 .navbar-toggler {
-    position: relative;
-    right:20px;
+    padding: 0.25rem 0.75rem;
+    margin-right: 20px;
+}
+
+.navbar-toggler:hover {
     border-color: #60946E;
+    color: #60946E;
+
 }
 
 /*My Work Play About-->*/
@@ -58,11 +63,10 @@ nav a {
 }
 
 nav a:hover {
-    color: #60946E;
     font-size: 1.13em;
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.00002);
+    -ms-transform: scale(1.0002);
+    transform: scale(1.000000001);
     transition: 1s ease;
 }
 
@@ -76,7 +80,7 @@ nav a:hover {
     color: #4D453E;
 }
 
-.nav a.active {
+.active {
     color: #60946E;
 }
 
