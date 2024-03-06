@@ -40,7 +40,7 @@ function NavigationBar() {
 
   return (
     <Navbar expand="md" bg="" variant="">
-      <Navbar.Brand as={NavLink} to="/Home" className={activeLink === "Home" ? "active" : ""}>
+      <Navbar.Brand as={NavLink} to="/Home" className={` ${activeLink === "Home" ? "active" : ""} logo`}>
         <img src={homeImage} alt="Amanda Fong's Logo" width="120px" height="120px" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav " />

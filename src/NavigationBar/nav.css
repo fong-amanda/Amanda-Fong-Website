@@ -22,6 +22,7 @@ html {
 
 .logo {
     padding: 0rem calc((100vw - 1300px) / 3.5);
+    margin-left: 20px;
 }
 
 .logo img {
