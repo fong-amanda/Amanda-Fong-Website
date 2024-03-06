@@ -134,7 +134,7 @@ function FusionCulturesProjects() {
     [<strong>Tea Time?</strong>, <br />, 'Procreate', <br />, 'Process(es): Experimented with rapid brush stroke. Detail in designs of cookware.'],
     [<strong>Touring</strong>, <br />, 'Procreate', <br />, 'Process: Complementary colors create contrast. Train lines of structure create movement.'],
 
-    ];
+  ];
 
   return (
     <div>
@@ -149,7 +149,7 @@ function FusionCulturesProjects() {
               key={index}
               onClick={() => toggleLightbox(index)}
               ref={photoRef[`imageRef${index}`]}
-              className={` fade-in ${visiblePhoto[`image${index}`] ? 'visible' : ''}`}>
+              className={` fade-in ${visiblePhoto[`image${index}`] ? 'visible' : ''} image-container`}>
               {image}
             </div>
           ))}

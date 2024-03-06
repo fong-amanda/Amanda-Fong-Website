@@ -1,6 +1,7 @@
 .yarl__container {
-    background-color: rgba(0, 0, 0, 0.8) !important; 
+    background-color: rgba(0, 0, 0, 0.8) !important;
 }
+
 /**Fade*/
 @keyframes fadeIn {
     from {
@@ -42,6 +43,8 @@ shadow ------
     position: relative;
     list-style: none;
     margin-bottom: 15px;
+    cursor: pointer;
+
 }
 
 .images .artPiece .title {
@@ -56,6 +59,8 @@ shadow ------
     background: linear-gradient(to top, black, transparent);
     color: white;
     border-radius: 5px;
+    cursor: pointer;
+
 }
 
 
@@ -70,8 +75,14 @@ shadow ------
     bottom: 0;
 }
 
-.artPiece:hover {
+.image-container {
     cursor: pointer;
+}
+
+.image-container:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+
 }
 
 /* .artPieceIndividual {

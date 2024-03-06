@@ -154,7 +154,7 @@ function Play() {
                             key={index}
                             onClick={() => toggleLightbox(index)}
                             ref={photoRef[`imageRef${index}`]}
-                            className={` fade-in ${visiblePhoto[`image${index}`] ? 'visible' : ''}`}>
+                            className={` fade-in ${visiblePhoto[`image${index}`] ? 'visible' : ''} image-container`}>
                             {image}
                         </div>
                     ))}
