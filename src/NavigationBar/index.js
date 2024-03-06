@@ -51,7 +51,7 @@ function Nav() {
           className={` ${activeLink === "Home" ? "active" : ""}`}
           onClick={handleScrollToPortfolio}
         >
-          My Work
+          My&nbsp;Work
         </NavLink>
         <NavLink to="/Scrapbook" className={` ${activeLink === "Scrapbook" ? "active" : ""}`}>
           Scrapbooking

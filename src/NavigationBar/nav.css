@@ -69,5 +69,6 @@ nav a:hover {
 @media screen and (max-width: 720px) {
     .nav {
         flex-wrap: nowrap;
+        
     }
 }
