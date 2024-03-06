@@ -1,20 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./fixLeak.css";
 import Nav from "../../../NavigationBar";
 import Footer from "../../../Footer/footer";
-function FixLeakProcess() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-    return (
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/captions.css";
 
+function FixLeakProcess() {
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, []);
+    const [open, setOpen] = React.useState(false);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+    return (
         <div>
             <Nav />
             <br />
             <section className="cover-image">
                 <div className="image-background">
                     <div className="image-background-container">
-                        <img src="fixALeak Images/Cover2Landscape.jpg" alt="Cover" />
+                        <img style={{ cursor: "auto" }} src="fixALeak Images/Cover2Landscape.jpg" alt="Cover" />
                     </div>
                 </div>
             </section>
@@ -111,7 +117,14 @@ function FixLeakProcess() {
                 <h2>Design Process</h2>
                 <p>Used the Design Thinking approach for solving this problem. To practice design thinking we followed the below
                     process.</p>
-                <img src="fixALeak Images/designProcess.png" alt="Design Process" />
+                <img
+                    src="fixALeak Images/designProcess.png"
+                    alt="Design Process"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(0);
+                    }}
+                />
 
                 <h3>Discover Phase</h3>
                 <p>Used the Design Thinking approach for solving this problem. To practice design thinking we followed the below
@@ -152,10 +165,31 @@ function FixLeakProcess() {
                     interviews,
                     we
                     developed a persona and utilized Whimsical to create affinity diagrams and notes.</p>
+                <img
+                    src="fixALeak Images/audrey.png"
+                    alt="Persona"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(1);
+                    }}
+                />
+                <img
+                    src="fixALeak Images/affinity diagram.png"
+                    alt="Affinity Diagram"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(2);
+                    }}
+                />
+                <img
+                    src="fixALeak Images/notes.png"
+                    alt="Notes"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(3);
+                    }}
+                />
 
-                <img src="fixALeak Images/audrey.png" alt="Persona" />
-                <img src="fixALeak Images/affinity diagram.png" alt="Affinity Diagram" />
-                <img src="fixALeak Images/notes.png" alt="Notes" />
 
                 <h3>Ideation Phase</h3>
                 <p>We created rough sketches for our prototype. We decided that to generate our wireframes, we would look at
@@ -166,8 +200,14 @@ function FixLeakProcess() {
                     ask users for more information if the algorithm believed that there was not enough for the Engineer to
                     work
                     off of.</p>
-                <img src="fixALeak Images/ideationPhase.png" alt="Ideation Phase" />
-                <h3>Design Phase</h3>
+                <img
+                    src="fixALeak Images/ideationPhase.png"
+                    alt="ideation phase"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(4);
+                    }}
+                />                <h3>Design Phase</h3>
                 <p>Followed the below steps in the design phase:</p>
                 <ol>
                     <li>Paper Sketches</li>
@@ -176,48 +216,143 @@ function FixLeakProcess() {
                     <li>Final Design </li>
                 </ol>
                 <h4>Paper Sketches</h4>
-                <img src="fixALeak Images/paperSketch1.png" alt="paperSketch1" />
-                <img src="fixALeak Images/paperSketch2.png" alt="paperSketch2" />
-                <img src="fixALeak Images/paperSketch3.png" alt="paperSketch3" />
+                <img
+                    src="fixALeak Images/paperSketch1.png"
+                    alt="paper sketch"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(5);
+                    }}
+                />
+                <img
+                    src="fixALeak Images/paperSketch2.png"
+                    alt="paper sketch"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(6);
+                    }}
+                />
+                <img
+                    src="fixALeak Images/paperSketch3.png"
+                    alt="paper sketch"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(7);
+                    }}
+                />
+
 
                 <h4>Low-Fidelity Wireframes</h4>
                 <h5><a href="https://balsamiq.cloud/svhx3ll/pn0lifi">Click Here to see on Balsamiq!</a></h5>
                 <h5>Resident Interfaces</h5>
-                <img src="fixALeak Images/LF1.png" alt="Low-fidelity1" />
-                <img src="fixALeak Images/LF2.png" alt="Low-fidelity2" />
-                <h5>Engineer Interfaces</h5>
-                <img src="fixALeak Images/LF3.png" alt="Low-fidelity3" />
 
+                <img
+                    src="fixALeak Images/LF1.png"
+                    alt="Low-fidelity1"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(8);
+                    }}
+                />
+
+                <img
+                    src="fixALeak Images/LF2.png"
+                    alt="Low-fidelity2"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(9);
+                    }}
+                />
+
+                <h5>Engineer Interfaces</h5>
+                <img
+                    src="fixALeak Images/LF3.png"
+                    alt="Low-fidelity3"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(10);
+                    }}
+                />
                 <h4>Mid-Fidelity Wireframes</h4>
                 <h5>Resident Interfaces</h5>
-                <img src="fixALeak Images/MF1.png" alt="Medium-fidelity1" />
+                <img
+                    src="fixALeak Images/MF1.png"
+                    alt="Medium-fidelity1"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(11);
+                    }}
+                />
 
                 <h5>Engineer Interfaces</h5>
-                <img src="fixALeak Images/MF2.png" alt="Medium-fidelity2" />
-
+                <img
+                    src="fixALeak Images/MF2.png"
+                    alt="Medium-fidelity2"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(12);
+                    }}
+                />
                 <h2>Final Design</h2>
                 <h5><a href="https://ihlp9w.axshare.com/?id=h5upi9&p=intro">Click Here to see on Axure!</a></h5>
 
                 <h5>Start/Login Interfaces</h5>
-                <img src="fixALeak Images/loginInterface.png" alt="Login Interface" />
+                <img
+                    src="fixALeak Images/loginInterface.png"
+                    alt="Login Interface"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(13);
+                    }}
+                />
 
                 <h5>Resident Interfaces</h5>
-                <img src="fixALeak Images/residentInterface.png" alt="Resident Interface" />
+                <img
+                    src="fixALeak Images/residentInterface.png"
+                    alt="Resident Interface"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(14);
+                    }}
+                />
 
                 <h5>Engineer Interfaces</h5>
-                <img src="fixALeak Images/engineerInterface.png" alt="Engineer Interface" />
+                <img
+                    src="fixALeak Images/engineerInterface.png"
+                    alt="Engineer Interface"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(15);
+                    }}
+                />
 
                 <h2>Presentation</h2>
                 <p>See <a href="https://docs.google.com/presentation/d/1KMLKFvJxZyMVsiU0NrcO0XqTdfgBQ3U9CIGj6BBp6p0/edit#slide=id.p">Google Slides Presentation</a> for more information about the project.</p>
 
                 <h2>Results</h2>
                 <h5>Observed Results</h5>
-                <img src="fixALeak Images/observedResults.png" alt="Observed Results" />
+                <img
+                    src="fixALeak Images/observedResults.png"
+                    alt="Observed Results"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(16);
+                    }}
+                />
                 <h3>Task Completion Rates</h3>
                 <p>Out of our eight total tasks, our participants have completed all of them successfully. This shows that
                     our
                     app is easy and intuitive to use for the participants that we have surveyed.</p>
-                <img src="fixALeak Images/taskCompletionRates.png" alt="Task Completion Rates" />
+
+
+                <img
+                    src="fixALeak Images/taskCompletionRates.png"
+                    alt="Task Completion Rates"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(17);
+                    }}
+                />
                 <h3>Time on Task</h3>
                 <p>When we compared the average time on task of the participants of our survey to the average time on task
                     of
@@ -226,7 +361,14 @@ function FixLeakProcess() {
                     meet
                     that standard. We hope to fix those lower task-based efficiency percentages
                     to exceed the industry standard in our final design.</p>
-                <img src="fixALeak Images/timeOnTask.png" alt="Time on Task" />
+                <img
+                    src="fixALeak Images/timeOnTask.png"
+                    alt="Time On Task"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(18);
+                    }}
+                />
                 <h3>Task-Based Usability</h3>
                 <p>When conducting our survey on our participants, we asked them to rate the usability of every task that we
                     had
@@ -235,7 +377,14 @@ function FixLeakProcess() {
                     While
                     we are proud of these tasked-based usability scores, we know that we
                     still have room for improvement.</p>
-                <img src="fixALeak Images/taskBasedUsability.png" alt="Task-Based Usability" />
+                <img
+                    src="fixALeak Images/taskBasedUsability.png"
+                    alt="Task-Based Usability"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(19);
+                    }}
+                />
                 <h3>Overall Perceived Usability</h3>
                 <p>The system usability scale ranges from 0-100 with the higher end meaning a higher overall perceived
                     usability. At
@@ -245,8 +394,14 @@ function FixLeakProcess() {
                     wanted to pass was 80 out of 100, and we have done that. However, we want to get as close to 100 as
                     possible.
                 </p>
-                <img src="fixALeak Images/systemUsabilityScoreChart.png" alt="Overall Perceived Usability" />
-
+                <img
+                    src="fixALeak Images/systemUsabilityScoreChart.png"
+                    alt="Overall Perceived Usability"
+                    onClick={() => {
+                        setOpen(true);
+                        setSelectedImageIndex(20);
+                    }}
+                />
                 <h2>Discussion</h2>
                 <p>Overall, our results were fairly positive for this stage of the project. We found that our app
                     was extremely effective as we received a 100% task completion from all four of our participants
@@ -294,6 +449,54 @@ function FixLeakProcess() {
                     exist already. By revising our app to fix these things, we believe that we will have an efficient, effective,
                     and usable product that can be scaled to represent a broader scope of buildings.</p>
             </section>
+
+            <Lightbox
+                open={open}
+                close={() => setOpen(false)}
+
+                // opens associated image lightbox
+                index={selectedImageIndex}
+                slides={[
+                    { src: "/fixALeak Images/designProcess.png" },
+                    { src: "/fixALeak Images/audrey.png" },
+                    { src: "/fixALeak Images/affinity diagram.png" },
+                    { src: "/fixALeak Images/notes.png" },
+
+                    // 4
+                    { src: "/fixALeak Images/ideationPhase.png" },
+
+                    // 5
+                    { src: "/fixALeak Images/paperSketch1.png" },
+                    { src: "/fixALeak Images/paperSketch2.png" },
+                    { src: "/fixALeak Images/paperSketch3.png" },
+
+
+                    // 8
+                    { src: "/fixALeak Images/LF1.png" },
+                    { src: "/fixALeak Images/LF2.png" },
+                    { src: "/fixALeak Images/LF3.png" },
+
+                    // 11
+                    { src: "/fixALeak Images/MF1.png" },
+                    { src: "/fixALeak Images/MF2.png" },
+
+                    // 13
+                    { src: "/fixALeak Images/loginInterface.png" },
+                    { src: "/fixALeak Images/residentInterface.png" },
+                    { src: "/fixALeak Images/engineerInterface.png" },
+
+                    // 16
+                    { src: "/fixALeak Images/observedResults.png" },
+                    { src: "/fixALeak Images/taskCompletionRates.png" },
+                    { src: "/fixALeak Images/timeOnTask.png" },
+                    { src: "/fixALeak Images/taskBasedUsability.png" },
+
+                    { src: "/fixALeak Images/systemUsabilityScoreChart.png" },
+
+
+
+                ]}
+            />
             <Footer />
 
         </div>

@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "../../../NavigationBar";
 import './disrupt.css';
 import Footer from "../../../Footer/footer";
@@ -8,9 +8,9 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
 function DisruptProcess() {
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, []);
+     useEffect(() => {
+         window.scrollTo(0, 0);
+     }, []);
     const [open, setOpen] = React.useState(false);
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
@@ -666,9 +666,9 @@ function DisruptProcess() {
                 </p>
                 <br />
             </section>
-            <button type="button" onClick={() => setOpen(true)}>
+            {/* <button type="button" onClick={() => setOpen(true)}>
                 Open Lightbox
-            </button>
+            </button> */}
 
             <Lightbox
                 open={open}
