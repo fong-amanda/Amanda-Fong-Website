@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Nav from "../../../NavigationBar";
 import './hippo.css';
 import Footer from "../../../Footer/footer";
-import Lightbox from "yet-another-react-lightbox";
+// import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
@@ -10,8 +10,8 @@ function HippoProcess() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    const [open, setOpen] = React.useState(false);
-    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+    // const [open, setOpen] = React.useState(false);
+    // const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
     return (
         <>
