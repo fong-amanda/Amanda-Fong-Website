@@ -10,6 +10,7 @@ function Disrupt() {
             </Link>
             <p>Revamped website and rebrand of Northeastern's Fintech Club, Disrupt.</p>
         </div>
+        
     )
 }
 export default Disrupt;

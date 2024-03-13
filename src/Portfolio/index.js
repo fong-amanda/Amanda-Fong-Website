@@ -6,7 +6,8 @@ import Disrupt from "./Projects/Disrupt/index"
 import "./portfolio.css";
 import { useState, useRef } from "react";
 import Finances from "./Projects/YouthfulFinaces";
-// import Sac from "./Projects/Sac";
+import Hippo from "./Projects/Hippo";
+import CherryCrisis from "./Projects/CherryCrisis";
 
 function Portfolio() {
   const [headerVisible, setHeaderVis] = useState(false);
@@ -27,8 +28,11 @@ function Portfolio() {
   const [financesVisible, setFinancesVis] = useState(false);
   const financesRef = useRef();
 
-  // const [sacVisible, setSacVis] = useState(false);
-  // const sacRef = useRef();
+  const [hippoVisible, setHippoVis] = useState(false);
+  const hippoRef = useRef();
+
+  const [cherryVisible, setCherryVis] = useState(false);
+  const cherryRef = useRef();
 
   React.useEffect(() => {
     const headerObserver = new IntersectionObserver(entries => {
@@ -73,13 +77,19 @@ function Portfolio() {
     financesObserver.observe(financesRef.current);
   }, [financesRef]);
 
-  // React.useEffect(() => {
-  //   const sacObserver = new IntersectionObserver(entries => {
-  //     setFinancesVis(entries[0].isIntersecting);
-  //   });
-  //   sacObserver.observe(sacRef.current);
-  // }, [sacRef]);
+  React.useEffect(() => {
+    const hippoObserver = new IntersectionObserver(entries => {
+      setHippoVis(entries[0].isIntersecting);
+    });
+    hippoObserver.observe(hippoRef.current);
+  }, [hippoRef]);
 
+  React.useEffect(() => {
+    const cherryObserver = new IntersectionObserver(entries => {
+      setCherryVis(entries[0].isIntersecting);
+    });
+    cherryObserver.observe(cherryRef.current);
+  }, [hippoRef]);
   return (
     <div id="myWork" className="my-work-section">
       <h1
@@ -105,6 +115,9 @@ function Portfolio() {
         <div ref={fusionRef} className={`fade-in projectProcess ${fusionVisible ? "visible" : ""}`}>
           <FusionCultures />
         </div>
+        <br/>
+
+
 
       </div>
       <div>
@@ -112,9 +125,19 @@ function Portfolio() {
           className={`fade-in ${headerVisible ? "visible" : ""}`}
           ref={headerRef}
         >
-          {/* <center>Works In Progress...</center> */}
+          <center>Works In Progress...</center>
         </h1>
+        <div className="WIP">
+          <div ref={hippoRef} className={`fade-in projectProcess ${hippoVisible ? "visible" : ""}`}>
+            <Hippo />
 
+          </div>
+          <br/>
+          <div ref={cherryRef} className={`fade-in projectProcess ${cherryVisible ? "visible" : ""}`}>
+            <CherryCrisis />
+
+          </div>
+        </div>
 
       </div>
     </div>

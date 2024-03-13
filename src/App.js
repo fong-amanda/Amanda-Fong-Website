@@ -9,7 +9,9 @@ import SpotifyProcess from './Portfolio/Projects/Spotify/spotify'
 import FusionCulturesProjects from './Portfolio/Projects/FusionCultures/fusion-of-cultures'
 import DisruptProcess from './Portfolio/Projects/Disrupt/disrupt'
 import FinancesProcess from './Portfolio/Projects/YouthfulFinaces/finances'
-
+import CherryProcess from './Portfolio/Projects/CherryCrisis/cherryCrisis';
+import HippoProcess from './Portfolio/Projects/Hippo/hippo';
+import Hippo from './Portfolio/Projects/Hippo';
 function App() {
   return (
     <Router>
@@ -26,6 +28,8 @@ function App() {
         <Route path="/fusion-of-cultures" element={<FusionCulturesProjects />} />
         <Route path="/disrupt" element={<DisruptProcess />} />
         <Route path="/cosmic-finances" element={<FinancesProcess />} />
+        <Route path="/cherry-crisis" element={<CherryProcess />} />
+        <Route path="/hippo" element={<HippoProcess />} />
 
 
 
