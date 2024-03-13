@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Nav from "../../../NavigationBar";
 import './hippo.css';
 import Footer from "../../../Footer/footer";
