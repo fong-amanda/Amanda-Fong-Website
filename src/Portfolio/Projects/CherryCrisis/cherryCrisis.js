@@ -197,7 +197,7 @@ function CherryProcess() {
                                 alt="color scheme"
                                 onClick={() => {
                                     setOpen(true);
-                                    setSelectedImageIndex(9);
+                                    setSelectedImageIndex(7);
                                 }}
                             />
 
@@ -209,7 +209,7 @@ function CherryProcess() {
                                 alt="type"
                                 onClick={() => {
                                     setOpen(true);
-                                    setSelectedImageIndex(10);
+                                    setSelectedImageIndex(8);
                                 }}
                             />
                         </div></div>
@@ -223,7 +223,7 @@ function CherryProcess() {
                                 alt="type"
                                 onClick={() => {
                                     setOpen(true);
-                                    setSelectedImageIndex(10);
+                                    setSelectedImageIndex(9);
                                 }}
                             />
                         </div>
@@ -246,7 +246,7 @@ function CherryProcess() {
                         alt="Cherry Crisis as a person"
                         onClick={() => {
                             setOpen(true);
-                            setSelectedImageIndex(17);
+                            setSelectedImageIndex(10);
                         }}
                     />
 
@@ -276,16 +276,7 @@ function CherryProcess() {
                         alt="site map"
                         onClick={() => {
                             setOpen(true);
-                            setSelectedImageIndex(19);
-                        }}
-                    />
-
-                    <img
-                        src="disruptImages/paperSketch2.jpg"
-                        alt="Paper Sketches"
-                        onClick={() => {
-                            setOpen(true);
-                            setSelectedImageIndex(21);
+                            setSelectedImageIndex(11);
                         }}
                     />
 
@@ -296,7 +287,7 @@ function CherryProcess() {
                         alt="lo-fi"
                         onClick={() => {
                             setOpen(true);
-                            setSelectedImageIndex(22);
+                            setSelectedImageIndex(12);
                         }}
                     />
                     <br />
@@ -305,7 +296,7 @@ function CherryProcess() {
                         alt="lo-fi"
                         onClick={() => {
                             setOpen(true);
-                            setSelectedImageIndex(23);
+                            setSelectedImageIndex(13);
                         }}
                     />                <br />
                     <br />
@@ -315,7 +306,7 @@ function CherryProcess() {
                         alt="mid-fi"
                         onClick={() => {
                             setOpen(true);
-                            setSelectedImageIndex(25);
+                            setSelectedImageIndex(14);
                         }}
                     />                <br />
                     <img
@@ -323,7 +314,7 @@ function CherryProcess() {
                         alt="mid-fi"
                         onClick={() => {
                             setOpen(true);
-                            setSelectedImageIndex(26);
+                            setSelectedImageIndex(15);
                         }}
                     />                <br />
 
@@ -344,7 +335,7 @@ function CherryProcess() {
                         alt="hi-fi"
                         onClick={() => {
                             setOpen(true);
-                            setSelectedImageIndex(28);
+                            setSelectedImageIndex(16);
                         }}
                     />
                     <br />
@@ -354,7 +345,7 @@ function CherryProcess() {
                         alt="hi-fi"
                         onClick={() => {
                             setOpen(true);
-                            setSelectedImageIndex(29);
+                            setSelectedImageIndex(17);
                         }}
                     />
                     <br />
@@ -394,47 +385,19 @@ function CherryProcess() {
                         { src: "/cherryImages/moodboarding4.jpg" },
                         { src: "/cherryImages/logo1.png" },
                         { src: "/cherryImages/logo2.png" },
+                        { src: "/cherryImages/colorpalette.png" },
+                        { src: "/cherryImages/typography.png" },
                         { src: "/cherryImages/logo3.png" },
-                        { src: "/cherryImages/colorscheme.png" },
-                        { src: "/cherryImages/type1.png" },
-                        { src: "/cherryImages/type2.png" },
 
-                        // 12
-                        { src: "/cherryImages/finallogo.png" },
-                        { src: "/cherryImages/logofinal1.png" },
-
-                        // 14
-                        { src: "/cherryImages/socialmedia.png" },
-                        { src: "/cherryImages/socialmedia2.png" },
-                        { src: "/cherryImages/socialmedia3.png" },
-
-                        // 17
-                        { src: "/cherryImages/userStoryBrainstorm.jpg" },
-                        { src: "/cherryImages/FeatureBrainstorm.jpg" },
-
-                        // 19
-                        { src: "/cherryImages/sitemap.jpg" },
-
-                        // 20
-                        { src: "/cherryImages/paperSketch1.jpg" },
-                        { src: "/cherryImages/paperSketch2.jpg" },
-
-                        // 22
+                        
+                        { src: "/cherryImages/asaperson.png" },
+                        { src: "/cherryImages/sitemap.png" },
                         { src: "/cherryImages/lofi1.png" },
                         { src: "/cherryImages/lofi2.png" },
-                        { src: "/cherryImages/lofi3.png" },
-
-
-                        // 25
                         { src: "/cherryImages/midfi1.png" },
                         { src: "/cherryImages/midfi2.png" },
-                        { src: "/cherryImages/midfi3.png" },
-
-                        // 28
-                        { src: "/cherryImages/hifiHomeAbout.png" },
-                        { src: "/cherryImages/hifiVentures.png" },
-                        { src: "/cherryImages/hifiConsultingEventsNewsroom.png" },
-
+                        { src: "/cherryImages/highfi1.png" },
+                        { src: "/cherryImages/highfi2.png" },
 
 
                     ]}
