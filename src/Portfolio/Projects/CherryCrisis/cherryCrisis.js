@@ -8,7 +8,7 @@ import "yet-another-react-lightbox/plugins/captions.css";
 
 function CherryProcess() {
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, []);
     const [open, setOpen] = React.useState(false);
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
