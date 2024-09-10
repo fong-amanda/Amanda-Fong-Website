@@ -1,18 +1,15 @@
 import { Link } from 'react-router-dom';
-function FixLeak() {
+function Cherry() {
     return (
-        <div className="Cherry-Crisis">
-            {/* <Link to="/fix-a-leak">
-        <img src="fixALeak Images/Cover Page.jpg" alt="Fix A Leak Cover Page" />
-      </Link> */}
+        <div className="Cherry">
+            <Link to="/cherry-crisis">
+                <img src="cherryImages/cover.png" alt="Cherry" />
+            </Link>
             <Link to="/cherry-crisis">
                 <h2>Cherry Crisis</h2>
-                <p>Crafting the Cherry Crisis Band's brand identity and designing along with developing
-                    an engaging website design to showcase their music and personality.
-                </p>
             </Link>
+            <p>Developed the brand identity for Cherry Crisis Band and designed an engaging website to showcase their music and personality.</p>        </div>
 
-        </div>
     )
 }
-export default FixLeak;
+export default Cherry;

@@ -26,15 +26,15 @@ function Home() {
                     <h1 className="fade1">Hey, I'm <span className="amanda">Amanda!</span> *:･ﾟ⊹˚ʚ</h1>
                     <h2 className="fade2">Driven by a passion for both design and software development.</h2>
                     <h3 className="fade3">Striving to create a digital world that welcomes and empowers all users.</h3>
-                    <p className="fade3">✧ Information Technology Co-Op @ <a href="https://www.coverys.com/" target="_blank"
+                    <p className="fade3">✧ Prev. Cloud O365 Technology Co-Op @ <a href="https://www.coverys.com/" target="_blank"
                         rel="noopener noreferrer">Coverys</a>
                     </p>
-                    <p className="fade3">✧ Designer & Developer @ <a
+                    <p className="fade3">✧ Design Lead @ <a
                         href="https://scout.camd.northeastern.edu/" target="_blank" rel="noopener noreferrer">Scout</a> |
                         Software Designer @ <a href="https://generatenu.com/" target="_blank"
-                            rel="noopener noreferrer">Generate</a> |
-                        Product Designer @ <a href="https://www.c4cneu.com/" target="_blank"
-                            rel="noopener noreferrer">Code4Community</a>
+                            rel="noopener noreferrer">Generate</a>
+                        {/* Product Designer @ <a href="https://www.c4cneu.com/" target="_blank"
+                            rel="noopener noreferrer">Code4Community</a> */}
                     </p>
 
                     <p className="fade3">✧ Studying Computer Science & Interaction Design @

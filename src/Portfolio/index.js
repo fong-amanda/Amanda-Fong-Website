@@ -102,6 +102,10 @@ function Portfolio() {
         <div ref={disruptRef} className={`fade-in projectProcess ${disruptVisible ? "visible" : ""}`}>
           <Disrupt />
         </div>
+        <div ref={cherryRef} className={`fade-in projectProcess ${cherryVisible ? "visible" : ""}`}>
+          <CherryCrisis />
+
+        </div>
         <div ref={fixRef} className={`fade-in projectProcess ${fixVisible ? "visible" : ""}`}>
           <FixLeak />
         </div>
@@ -115,7 +119,7 @@ function Portfolio() {
         <div ref={fusionRef} className={`fade-in projectProcess ${fusionVisible ? "visible" : ""}`}>
           <FusionCultures />
         </div>
-        <br/>
+
 
 
 
@@ -132,11 +136,8 @@ function Portfolio() {
             <Hippo />
 
           </div>
-          <br/>
-          <div ref={cherryRef} className={`fade-in projectProcess ${cherryVisible ? "visible" : ""}`}>
-            <CherryCrisis />
+          <br />
 
-          </div>
         </div>
 
       </div>
