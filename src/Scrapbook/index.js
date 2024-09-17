@@ -1,11 +1,11 @@
 import React from 'react';
 import Nav from '../NavigationBar';
-import Seattle from './seattle';
-import Sem1 from './sem1';
-import Sem3 from './sem3';
-import { useState, useRef } from "react";
+// import Seattle from './seattle';
+// import Sem1 from './sem1';
+// import Sem3 from './sem3';
+// import { useState, useRef } from "react";
 import "./scrapbook.css";
-import Footer from '../Footer/footer';
+// import Footer from '../Footer/footer';
 
 const Scrapbook = () => {
   // const [sem3Visible, setSem3Vis] = useState(false);
