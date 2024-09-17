@@ -8,14 +8,14 @@ import "./scrapbook.css";
 import Footer from '../Footer/footer';
 
 const Scrapbook = () => {
-  const [sem3Visible, setSem3Vis] = useState(false);
-  const sem3Ref = useRef();
+  // const [sem3Visible, setSem3Vis] = useState(false);
+  // const sem3Ref = useRef();
 
-  const [seattleVisible, setSeattleVis] = useState(false);
-  const seattleRef = useRef();
+  // const [seattleVisible, setSeattleVis] = useState(false);
+  // const seattleRef = useRef();
 
-  const [sem1Visible, setSem1Vis] = useState(false);
-  const sem1Ref = useRef();
+  // const [sem1Visible, setSem1Vis] = useState(false);
+  // const sem1Ref = useRef();
   // React.useEffect(() => {
   //   const sem3Observer = new IntersectionObserver(entries => {
   //     setSem3Vis(entries[0].isIntersecting);

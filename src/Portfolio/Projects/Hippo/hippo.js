@@ -135,9 +135,7 @@ function HippoProcess() {
                         setSelectedImageIndex(0);
                     }}
                 />
-                <img
-
-                />
+           
 
                 <h4>Final Moodboard</h4>
 

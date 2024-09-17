@@ -109,7 +109,7 @@ function Portfolio() {
 
   React.useEffect(() => {
     const threeStonesObserver = new IntersectionObserver(entries => {
-      setLavanVis(entries[0].isIntersecting);
+      setThreeStonesVis(entries[0].isIntersecting);
     });
     threeStonesObserver.observe(threeStonesRef.current);
   }, [threeStonesRef]);
@@ -156,7 +156,7 @@ function Portfolio() {
           <div ref={lavanRef} className={`fade-in projectProcess ${lavanVisible ? "visible" : ""}`}>
             <Lavan />
           </div>
-          <div ref={threeStonesRef} style={{ marginTop: '50px' }} className={`fade-in projectProcess ${lavanVisible ? "visible" : ""}`}>
+          <div ref={threeStonesRef} style={{ marginTop: '50px' }} className={`fade-in projectProcess ${threeStonesVisible ? "visible" : ""}`}>
             <ThreeStones />
           </div>
           <br />
