@@ -8,6 +8,8 @@ import { useState, useRef } from "react";
 import Finances from "./Projects/YouthfulFinaces";
 import Hippo from "./Projects/Hippo";
 import CherryCrisis from "./Projects/CherryCrisis";
+import Lavan from "./Projects/LavanBeauty";
+import ThreeStones from "./Projects/ThreeStones";
 
 function Portfolio() {
   const [headerVisible, setHeaderVis] = useState(false);
@@ -33,6 +35,13 @@ function Portfolio() {
 
   const [cherryVisible, setCherryVis] = useState(false);
   const cherryRef = useRef();
+
+  const [lavanVisible, setLavanVis] = useState(false);
+  const lavanRef = useRef();
+
+  const [threeStonesVisible, setThreeStonesVis] = useState(false);
+  const threeStonesRef = useRef();
+
 
   React.useEffect(() => {
     const headerObserver = new IntersectionObserver(entries => {
@@ -89,7 +98,21 @@ function Portfolio() {
       setCherryVis(entries[0].isIntersecting);
     });
     cherryObserver.observe(cherryRef.current);
-  }, [hippoRef]);
+  }, [cherryRef]);
+
+  React.useEffect(() => {
+    const lavanObserver = new IntersectionObserver(entries => {
+      setLavanVis(entries[0].isIntersecting);
+    });
+    lavanObserver.observe(lavanRef.current);
+  }, [lavanRef]);
+
+  React.useEffect(() => {
+    const threeStonesObserver = new IntersectionObserver(entries => {
+      setLavanVis(entries[0].isIntersecting);
+    });
+    threeStonesObserver.observe(threeStonesRef.current);
+  }, [threeStonesRef]);
   return (
     <div id="myWork" className="my-work-section">
       <h1
@@ -99,17 +122,18 @@ function Portfolio() {
         <center>My Work !</center>
       </h1>
       <div className="my-work">
+        <div ref={hippoRef} className={`fade-in projectProcess ${hippoVisible ? "visible" : ""}`}>
+          <Hippo />
+        </div>
         <div ref={disruptRef} className={`fade-in projectProcess ${disruptVisible ? "visible" : ""}`}>
           <Disrupt />
         </div>
         <div ref={cherryRef} className={`fade-in projectProcess ${cherryVisible ? "visible" : ""}`}>
           <CherryCrisis />
-
         </div>
         <div ref={fixRef} className={`fade-in projectProcess ${fixVisible ? "visible" : ""}`}>
           <FixLeak />
         </div>
-
         <div ref={spotifyRef} className={`fade-in projectProcess ${spotifyVisible ? "visible" : ""}`}>
           <Spotify />
         </div>
@@ -120,9 +144,6 @@ function Portfolio() {
           <FusionCultures />
         </div>
 
-
-
-
       </div>
       <div>
         <h1
@@ -132,9 +153,11 @@ function Portfolio() {
           <center>Works In Progress...</center>
         </h1>
         <div className="WIP">
-          <div ref={hippoRef} className={`fade-in projectProcess ${hippoVisible ? "visible" : ""}`}>
-            <Hippo />
-
+          <div ref={lavanRef} className={`fade-in projectProcess ${lavanVisible ? "visible" : ""}`}>
+            <Lavan />
+          </div>
+          <div ref={threeStonesRef} style={{ marginTop: '50px' }} className={`fade-in projectProcess ${lavanVisible ? "visible" : ""}`}>
+            <ThreeStones />
           </div>
           <br />
 

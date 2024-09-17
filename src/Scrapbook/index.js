@@ -16,26 +16,26 @@ const Scrapbook = () => {
 
   const [sem1Visible, setSem1Vis] = useState(false);
   const sem1Ref = useRef();
-  React.useEffect(() => {
-    const sem3Observer = new IntersectionObserver(entries => {
-      setSem3Vis(entries[0].isIntersecting);
-    });
-    sem3Observer.observe(sem3Ref.current);
-  }, [sem3Ref]);
+  // React.useEffect(() => {
+  //   const sem3Observer = new IntersectionObserver(entries => {
+  //     setSem3Vis(entries[0].isIntersecting);
+  //   });
+  //   sem3Observer.observe(sem3Ref.current);
+  // }, [sem3Ref]);
 
-  React.useEffect(() => {
-    const seattleObserver = new IntersectionObserver(entries => {
-      setSeattleVis(entries[0].isIntersecting);
-    });
-    seattleObserver.observe(seattleRef.current);
-  }, [seattleRef]);
+  // React.useEffect(() => {
+  //   const seattleObserver = new IntersectionObserver(entries => {
+  //     setSeattleVis(entries[0].isIntersecting);
+  //   });
+  //   seattleObserver.observe(seattleRef.current);
+  // }, [seattleRef]);
 
-  React.useEffect(() => {
-    const sem1Observer = new IntersectionObserver(entries => {
-      setSem1Vis(entries[0].isIntersecting);
-    });
-    sem1Observer.observe(sem1Ref.current);
-  }, [sem1Ref]);
+  // React.useEffect(() => {
+  //   const sem1Observer = new IntersectionObserver(entries => {
+  //     setSem1Vis(entries[0].isIntersecting);
+  //   });
+  //   sem1Observer.observe(sem1Ref.current);
+  // }, [sem1Ref]);
 
   return (
     <div>
@@ -46,7 +46,7 @@ const Scrapbook = () => {
         <h7 className="fade2">Below are some scrapbook carousel posts I made for
           Instagram!</h7>
       </div>
-      <div className='sem3'>
+      {/* <div className='sem3'>
         <div ref={sem3Ref} className={`fade-in ${sem3Visible ? "visible" : ""}`}>
           <Sem3 />
         </div>
@@ -59,7 +59,7 @@ const Scrapbook = () => {
       <div className='sem1'>
         <div ref={sem1Ref} className={`fade-in ${sem1Visible ? "visible" : ""}`}>
           <Sem1 />
-        </div>      </div>            <Footer />
+        </div>      </div>            <Footer /> */}
 
     </div>
 

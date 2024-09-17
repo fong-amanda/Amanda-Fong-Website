@@ -4,18 +4,20 @@ import "./hippo.css";
 function Hippo() {
     return (
         <div className="Hippo">
-            <Link to="/hippo">
-                {/* <img src="financesImages/cover.jpg" alt="finances-Cover" /> */}
+            <Link to="/student-activity-calendar">
+                <img src="sacImages/Cover.png" alt="Student-Activity-Calendar-Cover" />
             </Link>
             <Link to="/hippo">
-                <h2>Hippo</h2>
-                <p>An app that will serve as an activity calendar for
-                    undergraduate students at Northeastern.
-                    The app will allow students to discover different club events,
-                    club meetings, and student performamces. Student groups would be able
-                    to create accounts to post their events to the calendar and promote through the app.</p>
+                <h2>Student Activity Calendar</h2>
             </Link>
+            <p>
+                Designed an app that serves as a calendar, while allowing Northeastern undergraduate Boston students to discover new clubs and events on campus based on interests.
+            </p>
+            <br />
+            
+      
         </div>
+
 
     )
 }

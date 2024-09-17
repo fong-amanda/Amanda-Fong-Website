@@ -11,6 +11,8 @@ import DisruptProcess from './Portfolio/Projects/Disrupt/disrupt'
 import FinancesProcess from './Portfolio/Projects/YouthfulFinaces/finances'
 import CherryProcess from './Portfolio/Projects/CherryCrisis/cherryCrisis';
 import HippoProcess from './Portfolio/Projects/Hippo/hippo';
+import LavanProcess from './Portfolio/Projects/LavanBeauty/lavan';
+import ThreeStonesProcess from './Portfolio/Projects/ThreeStones/threeStones';
 function App() {
   return (
     <Router>
@@ -28,8 +30,9 @@ function App() {
         <Route path="/disrupt" element={<DisruptProcess />} />
         <Route path="/cosmic-finances" element={<FinancesProcess />} />
         <Route path="/cherry-crisis" element={<CherryProcess />} />
-        <Route path="/hippo" element={<HippoProcess />} />
-
+        <Route path="/student-activity-calendar" element={<HippoProcess />} />
+        <Route path="/lavan" element={<LavanProcess />} />
+        <Route path="/three-stones" element={<ThreeStonesProcess />} />
 
 
       </Routes>
