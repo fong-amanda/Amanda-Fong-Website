@@ -114,12 +114,15 @@ function About() {
                 <div className='moreAbout'>
                     <div className='skills' ref={skillsRef}>
                         <h2 className={`fade-in ${skillsVisible ? "visible" : ""}`}>Skills</h2>
+                        <h5>Languages:</h5>
+
                         <p className={`fade-in ${skillsVisible ? "visible" : ""}`}>
-                            <h5>Languages:</h5> Java | HTML | CSS | Python | Racket | JavaScript | SQL
+                             Java | HTML | CSS | Python | Racket | JavaScript | SQL
                             <br />
                         </p>
+                        <h5>Tools & Frame:</h5>
                         <p className={`fade-in ${skillsVisible ? "visible" : ""}`}>
-                            <h5>Tools & Frame:</h5> Eclipse | Intellij | React | Bootstrap | Visual Studio | Microsoft Office Suite | Adobe Illustrator | Adobe Photoshop | Adobe InDesign | Figma | Axure | Procreate | Mailchimp | Adobe After Effects | Adobe Premiere | AutoCAD | Balsamiq
+                             Eclipse | Intellij | React | Bootstrap | Visual Studio | Microsoft Office Suite | Adobe Illustrator | Adobe Photoshop | Adobe InDesign | Figma | Axure | Procreate | Mailchimp | Adobe After Effects | Adobe Premiere | AutoCAD | Balsamiq
                         </p>
                     </div>
                     <div className='extracirriculars' ref={extracurricularsRef}>

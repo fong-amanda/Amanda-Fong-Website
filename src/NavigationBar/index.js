@@ -55,13 +55,7 @@ function NavigationBar() {
           >
             My Work
           </NavLink>
-          {/* <NavLink
-            as={NavLink}
-            to="/Scrapbook"
-            className={activeLink === "Scrapbook" ? "active" : ""}
-          >
-            Scrapbooking
-          </NavLink> */}
+
           <NavLink
             as={NavLink}
             to="/Play"
@@ -71,9 +65,17 @@ function NavigationBar() {
           </NavLink>
           <NavLink
             as={NavLink}
+            to="/Scrapbook"
+            className={activeLink === "Scrapbook" ? "active" : ""}
+          >
+            Scrapbooking
+          </NavLink>
+          <NavLink
+            as={NavLink}
             to="/About"
             className={activeLink === "About" ? "active" : ""}
           >
+
             About
           </NavLink>
         </Nav>

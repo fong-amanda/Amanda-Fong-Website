@@ -62,7 +62,12 @@
 
 
 
+.tasaRetreat h5 {
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-bottom: -45px;
 
+}
 /**Scrapbook*/
 .scrapbook img {
   align-items: center;

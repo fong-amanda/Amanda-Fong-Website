@@ -13,6 +13,8 @@ import ScratchboardDog from './Pieces/ScratchboardDogCover';
 import Nostalgia from './Pieces/NostalgiaCover';
 import SneakersStamp from './Pieces/SneakersStampCover';
 import RainbowCookies from './Pieces/RainbowCookiesCover';
+import Beabadoobee from './Pieces/Beabadoobee';
+
 import { useState, useRef } from "react";
 import Footer from '../Footer/footer';
 import "./Play.css";
@@ -79,6 +81,7 @@ function Play() {
 
     }, []);
     const photoNames = [
+        "Beabadoobee.png",
         "taiwanPostcard.jpeg",
         "northeasternGradCap.jpeg",
         "steampunkTurtle.jpg",
@@ -94,6 +97,7 @@ function Play() {
         "rainbowCookies.jpg"]
 
     const photoRef = {
+        beabadoobeeRef: useRef(),
         taiwanRef: useRef(),
         northeasternCapRef: useRef(),
         steampunkRef: useRef(),
@@ -110,6 +114,7 @@ function Play() {
     };
 
     const sources = [
+        <Beabadoobee />,
         <TaiwanPostcard />,
         <NortheasternGradCap />,
         <Steampunk />,
@@ -126,6 +131,7 @@ function Play() {
     ];
 
     const captions = [
+        [<strong>Beabadoobee Poster</strong>, <br />, 'Figma'],
         [<strong>Taiwan Postcard</strong>, <br />, 'Adobe Illustrator & Procreate'],
         [<strong>Northeastern Graduation Cap</strong>, <br />, 'Procreate'],
         [<strong>Steampunk Turtle</strong>, <br />, 'Procreate', <br />, 'Digitally painted and layer masks are used to incorporate a "steampunk" style into the composition of the turtle.'],
