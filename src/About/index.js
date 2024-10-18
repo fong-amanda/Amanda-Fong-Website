@@ -78,7 +78,7 @@ function About() {
                 <div className="about">
                     <div className="aboutMePhoto">
                         <img className={`fade-in ${aboutPhotoVisible ? "visible" : ""}`}
-                            ref={aboutPhotoRef} src="./AboutMeImage.jpg"
+                            ref={aboutPhotoRef} src="./AboutMeImage2.JPG"
                             alt="About Me" />
 
 
@@ -92,7 +92,7 @@ function About() {
                         <p className={`fade-in ${aboutParagraphVisible ? "visible" : ""}`}
                             ref={aboutParagraphRef}>
                             I’m a junior at Northeastern University studying Computer Science & Design with a
-                            concentration in Interaction Design. All my life, I’ve had a love for art, but since coming to Northeastern, I’ve explored the intersection of technology and design leading to my passion in UI/UX design. Previously, I used my art to express myself and as an outlet to destress. Now I strive to create work that streamlines tasks and adds more enjoyment to people's lives. Growing up, I’ve always loved helping others and through my clubs at college, I’m still actively able to engage in this. As a studio designer in Scout, a software designer in Generate, and a product designer in Code4Community, I work on UI/UX projects that I’m passionate about, where I’m able to make an impact in the community simultaneously. Through my work, I hope to <span style={{ color: "green" }}>create a digital world that welcomes and empowers all users.</span> In my free time, you can find me digitally painting, scrapbooking, trying new brunch places, playing water polo, or reading!
+                            concentration in Interaction Design. All my life, I’ve had a love for art, but since coming to Northeastern, I’ve explored the intersection of technology and design leading to my passion in UI/UX design. Previously, I used my art to express myself and as an outlet to destress. Now I strive to create work that streamlines tasks and adds more enjoyment to people's lives. Growing up, I’ve always loved helping others and through my clubs at college, I’m still actively able to engage in this. As a studio designer in Scout, a software designer in Generate, and a product designer in Code4Community, I work on UI/UX projects that I’m passionate about, where I’m able to make an impact in the community simultaneously. Through my work, I hope to <span style={{ color: "green" }}>create a digital world that welcomes and empowers all users.</span> In my free time, you can find me digitally painting, scrapbooking, doung puzzles, trying new brunch places, or reading!
                         </p>
                         <div>
 

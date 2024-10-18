@@ -7,7 +7,7 @@ function Hippo() {
             <Link to="/student-activity-calendar">
                 <img src="sacImages/Cover.png" alt="Student-Activity-Calendar-Cover" />
             </Link>
-            <Link to="/hippo">
+            <Link to="/student-activity-calendar">
                 <h2>Student Activity Calendar</h2>
             </Link>
             <p>
