@@ -1,0 +1,16 @@
+.cursor-circle {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #282c34;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.1s ease, width 0.2s, height 0.2s;
+  }
+  
+  body {
+    cursor: none; /* Hide the default cursor */
+  }
+  
