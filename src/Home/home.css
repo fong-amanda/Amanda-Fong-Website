@@ -37,6 +37,10 @@
     gap: 20px;
 
 }
+
+.intro-container .middle a {
+    text-decoration: none;
+}
 .middle {
     margin-top: 20px;
     /* vertical-align: middle; */

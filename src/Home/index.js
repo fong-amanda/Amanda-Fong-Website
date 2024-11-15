@@ -41,7 +41,7 @@ function Home() {
                         <a href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer"> Northeastern
                             University</a>
                     </p>
-                    <p className="fade3">Based In Boston, MA & Long Island, NY.
+                    <p className="fade3">Based In Boston, MA & Long Island, NY
                     </p>
                     <div className="container-button fade4">
                         <Link to="/About">
