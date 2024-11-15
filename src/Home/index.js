@@ -39,7 +39,7 @@ function Home() {
 
                     <p className="fade3">Studying Computer Science & Interaction Design @
                         <a href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer"> Northeastern
-                            University</a>
+                            </a>
                     </p>
                     <p className="fade3">Based In Boston, MA & Long Island, NY
                     </p>
@@ -51,6 +51,7 @@ function Home() {
                 </div>
                 <div className="middleImage">
                         <img 
+                        className="fade1"
                         src="/poloroid2.png" 
                         srcset="poloroid2.png 768w, poloroid2.png 1200w"
                         alt="Poloroid" />
