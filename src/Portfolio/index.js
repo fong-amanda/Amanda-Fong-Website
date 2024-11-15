@@ -42,6 +42,8 @@ function Portfolio() {
   const [threeStonesVisible, setThreeStonesVis] = useState(false);
   const threeStonesRef = useRef();
 
+  const [worksInProgressVisible, setWorksInProgressVis] = useState(false);
+  const worksInProgressRef = useRef();
 
   React.useEffect(() => {
     const headerObserver = new IntersectionObserver(entries => {
@@ -113,14 +115,24 @@ function Portfolio() {
     });
     threeStonesObserver.observe(threeStonesRef.current);
   }, [threeStonesRef]);
+
+  React.useEffect(() => {
+    const worksInProgressObserver = new IntersectionObserver(entries => {
+      setWorksInProgressVis(entries[0].isIntersecting);
+    });
+    worksInProgressObserver.observe(worksInProgressRef.current);
+  }, [worksInProgressRef]);
+
   return (
     <div id="myWork" className="my-work-section">
+      <div className="work-header">      
       <h1
-        className={`fade-in ${headerVisible ? "visible" : ""}`}
-        ref={headerRef}
-      >
-        <center>My Work !</center>
-      </h1>
+          className={`fade-in ${headerVisible ? "visible" : ""}`}
+          ref={headerRef}
+        >
+          <center>My Work!</center>
+        </h1>
+      </div>
       <div className="my-work">
         <div ref={hippoRef} className={`fade-in projectProcess ${hippoVisible ? "visible" : ""}`}>
           <Hippo />
@@ -147,8 +159,8 @@ function Portfolio() {
       </div>
       <div>
         <h1
-          className={`fade-in ${headerVisible ? "visible" : ""}`}
-          ref={headerRef}
+          className={`fade-in ${worksInProgressVisible ? "visible" : ""}`}
+          ref={worksInProgressRef}
         >
           <center>Works In Progress...</center>
         </h1>

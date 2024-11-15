@@ -27,38 +27,72 @@
     animation: fadeIn 6.0s ease-out forwards; 
 }
 
+.intro-container {
 
-.middle {
+    margin-top: 30px; 
     display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px;
+
+}
+.middle {
+    margin-top: 20px;
+    /* vertical-align: middle; */
+    padding-left: calc((100vw - 1300px) / 3.5); /* Matches the logo's padding */
+    margin-left: 20px; /* Matches the logo's margin */
+    display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    /* justify-content: center; */
+    align-items: flex-start; 
     color: #4D453E;
-    padding: 0rem 2rem;
+
+}
+.middleImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    vertical-align: middle;
+    flex-direction: column;
+        /* vertical-align: middle; */
+
+
+        /* justify-content: center; */
+}
+
+.middleImage img {
+    margin-top: -80px;
+    vertical-align: center;
+    width: 80%;
+    flex:1;
+
 }
 
 .middle h1 {
-    padding-top: 220px;
+    /* padding-top: 220px; */
     font-size: 2.35rem;
-    padding-left: 450px;
+    /* padding-left: 450px; */
     padding-bottom: 0.8rem;
     color: #4D453E;
-    font-size: 45px;
-    font-weight: 400;
+    font-size: 70px;
+    font-weight: 500;
     word-wrap: break-word;
 }
 
 .middle .amanda {
     color: #60946E;
-    font-size: 45px;
-    font-family: Lexend;
-    font-weight: 400;
+    font-size: 70px;
+    /* font-family: Lexend; */
+    font-weight: 600;
     word-wrap: break-word
 }
 
 .middle h2 {
     font-size: 1.5rem;
-    padding-left: 450px;
+    /* padding-left: 450px; */
     color: #4D453E;
     font-size: 20px;
     font-weight: 500;
@@ -66,30 +100,30 @@
 }
 
 .middle h3 {
-    font-size: 1.5rem;
-    padding-left: 450px;
+    font-size: 40px;
+    /* padding-left: 450px; */
     padding-bottom: 1rem;
     color: #4D453E;
-    font-size: 20px;
     font-weight: 500;
-    word-wrap: break-word;
+word-wrap: break-word
 }
 
 .middle p {
-    padding-left: 490px;
-    margin-bottom: 10px;
-    color: #4D453E;
-    font-size: 15px;
-    font-family: Lexend;
-    font-weight: 300;
-    word-wrap: break-word
+    font-size: 24px;
+    font-family: Kumbh Sans;
+    font-weight: 400;
+    line-height: 29.58px;
+    word-wrap: break-word;
 }
 
 .middle p a {
-    color: #60946E;
-    font-size: 15px;
-    font-weight: 600;
     text-decoration: none;
+    color: #60946E;
+    font-size: 24px;
+    font-family: Kumbh Sans;
+    font-weight: 400;
+    text-decoration: underline;
+    line-height: 29.58px;
     word-wrap: break-word
 }
 
@@ -98,7 +132,7 @@
 }
 
 .container-button {
-    padding-left: 450px;
+    /* padding-left: 450px; */
     margin-top: 18px;
     margin-bottom: 360px;
 
@@ -138,11 +172,11 @@
     .middle h3,
     .middle p,
     .container-button {
-        padding-left: 300px;
+        /* padding-left: 300px; */
     }
 
     .middle p {
-        padding-left: 340px;
+        /* padding-left: 340px; */
     }
 
 }
@@ -154,11 +188,34 @@
     .middle h3,
     .middle p,
     .container-button {
-        padding-left: 200px;
+        /* padding-left: 200px; */
     }
 
     .middle p {
-        padding-left: 240px;
+        /* padding-left: 240px; */
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .intro-container {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center align content */
+    }
+
+    .middleImage {
+        margin-top: 20px; /* Add space between text and image */
+    }
+    .middle h1,
+    .middle h2,
+    .middle h3,
+    .middle p,
+    .container-button {
+        /* padding-left: 150px; */
+    }
+
+    .middle p {
+        /* padding-left: 190px; */
     }
 
 }
@@ -170,27 +227,11 @@
     .middle h3,
     .middle p,
     .container-button {
-        padding-left: 150px;
+        /* padding-left: 100px; */
     }
 
     .middle p {
-        padding-left: 190px;
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-
-    .middle h1,
-    .middle h2,
-    .middle h3,
-    .middle p,
-    .container-button {
-        padding-left: 100px;
-    }
-
-    .middle p {
-        padding-left: 140px;
+        /* padding-left: 140px; */
     }
 
 }
@@ -202,11 +243,11 @@
     .middle h3,
     .middle p,
     .container-button {
-        padding-left: 50px;
+        /* padding-left: 50px; */
     }
 
     .middle p {
-        padding-left: 90px;
+        /* padding-left: 90px; */
     }
 
 }
@@ -218,11 +259,11 @@
     .middle h3,
     .middle p,
     .container-button {
-        padding-left: 20px;
+        /* padding-left: 20px; */
     }
 
     .middle p {
-        padding-left: 60px;
+        /* padding-left: 60px; */
     }
 
 }
