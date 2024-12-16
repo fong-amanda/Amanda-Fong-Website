@@ -17,18 +17,18 @@ function DisruptProcess() {
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
     // Object to track which dropdowns are open
-    const [dropdowns, setDropdowns] = useState({
-        branding: false,
-        webDesign: false,
-    });
+    // const [dropdowns, setDropdowns] = useState({
+    //     branding: false,
+    //     webDesign: false,
+    // });
 
-    const toggleDropdown = (dropdown) => {
-        setDropdowns(prevState => ({
-            ...prevState,
-            [dropdown]: !prevState[dropdown], // Toggle the specific dropdown
-        }));
+    // const toggleDropdown = (dropdown) => {
+    //     setDropdowns(prevState => ({
+    //         ...prevState,
+    //         [dropdown]: !prevState[dropdown], // Toggle the specific dropdown
+    //     }));
 
-    };
+    // };
     return (
         <>
             <Nav />
@@ -126,12 +126,14 @@ function DisruptProcess() {
                 <h2>What is Disrupt?</h2>
                 <p>Disrupt is the only Fintech organization that provides a community driving education, advancement, and engagement for computer science and business students at Northeastern who want to gain skills related to Fintech in an era of rapidly changing financial and tech industries. </p>
                 <br />
-                <h1 onClick={() => toggleDropdown('branding')}>Branding</h1>
+                {/* <h1 onClick={() => toggleDropdown('branding')}>Branding</h1> */}
+                <h1 >Branding</h1>
+{/* 
                 {dropdowns.branding && (
-                    <>
+                    <> */}
                         <hr></hr>
 
-                        <h2>Discovering the brand</h2>
+                        <h2>1 | Discovering the brand</h2>
                         <p>We began the project by exploring and defining the ideal direction for the brand.
                             It was important for us to understand how Disrupt wants their club to be portrayed to students on campus.</p>
                         <h3>Personality Levels</h3>
@@ -218,7 +220,7 @@ function DisruptProcess() {
                                 setSelectedImageIndex(8);
                             }}
                         />
-                        <h2>Creating an Identity</h2>
+                        <h2>2 | Creating an Identity</h2>
                         <h3>Color Palette</h3>
                         <div className="two-columns-container">
                             <div className="column">
@@ -320,16 +322,15 @@ function DisruptProcess() {
                         />
 
 
-                    </>
-                )}
+                
+<br></br>
+<br></br>
 
-
-
-                <h1 onClick={() => toggleDropdown('webDesign')}>Website Revamp</h1>
-                {dropdowns.webDesign && (
-                    <>
+                <h1>Website Revamp</h1>
+                {/* {dropdowns.webDesign && (
+                    <> */}
                         <hr></hr>
-                        <h2>UX Research</h2>
+                        <h2>1 | UX Research</h2>
                         <h3>Brainstorming</h3>
                         <h4>User Story Brainstorm</h4>
                         <img
@@ -530,7 +531,7 @@ function DisruptProcess() {
                             <li>Need consistent branding that is cohesive across all platforms</li>
                             <li>Easily accessible links + CTAs</li>
                         </ul>
-                        <h2>Interpret</h2>
+                        <h2>2 | Interpret</h2>
                         <h3>Elevator Pitch</h3>
                         <h4>Disrupt is the only organization that provides a high growth opportunity to consult for fintech startups for neu undergrads in neu who want to get to know an intimate group and learn more about consulting in an era of increased interest and demand for fintech products</h4>
                         <h3>Refine Statements</h3>
@@ -547,7 +548,7 @@ function DisruptProcess() {
                                 </li>
                             </ol>
                         </h4>
-                        <h2>Make</h2>
+                        <h2>3 | Make</h2>
                         <h3>Sitemap</h3>
 
                         <img
@@ -576,7 +577,7 @@ function DisruptProcess() {
                             }}
                         />
 
-                        <h2>Design</h2>
+                        <h2>4 | Design</h2>
                         <h3>Low-Fidelity Wireframes</h3>
                         <img
                             src="disruptImages/lofi1.png"
@@ -671,7 +672,7 @@ function DisruptProcess() {
                             }}
                         />
                         <br />
-                        <h2>Presentation</h2>
+                        <h2>5 | Presentation</h2>
                         <p>
                             See the deployed site {' '}
                             <a
@@ -688,8 +689,8 @@ function DisruptProcess() {
 
 
                         </p>
-                    </>
-                )}
+                    {/* </>
+                )} */}
                 <br />
             </section>
             {/* <button type="button" onClick={() => setOpen(true)}>
