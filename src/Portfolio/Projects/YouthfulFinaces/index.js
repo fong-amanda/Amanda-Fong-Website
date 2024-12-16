@@ -10,7 +10,11 @@ function Finances() {
             <Link to="/cosmic-finances">
                 <h2>Cosmic Finances</h2>
             </Link>
-            <p>Designed a way for users to clearly view and be able to track their spending easily</p>
+            <p>
+            UI/UX Design | Web Design
+
+            {/* Designed a way for users to clearly view and be able to track their spending easily */}
+            </p>
         </div>
 
     )

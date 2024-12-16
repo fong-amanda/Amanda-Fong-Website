@@ -8,7 +8,10 @@ function Cherry() {
             <Link to="/cherry-crisis">
                 <h2>Cherry Crisis</h2>
             </Link>
-            <p>Developed the brand identity for Cherry Crisis Band and designed an engaging website to showcase their music and personality.</p>        </div>
+            <p>
+                {/* Developed the brand identity for Cherry Crisis Band and designed an engaging website to showcase their music and personality. */}
+                UI/UX Design | Web Design | Web Development
+             </p>        </div>
 
     )
 }

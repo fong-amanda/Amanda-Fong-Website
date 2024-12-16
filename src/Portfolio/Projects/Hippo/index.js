@@ -11,7 +11,8 @@ function Hippo() {
                 <h2>Student Activity Calendar</h2>
             </Link>
             <p>
-                Designed an app that serves as a calendar, while allowing Northeastern undergraduate Boston students to discover new clubs and events on campus based on interests.
+                {/* Designed an app that serves as a calendar, while allowing Northeastern undergraduate Boston students to discover new clubs and events on campus based on interests. */}
+                UI/UX Design | Mobile Application Design
             </p>
             <br />
             

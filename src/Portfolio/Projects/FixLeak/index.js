@@ -9,8 +9,9 @@ function FixLeak() {
         <h2>Fix-A-Leak</h2>
       </Link>
       <p>
-        Designed an app that would allow residents to easily report any mechanical issues they encountered in a
-        building.
+      UI/UX Design | Mobile Application Design
+        {/* Designed an app that would allow residents to easily report any mechanical issues they encountered in a
+        building. */}
       </p>
     </div>
   )

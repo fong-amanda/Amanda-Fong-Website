@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./fixLeak.css";
+import "../main.css";
 import Nav from "../../../NavigationBar";
 import Footer from "../../../Footer/footer";
 import Lightbox from "yet-another-react-lightbox";

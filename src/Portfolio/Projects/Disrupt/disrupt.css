@@ -4,11 +4,11 @@
 
 .flex-images img {
   width: calc(33.333% - 10px);
+  width: 100%; 
   max-width: 100%;
   height: auto;
 }
 
-/* twoColumns.css */
 .two-columns-container {
   display: flex;
   margin-left: -10px;
@@ -20,7 +20,6 @@
   padding: 10px;
 }
 
-/* threeColumns.css */
 .three-columns-container {
   display: flex;
   margin-left: -10px;
@@ -31,9 +30,8 @@
 .column {
   flex: 1;
   padding: 10px;
-}
+} 
 
-/**Disrupt*/
 
 .disrupt h1 {
   color: #1C1A1A;
@@ -68,3 +66,17 @@
   font-weight: 15px;
   color: pink;
 }
+
+
+.disrupt .flex-images {
+  display: flex;
+  flex-wrap: wrap;  
+  gap: 10px; 
+}
+
+.disrupt .flex-images img {
+  width: 100%; 
+  height: auto;
+  max-width: 100%;
+} 
+ 

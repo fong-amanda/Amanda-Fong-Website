@@ -13,32 +13,7 @@
   display: inline-block;
 }
 
-/* twoColumns.css */
-.two-columns-container {
-  display: flex;
-  margin-left: -10px;
-  margin-bottom: -20px;
-}
 
-.column {
-  flex: 1;
-  padding: 10px;
-}
-
-/* threeColumns.css */
-.three-columns-container {
-  display: flex;
-  margin-left: -10px;
-  margin-bottom: -20px;
-  width: 100%;
-}
-
-.column {
-  flex: 1;
-  padding: 10px;
-}
-
-/**Disrupt*/
 
 .cherry h1 {
   color: #1C1A1A;

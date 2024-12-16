@@ -13,8 +13,9 @@ function FusionCultures() {
                 <h2>Fusion of Cultures</h2>
             </Link>
             <p>
-                Sustained Investigation exploring and fusing American and Chinese/Taiwanese cultures together into art
-                pieces.
+                Graphic Design | Digital Painting
+                {/* Sustained Investigation exploring and fusing American and Chinese/Taiwanese cultures together into art
+                pieces. */}
             </p>
         </div>
     )
