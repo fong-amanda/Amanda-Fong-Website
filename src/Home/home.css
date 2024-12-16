@@ -151,15 +151,15 @@ word-wrap: break-word
     border-radius: 55px;
     color: #4D453E;
     text-align: center;
-    font-size: 18px;
     border-width: 1.30px;
     border-style: solid;
-    width: 134px;
-    height: 35px;
-    font-size: 14px;
+    width: 154px;
+    height: 45px;
+    font-size: 16px;
     font-weight: 400;
     word-wrap: break-word;
     transition: transform 1s ease;
+    
 }
 
 .container-button button:hover {
