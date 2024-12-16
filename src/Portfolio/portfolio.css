@@ -39,6 +39,11 @@ img {
   transition: 1s ease;
 
 }
+#myWork .my-work h1 {
+  font-size: 2.0rem;
+  text-decoration: dotted;
+  color: #4D453E;
+}
 
 .my-work h1 {
   font-size: 2.0rem;
