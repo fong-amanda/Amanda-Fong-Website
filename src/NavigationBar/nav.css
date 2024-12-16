@@ -5,20 +5,13 @@
 
 }
 
+/* .full-nav {
+    background-color: #F7F7ED !important;
+} */
+
 /**Scrolling*/
 html {
     scroll-behavior: smooth;
-}
-
-.nav {
-    height: 90px;
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0rem calc((100vw - 1300px) / 3.5);
-    color: #4D453E;
-
 }
 
 .logo {
@@ -53,6 +46,7 @@ html {
 /*My Work Play About-->*/
 .navbar-nav {
     padding: 0rem calc((100vw - 1300px) / 3.5);
+    
 }
 
 nav a {
@@ -72,9 +66,9 @@ nav a:hover {
 }
 
 .navBar {
-    background-color: #FAFAED;
     font-family: 'Lexend', sans-serif;
     border-bottom: 1.5px solid #4D453E;
+
 }
 
 .nav a {

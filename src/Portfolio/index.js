@@ -127,6 +127,7 @@ function Portfolio() {
     <div id="myWork" className="my-work-section">
       <div className="work-header">      
       <h1
+      
           className={`fade-in ${headerVisible ? "visible" : ""}`}
           ref={headerRef}
         >
