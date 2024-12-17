@@ -56,7 +56,7 @@ function FinancesProcess() {
                 </div>
             </section>
             <section className="summary finances">
-                <h2>UX Research</h2>
+                <h2>1 | UX Research</h2>
                 <h3>Social-UX task analysis</h3>
                 <h4>Money Manager:</h4>
                 <img
@@ -249,7 +249,7 @@ function FinancesProcess() {
                         </li>
                     </ol>
                 </p>
-                <h2>Interpret</h2>
+                <h2>2 | Interpret</h2>
                 <h3>“How Might We...”</h3>
                 <h5>“Create a way for users to clearly see and be able to track their spending easily?”
                 </h5>
@@ -344,7 +344,7 @@ function FinancesProcess() {
                 />
 
                 <p></p>
-                <h2>Design</h2>
+                <h2>3 | Design</h2>
                 <h3>Low-Fidelity Wireframes</h3>
 
                 <br />
@@ -432,7 +432,7 @@ function FinancesProcess() {
                         setSelectedImageIndex(20);
                     }}
                 />
-                <h2>Presentation</h2>
+                <h2>4 | Presentation</h2>
                 <p>
                     See{' '}
                     <a

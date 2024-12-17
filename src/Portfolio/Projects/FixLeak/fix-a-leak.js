@@ -126,7 +126,7 @@ function FixLeakProcess() {
                     }}
                 />
 
-                <h3>Discover Phase</h3>
+                <h3>1 | Discover Phase</h3>
                 <p>Used the Design Thinking approach for solving this problem. To practice design thinking we followed the below
                     process.</p>
                 <h4>Quantitative Research</h4>
@@ -160,7 +160,7 @@ function FixLeakProcess() {
                     <li>Half aren’t knowledgeable with tools that they might need to fix something like a leak</li>
                 </ul>
 
-                <h3>Define Phase</h3>
+                <h3>2 | Define Phase</h3>
                 <p>After completing our contextual inquiry process, analysis, and collecting data from surveys and
                     interviews,
                     we
@@ -191,7 +191,7 @@ function FixLeakProcess() {
                 />
 
 
-                <h3>Ideation Phase</h3>
+                <h3>3 | Ideation Phase</h3>
                 <p>We created rough sketches for our prototype. We decided that to generate our wireframes, we would look at
                     the
                     four sketches that we produced and extract the best parts out of all of them and combine them together.
@@ -207,7 +207,7 @@ function FixLeakProcess() {
                         setOpen(true);
                         setSelectedImageIndex(4);
                     }}
-                />                <h3>Design Phase</h3>
+                />                <h3>4 | Design Phase</h3>
                 <p>Followed the below steps in the design phase:</p>
                 <ol>
                     <li>Paper Sketches</li>

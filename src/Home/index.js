@@ -60,7 +60,6 @@ function Home() {
             </div>
 
             <Element name="my-work" className="my-work">
-
                 <Portfolio />
             </Element>
             <Footer />

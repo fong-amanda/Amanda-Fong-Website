@@ -19,7 +19,7 @@ function CherryProcess() {
             <br />
             <section className="cover-image">
                 <div className="image-background">
-                    <div className="image-background-container">
+                    <div className="image-background-container">x
                         <img style={{ cursor: "auto" }} src="cherryImages/cherryLandscape.png" alt="Cherry Landscape" />
                     </div>
                 </div>
@@ -114,7 +114,7 @@ function CherryProcess() {
                     <h1>Branding</h1>
                     <hr></hr>
 
-                    <h2>Discovering the brand</h2>
+                    <h2>1 | Discovering the brand</h2>
                     <p>We began the project by exploring and defining the ideal direction for the brand.
                         It was important for us to understand how Cherry Crisis wants their club to be portrayed to the music community.</p>
                     <h3>Personality Levels</h3>
@@ -186,7 +186,7 @@ function CherryProcess() {
                             setSelectedImageIndex(6);
                         }}
                     />                <br />
-                    <h2>Creating an Identity</h2>
+                    <h2>2 | Creating an Identity</h2>
                     <div className="two-columns-container">
 
                         <div className="column">
@@ -237,7 +237,7 @@ function CherryProcess() {
 
                     <h1>Website Revamp</h1>
                     <hr></hr>
-                    <h2>UX Research</h2>
+                    <h2>1 | UX Research</h2>
                     <h3>Brainstorming</h3>
                     <h4>User Story Brainstorm</h4>
                     <p>If Cherry Crisis were a person...</p>
@@ -251,7 +251,7 @@ function CherryProcess() {
                     />
 
 
-                    <h2>Interpret</h2>
+                    <h2>2 | Interpret</h2>
                     <h3>Elevator Pitch</h3>
                     <h4>Cherry Crisis is the only band that slays effortlessly for the queer community in the Boston music scene who resonate with the sound/message in an era of this terrifying DIY music scene in boston right now</h4>
                     <h3>Refine Statements</h3>
@@ -268,7 +268,7 @@ function CherryProcess() {
                             </li>
                         </ol>
                     </h4>
-                    <h2>Make</h2>
+                    <h2>3 | Make</h2>
                     <h3>Sitemap</h3>
 
                     <img
@@ -280,7 +280,7 @@ function CherryProcess() {
                         }}
                     />
 
-                    <h2>Design</h2>
+                    <h2>4 | Design</h2>
                     <h3>Low-Fidelity Wireframes</h3>
                     <img
                         src="cherryImages/lofi1.png"
@@ -349,7 +349,7 @@ function CherryProcess() {
                         }}
                     />
                     <br />
-                    <h2>Presentation</h2>
+                    <h2>5 | Presentation</h2>
                     <p>
                         See the deployed site {' '}
                         <a

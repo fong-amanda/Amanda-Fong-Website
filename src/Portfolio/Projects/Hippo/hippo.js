@@ -96,7 +96,7 @@ function HippoProcess() {
                 </div>
             </section>
             <section className="summary disrupt">
-                <h1>User Research</h1>
+                <h2>1 | User Research</h2>
                 <h3>Problem Statement: </h3>
                 <p>How can we streamline the process for undergraduate students to join clubs and manage their extracurricular activities more efficiently?
 
@@ -174,7 +174,7 @@ function HippoProcess() {
 
 
                 </ul>
-                <h2>Interpret</h2>
+                <h2>2 | Interpret</h2>
                 <h3>Personas</h3>
                 <img
                     src="sacImages/persona1.png"
@@ -204,7 +204,7 @@ function HippoProcess() {
                         </li>
                     </ol>
                 </h4>
-                <h2>Make</h2>
+                <h2>3 | Make</h2>
                 <h3>Sitemap</h3>
 
                 <img
@@ -217,7 +217,7 @@ function HippoProcess() {
 
                 />
 
-                <h2>Design</h2>
+                <h2>4 | Design</h2>
                 <h3>Low-Fidelity Wireframes</h3>
                 <h4>Login Pages</h4>
                 <img
@@ -363,7 +363,7 @@ function HippoProcess() {
                 </h>
      
                 <br />
-                <h2>Presentation</h2>
+                <h2>5 | Presentation</h2>
                 <p>Check out the{' '}<a
                     href="https://www.figma.com/proto/44j4p2HMxwqYoxTSbfVqla/Student-Activity-Calendar?kind=proto&node-id=6632-41806&page-id=7%3A160&scaling=scale-down&show-proto-sidebar=1&starting-point-node-id=6632%3A41806&t=oC656u75iLkkVhT0-1&viewport=237%2C143%2C0.13"
                     target="_blank" rel="noreferrer"

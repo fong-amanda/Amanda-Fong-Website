@@ -58,7 +58,7 @@ function SpotifyProcess() {
                 </div>
             </section>
             <section className="summary spotify">
-                <h2>UX Research</h2>
+                <h2>1 | UX Research</h2>
                 <h3>Social-UX task analysis</h3>
                 <h4>Instagram:</h4>
                 <img
@@ -134,7 +134,7 @@ function SpotifyProcess() {
                         </li>
                     </ol>
                 </p>
-                <h2>Interpret</h2>
+                <h2>2 | Interpret</h2>
                 <h3>“How Might We...”</h3>
                 <img
                     src="spotifyImages/hmw.png"
@@ -214,7 +214,7 @@ function SpotifyProcess() {
                 />
 
                 <p></p>
-                <h2>Design</h2>
+                <h2>3 | Design</h2>
                 <h3>Low-Fidelity Wireframes</h3>
                 <h>
                     <a href="https://www.figma.com/proto/ENyrd84vC2k7ORePWwdnO6/TAmandaFong?page-id=0%3A1&type=design&node-id=139-14444&viewport=-580%2C-262%2C0.25&t=N8Hj994fimAg25o3-1&scaling=min-zoom&starting-point-node-id=1%3A330&mode=design"
@@ -269,7 +269,7 @@ function SpotifyProcess() {
                     }}
                 />
 
-                <h2>Presentation</h2>
+                <h2>4 | Presentation</h2>
                 <p>
                     See{' '}
                     <a
