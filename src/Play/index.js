@@ -14,7 +14,7 @@ import Nostalgia from './Pieces/NostalgiaCover';
 import SneakersStamp from './Pieces/SneakersStampCover';
 import RainbowCookies from './Pieces/RainbowCookiesCover';
 import Beabadoobee from './Pieces/Beabadoobee';
-
+import MarineDebris from './Pieces/MarineDebris';
 import { useState, useRef } from "react";
 import Footer from '../Footer/footer';
 import "./Play.css";
@@ -81,6 +81,7 @@ function Play() {
 
     }, []);
     const photoNames = [
+        "MarineDebris.jpg",
         "Beabadoobee.png",
         "taiwanPostcard.jpeg",
         "northeasternGradCap.jpeg",
@@ -97,6 +98,7 @@ function Play() {
         "rainbowCookies.jpg"]
 
     const photoRef = {
+        marinedebris: useRef(),
         beabadoobeeRef: useRef(),
         taiwanRef: useRef(),
         northeasternCapRef: useRef(),
@@ -114,6 +116,7 @@ function Play() {
     };
 
     const sources = [
+        <MarineDebris/>,
         <Beabadoobee />,
         <TaiwanPostcard />,
         <NortheasternGradCap />,
@@ -131,6 +134,7 @@ function Play() {
     ];
 
     const captions = [
+        [<strong>Marine Debris Found on Shores</strong>, <br />, 'Data Visualization | Figma'],
         [<strong>Beabadoobee Poster</strong>, <br />, 'Figma'],
         [<strong>Taiwan Postcard</strong>, <br />, 'Adobe Illustrator & Procreate'],
         [<strong>Northeastern Graduation Cap</strong>, <br />, 'Procreate'],
