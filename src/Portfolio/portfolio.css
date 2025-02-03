@@ -80,7 +80,9 @@ img {
 
 /** WIP*/
 .WIP {
-  padding: 90px;
+  padding-left: 10%;
+  padding-right: 10px;
+
 }
 
 .WIP h2:hover {

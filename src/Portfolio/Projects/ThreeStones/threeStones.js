@@ -83,7 +83,7 @@ function ThreeStonesProcess() {
                             </div>
                         </div>
                         <h5 style={{ color: '#1C1A1A' }}>Timeline</h5>
-                        <p>September 2024 - Present</p>
+                        <p>September 2024 - December 2024</p>
 
                         <h5 style={{ color: '#1C1A1A' }}>Tools</h5>
                         <p>Figma</p>
