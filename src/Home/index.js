@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Nav from "../NavigationBar";
-import Portfolio from "../Portfolio";
+// import Portfolio from "../Portfolio";
 import { Element, scroller } from "react-scroll";
 import { Link } from "react-router-dom";
 import "./home.css";
