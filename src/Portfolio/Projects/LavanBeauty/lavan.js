@@ -60,7 +60,7 @@ function LavanProcess() {
             </h5>
             <h5 className="lavan">
               <a
-                href="https://www.figma.com/proto/Dn5jK3GW8zHeYwOI9MdF1l/Lavan-Beauty-Wireframes?page-id=1157%3A2756&node-id=1157-4937&viewport=128%2C487%2C0.09&t=KuRPdoNn4MDquZgW-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1157%3A4937"
+                href="https://drive.google.com/file/d/1d5mjqeBoFbFrbIt6hQJEWEey2CRjHKhT/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
