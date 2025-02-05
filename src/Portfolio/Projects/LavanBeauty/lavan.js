@@ -313,6 +313,24 @@ function LavanProcess() {
             </center>{" "}
           </div>
         </div>
+        <br />
+        <img
+          src="lavanImages/boxPackaging.jpg"
+          alt="type"
+          onClick={() => {
+            setOpen(true);
+            setSelectedImageIndex(11);
+          }}
+        />
+        <br />
+        <img
+          src="lavanImages/packaging.jpg"
+          alt="type"
+          onClick={() => {
+            setOpen(true);
+            setSelectedImageIndex(12);
+          }}
+        />
         <br></br>
         <br></br>
         <h1>Website Revamp</h1>
@@ -327,7 +345,7 @@ function LavanProcess() {
           alt="Features Brainstorm"
           onClick={() => {
             setOpen(true);
-            setSelectedImageIndex(11);
+            setSelectedImageIndex(13);
           }}
         />
         <img
@@ -335,7 +353,7 @@ function LavanProcess() {
           alt="Features Brainstorm"
           onClick={() => {
             setOpen(true);
-            setSelectedImageIndex(12);
+            setSelectedImageIndex(14);
           }}
         />
         <img
@@ -343,7 +361,7 @@ function LavanProcess() {
           alt="Features Brainstorm"
           onClick={() => {
             setOpen(true);
-            setSelectedImageIndex(13);
+            setSelectedImageIndex(15);
           }}
         />
         <h3>Common Themes</h3>
@@ -386,7 +404,7 @@ function LavanProcess() {
           alt="site map"
           onClick={() => {
             setOpen(true);
-            setSelectedImageIndex(14);
+            setSelectedImageIndex(16);
           }}
         />
         <img
@@ -394,7 +412,7 @@ function LavanProcess() {
           alt="site map"
           onClick={() => {
             setOpen(true);
-            setSelectedImageIndex(15);
+            setSelectedImageIndex(17);
           }}
         />
         <h3>Refine Statements</h3>
@@ -425,7 +443,7 @@ function LavanProcess() {
           alt="site map"
           onClick={() => {
             setOpen(true);
-            setSelectedImageIndex(16);
+            setSelectedImageIndex(18);
           }}
         />
         <h2>4 | Design</h2>
@@ -435,7 +453,7 @@ function LavanProcess() {
           alt="lo-fi"
           onClick={() => {
             setOpen(true);
-            setSelectedImageIndex(17);
+            setSelectedImageIndex(19);
           }}
         />{" "}
         <br />
@@ -444,7 +462,7 @@ function LavanProcess() {
           alt="lo-fi"
           onClick={() => {
             setOpen(true);
-            setSelectedImageIndex(18);
+            setSelectedImageIndex(20);
           }}
         />
         <br />
@@ -454,7 +472,7 @@ function LavanProcess() {
           alt="mid-fi"
           onClick={() => {
             setOpen(true);
-            setSelectedImageIndex(19);
+            setSelectedImageIndex(21);
           }}
         />{" "}
         <br />
@@ -463,7 +481,7 @@ function LavanProcess() {
           alt="mid-fi"
           onClick={() => {
             setOpen(true);
-            setSelectedImageIndex(20);
+            setSelectedImageIndex(22);
           }}
         />{" "}
         <br />
@@ -483,7 +501,7 @@ function LavanProcess() {
           alt="hi-fi"
           onClick={() => {
             setOpen(true);
-            setSelectedImageIndex(21);
+            setSelectedImageIndex(23);
           }}
         />
         <br />
@@ -493,7 +511,7 @@ function LavanProcess() {
           alt="hi-fi"
           onClick={() => {
             setOpen(true);
-            setSelectedImageIndex(22);
+            setSelectedImageIndex(24);
           }}
         />
         <br />
@@ -534,6 +552,10 @@ function LavanProcess() {
           { src: "/lavanImages/logo.jpg" },
           { src: "/lavanImages/sun.png" },
           { src: "/lavanImages/moon.png" },
+          { src: "/lavanImages/boxPackaging.jpg" },
+          { src: "/lavanImages/Packaging.jpg" },
+
+
 
           // 11
           { src: "/lavanImages/CompetitorAnalysis1.png" },
