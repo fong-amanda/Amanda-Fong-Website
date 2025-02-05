@@ -306,9 +306,9 @@ function LavanProcess() {
             <br />
             <center>
               <p>
-                The sun symbol on our website and packaging represents the day
-                cream, embodying elegance and energy for a bright, refreshed
-                start.
+                The moon symbol represents the night cream on our website and
+                packaging, reflecting a sense of calm, luxury, and rejuvenation
+                for nighttime skincare.
               </p>
             </center>{" "}
           </div>
