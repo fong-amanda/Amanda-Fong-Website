@@ -34,7 +34,25 @@ function Home() {
             users.
           </h3>
           <p className="fade3">
-            Prev. Microsoft Cloud O365 Developer Co-Op @{" "}
+            Producer Design Intern @{" "}
+            <a
+              href="https://s2nhealth.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              S2N Health
+            </a>
+          </p>
+          <p className="fade3">
+            Prev. Software Engineer Intern @{" "}
+            <a
+              href="https://www.cboe.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cboe
+            </a>
+            &nbsp; & Cloud O365 Developer Co-Op @{" "}
             <a
               href="https://www.coverys.com/"
               target="_blank"
@@ -44,7 +62,7 @@ function Home() {
             </a>
           </p>
           <p className="fade3">
-            Design Lead @{" "}
+            Design Producer @{" "}
             <a
               href="https://scout.camd.northeastern.edu/"
               target="_blank"
