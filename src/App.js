@@ -21,7 +21,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Cursor /> {/* Add the cursor component here, outside Routes */}
+        <Cursor /> 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />

@@ -1,6 +1,6 @@
 // Cursor.js
 import React, { useEffect } from 'react';
-import './Cursor.css'; // Style your cursor here
+import './Cursor.css';
 
 const Cursor = () => {
   useEffect(() => {
@@ -24,16 +24,33 @@ const Cursor = () => {
     };
 
     document.addEventListener('mousemove', moveCursor);
-    document.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('mouseenter', growCursor);
-      link.addEventListener('mouseleave', shrinkCursor);
+
+    // Expanded list of clickable elements
+    const clickableElements = document.querySelectorAll(`
+      a, 
+      button, 
+      .view-project-btn,
+      .tag,
+      [onclick],
+      [role="button"],
+      input[type="submit"],
+      input[type="button"],
+      .projectProcess h2,
+      .projectProcess img,
+      .coding-project h2,
+      .coding-project img
+    `);
+
+    clickableElements.forEach((element) => {
+      element.addEventListener('mouseenter', growCursor);
+      element.addEventListener('mouseleave', shrinkCursor);
     });
 
     return () => {
       document.removeEventListener('mousemove', moveCursor);
-      document.querySelectorAll('a').forEach((link) => {
-        link.removeEventListener('mouseenter', growCursor);
-        link.removeEventListener('mouseleave', shrinkCursor);
+      clickableElements.forEach((element) => {
+        element.removeEventListener('mouseenter', growCursor);
+        element.removeEventListener('mouseleave', shrinkCursor);
       });
     };
   }, []);

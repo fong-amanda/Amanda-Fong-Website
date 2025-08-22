@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 /* Scrolling */
@@ -60,7 +60,7 @@ nav a:hover {
 }
 
 .navBar {
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Kumbh Sans', sans-serif;
     border-bottom: 1.5px solid #4D453E;
 }
 

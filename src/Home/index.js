@@ -15,7 +15,7 @@ function Home() {
       if (element) {
         element.scrollIntoView({
           behavior: "smooth",
-          block: "start"
+          block: "start",
         });
       }
     }
@@ -26,25 +26,36 @@ function Home() {
       <Nav />
       <div className="intro-container">
         <div className="middle">
-          <h1 className="fade1">
+          <h2 className="fade1">
+            {" "}
             Hey, I'm <span className="amanda">Amanda!👋</span>
-          </h1>
-          <h3 className="fade3">
-            Striving to create a digital world that welcomes and empowers all
-            users.
+          </h2>
+
+          <h3>
+            Crafting Inclusive Digital Solutions
+            <br />
+            Through <span className="codeCreative">Code</span> &{" "}
+            <span className="codeCreative">Creativity</span>
           </h3>
-          <p className="fade3">
-            Product Design Intern @{" "}
+          <p className="fade3 indentPar">
+            ⟡ Product Design Intern @{" "}
             <a
               href="https://s2nhealth.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               S2N Health
-            </a>
+            </a>  | Design Producer @{" "}
+            <a
+              href="https://scout.camd.northeastern.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Scout
+            </a>{" "}
           </p>
-          <p className="fade3">
-            Prev. Software Engineer Intern @{" "}
+          <p className="fade3 indentPar">
+            ⟡ Prev. SWE Intern @{" "}
             <a
               href="https://www.cboe.com/"
               target="_blank"
@@ -52,7 +63,7 @@ function Home() {
             >
               Cboe
             </a>
-            &nbsp; & Cloud O365 Developer Co-Op @{" "}
+            &nbsp; | Prev. Cloud O365 Developer Co-Op @{" "}
             <a
               href="https://www.coverys.com/"
               target="_blank"
@@ -61,36 +72,7 @@ function Home() {
               Coverys
             </a>
           </p>
-          <p className="fade3">
-            Design Producer @{" "}
-            <a
-              href="https://scout.camd.northeastern.edu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Scout
-            </a>{" "}
-            | Software Designer @{" "}
-            <a
-              href="https://generatenu.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Generate
-            </a>
-          </p>
-          <p className="fade3">
-            Studying Computer Science & Interaction Design @
-            <a
-              href="https://www.northeastern.edu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {" "}
-              Northeastern
-            </a>
-          </p>
-          <p className="fade3">Based In Boston, MA & Long Island, NY</p>
+         
           <div className="container-button fade4">
             <Link to="/About">
               <button>More About Me!</button>

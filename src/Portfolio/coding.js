@@ -31,8 +31,8 @@ const TAG_MAPPINGS = {
   "Front-end": "front-end",
   "Back-end": "back-end",
   "Data Structures": "data-structures",
-  Algorithms: "algorithms",
-  React: "front-end",
+  "Algorithms": "algorithms",
+  "React": "front-end",
   "Data Visualization": "data-analysis",
 };
 
@@ -217,10 +217,8 @@ function Coding() {
     projects: new Array(CODING_PROJECTS.length).fill(false),
   });
 
-  // Get all unique tags for filter buttons
   const allTags = useMemo(() => getAllTags(CODING_PROJECTS), []);
 
-  // Filter projects based on active filters
   const filteredProjects = useMemo(() => {
     if (activeFilters.length === 0) return CODING_PROJECTS;
 
@@ -231,7 +229,6 @@ function Coding() {
     });
   }, [activeFilters]);
 
-  // Pad projects to maintain grid layout
   const paddedProjects = useMemo(() => {
     const padded = [...filteredProjects];
     if (padded.length % 2 !== 0) {
@@ -240,7 +237,6 @@ function Coding() {
     return padded;
   }, [filteredProjects]);
 
-  // Create refs using useMemo to ensure they're only created once
   const refs = useMemo(
     () => ({
       projects: CODING_PROJECTS.map(() => React.createRef()),
@@ -248,18 +244,15 @@ function Coding() {
     []
   );
 
-  // Handle tag filter toggle
   const handleTagFilter = (tag) => {
     setActiveFilters((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
   };
 
-  // Clear all filters
   const clearFilters = () => {
     setActiveFilters([]);
 
-    // Reset visibility to show all projects when clearing filters
     setTimeout(() => {
       setVisibility((prev) => ({
         ...prev,
@@ -278,7 +271,6 @@ function Coding() {
         "noopener,noreferrer"
       );
     } else {
-      // Fallback to internal navigation
       const projectRoutes = {
         "Cherry Crisis": "/cherry-crisis",
         "Data Visualization Dashboard": "/data-visualization-dashboard",
@@ -293,7 +285,6 @@ function Coding() {
     }
   };
 
-  // Intersection Observer for visibility
   useEffect(() => {
     const observers = [];
     const observerOptions = { threshold: 0.1 };
@@ -311,16 +302,12 @@ function Coding() {
       return observer;
     };
 
-    // Observe projects
     refs.projects.forEach((ref, index) => {
       observers.push(createObserver(ref, "projects", index));
     });
-
-    // Cleanup
     return () => observers.forEach((observer) => observer.disconnect());
   }, [refs]);
 
-  // Update visibility when activeFilters change
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisibility((prev) => ({
@@ -335,7 +322,6 @@ function Coding() {
   return (
     <ScrollProvider>
       <div id="myCoding" name="my-coding" className="my-work-section portfolio">
-        {/* Filter Controls */}
         <div className="filter-controls">
           <div className="filter-header">
             {activeFilters.length > 0 && (

@@ -35,7 +35,6 @@
     align-items: center; 
     justify-content: center; 
     gap: 20px;
-    /* background-color: #F7F7ED;  */
 
 }
 
@@ -45,13 +44,11 @@
 }
 .middle {
     margin-top: 20px;
-    /* vertical-align: middle; */
     padding-left: calc((100vw - 1300px) / 3.5); /* Matches the logo's padding */
-    margin-left: 20px; /* Matches the logo's margin */
+    margin-left: 50px;
     display: flex;
     flex: 1;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: flex-start; 
     color: #4D453E;
 
@@ -63,10 +60,7 @@
     align-items: center; 
     vertical-align: middle;
     flex-direction: column;
-        /* vertical-align: middle; */
-
-
-        /* justify-content: center; */
+  
 }
 
 .middleImage img {
@@ -80,9 +74,7 @@
 }
 
 .middle h1 {
-    /* padding-top: 220px; */
     font-size: 2.35rem;
-    /* padding-left: 450px; */
     padding-bottom: 0.8rem;
     color: #4D453E;
     font-size: 70px;
@@ -91,33 +83,43 @@
 }
 
 .middle .amanda {
-    color: #60946E;
-    font-size: 70px;
-    /* font-family: Lexend; */
+    color: #4D453E;
+    font-size:26px;
     font-weight: 600;
     word-wrap: break-word
 }
 
 .middle h2 {
-    font-size: 1.5rem;
-    /* padding-left: 450px; */
+    font-size: 26px;
+    font-family: Kumbh Sans;
+    font-weight: 400;
+    line-height: 29.58px;
+    word-wrap: break-word;
     color: #4D453E;
-    font-size: 20px;
-    font-weight: 500;
-    word-wrap: break-word
 }
 
 .middle h3 {
-    font-size: 40px;
-    /* padding-left: 450px; */
-    padding-bottom: 1rem;
-    color: #4D453E;
-    font-weight: 500;
-word-wrap: break-word
+color: #4D453E;
+font-size: 40px;
+font-family: Libre Bodoni;
+word-wrap: break-word;
+font-weight: 400;
+
 }
 
+
+
+.codeCreative {
+color: #60946E;
+font-size: 40px;
+font-family: Libre Bodoni;
+font-style: italic;
+    font-weight: 550;
+word-wrap: break-word
+
+}
 .middle p {
-    font-size: 24px;
+    font-size: 20px;
     font-family: Kumbh Sans;
     font-weight: 400;
     line-height: 29.58px;
@@ -127,7 +129,7 @@ word-wrap: break-word
 .middle p a {
     text-decoration: none;
     color: #60946E;
-    font-size: 24px;
+    font-size: 20px;
     font-family: Kumbh Sans;
     font-weight: 400;
     text-decoration: underline;
@@ -138,9 +140,11 @@ word-wrap: break-word
 .middle p a:hover {
     font-weight: 750;
 }
-
+.indentPar {
+  margin-bottom: 0.5rem; /* Reduce the bottom margin */
+  line-height: 1.4; /* Adjust line height if needed */
+}
 .container-button {
-    /* padding-left: 450px; */
     margin-top: 18px;
     margin-bottom: 360px;
 
@@ -149,132 +153,31 @@ word-wrap: break-word
 .container-button button {
     text-decoration: none;
     background-color: rgba(126, 106, 88, 0);
-    border-radius: 55px;
+    border-radius: 8px;
     color: #4D453E;
     text-align: center;
     border-width: 1.30px;
     border-style: solid;
-    width: 154px;
-    height: 45px;
-    font-size: 16px;
+    width: 130px; /* Reduced from 154px */
+    height: 40px; /* Reduced from 45px */
+    font-size: 14px; /* Reduced from 14px */
     font-weight: 400;
     word-wrap: break-word;
     transition: transform 1s ease;
-    
 }
 
 .container-button button:hover {
     color: #F7F7ED;
     background-color: #4D453E;
     cursor: pointer;
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
     transition: 1.5s ease;
 }
 
-@media screen and (max-width: 1536px) {
 
-    .middle h1,
-    .middle h2,
-    .middle h3,
-    .middle p,
-    .container-button {
-        /* padding-left: 300px; */
-    }
 
-    .middle p {
-        /* padding-left: 340px; */
-    }
-
-}
-
-@media screen and (max-width: 1152px) {
-
-    .middle h1,
-    .middle h2,
-    .middle h3,
-    .middle p,
-    .container-button {
-        /* padding-left: 200px; */
-    }
-
-    .middle p {
-        /* padding-left: 240px; */
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-    .intro-container {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Center align content */
-    }
-
-    .middleImage {
-        margin-top: 20px; /* Add space between text and image */
-    }
-    .middle h1,
-    .middle h2,
-    .middle h3,
-    .middle p,
-    .container-button {
-        /* padding-left: 150px; */
-    }
-
-    .middle p {
-        /* padding-left: 190px; */
-    }
-
-}
-
-@media screen and (max-width: 768px) {
-
-    .middle h1,
-    .middle h2,
-    .middle h3,
-    .middle p,
-    .container-button {
-        /* padding-left: 100px; */
-    }
-
-    .middle p {
-        /* padding-left: 140px; */
-    }
-
-}
-
-@media screen and (max-width: 650px) {
-
-    .middle h1,
-    .middle h2,
-    .middle h3,
-    .middle p,
-    .container-button {
-        /* padding-left: 50px; */
-    }
-
-    .middle p {
-        /* padding-left: 90px; */
-    }
-
-}
-
-@media screen and (max-width: 500px) {
-
-    .middle h1,
-    .middle h2,
-    .middle h3,
-    .middle p,
-    .container-button {
-        /* padding-left: 20px; */
-    }
-
-    .middle p {
-        /* padding-left: 60px; */
-    }
-
-}
 
 .myWorkHeader {
     margin-top: 2rem;

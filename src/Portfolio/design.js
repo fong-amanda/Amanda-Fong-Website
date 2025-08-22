@@ -285,16 +285,13 @@ function Design() {
     const observers = [];
     const observerOptions = { threshold: 0.1 };
 
-    // Helper function to create and manage observers
     const createObserver = (ref, key, index = null) => {
       const observer = new IntersectionObserver((entries) => {
         setVisibility((prev) => {
-          // For single items like header
           if (index === null) {
             return { ...prev, [key]: entries[0].isIntersecting };
           }
 
-          // For lists like projects and wip
           const newVisibility = [...prev[key]];
           newVisibility[index] = entries[0].isIntersecting;
           return { ...prev, [key]: newVisibility };
@@ -305,18 +302,14 @@ function Design() {
       return observer;
     };
 
-    // Observe header
     observers.push(createObserver(refs.header, "header"));
 
-    // Observe projects
     refs.projects.forEach((ref, index) => {
       observers.push(createObserver(ref, "projects", index));
     });
 
-    // Observe works in progress header
     observers.push(createObserver(refs.worksInProgress, "worksInProgress"));
 
-    // Observe WIP projects
     refs.wip.forEach((ref, index) => {
       observers.push(createObserver(ref, "wip", index));
     });
@@ -325,9 +318,7 @@ function Design() {
     return () => observers.forEach((observer) => observer.disconnect());
   }, [refs]);
 
-  // Update visibility when activeFilters change
   useEffect(() => {
-    // Small delay to allow DOM to update before checking visibility
     const timer = setTimeout(() => {
       setVisibility((prev) => ({
         ...prev,
@@ -352,7 +343,6 @@ function Design() {
   return (
     <ScrollProvider>
       <div id="myWork" name="my-work" className="my-work-section portfolio">
-        {/* Filter Controls */}
         <div className="filter-controls">
           <div className="filter-header">
             {activeFilters.length > 0 && (
@@ -461,7 +451,6 @@ function Design() {
           </div>
         )}
 
-        {/* No results message */}
         {activeFilters.length > 0 &&
           filteredProjects.length === 0 &&
           filteredWIP.length === 0 && (

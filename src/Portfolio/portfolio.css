@@ -140,18 +140,54 @@ img {
   transform: translateY(-2px);
 }
 
-.filter-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  padding-bottom: 0.5rem;
+.filter-tag {
+  white-space: nowrap;
+  position: relative; /* Ensure tags can expand */
+  z-index: 10; /* Bring tags to front */
 }
 
-.filter-tag {
-  font-size: 0.85rem;
-  padding: 0.4rem 1rem;
-  white-space: nowrap;
-  flex-shrink: 0;
+.filter-tags {
+  padding-top: 2px;
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 0.75rem;
+  max-height: 150px; 
+  overflow-y: auto; 
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin; 
+  scrollbar-color: rgba(197, 165, 114, 0.3) transparent;
+  position: relative;
+   clip-path: 
+    inset(0 0 -20px 0); /* Allows bottom to overflow slightly */
+}
+
+.filter-tags::-webkit-scrollbar {
+  width: 6px; /* Vertical scrollbar width */
+}
+
+.filter-tags::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.filter-tags::-webkit-scrollbar-thumb {
+  background-color: rgba(197, 165, 114, 0.3);
+  border-radius: 3px;
+}
+
+
+
+.tag {
+  position: relative;
+  z-index: 10; /* Ensure hover state is above other elements */
+  overflow: visible; /* Allow content to expand */
+}
+
+.tag:hover {
+  position: relative;
+  z-index: 100; /* Ensure hover state is above everything */
+  transform: translateY(-2px);
+  background-color: rgba(139, 115, 85, 0.05);
+  overflow: visible;
 }
 
 /* No results styling */
@@ -232,7 +268,7 @@ img {
   margin-top: 50px;
   display: flex;
   justify-content: flex-start;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid rgba(77, 69, 62, 0.2); /* Lowered opacity */
   position: relative;
   width: 80%;
   margin-left: auto;
@@ -264,7 +300,7 @@ img {
 .tabs button.active {
   font-weight: 600; 
   color: #60946e;
-  background-color: #f3f3e5;
+  background-color: rgb(246, 246, 230, 0.2);
   box-shadow: 0 -2px 10px rgba(96, 148, 110, 0.1);
   opacity: 1; 
 }
@@ -381,6 +417,7 @@ img {
   border: 1px solid rgba(96, 148, 110, 0.2);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding: 25px;
+background-color: rgb(246, 246, 230, 0.2);
   transition: all 0.3s ease;
   position: relative;
   width: 100%;
