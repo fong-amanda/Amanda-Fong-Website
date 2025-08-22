@@ -1,5 +1,5 @@
 import React from 'react';
-import { createContext, useContext } from 'react';
+import { createContext } from 'react';
 import { useState } from 'react';
 
 const ScrollContext = createContext({ shouldScroll: true });

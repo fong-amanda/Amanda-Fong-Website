@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import Design from "./design";
 import Coding from "./coding";
 import "./portfolio.css";

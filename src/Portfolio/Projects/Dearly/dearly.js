@@ -1,17 +1,15 @@
-import React, { useEffect } from "react";
 import Nav from "../../../NavigationBar";
 import "./dearly.css";
 import Footer from "../../../Footer/footer";
 // import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
+import { useEffect } from "react";
 
 function DearlyProcess() {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-  // const [open, setOpen] = React.useState(false);
-  // const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -49,22 +47,7 @@ function DearlyProcess() {
             <h5 style={{ color: "#1C1A1A" }} className="dearly">
               This project is still in progress! Come back soon for updates.
             </h5>
-            {/* <h5 className="lavan">
-                            <a
-                                href="https://www.figma.com/proto/ldXYpkEbm49gv0sqzXp0pF/Disrupt-Hi-Fis?page-id=0%3A1&type=design&node-id=1-634&viewport=5733%2C1774%2C0.52&t=1vSW2QCw22ftuLHh-1&scaling=min-zoom&starting-point-node-id=1%3A50&mode=design"
-                                target="_blank" rel="noreferrer"
-                            >
-                                High-Fidelity Prototype
-                            </a>
-                        </h5>
-                        <h5 className="hippo">
-                            <a
-                                href="https://www.disruptneu.com/"
-                                target="_blank" rel="noreferrer"
-                            >
-                                Deployed Site
-                            </a>
-                        </h5> */}
+   
           </div>
 
           <div className="overviewRight dearly">
