@@ -19,7 +19,7 @@ function CherryProcess() {
             <br />
             <section className="cover-image">
                 <div className="image-background">
-                    <div className="image-background-container">x
+                    <div className="image-background-container">
                         <img style={{ cursor: "auto" }} src="cherryImages/cherryLandscape.png" alt="Cherry Landscape" />
                     </div>
                 </div>

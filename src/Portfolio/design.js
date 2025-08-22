@@ -1,224 +1,480 @@
-import React from "react";
-import FixLeak from "./Projects/FixLeak/index";
-import Spotify from "./Projects/Spotify/index";
-import FusionCultures from "./Projects/FusionCultures/index";
-import Disrupt from "./Projects/Disrupt/index";
+import React, { useState, useEffect, useMemo } from "react";
+import { ScrollProvider } from "./Context/ScrollContext";
 import "./portfolio.css";
-import { useState, useRef } from "react";
-import Finances from "./Projects/YouthfulFinaces";
-import Hippo from "./Projects/Hippo";
-import CherryCrisis from "./Projects/CherryCrisis";
-import Lavan from "./Projects/LavanBeauty";
-import ThreeStones from "./Projects/ThreeStones";
-import Dearly from "./Projects/Dearly";
+import { useNavigate } from "react-router-dom";
 
-function Design() {
-  const [headerVisible, setHeaderVis] = useState(false);
-  const headerRef = useRef();
-  const [HippoVisible, setHippoVis] = useState(false);
-  const HippoRef = useRef();
+const getAllTags = (projects) => {
+  const tagSet = new Set();
+  const orderedTags = [];
 
-  const [fixVisible, setFixVis] = useState(false);
-  const fixRef = useRef();
+  projects.forEach((project) => {
+    if (project.tags) {
+      const tags = project.tags.split(" | ").map((tag) => tag.trim());
+      tags.forEach((tag) => {
+        if (!tagSet.has(tag)) {
+          tagSet.add(tag);
+          orderedTags.push(tag);
+        }
+      });
+    }
+  });
 
-  const [spotifyVisible, setSpotifyVis] = useState(false);
-  const spotifyRef = useRef();
+  return orderedTags;
+};
 
-  const [fusionVisible, setFusionVis] = useState(false);
-  const fusionRef = useRef();
+const parseTagsToHTML = (tagsString, activeFilters, onTagClick) => {
+  if (!tagsString) return null;
 
-  const [disruptVisible, setDisruptVis] = useState(false);
-  const disruptRef = useRef();
+  const tagMappings = {
+    "UI/UX Design": "ui-ux",
+    "Web Design": "web-design",
+    Branding: "branding",
+    "Mobile Application Design": "mobile-app",
+    "Graphic Design": "graphic-design",
+    "Digital Painting": "digital-painting",
+    Accessibility: "accessibility",
+  };
 
-  const [financesVisible, setFinancesVis] = useState(false);
-  const financesRef = useRef();
-
-  const [cherryVisible, setCherryVis] = useState(false);
-  const cherryRef = useRef();
-
-  const [lavanVisible, setLavanVis] = useState(false);
-  const lavanRef = useRef();
-
-  const [threeStonesVisible, setThreeStonesVis] = useState(false);
-  const threeStonesRef = useRef();
-
-  const [worksInProgressVisible, setWorksInProgressVis] = useState(false);
-  const worksInProgressRef = useRef();
-
-  React.useEffect(() => {
-    const headerObserver = new IntersectionObserver((entries) => {
-      setHeaderVis(entries[0].isIntersecting);
-    });
-    headerObserver.observe(headerRef.current);
-  }, [headerRef]);
-  React.useEffect(() => {
-    const hippoObserver = new IntersectionObserver((entries) => {
-      setHippoVis(entries[0].isIntersecting);
-    });
-    hippoObserver.observe(HippoRef.current);
-  }, [fixRef]);
-
-  React.useEffect(() => {
-    const fixObserver = new IntersectionObserver((entries) => {
-      setFixVis(entries[0].isIntersecting);
-    });
-    fixObserver.observe(fixRef.current);
-  }, [fixRef]);
-
-  React.useEffect(() => {
-    const spotifyObserver = new IntersectionObserver((entries) => {
-      setSpotifyVis(entries[0].isIntersecting);
-    });
-    spotifyObserver.observe(spotifyRef.current);
-  }, [spotifyRef]);
-
-  React.useEffect(() => {
-    const fusionObserver = new IntersectionObserver((entries) => {
-      setFusionVis(entries[0].isIntersecting);
-    });
-    fusionObserver.observe(fusionRef.current);
-  }, [fusionRef]);
-
-  React.useEffect(() => {
-    const disruptObserver = new IntersectionObserver((entries) => {
-      setDisruptVis(entries[0].isIntersecting);
-    });
-    disruptObserver.observe(disruptRef.current);
-  }, [disruptRef]);
-
-  React.useEffect(() => {
-    const financesObserver = new IntersectionObserver((entries) => {
-      setFinancesVis(entries[0].isIntersecting);
-    });
-    financesObserver.observe(financesRef.current);
-  }, [financesRef]);
-
-  React.useEffect(() => {
-    const cherryObserver = new IntersectionObserver((entries) => {
-      setCherryVis(entries[0].isIntersecting);
-    });
-    cherryObserver.observe(cherryRef.current);
-  }, [cherryRef]);
-
-  React.useEffect(() => {
-    const lavanObserver = new IntersectionObserver((entries) => {
-      setLavanVis(entries[0].isIntersecting);
-    });
-    lavanObserver.observe(lavanRef.current);
-  }, [lavanRef]);
-
-  React.useEffect(() => {
-    const threeStonesObserver = new IntersectionObserver((entries) => {
-      setThreeStonesVis(entries[0].isIntersecting);
-    });
-    threeStonesObserver.observe(threeStonesRef.current);
-  }, [threeStonesRef]);
-
-  React.useEffect(() => {
-    const worksInProgressObserver = new IntersectionObserver((entries) => {
-      setWorksInProgressVis(entries[0].isIntersecting);
-    });
-    worksInProgressObserver.observe(worksInProgressRef.current);
-  }, [worksInProgressRef]);
+  const tags = tagsString.split(" | ").map((tag) => tag.trim());
 
   return (
-    <div id="myWork" className="my-work-section">
-      <div className="work-header">
-        <h1
-          className={`fade-in ${headerVisible ? "visible" : ""}`}
-          ref={headerRef}
-        >
-          <center>My Work!</center>
-        </h1>
-      </div>
-      <div className="my-work">
-        <div
-          ref={lavanRef}
-          className={`fade-in projectProcess ${lavanVisible ? "visible" : ""}`}
-        >
-          <Lavan />
-        </div>
-        <div
-          ref={HippoRef}
-          className={`fade-in projectProcess ${HippoVisible ? "visible" : ""}`}
-        >
-          <Hippo />
-        </div>
-
-        <div
-          ref={disruptRef}
-          className={`fade-in projectProcess ${
-            disruptVisible ? "visible" : ""
-          }`}
-        >
-          <Disrupt />
-        </div>
-        <div
-          ref={cherryRef}
-          className={`fade-in projectProcess ${cherryVisible ? "visible" : ""}`}
-        >
-          <CherryCrisis />
-        </div>
-        <div
-          ref={fixRef}
-          className={`fade-in projectProcess ${fixVisible ? "visible" : ""}`}
-        >
-          <FixLeak />
-        </div>
-        <div
-          ref={spotifyRef}
-          className={`fade-in projectProcess ${
-            spotifyVisible ? "visible" : ""
-          }`}
-        >
-          <Spotify />
-        </div>
-        <div
-          ref={financesRef}
-          className={`fade-in projectProcess ${
-            financesVisible ? "visible" : ""
-          }`}
-        >
-          <Finances />
-        </div>
-        <div
-          ref={fusionRef}
-          className={`fade-in projectProcess ${fusionVisible ? "visible" : ""}`}
-        >
-          <FusionCultures />
-        </div>
-      </div>
-      <div>
-        <h1
-          className={`fade-in ${worksInProgressVisible ? "visible" : ""}`}
-          ref={worksInProgressRef}
-        >
-          <center>Works In Progress...</center>
-        </h1>
-        <br />
-        <div className="WIP">
-          <div
-            ref={threeStonesRef}
-            // style={{ marginTop: "50px" }}
-            className={`fade-in projectProcess ${
-              threeStonesVisible ? "visible" : ""
-            }`}
+    <div className="project-tags">
+      {tags.map((tag, index) => {
+        const className = tagMappings[tag] || "";
+        const isActive = activeFilters.includes(tag);
+        return (
+          <span
+            key={index}
+            className={`tag ${className} ${isActive ? "selected" : ""}`}
+            onClick={() => onTagClick(tag)}
           >
-            <Dearly />
-          </div>
-          <div
-            ref={threeStonesRef}
-            style={{ marginTop: "50px" }}
-            className={`fade-in projectProcess ${
-              threeStonesVisible ? "visible" : ""
-            }`}
-          >
-            <ThreeStones />
-          </div>
-          <br />
-        </div>
-      </div>
+            {tag}
+          </span>
+        );
+      })}
     </div>
   );
+};
+
+const ProjectCard = ({
+  name,
+  coverImageSrc,
+  coverImageAlt,
+  onClick,
+  tags,
+  description,
+  customClass,
+  activeFilters,
+  onTagClick,
+}) => {
+  return (
+    <div className={`projectProcess ${customClass || ""}`}>
+      {coverImageSrc && (
+        <img
+          src={coverImageSrc}
+          alt={coverImageAlt || `${name} Cover`}
+          onClick={onClick}
+        />
+      )}
+      <h2 onClick={onClick}>{name}</h2>
+      {parseTagsToHTML(tags, activeFilters, onTagClick)}
+      {description && <p className="project-description">{description}</p>}
+    </div>
+  );
+};
+
+// Define project details
+const PROJECTS = [
+  {
+    name: "Lavan Beauty",
+    coverImageSrc: "lavanImages/CoverLavan.png",
+    coverImageAlt: "Lavan-Beauty-Cover",
+    tags: "UI/UX Design | Web Design | Branding",
+  },
+  {
+    name: "Student Activity Calendar",
+    coverImageSrc: "sacImages/Cover.png",
+    alt: "Student-Activity-Calendar-Cover",
+    tags: "UI/UX Design | Mobile Application Design",
+  },
+  {
+    name: "Disrupt",
+    coverImageSrc: "disruptImages/cover.jpg",
+    tags: "UI/UX Design | Web Design",
+    customClass: "Disrupt",
+  },
+  {
+    name: "Cherry Crisis",
+    coverImageSrc: "cherryImages/cover.png",
+    alt: "Cherry Crisis Cover Image",
+    tags: "UI/UX Design | Web Design",
+  },
+  {
+    name: "Fix-A-Leak",
+    coverImageSrc: "fixALeak Images/Cover Page.jpg",
+    alt: "Fix a leak cover Image",
+    tags: "UI/UX Design | Mobile Application Design",
+  },
+  {
+    name: "Social Spotify",
+    coverImageSrc: "spotifyImages/cover.jpg",
+    alt: "Social-Spotify-Cover",
+    tags: "UI/UX Design | Mobile Application Design",
+  },
+  {
+    name: "Cosmic Finances",
+    coverImageSrc: "financesImages/cover.jpg",
+    tags: "UI/UX Design | Web Design",
+  },
+  {
+    name: "Fusion of Cultures",
+    coverImageSrc:
+      "fusionOfCulturesIndividual/fusionOfCulturesPhotos/Cover.jpg",
+    tags: "Graphic Design | Digital Painting",
+  },
+];
+
+const WORKS_IN_PROGRESS = [
+  {
+    name: "Dearly",
+    description:
+      "Designing mobile app that helps families stay intimately connected across generations by sharing moments, memories, and conversations. Designed with accessibility and simplicity in mind, it bridges the technological divide between younger and older family members by offering two distinct user modes: a streamlined, simplified interface for elderly users and a feature-rich experience for younger users.",
+    tags: "Mobile Application Design | Accessibility | UI/UX Design",
+  },
+  {
+    name: "Three Stones",
+    description:
+      "Designing a mobile app that connects real estate developers with investors by allowing developers to post crowdfunding projects and investors to explore listings, contribute small amounts, and build a real estate portfolio for potential profit.",
+    tags: "Mobile Application Design | Accessibility | UI/UX Design",
+  },
+];
+
+function Design() {
+  const navigate = useNavigate();
+  const [activeFilters, setActiveFilters] = useState([]);
+
+  const [visibility, setVisibility] = useState({
+    header: false,
+    projects: new Array(PROJECTS.length).fill(false),
+    worksInProgress: false,
+    wip: new Array(WORKS_IN_PROGRESS.length).fill(false),
+  });
+
+  // Get all unique tags for filter buttons
+  const allTags = useMemo(() => {
+    return getAllTags([...PROJECTS, ...WORKS_IN_PROGRESS]);
+  }, []);
+
+  // Filter projects based on active filters
+  const filteredProjects = useMemo(() => {
+    if (activeFilters.length === 0) return PROJECTS;
+
+    return PROJECTS.filter((project) => {
+      if (!project.tags) return false;
+      const projectTags = project.tags.split(" | ").map((tag) => tag.trim());
+      return activeFilters.some((filter) => projectTags.includes(filter));
+    });
+  }, [activeFilters]);
+
+  // Pad projects to maintain two-column grid
+  const paddedProjects = useMemo(() => {
+    const padded = [...filteredProjects];
+    // If odd number of projects, add a placeholder div
+    if (padded.length % 2 !== 0) {
+      padded.push({ name: "placeholder", placeholder: true });
+    }
+    return padded;
+  }, [filteredProjects]);
+
+  // Filter WIP projects
+  const filteredWIP = useMemo(() => {
+    if (activeFilters.length === 0) return WORKS_IN_PROGRESS;
+
+    return WORKS_IN_PROGRESS.filter((project) => {
+      if (!project.tags) return false;
+      const projectTags = project.tags.split(" | ").map((tag) => tag.trim());
+      return activeFilters.some((filter) => projectTags.includes(filter));
+    });
+  }, [activeFilters]);
+
+  // Pad WIP projects to maintain two-column grid
+  const paddedWIP = useMemo(() => {
+    const padded = [...filteredWIP];
+    // If odd number of projects, add a placeholder div
+    if (padded.length % 2 !== 0) {
+      padded.push({ name: "placeholder", placeholder: true });
+    }
+    return padded;
+  }, [filteredWIP]);
+
+  // Create refs using useMemo to ensure they're only created once
+  const refs = useMemo(
+    () => ({
+      header: React.createRef(),
+      projects: PROJECTS.map(() => React.createRef()),
+      worksInProgress: React.createRef(),
+      wip: WORKS_IN_PROGRESS.map(() => React.createRef()),
+    }),
+    []
+  );
+
+  // Handle tag filter toggle
+  const handleTagFilter = (tag) => {
+    setActiveFilters((prev) => {
+      if (prev.includes(tag)) {
+        return prev.filter((t) => t !== tag);
+      } else {
+        return [...prev, tag];
+      }
+    });
+  };
+
+  // Clear all filters
+  const clearFilters = () => {
+    setActiveFilters([]);
+
+    // Reset visibility to show all projects when clearing filters
+    setTimeout(() => {
+      setVisibility((prev) => ({
+        ...prev,
+        projects: new Array(PROJECTS.length).fill(true),
+        wip: new Array(WORKS_IN_PROGRESS.length).fill(true),
+      }));
+    }, 50);
+  };
+
+  const handleProjectClick = (projectName) => {
+    // Add navigation logic for each project
+    switch (projectName) {
+      case "Lavan Beauty":
+        navigate("/lavan");
+        break;
+      case "Disrupt":
+        navigate("/disrupt");
+        break;
+      case "Student Activity Calendar":
+        navigate("/student-activity-calendar");
+        break;
+      case "Cherry Crisis":
+        navigate("/cherry-crisis");
+        break;
+      case "Fix-A-Leak":
+        navigate("/fix-a-leak");
+        break;
+      case "Social Spotify":
+        navigate("/spotify");
+        break;
+      case "Cosmic Finances":
+        navigate("/cosmic-finances");
+        break;
+      case "Fusion of Cultures":
+        navigate("/fusion-of-cultures");
+        break;
+      case "Dearly":
+        navigate("/dearly");
+        break;
+      case "Three Stones":
+        navigate("/three-stones");
+        break;
+      default:
+        console.log(`No route defined for ${projectName}`);
+    }
+  };
+
+  useEffect(() => {
+    const observers = [];
+    const observerOptions = { threshold: 0.1 };
+
+    // Helper function to create and manage observers
+    const createObserver = (ref, key, index = null) => {
+      const observer = new IntersectionObserver((entries) => {
+        setVisibility((prev) => {
+          // For single items like header
+          if (index === null) {
+            return { ...prev, [key]: entries[0].isIntersecting };
+          }
+
+          // For lists like projects and wip
+          const newVisibility = [...prev[key]];
+          newVisibility[index] = entries[0].isIntersecting;
+          return { ...prev, [key]: newVisibility };
+        });
+      }, observerOptions);
+
+      if (ref.current) observer.observe(ref.current);
+      return observer;
+    };
+
+    // Observe header
+    observers.push(createObserver(refs.header, "header"));
+
+    // Observe projects
+    refs.projects.forEach((ref, index) => {
+      observers.push(createObserver(ref, "projects", index));
+    });
+
+    // Observe works in progress header
+    observers.push(createObserver(refs.worksInProgress, "worksInProgress"));
+
+    // Observe WIP projects
+    refs.wip.forEach((ref, index) => {
+      observers.push(createObserver(ref, "wip", index));
+    });
+
+    // Cleanup
+    return () => observers.forEach((observer) => observer.disconnect());
+  }, [refs]);
+
+  // Update visibility when activeFilters change
+  useEffect(() => {
+    // Small delay to allow DOM to update before checking visibility
+    const timer = setTimeout(() => {
+      setVisibility((prev) => ({
+        ...prev,
+        projects: new Array(PROJECTS.length).fill(true),
+        wip: new Array(WORKS_IN_PROGRESS.length).fill(true),
+      }));
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [activeFilters]);
+
+  const tagMappings = {
+    "UI/UX Design": "ui-ux",
+    "Web Design": "web-design",
+    Branding: "branding",
+    "Mobile Application Design": "mobile-app",
+    "Graphic Design": "graphic-design",
+    "Digital Painting": "digital-painting",
+    Accessibility: "accessibility",
+  };
+
+  return (
+    <ScrollProvider>
+      <div id="myWork" name="my-work" className="my-work-section portfolio">
+        {/* Filter Controls */}
+        <div className="filter-controls">
+          <div className="filter-header">
+            {activeFilters.length > 0 && (
+              <button className="clear-filters" onClick={clearFilters}>
+                Clear All ({activeFilters.length})
+              </button>
+            )}
+          </div>
+
+          <div className="filter-tags">
+            {allTags.map((tag) => {
+              const className = tagMappings[tag] || "";
+              const isActive = activeFilters.includes(tag);
+              return (
+                <span
+                  key={tag}
+                  className={`tag filter-tag ${className} ${
+                    isActive ? "selected" : ""
+                  }`}
+                  onClick={() => handleTagFilter(tag)}
+                >
+                  {tag}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="my-work">
+          {paddedProjects.map((project, index) => {
+            // Skip rendering placeholder
+            if (project.placeholder) {
+              return (
+                <div
+                  key="placeholder"
+                  style={{ visibility: "hidden", height: 0, margin: 0 }}
+                />
+              );
+            }
+
+            const originalIndex = PROJECTS.findIndex(
+              (p) => p.name === project.name
+            );
+            return (
+              <div
+                key={project.name}
+                ref={refs.projects[originalIndex]}
+                className={`fade-in ${
+                  visibility.projects[originalIndex] ? "visible" : ""
+                }`}
+              >
+                <ProjectCard
+                  {...project}
+                  onClick={() => handleProjectClick(project.name)}
+                  activeFilters={activeFilters}
+                  onTagClick={handleTagFilter}
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        {(filteredWIP.length > 0 || activeFilters.length === 0) && (
+          <div>
+            <h1
+              className={`fade-in ${
+                visibility.worksInProgress ? "visible" : ""
+              }`}
+              ref={refs.worksInProgress}
+            >
+              <center>Works In Progress...</center>
+            </h1>
+            <div className="my-work">
+              {paddedWIP.map((project, index) => {
+                // Skip rendering placeholder
+                if (project.placeholder) {
+                  return (
+                    <div
+                      key="placeholder"
+                      style={{ visibility: "hidden", height: 0, margin: 0 }}
+                    />
+                  );
+                }
+
+                const originalIndex = WORKS_IN_PROGRESS.findIndex(
+                  (p) => p.name === project.name
+                );
+                return (
+                  <div
+                    key={project.name}
+                    ref={refs.wip[originalIndex]}
+                    className={`fade-in ${
+                      visibility.wip[originalIndex] ? "visible" : ""
+                    }`}
+                  >
+                    <ProjectCard
+                      {...project}
+                      onClick={() => handleProjectClick(project.name)}
+                      activeFilters={activeFilters}
+                      onTagClick={handleTagFilter}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* No results message */}
+        {activeFilters.length > 0 &&
+          filteredProjects.length === 0 &&
+          filteredWIP.length === 0 && (
+            <div className="no-results">
+              <h3>No projects found with the selected filters.</h3>
+              <button className="clear-filters" onClick={clearFilters}>
+                Clear filters to see all
+              </button>
+            </div>
+          )}
+      </div>
+    </ScrollProvider>
+  );
 }
+
 export default Design;

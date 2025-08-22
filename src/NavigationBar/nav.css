@@ -2,14 +2,9 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Lexend', sans-serif;
-
 }
 
-/* .full-nav {
-    background-color: #F7F7ED !important;
-} */
-
-/**Scrolling*/
+/* Scrolling */
 html {
     scroll-behavior: smooth;
 }
@@ -31,7 +26,7 @@ html {
     transition: 1s ease;
 }
 
-/*toggle*/
+/* Toggle */
 .navbar-toggler {
     padding: 0.25rem 0.75rem;
     margin-right: 20px;
@@ -40,13 +35,11 @@ html {
 .navbar-toggler:hover {
     border-color: #60946E;
     color: #60946E;
-
 }
 
-/*My Work Play About-->*/
+/* Navigation */
 .navbar-nav {
     padding: 0rem calc((100vw - 1300px) / 3.5);
-    
 }
 
 nav a {
@@ -54,8 +47,8 @@ nav a {
     color: #4D453E;
     padding: 0 1.5rem;
     margin-inline-end: 1rem;
-    transition: color 0.3s ease, font-size 0.3s ease;}
-
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
 
 nav a:hover {
     font-size: 1.13em;
@@ -63,32 +56,34 @@ nav a:hover {
     -ms-transform: scale(1.0002);
     transform: scale(1.000000001);
     transition: 1s ease;
+    color: #60946E;
 }
 
 .navBar {
     font-family: 'Lexend', sans-serif;
     border-bottom: 1.5px solid #4D453E;
-
 }
 
 .nav a {
     color: #4D453E;
 }
 
+/* Updated Active State for React Router NavLink */
+.nav-link.active, 
 .active {
-    color: #60946E;
+    color: #60946E !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 720px) {
     .nav {
         flex-wrap: nowrap;
-
     }
 }
 
 @media screen and (max-width: 663px) {
     .nav {
         flex-wrap: nowrap;
-
     }
 }

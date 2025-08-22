@@ -140,7 +140,7 @@ function FusionCulturesProjects() {
     <div>
       <Nav />
       <div className='playHeading'>
-        <h1 className="fade1">Play !</h1>
+        <h1 className="fade1">Fusion Of Cultures</h1>
       </div>
       <section className="gallery container grid grid-cols-3 gap-2 mx-auto">
         <ul className="images">

@@ -67,15 +67,6 @@ function LavanProcess() {
                 Brandbook{" "}
               </a>
             </h5>
-            {/* <h5 className="hippo">
-              <a
-                href="https://www.disruptneu.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Deployed Site
-              </a>
-            </h5> */}
           </div>
 
           <div className="overviewRight lavan">
@@ -124,11 +115,7 @@ function LavanProcess() {
           This mission stands out in an era of overconsumption and consumerism.{" "}
         </p>
         <br />
-        {/* <h1 onClick={() => toggleDropdown('branding')}>Branding</h1> */}
         <h1>Branding</h1>
-        {/* 
-                {dropdowns.branding && (
-                    <> */}
         <hr></hr>
         <h2>1 | Discovering the brand</h2>
         <p>

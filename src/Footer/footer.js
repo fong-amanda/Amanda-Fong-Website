@@ -13,7 +13,7 @@ function Footer() {
             <hr />
             <div className="text">
                 <div>
-                    <p>ⓒ 2024 Amanda Fong — a portfolio made with love ⊹˚ʚ 🌱⭒ ˚✧.♡</p>
+                    <p>ⓒ 2024 Amanda Fong — a portfolio designed and developed with love ⊹˚ʚ 🌱⭒ ˚✧.♡</p>
                     {/* <p style={{ marginLeft: 19 }}>Based in Long Island, NY & Boston, MA</p> */}
                 </div>
                 <div className="icon-container">

@@ -2,21 +2,24 @@ import React, { useState, useEffect } from "react";
 import { Navbar, Nav } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
 import homeImage from "../Images/AFongLogo.png";
-import { scroller } from 'react-scroll';
 import "./nav.css";
 
 function NavigationBar() {
   const [activeLink, setActiveLink] = useState("Home");
 
-  const handleScrollToPortfolio = () => {
+  const handleScrollToPortfolio = (e) => {
+    e.preventDefault(); // Prevent any default behavior
     const path = window.location.pathname;
 
-    if (path === "/Home") {
-      scroller.scrollTo("my-work", {
-        duration: 800,
-        delay: 0,
-        smooth: "easeInOutQuart",
-      });
+    if (path === "/Home" || path === "/home" || path === "/") {
+      // Use regular DOM scrolling
+      const element = document.getElementById("my-work");
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
     } else {
       window.location.href = "/Home#my-work";
     }
@@ -25,13 +28,13 @@ function NavigationBar() {
   useEffect(() => {
     const path = window.location.pathname;
 
-    if (path === "/home") {
+    if (path === "/Home" || path === "/home" || path === "/") {
       setActiveLink("Home");
-    } else if (path === "/scrapbook") {
+    } else if (path === "/Scrapbook" || path === "/scrapbook") {
       setActiveLink("Scrapbook");
-    } else if (path === "/play") {
+    } else if (path === "/Play" || path === "/play") {
       setActiveLink("Play");
-    } else if (path === "/about") {
+    } else if (path === "/About" || path === "/about") {
       setActiveLink("About");
     } else {
       setActiveLink(null);
@@ -40,42 +43,39 @@ function NavigationBar() {
 
   return (
     <Navbar className="full-nav" expand="md" bg="" variant="">
-      <Navbar.Brand as={NavLink} to="/Home" className={` ${activeLink === "Home" ? "active" : ""} logo`}>
+      <Navbar.Brand as={NavLink} to="/Home" className={`${activeLink === "Home" ? "active" : ""} logo`}>
         <img src={homeImage} alt="Amanda Fong's Logo" width="120px" height="120px" />
       </Navbar.Brand>
       <Navbar.Toggle className="navbar-toggler" />
-
+      
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
-        <Nav className="ml-auto ">
+        <Nav className="ml-auto">
           <NavLink
-            as={NavLink}
             to="/Home#my-work"
-            className={activeLink === "Home" ? "active" : ""}
             onClick={handleScrollToPortfolio}
+            className={`nav-link ${activeLink === "Home" ? "active" : ""}`}
           >
             My Work
           </NavLink>
-
+          
           <NavLink
-            as={NavLink}
             to="/Play"
-            className={activeLink === "Play" ? "active" : ""}
+            className={`nav-link ${activeLink === "Play" ? "active" : ""}`}
           >
             Play
           </NavLink>
+          
           <NavLink
-            as={NavLink}
             to="/Scrapbook"
-            className={activeLink === "Scrapbook" ? "active" : ""}
+            className={`nav-link ${activeLink === "Scrapbook" ? "active" : ""}`}
           >
             Scrapbooking
           </NavLink>
+          
           <NavLink
-            as={NavLink}
             to="/About"
-            className={activeLink === "About" ? "active" : ""}
+            className={`nav-link ${activeLink === "About" ? "active" : ""}`}
           >
-
             About
           </NavLink>
         </Nav>

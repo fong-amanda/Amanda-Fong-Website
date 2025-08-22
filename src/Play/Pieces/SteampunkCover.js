@@ -1,5 +1,5 @@
 import React from 'react';
-import "./../Play.css";
+import "../Play.css";
 function Steampunk() {
     return (
         <div className="artPieceIndividual artPiece">
