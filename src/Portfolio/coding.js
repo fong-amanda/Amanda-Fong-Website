@@ -157,7 +157,8 @@ const CODING_PROJECTS = [
     description:
       "A developer-focused forum built with TypeScript, leveraging React for the frontend and Node.js for the backend. The platform provides a secure, community-driven space for software professionals to connect, share knowledge, and collaborate through features like authenticated discussions, Q&A, and messaging. It offers a comprehensive web application designed specifically to support tech community interactions.",
     tags: "TypeScript | React | Node.js | Web Development | Full Stack | Backend | SSO | MongoDB | Front-end",
-    externalLink: "https://github.com/fong-amanda/Degree-Defender-Stack-Overflow",
+    externalLink:
+      "https://github.com/fong-amanda/Degree-Defender-Stack-Overflow",
   },
   {
     name: "Cherry Crisis",
@@ -187,8 +188,16 @@ const CODING_PROJECTS = [
     name: "Marble Solitaire Game",
     description:
       "Marble Solitaire Game is a comprehensive Java-based implementation of the classic board game, featuring a robust Model-View-Controller (MVC) architecture. The project includes a fully functional game engine with multiple board configurations, including the original English and European Solitaire variants, complete with a flexible controller and text-based visualization system.",
-    tags: "Java | Object-Oriented Design | Game Development | MVC Architecture",
+    tags: "Java | Object-Oriented Programming | Game Development | MVC Architecture",
     externalLink: "https://github.com/fong-amanda/Marble-Solitaire",
+  },
+  {
+    name: "Floodt",
+    description:
+      "Flood It is a color-based puzzle game where players strategically flood a grid of colored cells, starting from the top-left corner and attempting to make the entire board a single color within a limited number of moves. The game uses Java's Impworld library to create an interactive grid where players click on colors to expand their controlled area, with the challenge increasing based on board size and number of color variations.",
+
+    tags: "Java | Game Development | Object-Oriented Programming | Data Structures",
+    externalLink: "https://github.com/fong-amanda/Floodt-Project",
   },
 ];
 
