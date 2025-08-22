@@ -31,8 +31,8 @@ const TAG_MAPPINGS = {
   "Front-end": "front-end",
   "Back-end": "back-end",
   "Data Structures": "data-structures",
-  "Algorithms": "algorithms",
-  "React": "front-end",
+  Algorithms: "algorithms",
+  React: "front-end",
   "Data Visualization": "data-analysis",
 };
 
@@ -153,27 +153,34 @@ const ProjectCard = ({
 // Define coding projects
 const CODING_PROJECTS = [
   {
+    name: "Degree Defender Stack Overflow",
+    description:
+      "A developer-focused forum built with TypeScript, leveraging React for the frontend and Node.js for the backend. The platform provides a secure, community-driven space for software professionals to connect, share knowledge, and collaborate through features like authenticated discussions, Q&A, and messaging. It offers a comprehensive web application designed specifically to support tech community interactions.",
+    tags: "TypeScript | React | Node.js | Web Development | Full Stack | Backend | SSO | MongoDB | Front-end",
+    externalLink: "https://github.com/fong-amanda/Degree-Defender-Stack-Overflow",
+  },
+  {
     name: "Cherry Crisis",
     description:
       "Developed a full-stack web platform for Cherry Crisis using React.js and MongoDB, creating an immersive digital experience that amplifies the band's mission of building an inclusive music community. The project features a responsive design that showcases the band's unique identity, enabling seamless content management and user interaction while reflecting their commitment to representation in the Boston music scene.",
-    tags: "Full Stack | Web Development | React | MongoDB | Front-end | Backend",
+    tags: "Full Stack | Web Development | React | MongoDB | Front-end | Backend | TypeScript",
     liveSite: "https://cherrycrisis.vercel.app/",
     sourceCodeRequest: true,
   },
   {
     name: "Scout Conference: 2025 Interventions Shift",
     description:
-"Developed a comprehensive website for Shift, Scout's annual design conference, utilizing a modern tech stack of TypeScript, SCSS, and JavaScript. The project creates an engaging and accessible digital platform that showcases interactive design, responsive layout, and a clean, informative interface effectively communicating the conference's mission of inclusivity and innovative design thinking.",
-  tags: "Web Development | React | Front-end | TypeScript | SCSS | Accessibility",
-    
-liveSite: "https://interventions.design/",
+      "Developed a comprehensive website for Shift, Scout's annual design conference, utilizing a modern tech stack of TypeScript, SCSS, and JavaScript. The project creates an engaging and accessible digital platform that showcases interactive design, responsive layout, and a clean, informative interface effectively communicating the conference's mission of inclusivity and innovative design thinking.",
+    tags: "Web Development | React | Front-end | TypeScript | SCSS | Accessibility",
+
+    liveSite: "https://interventions.design/",
     sourceCodeRequest: true,
   },
   {
     name: "Campus Club Tracker",
     description:
       "Campus Club Tracker (CCT) is a Python-based application that revolutionizes campus club management by providing a seamless platform for students and administrators. The system enables users to discover campus organizations, manage events, and track budgets through an intuitive, menu-driven interface connected to a MySQL database. By streamlining club operations, CCT simplifies the complex ecosystem of university extracurricular activities.",
-    tags: "Python | MySQL | Database Management | Web Application | Full Stack | Backend Development | CRUD Operations | Database Design",
+    tags: "Python | MySQL | Database Management | Web Development | Full Stack | Backend | CRUD Operations | Database Design",
     externalLink: "https://github.com/fong-amanda/Campus-Club-Tracker",
   },
   {

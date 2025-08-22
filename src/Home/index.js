@@ -31,7 +31,7 @@ function Home() {
             Hey, I'm <span className="amanda">Amanda!👋</span>
           </h2>
 
-          <h3>
+          <h3 className="fade2">
             Crafting Inclusive Digital Solutions
             <br />
             Through <span className="codeCreative">Code</span> &{" "}
