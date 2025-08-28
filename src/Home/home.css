@@ -1,16 +1,16 @@
-
+/* Fade-In Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(-20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+/* Fade Animation Classes */
 .fade1 {
     animation: fadeIn 2s ease-out forwards; 
 }
@@ -27,21 +27,52 @@
     animation: fadeIn 6.0s ease-out forwards; 
 }
 
+/* Intro Container Layout */
 .intro-container {
-
     padding-top: 30px; 
     display: flex;
     flex-direction: row; 
     align-items: center; 
     justify-content: center; 
     gap: 20px;
-
 }
 
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .middle {
+        padding-left: 0;
+        margin-left: 0;
+        width: 90%;
+    }
+
+    .middleImage {
+        margin-top: 20px;
+        width: 90%;
+    }
+
+    .middleImage img {
+        margin-top: 0;
+        width: 70%;
+        max-width: 400px;
+    }
+
+    .container-button {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+}
+
+/* Middle Section Styling */
 .intro-container .middle a {
     text-decoration: none;
-
 }
+
 .middle {
     margin-top: 20px;
     padding-left: calc((100vw - 1300px) / 3.5); /* Matches the logo's padding */
@@ -51,42 +82,21 @@
     flex-direction: column;
     align-items: flex-start; 
     color: #4D453E;
-
-}
-.middleImage {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    vertical-align: middle;
-    flex-direction: column;
-  
-}
-
-.middleImage img {
-    margin-top: -80px;
-    vertical-align: center;
-    width: 80%;
-    flex:1;
-    pointer-events: none;
-
-
 }
 
 .middle h1 {
-    font-size: 2.35rem;
-    padding-bottom: 0.8rem;
-    color: #4D453E;
     font-size: 70px;
     font-weight: 500;
+    color: #4D453E;
     word-wrap: break-word;
+    padding-bottom: 0.8rem;
 }
 
 .middle .amanda {
     color: #4D453E;
-    font-size:26px;
+    font-size: 26px;
     font-weight: 600;
-    word-wrap: break-word
+    word-wrap: break-word;
 }
 
 .middle h2 {
@@ -99,25 +109,22 @@
 }
 
 .middle h3 {
-color: #4D453E;
-font-size: 40px;
-font-family: Libre Bodoni;
-word-wrap: break-word;
-font-weight: 400;
-
+    color: #4D453E;
+    font-size: 40px;
+    font-family: Libre Bodoni;
+    word-wrap: break-word;
+    font-weight: 400;
 }
-
-
 
 .codeCreative {
-color: #60946E;
-font-size: 40px;
-font-family: Libre Bodoni;
-font-style: italic;
+    color: #60946E;
+    font-size: 40px;
+    font-family: Libre Bodoni;
+    font-style: italic;
     font-weight: 550;
-word-wrap: break-word
-
+    word-wrap: break-word;
 }
+
 .middle p {
     font-size: 20px;
     font-family: Kumbh Sans;
@@ -134,20 +141,40 @@ word-wrap: break-word
     font-weight: 400;
     text-decoration: underline;
     line-height: 29.58px;
-    word-wrap: break-word
+    word-wrap: break-word;
 }
 
 .middle p a:hover {
     font-weight: 750;
 }
+
 .indentPar {
-  margin-bottom: 0.5rem; /* Reduce the bottom margin */
-  line-height: 1.4; /* Adjust line height if needed */
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
 }
+
+/* Middle Image Styling */
+.middleImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    vertical-align: middle;
+    flex-direction: column;
+}
+
+.middleImage img {
+    margin-top: -80px;
+    vertical-align: center;
+    width: 80%;
+    flex: 1;
+    pointer-events: none;
+}
+
+/* Button Styling */
 .container-button {
     margin-top: 18px;
     margin-bottom: 360px;
-
 }
 
 .container-button button {
@@ -158,9 +185,9 @@ word-wrap: break-word
     text-align: center;
     border-width: 1.30px;
     border-style: solid;
-    width: 130px; /* Reduced from 154px */
-    height: 40px; /* Reduced from 45px */
-    font-size: 14px; /* Reduced from 14px */
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
     font-weight: 400;
     word-wrap: break-word;
     transition: transform 1s ease;
@@ -170,15 +197,11 @@ word-wrap: break-word
     color: #F7F7ED;
     background-color: #4D453E;
     cursor: pointer;
-    -webkit-transform: scale(1.04);
-    -ms-transform: scale(1.04);
     transform: scale(1.04);
     transition: 1.5s ease;
 }
 
-
-
-
+/* My Work Header */
 .myWorkHeader {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -186,5 +209,4 @@ word-wrap: break-word
     font-weight: 500;
     align-items: center;
     color: #4D453E;
-
 }

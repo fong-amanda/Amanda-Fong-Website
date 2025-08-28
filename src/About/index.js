@@ -25,6 +25,56 @@ function About() {
   const [extracurricularsVisible, setExtracurricularsVis] = useState(false);
   const extracurricularsRef = useRef();
 
+  // const carouselRef = useRef();
+  
+  // Sample photos - replace with your actual images
+  // const photos = [
+  //   {
+  //     name: "Design Work",
+  //   src:"./AboutMeImage3.jpg",
+  //     desc: "UI/UX Design Project"
+  //   },
+  //   {
+  //     name: "Art Project",
+  //   src:"./AboutMeImage3.jpg",
+  //     desc: "Digital Painting"
+  //   },
+  //   {
+  //     name: "Photography",
+  //   src:"./AboutMeImage3.jpg",
+  //     desc: "Nature Photography"
+  //   },
+  //   {
+  //     name: "Code Project",
+  //   src:"./AboutMeImage3.jpg",
+  //     desc: "Web Development"
+  //   },
+  //   {
+  //     name: "Creative Work",
+  //   src:"./AboutMeImage3.jpg",
+  //     desc: "Mixed Media Art"
+  //   }
+  // ];
+  
+  // const totalItems = photos.length;
+
+  // // Generate random rotation for each image change
+  // const getRandomRotation = () => {
+  //   return Math.random() * 16 - 8; // Random rotation between -8 and 8 degrees
+  // };
+
+
+  // const handleIndexChange = (increment) => {
+  //   setCurrentIndex((prevIndex) => {
+  //     const newIndex = (prevIndex + increment + totalItems) % totalItems;
+  //     setRotation(getRandomRotation()); // New rotation for each image
+  //     return newIndex;
+  //   });
+  // };
+
+  // const goToNext = () => handleIndexChange(1);
+  // const goToPrev = () => handleIndexChange(-1);
+
   React.useEffect(() => {
     const headerObserver = new IntersectionObserver((entries) => {
       setHeaderVis(entries[0].isIntersecting);
@@ -38,6 +88,7 @@ function About() {
     });
     aboutParagraphObserver.observe(aboutParagraphRef.current);
   }, [aboutParagraphRef]);
+  
   React.useEffect(() => {
     const contactObserver = new IntersectionObserver((entries) => {
       setContactVis(entries[0].isIntersecting);
@@ -58,12 +109,20 @@ function About() {
     });
     skillsObserver.observe(skillsRef.current);
   }, [skillsRef]);
+  
   React.useEffect(() => {
     const extracurricularsObserver = new IntersectionObserver((entries) => {
       setExtracurricularsVis(entries[0].isIntersecting);
     });
     extracurricularsObserver.observe(extracurricularsRef.current);
   }, [extracurricularsRef]);
+
+  // React.useEffect(() => {
+  //   const carouselObserver = new IntersectionObserver((entries) => {
+  //     setCarouselVis(entries[0].isIntersecting);
+  //   });
+  //   carouselObserver.observe(carouselRef.current);
+  // }, [carouselRef]);
 
   return (
     <div>
@@ -75,7 +134,7 @@ function About() {
         <div className="about">
           <div className="aboutMePhoto">
             <img
-              className={`fade-in ${aboutPhotoVisible ? "visible" : ""}`}
+              className={`about-profile-image fade-in ${aboutPhotoVisible ? "visible" : ""}`}
               ref={aboutPhotoRef}
               src="./AboutMeImage2.JPG"
               alt="About Me"
@@ -86,23 +145,23 @@ function About() {
               className={`fade-in ${headerVisible ? "visible" : ""}`}
               ref={headerRef}
             >
-              Hi! I’m Amanda!
+              Hi! I'm Amanda!
             </h2>
             <p
               className={`fade-in ${aboutParagraphVisible ? "visible" : ""}`}
               ref={aboutParagraphRef}
             >
-              I’m a junior at Northeastern University studying Computer Science
+              I'm a junior at Northeastern University studying Computer Science
               & Design with a concentration in Interaction Design. All my life,
-              I’ve had a love for art, but since coming to Northeastern, I’ve
+              I've had a love for art, but since coming to Northeastern, I've
               explored the intersection of technology and design leading to my
               passion in UI/UX design. Previously, I used my art to express
               myself and as an outlet to destress. Now I strive to create work
               that streamlines tasks and adds more enjoyment to people's lives.
-              Growing up, I’ve always loved helping others and through my clubs
-              at college, I’m still actively able to engage in this. As a studio
+              Growing up, I've always loved helping others and through my clubs
+              at college, I'm still actively able to engage in this. As a studio
               designer in Scout and a software designer in Generate, I work on
-              UI/UX projects that I’m passionate about, where I’m able to make
+              UI/UX projects that I'm passionate about, where I'm able to make
               an impact in the community simultaneously. Through my work, I hope
               to{" "}
               <span style={{ color: "green" }}>
@@ -151,6 +210,9 @@ function About() {
             </div>
           </div>
         </div>
+
+        {/* New Image Carousel Section */}
+  
         <div className="moreAbout">
           <div className="skills" ref={skillsRef}>
             <h2 className={`fade-in ${skillsVisible ? "visible" : ""}`}>
@@ -212,9 +274,6 @@ function About() {
                 Generate
               </a>
             </p>
-            {/* <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
-                            ✧ Product Designer @ <a href="https://www.c4cneu.com/" target="_blank" rel="noreferrer">Code4Community</a>
-                        </p> */}
 
             <p
               className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}
@@ -228,9 +287,7 @@ function About() {
                 NEU Taiwanese American Student Association
               </a>
             </p>
-            {/* <p className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}>
-                            ✧ Graphic Designer @ <a href="https://www.hackrahmedia.org/" target="_blank" rel="noreferrer">Hackrah Media</a>
-                        </p> */}
+
             <p
               className={`fade-in ${extracurricularsVisible ? "visible" : ""}`}
             >
@@ -244,7 +301,10 @@ function About() {
               </a>
             </p>
           </div>
+          
         </div>
+           
+
       </section>
       <Footer />
     </div>
@@ -252,3 +312,70 @@ function About() {
 }
 
 export default About;
+
+
+/**
+ *  <div 
+          className={`image-carousel-section fade-in ${carouselVisible ? "visible" : ""}`}
+          ref={carouselRef}
+        >
+          <div className="carousel-container">
+            <button className="carousel-btn prev" onClick={goToPrev}>
+              <FaChevronLeft />
+            </button>
+            
+            <div className="carousel-image-wrapper">
+              <img
+                className="carousel-image prev-image"
+                src={photos[(currentIndex - 1 + totalItems) % totalItems].src}
+                alt={photos[(currentIndex - 1 + totalItems) % totalItems].desc}
+                style={{
+                  transform: `rotate(${rotation - 3}deg) translateX(-20px) scale(0.9)`,
+                }}
+              />
+              
+              <img
+                className="carousel-image next-image"
+                src={photos[(currentIndex + 1) % totalItems].src}
+                alt={photos[(currentIndex + 1) % totalItems].desc}
+                style={{
+                  transform: `rotate(${rotation + 4}deg) translateX(20px) scale(0.9)`,
+                }}
+              />
+              
+              <img
+                key={currentIndex} // Force re-render for transition
+                className="carousel-image current-image"
+                src={photos[currentIndex].src}
+                alt={photos[currentIndex].desc}
+                style={{
+                  transform: `rotate(${rotation}deg)`,
+                  transition: 'transform 0.6s ease-in-out, opacity 0.3s ease-in-out'
+                }}
+              />
+              
+              <div className="image-info">
+                <h4>{photos[currentIndex].name}</h4>
+                <p>{photos[currentIndex].desc}</p>
+              </div>
+            </div>
+
+            <button className="carousel-btn next" onClick={goToNext}>
+              <FaChevronRight />
+            </button>
+          </div>
+          
+          <div className="carousel-dots">
+            {photos.map((_, index) => (
+              <button
+                key={index}
+                className={`dot ${index === currentIndex ? 'active' : ''}`}
+                onClick={() => {
+                  setCurrentIndex(index);
+                  setRotation(getRandomRotation());
+                }}
+              />
+            ))}
+          </div>
+        </div>
+ */
