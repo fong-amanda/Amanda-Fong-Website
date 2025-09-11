@@ -24,7 +24,7 @@ function Footer() {
                     <a href="https://github.com/fong-amanda" target="_blank" rel="noopener noreferrer">
                         <FaGithub />
                     </a>
-                    <a href="mailto:fong.am@northeastern.edu">
+                    <a href="mailto:fong.m.amanda@gmail.com">
                         <IoMail />
                     </a>
                 </div>

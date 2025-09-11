@@ -181,11 +181,11 @@ function About() {
               <h3>
                 <a
                   className="mail"
-                  href="mailto:fong.am@northeastern.edu"
+                  href="mailto:fong.m.amanda@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  fong.am@northeastern.edu
+fong.m.amanda@gmail.com
                 </a>
               </h3>
               <h3>
