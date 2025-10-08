@@ -151,7 +151,7 @@ function About() {
               className={`fade-in ${aboutParagraphVisible ? "visible" : ""}`}
               ref={aboutParagraphRef}
             >
-              I'm a junior at Northeastern University studying Computer Science
+              I'm a senior at Northeastern University studying Computer Science
               & Design with a concentration in Interaction Design. All my life,
               I've had a love for art, but since coming to Northeastern, I've
               explored the intersection of technology and design leading to my
