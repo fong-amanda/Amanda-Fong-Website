@@ -91,6 +91,12 @@ const PROJECTS = [
     coverImageAlt: "Lavan-Beauty-Cover",
     tags: "UI/UX Design | Web Design | Branding",
   },
+    {
+    name: "Dearly",
+    coverImageSrc:
+      "dearlyImages/Cover.jpg",
+    tags: "Accessibility | UI/UX Design | Branding | Mobile Application Design",
+  },
   {
     name: "Student Activity Calendar",
     coverImageSrc: "sacImages/Cover.png",
@@ -100,14 +106,14 @@ const PROJECTS = [
   {
     name: "Disrupt",
     coverImageSrc: "disruptImages/cover.jpg",
-    tags: "UI/UX Design | Web Design",
+    tags: "UI/UX Design | Web Design | Branding",
     customClass: "Disrupt",
   },
   {
     name: "Cherry Crisis",
     coverImageSrc: "cherryImages/cover.png",
     alt: "Cherry Crisis Cover Image",
-    tags: "UI/UX Design | Web Design",
+    tags: "UI/UX Design | Web Design | Branding",
   },
   {
     name: "Fix-A-Leak",
@@ -132,15 +138,10 @@ const PROJECTS = [
       "fusionOfCulturesIndividual/fusionOfCulturesPhotos/Cover.jpg",
     tags: "Graphic Design | Digital Painting",
   },
+
 ];
 
 const WORKS_IN_PROGRESS = [
-  {
-    name: "Dearly",
-    description:
-      "Designing mobile app that helps families stay intimately connected across generations by sharing moments, memories, and conversations. Designed with accessibility and simplicity in mind, it bridges the technological divide between younger and older family members by offering two distinct user modes: a streamlined, simplified interface for elderly users and a feature-rich experience for younger users.",
-    tags: "Mobile Application Design | Accessibility | UI/UX Design",
-  },
   {
     name: "Three Stones",
     description:

@@ -5,7 +5,7 @@ function Dearly() {
   return (
     <div className="dearly">
       <Link to="/dearly">
-        {/* <img src="financesImages/cover.jpg" alt="finances-Cover" /> */}
+        <img src="financesImages/cover.jpg" alt="finances-Cover" />
       </Link>
       <Link to="/dearly">
         <h2>Dearly</h2>
