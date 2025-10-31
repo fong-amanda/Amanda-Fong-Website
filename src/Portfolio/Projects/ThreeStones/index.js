@@ -9,13 +9,7 @@ function ThreeStones() {
       </Link>
       <Link to="/three-stones">
         <h2>Three Stones</h2>
-        <p>
-          {" "}
-          Designing a mobile app that connects real estate developers with
-          investors by allowing developers to post crowdfunding projects and
-          investors to explore listings, contribute small amounts, and build a
-          real estate portfolio for potential profit.
-        </p>
+        
       </Link>
     </div>
   );

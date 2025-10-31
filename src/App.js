@@ -16,6 +16,7 @@ import ThreeStonesProcess from "./Portfolio/Projects/ThreeStones/threeStones";
 import DearlyProcess from "./Portfolio/Projects/Dearly/dearly";
 
 import Cursor from "./Cursor/cursor";
+import WanderlyProcess from "./Portfolio/Projects/Wanderly/Wanderly";
 
 function App() {
   return (
@@ -43,6 +44,8 @@ function App() {
           <Route path="/lavan" element={<LavanProcess />} />
           <Route path="/three-stones" element={<ThreeStonesProcess />} />
           <Route path="/dearly" element={<DearlyProcess />} />
+          <Route path="/wanderly" element={<WanderlyProcess />} />
+
 
         </Routes>
       </div>

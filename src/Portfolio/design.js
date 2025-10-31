@@ -139,6 +139,7 @@ const PROJECTS = [
     tags: "Graphic Design | Digital Painting",
   },
 
+
 ];
 
 const WORKS_IN_PROGRESS = [
@@ -146,6 +147,12 @@ const WORKS_IN_PROGRESS = [
     name: "Three Stones",
     description:
       "Designing a mobile app that connects real estate developers with investors by allowing developers to post crowdfunding projects and investors to explore listings, contribute small amounts, and build a real estate portfolio for potential profit.",
+    tags: "Mobile Application Design | Accessibility | UI/UX Design",
+  },
+    {
+    name: "Wanderly",
+    description:
+      "Wanderly is your travel companion, combining creativity, planning, and connection. With personalized bucket lists, auto-generated scrapbooks, and a curated traveler network, Wanderly enhances your meaningful moments on your journey.",
     tags: "Mobile Application Design | Accessibility | UI/UX Design",
   },
 ];
@@ -276,6 +283,9 @@ function Design() {
         break;
       case "Three Stones":
         navigate("/three-stones");
+        break;
+              case "Wanderly":
+        navigate("/wanderly");
         break;
       default:
         console.log(`No route defined for ${projectName}`);
