@@ -39,11 +39,27 @@
 }
 
 
-
-.dearly a:hover {
-}
-
 .table-first {
   font-weight: 15px;
   color: 334E3D;
+}
+
+
+.showcase-columns-container {
+  display: flex;
+  gap: 10px; /* Optional: adds some space between columns */
+  width: 100%;
+}
+
+.showcase-columns-container .showcase-column {
+  flex: 1;
+  display: flex;
+  align-items: stretch; /* Ensures columns stretch to same height */
+}
+
+.showcase-columns-container .showcase-column img {
+  width: 100%;
+  height: 100%; /* Make images fill their container */
+  object-fit: cover; /* Maintain aspect ratio while covering the entire area */
+  cursor: pointer; /* Indicate the image is clickable */
 }

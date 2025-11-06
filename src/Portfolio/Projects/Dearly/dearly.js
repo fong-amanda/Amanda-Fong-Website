@@ -375,6 +375,49 @@ function DearlyProcess() {
           </a>
           !
         </p>
+        <h4>Showcase</h4>
+        <p>
+          The last step was presenting our work at the <a
+            href="https://generatenu.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Generate
+          </a>&nbsp;
+        Spring 2025 showcase!
+        </p>
+        <div className="showcase-columns-container">
+          <div className="showcase-column">
+            <img
+              src="dearlyImages/showcase1.jpg"
+              alt="showcase"
+              onClick={() => {
+                setOpen(true);
+                setSelectedImageIndex(15);
+              }}
+            />
+          </div>
+          <div className="showcase-column">
+            <img
+              src="dearlyImages/showcase2.jpg"
+              alt="showcase"
+              onClick={() => {
+                setOpen(true);
+                setSelectedImageIndex(15);
+              }}
+            />
+          </div>
+          <div className="showcase-column">
+            <img
+              src="dearlyImages/showcase3.jpg"
+              alt="showcase"
+              onClick={() => {
+                setOpen(true);
+                setSelectedImageIndex(15);
+              }}
+            />
+          </div>
+        </div>
         {/* </>
                 )} */}
         <br />
@@ -399,14 +442,10 @@ function DearlyProcess() {
           { src: "/dearlyImages/lofi2.jpg" },
           { src: "/dearlyImages/midfi.jpg" },
 
-
-
           // 11
           { src: "/dearlyImages/hifi1.jpg" },
           { src: "/dearlyImages/hifi2.jpg" },
           { src: "/dearlyImages/hifi3.jpg" },
-
-        
         ]}
       />
       <Footer />
