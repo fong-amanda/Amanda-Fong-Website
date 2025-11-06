@@ -393,7 +393,7 @@ function DearlyProcess() {
               alt="showcase"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(15);
+                setSelectedImageIndex(16);
               }}
             />
           </div>
@@ -403,7 +403,7 @@ function DearlyProcess() {
               alt="showcase"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(15);
+                setSelectedImageIndex(17);
               }}
             />
           </div>
@@ -413,7 +413,7 @@ function DearlyProcess() {
               alt="showcase"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(15);
+                setSelectedImageIndex(18);
               }}
             />
           </div>
@@ -446,6 +446,10 @@ function DearlyProcess() {
           { src: "/dearlyImages/hifi1.jpg" },
           { src: "/dearlyImages/hifi2.jpg" },
           { src: "/dearlyImages/hifi3.jpg" },
+                    { src: "/dearlyImages/showcase1.jpg" },
+          { src: "/dearlyImages/showcase2.jpg" },
+          { src: "/dearlyImages/showcase3.jpg" },
+
         ]}
       />
       <Footer />
