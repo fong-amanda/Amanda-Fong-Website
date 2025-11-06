@@ -419,9 +419,7 @@ function Design() {
         {(filteredWIP.length > 0 || activeFilters.length === 0) && (
           <div>
             <h1
-              className={`fade-in ${
-                visibility.worksInProgress ? "visible" : ""
-              }`}
+              
               ref={refs.worksInProgress}
             >
               <center>Works In Progress...</center>

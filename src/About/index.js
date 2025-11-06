@@ -136,7 +136,7 @@ function About() {
             <img
               className={`about-profile-image fade-in ${aboutPhotoVisible ? "visible" : ""}`}
               ref={aboutPhotoRef}
-              src="./AboutMeImage2.JPG"
+              src="./AboutMeImage4.JPG"
               alt="About Me"
             />
           </div>
