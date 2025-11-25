@@ -512,7 +512,19 @@
   margin-right: auto;
   padding: 0 20px;
   margin-bottom: 80px;
+  position: relative;
+    z-index: 2;
 }
+.textHome a{
+  text-decoration: none;
+  color: #4d453e;
+  font-weight: 600;
+}
+
+.textHome a:hover{
+  color: #60946e;
+}
+
 
 .textHome h4 {
   font-size: clamp(8px, 1.2vw, 18px);
@@ -528,6 +540,9 @@
   color: #60946e;
   font-style: italic;
   font-family: "Libre Bodoni", serif;
+    font-size: clamp(9px, 1.5vw, 22px);
+    font-weight: 600;
+
 }
 
 .green-line {
