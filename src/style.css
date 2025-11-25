@@ -1,88 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Kumbh Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Kumbh+Sans:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.kulim-park-extralight {
+  font-family: "Kulim Park", sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
-
-
-/** Individual Work Pages -----------------------------------------------*/
-/* .individual {
-    width: 60%;
-    margin: 0px auto 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 80px;
+.kulim-park-light {
+  font-family: "Kulim Park", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-.individual img {
-    width: 100%;
-    border-radius: 5px;
+.kulim-park-regular {
+  font-family: "Kulim Park", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.individual h1 {
-    font-size: 2.0rem;
-    text-decoration: dotted;
+.kulim-park-semibold {
+  font-family: "Kulim Park", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
-.portfolio-section a {
-    text-decoration: none;
+.kulim-park-bold {
+  font-family: "Kulim Park", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.description {
-    margin-top: 30%;
-
+.kulim-park-extralight-italic {
+  font-family: "Kulim Park", sans-serif;
+  font-weight: 200;
+  font-style: italic;
 }
 
-.individual p {
-    font-size: 1.3rem;
+.kulim-park-light-italic {
+  font-family: "Kulim Park", sans-serif;
+  font-weight: 300;
+  font-style: italic;
 }
 
-.individual .Fusion-of-Cultures img {
-    border-radius: 30px;
-
+.kulim-park-regular-italic {
+  font-family: "Kulim Park", sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
-.backArrow {
-    font-size: 4rem;
-    width: 65%;
-    margin: 0px auto 20px;
-} */
-
-/** Individual Work Pages Horizontal-----------------------------------------------*/
-/* 
-.backArrowHor {
-    font-size: 4rem;
-    width: 65%;
-    margin: 0px auto 0px;
+.kulim-park-semibold-italic {
+  font-family: "Kulim Park", sans-serif;
+  font-weight: 600;
+  font-style: italic;
 }
 
-.titleOfPhoto h1 {
-    font-size: 35px;
+.kulim-park-bold-italic {
+  font-family: "Kulim Park", sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
-
-.individualHorizontal img {
-    height: 500px;
-}
-
-.individualHorizontal {
-    margin-top: 40px;
-    display: flex;
-    column-gap: 15px;
-    align-items: center;
-    justify-content: center;
-    margin-left: 200px;
-    margin-right: 200px;
-
-}
-
-.software {
-
-    font-size: 1.3rem;
-    margin-top: 40px;
-    margin-bottom: 120px;
-    align-items: center;
-    justify-content: center;
-} */

@@ -1,16 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "../NavigationBar";
-import { Link } from "react-router-dom";
 import "./home.css";
 import Footer from "../Footer/footer";
 import Portfolio from "../Portfolio";
+import MessageBubble from "./MessageBubble";
 
 function Home() {
+  const [hoveredImage, setHoveredImage] = useState(null);
+
   // Scroll effect on load if the URL contains #my-work
   useEffect(() => {
     const hash = window.location.hash.substring(1);
     if (hash === "my-work") {
-      // Use regular DOM scrolling instead of react-scroll
       const element = document.getElementById("my-work");
       if (element) {
         element.scrollIntoView({
@@ -21,73 +22,106 @@ function Home() {
     }
   }, []);
 
+  // Optional: Image preloading to improve performance
+  useEffect(() => {
+    const imageUrls = [
+      "/homeImages/amandaHome.png",
+      "/homeImages/beli.png",
+      "/homeImages/camera.png",
+      "/homeImages/jam.png",
+      "/homeImages/matcha.png",
+      "/homeImages/postcard.png",
+      "/homeImages/receiptify.png",
+    ];
+
+    imageUrls.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
+  // Hover messages configuration
+  const hoverConfig = {
+    "amandaHome.png": {
+      message: "Hey, I'm Amanda! 👋🤸‍♀️",
+      className: "amanda-hover",
+    },
+    "beli.png": {
+      message: "Cafe hopping and rating bites 🥐",
+      className: "beli-hover",
+    },
+    "camera.png": {
+      message: "I love capturing moments on my digital camera",
+      className: "camera-hover",
+    },
+    "jam.png": {
+      message: "I look for prints and trinkets wherever I go 🏞️🗝️",
+      className: "jam-hover",
+    },
+    "matcha.png": {
+      message: "An iced matcha is my love language ☁️🍵",
+      className: "matcha-hover",
+    },
+    "postcard.png": {
+      message: "Some more about me 🙂‍↕️💌",
+      className: "postcard-hover",
+    },
+    "receiptify.png": {
+      message: "My life's soundtrack 🎧",
+      className: "receiptify-hover",
+    },
+  };
+
   return (
     <div>
       <Nav />
-      <div className="intro-container">
+      <div>
         <div className="middle">
           <h2 className="fade1">
-            {" "}
-            Hey, I'm <span className="amanda">Amanda!👋</span>
+            <div className="kulim-park-semibold amanda">AMANDA FONG</div>
           </h2>
-
-          <h3 className="fade2">
-            Crafting Inclusive Digital Solutions
-            <br />
-            Through <span className="codeCreative">Code</span> &{" "}
-            <span className="codeCreative">Creativity</span>
-          </h3>
-          <p className="fade3 indentPar">
-            ⟡ Product Design Intern @{" "}
-            <a
-              href="https://s2nhealth.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              S2N Health
-            </a>  | Design Producer @{" "}
-            <a
-              href="https://scout.camd.northeastern.edu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Scout
-            </a>{" "}
-          </p>
-          <p className="fade3 indentPar">
-            ⟡ Prev. SWE Intern @{" "}
-            <a
-              href="https://www.cboe.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Cboe
-            </a>
-            &nbsp; | Prev. Cloud O365 Developer Co-Op @{" "}
-            <a
-              href="https://www.coverys.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Coverys
-            </a>
-          </p>
-         
-          <div className="container-button fade4">
-            <Link to="/About">
-              <button>More About Me!</button>
-            </Link>
-          </div>
         </div>
         <div className="middleImage">
-          <img
-            className="fade1"
-            src="/poloroid2.png"
-            srcSet="poloroid2.png 768w, poloroid2.png 1200w"
-            alt="Poloroid"
-          />
+          {Object.keys(hoverConfig).map((imageName) => (
+            <img
+              key={imageName}
+              className="fade1 portfolioimage"
+              src={`/homeImages/${imageName}`}
+              alt={imageName.replace(".png", "")}
+              loading="lazy"
+              onMouseEnter={() => setHoveredImage(imageName)}
+              onMouseLeave={() => setHoveredImage(null)}
+            />
+          ))}
+
+          {/* Hover Message Bubble */}
+          {hoveredImage && (
+            <div
+              className={`hover-text ${hoverConfig[hoveredImage].className}`}
+            >
+              <MessageBubble
+                message={hoverConfig[hoveredImage].message}
+                tailPosition={
+                  hoveredImage === "amandaHome.png"
+                    ? "left"
+                    : hoveredImage === "beli.png"
+                    ? "top-right"
+                    : hoveredImage === "receiptify.png" ||
+                      hoveredImage === "jam.png"
+                    ? "top-left"
+                    : "right"
+                }
+              />
+            </div>
+          )}
         </div>
-        <br />
+        <div className="textHome">
+        <h4>I'm a Boston based product designer passionate about crafting inclusive <br></br>digital solutions through <span class="green-libre">code</span> & <span class="green-libre">creativity</span></h4>
+       <hr className="green-line" />
+
+        <p>Currently designing experiences @ S2N Health</p>
+        <p>Previous software engineer intern @ Cboe & cloud O365 developer co-op @ Coverys</p>
+        </div>
       </div>
 
       <div id="my-work" className="my-work">

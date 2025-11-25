@@ -1,7 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Kulim Park', sans-serif;
 }
 
 /* Scrolling */
@@ -60,7 +60,7 @@ nav a:hover {
 }
 
 .navBar {
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Kulim Park', sans-serif;
     border-bottom: 1.5px solid #4D453E;
 }
 

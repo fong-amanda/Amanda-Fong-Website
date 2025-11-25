@@ -1,212 +1,540 @@
-/* Fade-In Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Fade Animation Classes */
-.fade1 {
-    animation: fadeIn 2s ease-out forwards; 
-}
-
-.fade2 {
-    animation: fadeIn 3s ease-out forwards; 
-}
-
-.fade3 {
-    animation: fadeIn 4.5s ease-out forwards; 
-}
-
-.fade4 {
-    animation: fadeIn 6.0s ease-out forwards; 
-}
-
-/* Intro Container Layout */
-.intro-container {
-    padding-top: 30px; 
-    display: flex;
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: center; 
-    gap: 20px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 900px) {
-    .intro-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .middle {
-        padding-left: 0;
-        margin-left: 0;
-        width: 90%;
-    }
-
-    .middleImage {
-        margin-top: 20px;
-        width: 90%;
-    }
-
-    .middleImage img {
-        margin-top: 0;
-        width: 70%;
-        max-width: 400px;
-    }
-
-    .container-button {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 50px;
-    }
-}
-
-/* Middle Section Styling */
-.intro-container .middle a {
-    text-decoration: none;
-}
-
+/* Responsive layout that maintains aspect ratios and positioning */
 .middle {
-    margin-top: 20px;
-    padding-left: calc((100vw - 1300px) / 3.5); /* Matches the logo's padding */
-    margin-left: 50px;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: flex-start; 
-    color: #4D453E;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.middle h1 {
-    font-size: 70px;
-    font-weight: 500;
-    color: #4D453E;
-    word-wrap: break-word;
-    padding-bottom: 0.8rem;
+.amanda {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  color: #60946e;
+  text-align: center;
 }
 
-.middle .amanda {
-    color: #4D453E;
-    font-size: 26px;
-    font-weight: 600;
-    word-wrap: break-word;
-}
-
-.middle h2 {
-    font-size: 26px;
-    font-family: Kumbh Sans;
-    font-weight: 400;
-    line-height: 29.58px;
-    word-wrap: break-word;
-    color: #4D453E;
-}
-
-.middle h3 {
-    color: #4D453E;
-    font-size: 40px;
-    font-family: Libre Bodoni;
-    word-wrap: break-word;
-    font-weight: 400;
-}
-
-.codeCreative {
-    color: #60946E;
-    font-size: 40px;
-    font-family: Libre Bodoni;
-    font-style: italic;
-    font-weight: 550;
-    word-wrap: break-word;
-}
-
-.middle p {
-    font-size: 20px;
-    font-family: Kumbh Sans;
-    font-weight: 400;
-    line-height: 29.58px;
-    word-wrap: break-word;
-}
-
-.middle p a {
-    text-decoration: none;
-    color: #60946E;
-    font-size: 20px;
-    font-family: Kumbh Sans;
-    font-weight: 400;
-    text-decoration: underline;
-    line-height: 29.58px;
-    word-wrap: break-word;
-}
-
-.middle p a:hover {
-    font-weight: 750;
-}
-
-.indentPar {
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-}
-
-/* Middle Image Styling */
 .middleImage {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    vertical-align: middle;
-    flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: calc(100vw * 0.4);
+  max-height: 900px;
+  min-height: 300px;
+  overflow: visible;
+}
+.middleImage .portfolioimage {
+  position: absolute;
+  object-fit: contain;
+  cursor: default;
+  transition: transform 0.5s cubic-bezier(5, 5, 200, 200);
 }
 
-.middleImage img {
-    margin-top: -80px;
-    vertical-align: center;
-    width: 80%;
-    flex: 1;
-    pointer-events: none;
+.middleImage .portfolioimage:hover {
+  transform: scale(1.03) rotate(2deg) !important;
 }
 
-/* Button Styling */
-.container-button {
-    margin-top: 18px;
-    margin-bottom: 360px;
+.middleImage img:nth-child(1) {
+  /* Amanda's image */
+  width: min(800px, 30vw);
+  height: min(800px, 40vw);
+  right: 25%;
+  top: -5%;
+  object-fit: contain; /* Helps maintain aspect ratio */
 }
 
-.container-button button {
-    text-decoration: none;
-    background-color: rgba(126, 106, 88, 0);
-    border-radius: 8px;
-    color: #4D453E;
-    text-align: center;
-    border-width: 1.30px;
-    border-style: solid;
-    width: 130px;
-    height: 40px;
-    font-size: 14px;
-    font-weight: 400;
-    word-wrap: break-word;
-    transition: transform 1s ease;
+.middleImage img:nth-child(2) {
+  /* beli */
+  width: min(200px, 15vw);
+  height: min(300px, 15vw);
+  left: 21%;
+  top: 33%;
+  transform: rotate(-3deg) scale(1.2);
 }
 
-.container-button button:hover {
-    color: #F7F7ED;
-    background-color: #4D453E;
-    cursor: pointer;
-    transform: scale(1.04);
-    transition: 1.5s ease;
+.middleImage img:nth-child(3) {
+  /* camera */
+  width: min(250px, 14vw);
+  height: min(200px, 9vw);
+  right: 44%;
+  top: 5%;
+  transform: rotate(10deg) scale(1.1);
 }
 
-/* My Work Header */
-.myWorkHeader {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-size: 2.0rem;
-    font-weight: 500;
-    align-items: center;
-    color: #4D453E;
+.middleImage img:nth-child(4) {
+  /* jam */
+  width: min(150px, 10vw);
+  height: min(150px, 10vw);
+  right: 56%;
+  bottom: 30%;
+  transform: rotate(-5deg) scale(1.1);
+}
+
+.middleImage img:nth-child(5) {
+  /* matcha */
+  width: min(200px, 13vw);
+  height: min(250px, 16vw);
+  left: 26%;
+  top: 5%;
+  transform: rotate(8deg) scale(1.2);
+}
+
+.middleImage img:nth-child(6) {
+  /* postcard */
+  width: min(800px, vw);
+  height: min(800px, 20vw);
+  left: 30%;
+  top: 20%;
+  transform: rotate(-7deg) scale(1.1);
+  z-index: 1; /* Lower z-index */
+}
+
+.middleImage img:nth-child(7) {
+  /* receiptify */
+  width: min(400px, 22vw);
+  height: min(500px, 22vw);
+  right: 28%;
+  bottom: 23%;
+  transform: rotate(6deg) scale(3); /* Increased to scale(3) */
+}
+.middleImage img:nth-child(2), /* beli */
+.middleImage img:nth-child(3), /* camera */
+.middleImage img:nth-child(4), /* jam */
+.middleImage img:nth-child(5), /* matcha */
+.middleImage img:nth-child(7) {
+  /* receiptify */
+  z-index: 2; /* Higher z-index to appear on top of postcard */
+}
+
+/* Fade in animation */
+.fade1 {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 576px) {
+  .middleImage img:nth-child(1), /* Amanda's image */
+  .middleImage img:nth-child(6), /* postcard */
+  .middleImage img:nth-child(7) {
+    /* receiptify */
+    width: min(225px, 45vw);
+    height: min(225px, 45vw);
+  }
+
+  .middleImage img:nth-child(1) {
+    right: 10%;
+    top: -2%;
+  }
+
+  .middleImage img:nth-child(2) {
+    /* beli */
+
+    left: 15%;
+    top: 30%;
+  }
+  .middleImage img:nth-child(3) {
+    width: min(300px, 16vw);
+    height: min(200px, 14vw);
+    right: 40%;
+    top: 3%;
+  }
+
+  .middleImage img:nth-child(4) {
+    /* jam */
+    right: 60%;
+    bottom: 30%;
+    transform: rotate(-5deg) scale(1.1);
+  }
+
+  .middleImage img:nth-child(5) {
+    /* matcha */
+    width: min(200px, 13vw);
+    height: min(250px, 16vw);
+    left: 18%;
+    top: 5%;
+    transform: rotate(8deg) scale(1.2);
+  }
+
+  .middleImage img:nth-child(6) {
+    left: 20%;
+    top: 4%;
+  }
+
+  .middleImage img:nth-child(7) {
+    right: 8%;
+    bottom: 20%;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  .middleImage img:nth-child(4) {
+    /* jam */
+    right: 60%;
+    top: 40%;
+  }
+  .middleImage img:nth-child(7) {
+    right: 8%;
+    bottom: 20%;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  .middleImage img:nth-child(7) {
+    right: 6%;
+    bottom: 35%;
+  }
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.hover-text {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  max-width: calc(100% - 20px); /* Prevent overflow */
+}
+
+.hover-text-svg {
+  max-width: 200px;
+  max-height: 100px;
+  opacity: 0.9;
+}
+
+/* AppleMessageBubble Specific Styles */
+.message-bubble {
+  display: flex;
+  margin-bottom: 0.5rem;
+  justify-content: center;
+  width: 100%;
+  opacity: 0;
+  animation: bubbleAppear 0.3s ease-out forwards;
+}
+
+@keyframes bubbleAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.message-bubble-content {
+  background-color: #598d67;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  max-width: 300px;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Right tail - bottom right corner removed */
+.message-bubble-content.tail-right {
+  border-bottom-right-radius: 0;
+}
+
+/* Left tail - bottom left corner removed */
+.message-bubble-content.tail-left {
+  border-bottom-left-radius: 0;
+}
+
+/* Top Right tail - top right corner removed */
+.message-bubble-content.tail-top-right {
+  border-top-right-radius: 0;
+}
+
+/* Top Left tail - top left corner removed */
+.message-bubble-content.tail-top-left {
+  border-top-left-radius: 0;
+}
+
+/* Hover Text Positioning - Matching Photo Positions */
+.amanda-hover {
+  width: min(800px, 30vw);
+  right: 8%;
+  top: 2%;
+  transform: rotate(3deg);
+  overflow: visible;
+}
+
+.beli-hover {
+  width: min(300px, 20vw);
+  left: 5%;
+  top: 73%;
+  transform: rotate(-3deg);
+}
+
+.camera-hover {
+  width: min(300px, 22vw);
+  left: 23%;
+  top: 0%;
+  transform: rotate(5deg);
+}
+
+.jam-hover {
+  width: min(280px, 30vw);
+  right: 32%;
+  bottom: 10%;
+  transform: rotate(5deg);
+}
+
+.matcha-hover {
+  width: min(300px, 20vw);
+  left: 9%;
+  top: 4%;
+  transform: rotate(8deg);
+}
+
+.postcard-hover {
+  left: 20%;
+  top: 4%;
+  transform: rotate(4deg);
+}
+
+.receiptify-hover {
+  width: min(400px, 22vw);
+  right: 20%;
+  bottom: 12%;
+
+  transform: rotate(6deg);
+}
+
+/* Mobile Responsive Positioning */
+@media screen and (min-width: 1278px) {
+  .amanda-hover {
+    right: 13%;
+    top: 2%;
+  }
+
+  .beli-hover {
+    left: 8%;
+    top: 73%;
+    transform: rotate(-5deg);
+  }
+  .camera-hover {
+    left: 23%;
+    top: 2%;
+  }
+
+  .matcha-hover {
+    left: 10%;
+    top: 4%;
+  }
+  .jam-hover {
+    right: 41%;
+    top: 74%;
+  }
+
+  .postcard-hover {
+    left: 27%;
+    top: 4%;
+  }
+
+  .receiptify-hover {
+    right: 22.5%;
+    bottom: 15%;
+  }
+}
+
+/* Mobile Responsive Positioning */
+@media screen and (max-width: 1000px) {
+  .amanda-hover {
+    width: min(300px, 20vw);
+    right: 13%;
+    top: 1%;
+  }
+  [class$="-hover"] .message-bubble-content {
+    font-size: 12px;
+  }
+  .beli-hover {
+    width: min(250px, 16vw);
+
+    left: 12%;
+    top: 73%;
+  }
+  .camera-hover {
+    width: min(300px, 22vw);
+
+    left: 22%;
+    top: -1%;
+  }
+
+  .jam-hover {
+    width: min(280px, 23vw);
+
+    right: 37%;
+    top: 74%;
+  }
+
+  .matcha-hover {
+    left: 9%;
+    top: 4%;
+  }
+
+  .postcard-hover {
+    left: 20%;
+    top: 4%;
+  }
+
+  .receiptify-hover {
+    right: 20%;
+    bottom: 8%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .amanda-hover {
+    width: min(310px, 18vw);
+    right: 13%;
+    top: 1%;
+    max-height: min(150px, 10vw);
+  }
+  .beli-hover {
+    width: min(250px, 18vw);
+
+    left: 12%;
+    top: 73%;
+  }
+  .camera-hover {
+    width: min(200px, 25vw);
+    left: 20%;
+    top: -3%;
+  }
+
+  .receiptify-hover {
+    right: 20%;
+    bottom: 8%;
+  }
+
+  [class$="-hover"] .message-bubble-content {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 675px) {
+  .amanda-hover {
+    width: min(310px, 20vw);
+    max-height: 120px; /* Maximum height */
+    right: 12%;
+    top: 0%;
+    overflow: visible; /* Allow content to overflow the div */
+  }
+  .beli-hover {
+    width: min(250px, 18vw);
+
+    left: 8%;
+    top: 67%;
+  }
+  .postcard-hover {
+    left: 10%;
+    top: 3%;
+  }
+  [class$="-hover"] .message-bubble-content {
+    font-size: 9px;
+  }
+
+  .jam-hover {
+    width: min(280px, 25vw);
+
+    right: 37%;
+    top: 74%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .amanda-hover {
+    width: min(310px, 20vw);
+    max-height: 120px;
+    right: 0%;
+    top: -4%;
+    overflow: visible;
+  }
+  .beli-hover {
+    width: min(250px, 18vw);
+
+    left: 5%;
+    top: 60%;
+  }
+  .matcha-hover {
+    width: min(320px, 22vw);
+
+    left: 0%;
+    top: -2%;
+  }
+  .camera-hover {
+    width: min(200px, 30vw);
+    left: 16%;
+    top: -3%;
+  }
+  .receiptify-hover {
+    right: 10%;
+    bottom: 8%;
+  }
+
+  .jam-hover {
+    width: min(280px, 26vw);
+
+    right: 37%;
+    top: 74%;
+  }
+  /* Target all hover classes' message bubble contents */
+  [class$="-hover"] .message-bubble-content {
+    font-size: 8px;
+  }
+}
+
+#basic-navbar-nav {
+  margin-left: 40px;
+}
+.textHome {
+  margin-top: -5.5%;
+  max-width: 800px;
+  color: #4d453e;
+  font-size: clamp(8px, 1.5vw, 20px);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  margin-bottom: 80px;
+}
+
+.textHome h4 {
+  font-size: clamp(8px, 1.2vw, 18px);
+}
+
+.textHome p {
+  color: #4d453e;
+  font-size: clamp(7px, 1vw, 14px);
+  margin-bottom: -1px;
+}
+
+.green-libre {
+  color: #60946e;
+  font-style: italic;
+  font-family: "Libre Bodoni", serif;
+}
+
+.green-line {
+  width: clamp(150px, 50vw, 400px);
+  max-width: 100%;
+  height: 1px;
+  background-color: #60946e;
+  border: none;
+  margin: 10px auto;
 }

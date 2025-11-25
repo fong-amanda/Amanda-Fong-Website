@@ -7,7 +7,6 @@ import GeometricPov from './Pieces/GeometricPovCover';
 import Envision from './Pieces/EnvisionCover';
 import DeepIntoTaylor from './Pieces/DeepIntoTaylorCover';
 import MemorialHall from './Pieces/MemorialHallCover';
-import CornellBlanket from './Pieces/CornellBlanketCover';
 import Soaking from './Pieces/SoakingCover';
 import ScratchboardDog from './Pieces/ScratchboardDogCover';
 import Nostalgia from './Pieces/NostalgiaCover';
@@ -90,7 +89,6 @@ function Play() {
         "envision.jpg",
         "deepIntoTaylor.jpeg",
         "memorialHall.jpg",
-        "cornellBlanket.jpeg",
         "soaking.jpg",
         "scratchboardDog.jpeg",
         "nostalgia.jpeg",
@@ -107,7 +105,6 @@ function Play() {
         envisionRef: useRef(),
         taylorRef: useRef(),
         memorialHallRef: useRef(),
-        cornellRef: useRef(),
         soakingRef: useRef(),
         dogRef: useRef(),
         nostalgiaRef: useRef(),
@@ -125,7 +122,6 @@ function Play() {
         <Envision />,
         <DeepIntoTaylor />,
         <MemorialHall />,
-        <CornellBlanket />,
         <Soaking />,
         <ScratchboardDog />,
         <Nostalgia />,
@@ -143,7 +139,6 @@ function Play() {
         [<strong>Envision</strong>, <br />, 'Procreate'],
         [<strong>Deep Into Taylor</strong>, <br />, 'Adobe Illustrator'],
         [<strong>Memorial Hall</strong>, <br />, 'Procreate', <br />, 'Presented at the Art Supervisors Association 2021 All County Art Exhibition'],
-        [<strong>Cornell Blanket</strong>, <br />, 'Procreate'],
         [<strong>Soaking In The Sunset</strong>, <br />, 'Adobe Illustrator'],
         [<strong>Scratchboard Dog</strong>, <br />, 'Procreate'],
         [<strong>Nostalgia</strong>, <br />, 'Procreate'],
@@ -155,7 +150,6 @@ function Play() {
         <div>
             <Nav />
             <div className='playHeading'>
-                <h1 className="fade1">Play !</h1>
             </div>
             <section className="gallery container grid grid-cols-3 gap-2 mx-auto">
                 <ul className="images">

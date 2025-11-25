@@ -25,55 +25,6 @@ function About() {
   const [extracurricularsVisible, setExtracurricularsVis] = useState(false);
   const extracurricularsRef = useRef();
 
-  // const carouselRef = useRef();
-  
-  // Sample photos - replace with your actual images
-  // const photos = [
-  //   {
-  //     name: "Design Work",
-  //   src:"./AboutMeImage3.jpg",
-  //     desc: "UI/UX Design Project"
-  //   },
-  //   {
-  //     name: "Art Project",
-  //   src:"./AboutMeImage3.jpg",
-  //     desc: "Digital Painting"
-  //   },
-  //   {
-  //     name: "Photography",
-  //   src:"./AboutMeImage3.jpg",
-  //     desc: "Nature Photography"
-  //   },
-  //   {
-  //     name: "Code Project",
-  //   src:"./AboutMeImage3.jpg",
-  //     desc: "Web Development"
-  //   },
-  //   {
-  //     name: "Creative Work",
-  //   src:"./AboutMeImage3.jpg",
-  //     desc: "Mixed Media Art"
-  //   }
-  // ];
-  
-  // const totalItems = photos.length;
-
-  // // Generate random rotation for each image change
-  // const getRandomRotation = () => {
-  //   return Math.random() * 16 - 8; // Random rotation between -8 and 8 degrees
-  // };
-
-
-  // const handleIndexChange = (increment) => {
-  //   setCurrentIndex((prevIndex) => {
-  //     const newIndex = (prevIndex + increment + totalItems) % totalItems;
-  //     setRotation(getRandomRotation()); // New rotation for each image
-  //     return newIndex;
-  //   });
-  // };
-
-  // const goToNext = () => handleIndexChange(1);
-  // const goToPrev = () => handleIndexChange(-1);
 
   React.useEffect(() => {
     const headerObserver = new IntersectionObserver((entries) => {
@@ -117,26 +68,18 @@ function About() {
     extracurricularsObserver.observe(extracurricularsRef.current);
   }, [extracurricularsRef]);
 
-  // React.useEffect(() => {
-  //   const carouselObserver = new IntersectionObserver((entries) => {
-  //     setCarouselVis(entries[0].isIntersecting);
-  //   });
-  //   carouselObserver.observe(carouselRef.current);
-  // }, [carouselRef]);
-
   return (
     <div>
       <Nav />
       <section id="aboutMe" className="aboutMe">
         <h1 className="aboutHeading fade1">
-          <center>About Me!</center>
         </h1>
         <div className="about">
           <div className="aboutMePhoto">
             <img
               className={`about-profile-image fade-in ${aboutPhotoVisible ? "visible" : ""}`}
               ref={aboutPhotoRef}
-              src="./AboutMeImage4.JPG"
+              src="./AboutMeImage6.JPG"
               alt="About Me"
             />
           </div>

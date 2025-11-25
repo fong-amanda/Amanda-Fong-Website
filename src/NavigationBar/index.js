@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
-import homeImage from "../Images/AFongLogo.png";
+import homeImage from "../Images/AFongLogo2.png";
 import "./nav.css";
 
 function NavigationBar() {
@@ -44,7 +44,7 @@ function NavigationBar() {
   return (
     <Navbar className="full-nav" expand="md" bg="" variant="">
       <Navbar.Brand as={NavLink} to="/Home" className={`${activeLink === "Home" ? "active" : ""} logo`}>
-        <img src={homeImage} alt="Amanda Fong's Logo" width="120px" height="120px" />
+        <img src={homeImage} alt="Amanda Fong's Logo" width="174px" height="90px" />
       </Navbar.Brand>
       <Navbar.Toggle className="navbar-toggler" />
       
@@ -65,12 +65,12 @@ function NavigationBar() {
             Play
           </NavLink>
           
-          <NavLink
+          {/* <NavLink
             to="/Scrapbook"
             className={`nav-link ${activeLink === "Scrapbook" ? "active" : ""}`}
           >
             Scrapbooking
-          </NavLink>
+          </NavLink> */}
           
           <NavLink
             to="/About"
