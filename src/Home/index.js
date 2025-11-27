@@ -115,7 +115,7 @@ function Home() {
             </div>
           )}
         </div>
-        <div className="textHome">
+        <div className="textHome fade1">
   <h4>I'm a Boston based product designer passionate about crafting inclusive <br></br>digital solutions through <span className="green-libre">code & creativity</span></h4>
   <hr className="green-line" />
 
