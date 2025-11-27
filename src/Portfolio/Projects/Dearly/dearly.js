@@ -383,8 +383,8 @@ function DearlyProcess() {
             rel="noreferrer"
           >
             Generate
-          </a>&nbsp;
-        Spring 2025 showcase!
+          </a>
+        &nbsp;Spring 2025 showcase!
         </p>
         <div className="showcase-columns-container">
           <div className="showcase-column">
