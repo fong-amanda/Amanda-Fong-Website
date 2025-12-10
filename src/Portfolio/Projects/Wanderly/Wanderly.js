@@ -10,9 +10,9 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
 function WanderlyProcess() {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [open, setOpen] = React.useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
