@@ -247,7 +247,7 @@ function DearlyProcess() {
           <li>User Flows</li>
           <li>Wireframes</li>
         </ol>
-        <h3>1 | Sitemap Refinement</h3>
+        <h2>1 | Sitemap Refinement</h2>
         <p>
           {" "}
           Instead of a complete information architecture overhaul, we focused on
@@ -272,7 +272,7 @@ function DearlyProcess() {
             setSelectedImageIndex(7);
           }}
         />
-        <h3>2 | Userflows</h3>
+        <h2>2 | Userflows</h2>
         <p>
           We mapped intricate user journeys through engineering collaboration,
           strategically aligning design vision with technical feasibility. Our
@@ -305,7 +305,7 @@ function DearlyProcess() {
             setSelectedImageIndex(9);
           }}
         />
-        <h3>3 | Onboarding Wireframes</h3>
+        <h2>3 | Onboarding Wireframes</h2>
         <h4>Low-Fidelity Wireframes</h4>
         <img
           src="dearlyImages/lofi1.jpg"
@@ -363,7 +363,7 @@ function DearlyProcess() {
             setSelectedImageIndex(15);
           }}
         />
-        <h3>4 | Presentation</h3>
+        <h2>4 | Presentation</h2>
         <p>
           Check out the{" "}
           <a
