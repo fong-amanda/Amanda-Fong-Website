@@ -33,11 +33,6 @@
 
 }
 
-.dearly h5 {
-
-}
-
-
 .table-first {
   font-weight: 15px;
   color: 334E3D;
@@ -53,7 +48,7 @@
 .showcase-columns-container .showcase-column {
   flex: 1;
   display: flex;
-  align-items: stretch; /* Ensures columns stretch to same height */
+  align-items: stretch; 
 }
 
 .showcase-columns-container .showcase-column img {

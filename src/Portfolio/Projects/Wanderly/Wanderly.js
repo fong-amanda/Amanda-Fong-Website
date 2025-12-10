@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./wanderly.css";
+import "../main.css";
 
 import Lightbox from "yet-another-react-lightbox";
 import Nav from "../../../NavigationBar";
@@ -9,9 +10,9 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
 function WanderlyProcess() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   const [open, setOpen] = React.useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
@@ -38,7 +39,7 @@ function WanderlyProcess() {
 
       <section id="overview-section" className="overview-section">
         <div className="overview">
-          <div className="overviewLeft lavan">
+          <div className="overviewLeft wanderly">
             <h5 style={{ color: "#382E25" }}>Project Overview</h5>
             <p>
               Wanderly is a travel companion that blends creative documentation,
@@ -47,7 +48,7 @@ function WanderlyProcess() {
               Wanderly enhances your meaningful moments on your journey.
             </p>{" "}
             <br />
-            {/* <h5 style={{ color: "#1C1A1A" }} className="lavan">
+            {/* <h5 style={{ color: "#1C1A1A" }} className="wanderly">
               This project is still in progress! Come back soon for updates.
             </h5> */}
             <h5 style={{ color: "#382E25" }} className="wanderly">
@@ -61,22 +62,24 @@ function WanderlyProcess() {
             </h5>
           </div>
 
-          <div className="overviewRight lavan">
-            <h5 style={{ color: "#382E25" }}>Role</h5>
-            <p>Software Designer</p>
+<div className="overviewRight wanderly">
+  <div className="two-columns-container">
+    <div className="column">
+      <h5 style={{ color: "#382E25" }}>Role</h5>
+      <p>Software Designer</p>
 
-            <h5 style={{ color: "#382E25" }}>Team</h5>
-            <div className="three-columns-container">
-              <div className="column">
-                <p>Solo Project!</p>
-              </div>
-            </div>
-            <h5 style={{ color: "#382E25" }}>Timeline</h5>
-            <p>January 2025 - April 2025</p>
+      <h5 style={{ color: "#382E25" }}>Team</h5>
+      <p>Solo Project!</p>
+    </div>
+    <div className="column">
+      <h5 style={{ color: "#382E25" }}>Timeline</h5>
+      <p>January 2025 - April 2025</p>
 
-            <h5 style={{ color: "#382E25" }}>Tools</h5>
-            <p>Figma</p>
-          </div>
+      <h5 style={{ color: "#382E25" }}>Tools</h5>
+      <p>Figma</p>
+    </div>
+  </div>
+</div>
         </div>
       </section>
 
@@ -247,7 +250,9 @@ function WanderlyProcess() {
         />
         <br />
         <h2> 2 | Sitemap</h2>
-        <img
+  <div className="two-columns-container">
+    <div className="column">
+      <img
           src="wanderlyImages/sitemapdrawn.jpg"
           alt="sitemapdrawn"
           onClick={() => {
@@ -255,8 +260,9 @@ function WanderlyProcess() {
             setSelectedImageIndex(1);
           }}
         />{" "}
-        <br />
-        <img
+    </div>
+    <div className="column">
+       <img
           src="wanderlyImages/sitemap.svg"
           alt="sitemap"
           onClick={() => {
@@ -264,8 +270,14 @@ function WanderlyProcess() {
             setSelectedImageIndex(2);
           }}
         />
+    </div>
+  </div>
+       
+        <br />
+      
         <br />
         <h2>3 | Competitive Analysis</h2>
+        <br/>
         <div className="analysis-container">
           <div className="comparison-table">
             <div className="table-header">Workflow</div>

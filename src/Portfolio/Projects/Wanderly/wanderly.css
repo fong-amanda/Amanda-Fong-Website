@@ -1,5 +1,6 @@
 
-h1 {font-weight: 600;}
+h1 {font-weight: 600;
+color:  #382E25;}
 h2 {
     font-size: 23px;
 }
@@ -54,12 +55,13 @@ h2 {
 }
 .comparison-table {
     display: grid;
-    grid-template-columns: 124px 180px repeat(3, 200px);
+    grid-template-columns: 1fr 1.5fr repeat(3, 1.5fr); /* Use fractional units */
     gap: 2px;
     background-color: #382E25;
     border: 2px solid #382E25;
     border-radius: 8px;
     overflow: hidden;
+    width: 100%; /* Ensure it fills the container */
 }
 .workflow-group {
     display: contents;
@@ -116,7 +118,7 @@ h2 {
     font-size: 14px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 850px) {
     .comparison-table {
         display: flex;
         flex-direction: column;
