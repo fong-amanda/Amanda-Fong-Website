@@ -134,11 +134,11 @@ const PROJECTS = [
     alt: "Social-Spotify-Cover",
     tags: "UI/UX Design | Mobile Application Design",
   },
-  {
-    name: "Cosmic Finances",
-    coverImageSrc: "financesImages/cover.jpg",
-    tags: "UI/UX Design | Web Design",
-  },
+  // {
+  //   name: "Cosmic Finances",
+  //   coverImageSrc: "financesImages/cover.jpg",
+  //   tags: "UI/UX Design | Web Design",
+  // },
   {
     name: "Fusion of Cultures",
     coverImageSrc:
