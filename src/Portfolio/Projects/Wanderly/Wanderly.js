@@ -561,6 +561,17 @@ function WanderlyProcess() {
         <br />
         <h1>The Prototype</h1>
         <hr></hr>
+         <h2>
+          Check out the{" "}
+          <a
+            href="https://www.figma.com/proto/baYzQWkP6EDsjUKMwo4GNq/Journey-Project?page-id=43%3A189&node-id=300-17131&viewport=-1251%2C-667%2C0.11&t=ZXsp6VYPpSwrJWOG-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=422%3A10607&show-proto-sidebar=1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            prototype
+          </a>
+          !
+        </h2>
         <h2>Flow 1: Creating your Profile + Connecting with Others</h2>
         <div className="two-columns-container">
           <div className="column">
@@ -712,17 +723,7 @@ function WanderlyProcess() {
           <div className="column"></div>
         </div>{" "}
         <br />
-        <h2>
-          Check out the{" "}
-          <a
-            href="https://www.figma.com/proto/baYzQWkP6EDsjUKMwo4GNq/Journey-Project?page-id=43%3A189&node-id=300-17131&viewport=-1251%2C-667%2C0.11&t=ZXsp6VYPpSwrJWOG-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=422%3A10607&show-proto-sidebar=1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            prototype
-          </a>
-          !
-        </h2>
+       
       </section>
       <Lightbox
         open={open}
