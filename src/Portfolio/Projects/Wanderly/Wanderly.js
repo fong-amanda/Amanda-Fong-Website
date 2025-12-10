@@ -9,9 +9,9 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
 function WanderlyProcess() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   const [open, setOpen] = React.useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
@@ -33,9 +33,7 @@ function WanderlyProcess() {
 
       <section id="header" className="title-header">
         <h1 style={{ color: "#382E25" }}>Wanderly</h1>
-        <h2>
-          Mobile App Design, Prototyping, User Interviews, UX Research{" "}
-        </h2>
+        <h2>Mobile App Design, Prototyping, User Interviews, UX Research </h2>
       </section>
 
       <section id="overview-section" className="overview-section">
@@ -113,8 +111,7 @@ function WanderlyProcess() {
             <strong>create incredible memories</strong>, but navigating
             unfamiliar places alone can be daunting and{" "}
             <strong>keeping track of plans</strong> and logistics is often{" "}
-            <strong>overwhelming</strong>." - Female 22 year old (Solo
-            Traveler)
+            <strong>overwhelming</strong>." - Female 22 year old (Solo Traveler)
           </li>
         </ul>
         <h2>3 | Identified Primary Users</h2>
@@ -184,14 +181,13 @@ function WanderlyProcess() {
           </div>
         </div>
         <h2>4 | The Solution</h2>
-<p>Wanderly provides:</p>
-          <ul className="workflows-list">
-            <li>Personal bucket lists</li>
-            <li>Auto-generated scrapbooks </li>
-            <li>A curated traveler community </li>
-            <li>A unified space for planning, documenting and connecting </li>
-          </ul>
-         
+        <p>Wanderly provides:</p>
+        <ul className="workflows-list">
+          <li>Personal bucket lists</li>
+          <li>Auto-generated scrapbooks </li>
+          <li>A curated traveler community </li>
+          <li>A unified space for planning, documenting and connecting </li>
+        </ul>
         <h2>
           5 | Workflows - <em>How do the users go about doing it?</em>
         </h2>
@@ -288,7 +284,7 @@ function WanderlyProcess() {
               </div>
               <div className="app-cell">
                 <div className="app-name">Pinterest</div>
-<div className="app-takeaway">
+                <div className="app-takeaway">
                   <ul>
                     <li>Categorized boards with privacy options</li>
                     <li>Board name suggestions</li>
@@ -298,7 +294,7 @@ function WanderlyProcess() {
               </div>
               <div className="app-cell">
                 <div className="app-name">Instagram</div>
-<div className="app-takeaway">
+                <div className="app-takeaway">
                   <ul>
                     <li>State changes when saved</li>
                     <li>Clear save button location</li>
@@ -308,7 +304,7 @@ function WanderlyProcess() {
               </div>
               <div className="app-cell">
                 <div className="app-name">TikTok</div>
-<div className="app-takeaway">
+                <div className="app-takeaway">
                   <ul>
                     <li>Clear button with state change</li>
                     <li>Save confirmation popup</li>
@@ -329,7 +325,7 @@ function WanderlyProcess() {
               </div>
               <div className="app-cell">
                 <div className="app-name">TikTok</div>
-<div className="app-takeaway">
+                <div className="app-takeaway">
                   <ul>
                     <li>Primary button for final actions</li>
                     <li>Location, mention, hashtag suggestions</li>
@@ -339,7 +335,7 @@ function WanderlyProcess() {
               </div>
               <div className="app-cell">
                 <div className="app-name">Photos App</div>
-<div className="app-takeaway">
+                <div className="app-takeaway">
                   <ul>
                     <li>Grid view for reordering</li>
                     <li>Multi-select for bulk edits</li>
@@ -349,7 +345,7 @@ function WanderlyProcess() {
               </div>
               <div className="app-cell">
                 <div className="app-name">Pic Collage</div>
-<div className="app-takeaway">
+                <div className="app-takeaway">
                   <ul>
                     <li>Overuses primary buttons</li>
                     <li>Editable at multiple stages</li>
@@ -369,7 +365,7 @@ function WanderlyProcess() {
               </div>
               <div className="app-cell">
                 <div className="app-name">Hinge</div>
-<div className="app-takeaway">
+                <div className="app-takeaway">
                   <ul>
                     <li>Unread message counter</li>
                     <li>Compatibility notifications</li>
@@ -379,7 +375,7 @@ function WanderlyProcess() {
               </div>
               <div className="app-cell">
                 <div className="app-name">LinkedIn</div>
-<div className="app-takeaway">
+                <div className="app-takeaway">
                   <ul>
                     <li>Clear primary/secondary buttons</li>
                     <li>Clean, varied feed design</li>
@@ -389,7 +385,7 @@ function WanderlyProcess() {
               </div>
               <div className="app-cell">
                 <div className="app-name">Instagram</div>
-<div className="app-takeaway">
+                <div className="app-takeaway">
                   <ul>
                     <li>Good button hierarchy</li>
                     <li>Varied content frames</li>
@@ -404,7 +400,9 @@ function WanderlyProcess() {
           <h4>Overall Takeaways</h4>
           <div className="takeaways-grid">
             <div className="takeaway-item">
-              <div className="takeaway-title">Workflow 1: Saving posts/videos</div>
+              <div className="takeaway-title">
+                Workflow 1: Saving posts/videos
+              </div>
               <div className="takeaway-divider"></div>
               <p className="takeaway-text">
                 <ul>
@@ -446,7 +444,7 @@ function WanderlyProcess() {
               </p>
             </div>
           </div>
-<h2>4 | Color Palette + Typography</h2>
+          <h2>4 | Color Palette + Typography</h2>
           <div className="two-columns-container">
             <div className="column">
               <img
@@ -495,6 +493,57 @@ function WanderlyProcess() {
               />
             </div>
           </div>
+          <h2>6 | Design Iterations</h2>
+          <div className="two-columns-container">
+            <div className="column">
+              <img
+                src="wanderlyImages/iteration1.png"
+                alt="Wanderly Landscape"
+                onClick={() => {
+                  setOpen(true);
+                  setSelectedImageIndex(7);
+                }}
+              />
+              <p className="iterationcommments">
+                <strong>Iteration:</strong> Explored card layouts with 6, 2, and
+                3 photos, settling on 3 photos to balance profile information
+                with card compactness.
+              </p>
+            </div>
+            <div className="column">
+              <img
+                src="wanderlyImages/iteration2.png"
+                alt="Wanderly Landscape"
+                onClick={() => {
+                  setOpen(true);
+                  setSelectedImageIndex(8);
+                }}
+              />
+              <p className="iterationcommments">
+                <strong>Iteration:</strong> Tested different column
+                configurations and text positioning to optimize content
+                discovery and visual hierarchy.
+              </p>
+            </div>
+          </div>
+          <div className="two-columns-container">
+            <div className="column">
+              <img
+                src="wanderlyImages/iteration3.png"
+                alt="Wanderly Landscape"
+                onClick={() => {
+                  setOpen(true);
+                  setSelectedImageIndex(9);
+                }}
+              />
+              <p className="iterationcommments">
+                <strong>Iteration:</strong> User feedback revealed that filled
+                tags overshadowed other profile content, leading to the decision
+                to use outlined tags for better visual balance.
+              </p>
+            </div>
+            <div className="column"></div>
+          </div>
         </div>
         <br />
         <br />
@@ -508,7 +557,7 @@ function WanderlyProcess() {
               alt="Wanderly Landscape"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(7);
+                setSelectedImageIndex(10);
               }}
             />
           </div>
@@ -518,7 +567,7 @@ function WanderlyProcess() {
               alt="Wanderly Landscape"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(8);
+                setSelectedImageIndex(11);
               }}
             />
           </div>
@@ -530,7 +579,7 @@ function WanderlyProcess() {
               alt="Wanderly Landscape"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(9);
+                setSelectedImageIndex(12);
               }}
             />
           </div>
@@ -540,7 +589,7 @@ function WanderlyProcess() {
               alt="Wanderly Landscape"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(10);
+                setSelectedImageIndex(13);
               }}
             />
           </div>
@@ -552,7 +601,7 @@ function WanderlyProcess() {
               alt="Wanderly Landscape"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(11);
+                setSelectedImageIndex(14);
               }}
             />
           </div>
@@ -562,7 +611,7 @@ function WanderlyProcess() {
               alt="Wanderly Landscape"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(12);
+                setSelectedImageIndex(15);
               }}
             />
           </div>
@@ -577,7 +626,7 @@ function WanderlyProcess() {
               alt="Wanderly Landscape"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(13);
+                setSelectedImageIndex(16);
               }}
             />
           </div>
@@ -587,7 +636,7 @@ function WanderlyProcess() {
               alt="Wanderly Landscape"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(14);
+                setSelectedImageIndex(17);
               }}
             />
           </div>
@@ -599,7 +648,7 @@ function WanderlyProcess() {
               alt="Wanderly Landscape"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(15);
+                setSelectedImageIndex(18);
               }}
             />
           </div>
@@ -609,7 +658,7 @@ function WanderlyProcess() {
               alt="Wanderly Landscape"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(16);
+                setSelectedImageIndex(19);
               }}
             />
           </div>
@@ -622,7 +671,7 @@ function WanderlyProcess() {
               alt="Wanderly Landscape"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(17);
+                setSelectedImageIndex(20);
               }}
             />
           </div>
@@ -632,7 +681,7 @@ function WanderlyProcess() {
               alt="Wanderly Landscape"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(18);
+                setSelectedImageIndex(21);
               }}
             />
           </div>
@@ -644,7 +693,7 @@ function WanderlyProcess() {
               alt="Wanderly Landscape"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(19);
+                setSelectedImageIndex(22);
               }}
             />
           </div>{" "}
@@ -677,6 +726,10 @@ function WanderlyProcess() {
 
           { src: "/wanderlyImages/lowfis.png" },
           { src: "/wanderlyImages/midfis.png" },
+
+          { src: "/wanderlyImages/iteration1.png" },
+          { src: "/wanderlyImages/iteration2.png" },
+          { src: "/wanderlyImages/iteration3.png" },
 
           { src: "/wanderlyImages/1flow1.png" },
           { src: "/wanderlyImages/2flow1.png" },
