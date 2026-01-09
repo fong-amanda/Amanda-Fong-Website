@@ -1,56 +1,7 @@
-.title-header {
-    max-width: 1200px;
-    width: calc(100% - 160px); /* Match overview and summary */
-    margin: 50px auto;
-}
-
-
-.title-header h1 {
-    margin-top: 5rem;
-    font-size: 50px;
-    color: #2D375D;
-
-}
-
-.title-header h2 {
-    font-size: 20px;
-    font-weight: normal;
-    margin-bottom: 2.0rem;
-}
-
-.overview {
-    max-width: 1200px;
-    width: calc(100% - 160px); /* Equivalent to padding of 80px on each side */
-    margin: 50px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 100px;
-}
-.overview a {
-    color: var(--bs-body-color);
-}
-.overview h1 {
-    font-size: 50px;
-}
-
-.overview h2 {
-    font-size: 20px;
-    font-weight: normal;
-    margin-bottom: 5rem;
-
-}
-
-.overview h5 {
-    font-size: 22px;
-    margin-top: 1rem;
-    color: #2D375D;
-
-}
 
 .overviewRight {
     margin-top: 0rem;
 }
-
 
 .summary {
     max-width: 1200px;
@@ -59,47 +10,11 @@
     display: grid;
 }
 
-
-.summary a {
-    color: var(--bs-body-color);
-}
-
 .summary h2 {
-    margin-top: 2rem;
-}
-
-.leak h2 {
-    color: #2D375D;
-}
-
-.summary h3 {
     margin-top: 1rem;
-    font-size: 22px;
-}
-
-.leak h3 {
-    color: #3F4F7A;
-}
-
-.summary h4 {
-    margin-top: 1rem;
-    font-size: 20px;
-}
-
-.leak h4 {
-    color: #4C5F9B;
 }
 
 
-.summary h5 {
-    font-size: 18px;
-
-}
-
-.leak h5 {
-    color: #4C5F9B;
-    font-size: 18px;
-}
 
 .summary p {
     margin-bottom: 10px;

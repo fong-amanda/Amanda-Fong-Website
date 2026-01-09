@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./wanderly.css";
+import "./../projects.css";
 import "../main.css";
-
+import "./wanderly.css"
 import Lightbox from "yet-another-react-lightbox";
 import Nav from "../../../NavigationBar";
 import Footer from "../../../Footer/footer";
-// import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
@@ -33,25 +32,22 @@ function WanderlyProcess() {
       </section>
 
       <section id="header" className="title-header">
-        <h1 style={{ color: "#382E25" }}>Wanderly</h1>
-        <h2>Mobile App Design, Prototyping, User Interviews, UX Research </h2>
+        <h1 className="">Wanderly</h1>
+        <h4>Mobile App Design, Prototyping, User Interviews, UX Research </h4>
       </section>
 
       <section id="overview-section" className="overview-section">
         <div className="overview">
-          <div className="overviewLeft wanderly">
-            <h5 style={{ color: "#382E25" }}>Project Overview</h5>
+          <div className="overviewLeft">
+            <h5>Project Overview</h5>
             <p>
               Wanderly is a travel companion that blends creative documentation,
               planning, and social connection. With personalized bucket lists,
               auto-generated scrapbooks, and a curated traveler network,
               Wanderly enhances your meaningful moments on your journey.
-            </p>{" "}
+            </p>
             <br />
-            {/* <h5 style={{ color: "#1C1A1A" }} className="wanderly">
-              This project is still in progress! Come back soon for updates.
-            </h5> */}
-            <h5 style={{ color: "#382E25" }} className="wanderly">
+            <h5>
               <a
                 href="https://www.figma.com/proto/baYzQWkP6EDsjUKMwo4GNq/Journey-Project?page-id=43%3A189&node-id=300-17131&viewport=-1251%2C-667%2C0.11&t=ZXsp6VYPpSwrJWOG-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=422%3A10607&show-proto-sidebar=1"
                 target="_blank"
@@ -62,28 +58,28 @@ function WanderlyProcess() {
             </h5>
           </div>
 
-<div className="overviewRight wanderly">
-  <div className="two-columns-container">
-    <div className="column">
-      <h5 style={{ color: "#382E25" }}>Role</h5>
-      <p>Software Designer</p>
+          <div className="overviewRight">
+            <div className="two-columns-container">
+              <div className="column">
+                <h5>Role</h5>
+                <p>Software Designer</p>
 
-      <h5 style={{ color: "#382E25" }}>Team</h5>
-      <p>Solo Project!</p>
-    </div>
-    <div className="column">
-      <h5 style={{ color: "#382E25" }}>Timeline</h5>
-      <p>January 2025 - April 2025</p>
+                <h5>Team</h5>
+                <p>Solo Project!</p>
+              </div>
+              <div className="column">
+                <h5>Timeline</h5>
+                <p>January 2025 - April 2025</p>
 
-      <h5 style={{ color: "#382E25" }}>Tools</h5>
-      <p>Figma</p>
-    </div>
-  </div>
-</div>
+                <h5>Tools</h5>
+                <p>Figma</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="summary wanderly">
+      <section className="summary">
         <h1>Research Overview</h1>
         <hr></hr>
         <h2>1 | The Problem statement</h2>
@@ -119,11 +115,11 @@ function WanderlyProcess() {
         </ul>
         <h2>3 | Identified Primary Users</h2>
         <br />
-        <div className="container-wanderly">
-          <div className="column-wanderly">
-            <div className="number">1</div>
-            <div className="title">Travel-Documenters</div>
-            <div className="divider"></div>
+        <div className="three-column-container">
+          <div className="three-column-item">
+            <div className="item-number">1</div>
+            <div className="item-title">Travel-Documenters</div>
+            <div className="item-divider"></div>
             <p>
               <strong>Pain Points:</strong>
             </p>
@@ -141,16 +137,15 @@ function WanderlyProcess() {
             </p>
           </div>
 
-          <div className="column-wanderly">
-            <div className="number">2</div>
-            <div className="title">Social Travelers</div>
-            <div className="divider"></div>
+          <div className="three-column-item">
+            <div className="item-number">2</div>
+            <div className="item-title">Social Travelers</div>
+            <div className="item-divider"></div>
             <p>
               <strong>Pain Points:</strong>
             </p>
             <ul className="workflows-list">
               <li>Difficulty connecting with like-minded travelers</li>
-
               <li>Tedious</li>
             </ul>
             <p>
@@ -162,10 +157,10 @@ function WanderlyProcess() {
             </p>
           </div>
 
-          <div className="column-wanderly">
-            <div className="number">3</div>
-            <div className="title">Travel-Planners</div>
-            <div className="divider"></div>
+          <div className="three-column-item">
+            <div className="item-number">3</div>
+            <div className="item-title">Travel-Planners</div>
+            <div className="item-divider"></div>
             <p>
               <strong>Pain Points:</strong>
             </p>
@@ -195,10 +190,10 @@ function WanderlyProcess() {
           5 | Workflows - <em>How do the users go about doing it?</em>
         </h2>
         <br />
-        <div className="container-wanderly">
-          <div className="column-wanderly">
-            <div className="title">Travel-Documenter</div>
-            <div className="divider"></div>
+        <div className="three-column-container">
+          <div className="three-column-item">
+            <div className="item-title">Travel-Documenter</div>
+            <div className="item-divider"></div>
 
             <p>
               <strong>Workflows:</strong>
@@ -210,9 +205,9 @@ function WanderlyProcess() {
             </ul>
           </div>
 
-          <div className="column-wanderly">
-            <div className="title">Social Travelers</div>
-            <div className="divider"></div>
+          <div className="three-column-item">
+            <div className="item-title">Social Travelers</div>
+            <div className="item-divider"></div>
             <p>
               <strong>Workflows:</strong>
             </p>
@@ -222,9 +217,9 @@ function WanderlyProcess() {
             </ul>
           </div>
 
-          <div className="column-wanderly">
-            <div className="title">Travel-Planners</div>
-            <div className="divider"></div>
+          <div className="three-column-item">
+            <div className="item-title">Travel-Planners</div>
+            <div className="item-divider"></div>
             <p>
               <strong>Workflows:</strong>
             </p>
@@ -250,34 +245,34 @@ function WanderlyProcess() {
         />
         <br />
         <h2> 2 | Sitemap</h2>
-  <div className="two-columns-container">
-    <div className="column">
-      <img
-          src="wanderlyImages/sitemapdrawn.jpg"
-          alt="sitemapdrawn"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(1);
-          }}
-        />{" "}
-    </div>
-    <div className="column">
-       <img
-          src="wanderlyImages/sitemap.svg"
-          alt="sitemap"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(2);
-          }}
-        />
-    </div>
-  </div>
-       
+        <div className="two-columns-container">
+          <div className="column">
+            <img
+              src="wanderlyImages/sitemapdrawn.jpg"
+              alt="sitemapdrawn"
+              onClick={() => {
+                setOpen(true);
+                setSelectedImageIndex(1);
+              }}
+            />
+          </div>
+          <div className="column">
+            <img
+              src="wanderlyImages/sitemap.svg"
+              alt="sitemap"
+              onClick={() => {
+                setOpen(true);
+                setSelectedImageIndex(2);
+              }}
+            />
+          </div>
+        </div>
+
         <br />
-      
+
         <br />
         <h2>3 | Competitive Analysis</h2>
-        <br/>
+        <br />
         <div className="analysis-container">
           <div className="comparison-table">
             <div className="table-header">Workflow</div>
@@ -413,7 +408,7 @@ function WanderlyProcess() {
           <div className="takeaways-grid">
             <div className="takeaway-item">
               <div className="takeaway-title">
-                Workflow 1: Saving posts/videos
+                <h6>Workflow 1: Saving posts/videos</h6>
               </div>
               <div className="takeaway-divider"></div>
               <p className="takeaway-text">
@@ -428,7 +423,7 @@ function WanderlyProcess() {
 
             <div className="takeaway-item">
               <div className="takeaway-title">
-                Workflow 2: Making collages/videos
+               <h6>Workflow 2: Making collages/videos</h6> 
               </div>
               <div className="takeaway-divider"></div>
               <p className="takeaway-text">
@@ -443,7 +438,7 @@ function WanderlyProcess() {
 
             <div className="takeaway-item">
               <div className="takeaway-title">
-                Workflow 3: Connecting with others
+               <h6>Workflow 3: Connecting with others</h6> 
               </div>
               <div className="takeaway-divider"></div>
               <p className="takeaway-text">
@@ -461,7 +456,7 @@ function WanderlyProcess() {
             <div className="column">
               <img
                 src="wanderlyImages/type.svg"
-                alt="Wanderly Landscape"
+                alt="Wanderly Typography"
                 onClick={() => {
                   setOpen(true);
                   setSelectedImageIndex(3);
@@ -472,7 +467,7 @@ function WanderlyProcess() {
             <div className="column">
               <img
                 src="wanderlyImages/color.png"
-                alt="Wanderly Landscape"
+                alt="Wanderly Colors"
                 onClick={() => {
                   setOpen(true);
                   setSelectedImageIndex(4);
@@ -483,10 +478,10 @@ function WanderlyProcess() {
           <h2>5 | Wireframes</h2>
           <div className="two-columns-container">
             <div className="column">
-              <h4>Low-Fidelity Wireframes</h4>{" "}
+              <h4>Low-Fidelity Wireframes</h4>
               <img
                 src="wanderlyImages/lowfis.png"
-                alt="Wanderly Landscape"
+                alt="Low Fidelity Wireframes"
                 onClick={() => {
                   setOpen(true);
                   setSelectedImageIndex(5);
@@ -497,7 +492,7 @@ function WanderlyProcess() {
               <h4>Mid-Fidelity Wireframes</h4>
               <img
                 src="wanderlyImages/midfis.png"
-                alt="Wanderly Landscape"
+                alt="Mid Fidelity Wireframes"
                 onClick={() => {
                   setOpen(true);
                   setSelectedImageIndex(6);
@@ -510,13 +505,13 @@ function WanderlyProcess() {
             <div className="column">
               <img
                 src="wanderlyImages/iteration1.png"
-                alt="Wanderly Landscape"
+                alt="Design Iteration 1"
                 onClick={() => {
                   setOpen(true);
                   setSelectedImageIndex(7);
                 }}
               />
-              <p className="iterationcommments">
+              <p className="iteration-comments">
                 <strong>Iteration:</strong> Explored card layouts with 6, 2, and
                 3 photos, settling on 3 photos to balance profile information
                 with card compactness.
@@ -525,13 +520,13 @@ function WanderlyProcess() {
             <div className="column">
               <img
                 src="wanderlyImages/iteration2.png"
-                alt="Wanderly Landscape"
+                alt="Design Iteration 2"
                 onClick={() => {
                   setOpen(true);
                   setSelectedImageIndex(8);
                 }}
               />
-              <p className="iterationcommments">
+              <p className="iteration-comments">
                 <strong>Iteration:</strong> Tested different column
                 configurations and text positioning to optimize content
                 discovery and visual hierarchy.
@@ -542,13 +537,13 @@ function WanderlyProcess() {
             <div className="column">
               <img
                 src="wanderlyImages/iteration3.png"
-                alt="Wanderly Landscape"
+                alt="Design Iteration 3"
                 onClick={() => {
                   setOpen(true);
                   setSelectedImageIndex(9);
                 }}
               />
-              <p className="iterationcommments">
+              <p className="iteration-comments">
                 <strong>Iteration:</strong> User feedback revealed that filled
                 tags overshadowed other profile content, leading to the decision
                 to use outlined tags for better visual balance.
@@ -561,7 +556,7 @@ function WanderlyProcess() {
         <br />
         <h1>The Prototype</h1>
         <hr></hr>
-         <h2>
+        <h2>
           Check out the{" "}
           <a
             href="https://www.figma.com/proto/baYzQWkP6EDsjUKMwo4GNq/Journey-Project?page-id=43%3A189&node-id=300-17131&viewport=-1251%2C-667%2C0.11&t=ZXsp6VYPpSwrJWOG-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=422%3A10607&show-proto-sidebar=1"
@@ -577,7 +572,7 @@ function WanderlyProcess() {
           <div className="column">
             <img
               src="wanderlyImages/1flow1.png"
-              alt="Wanderly Landscape"
+              alt="Flow 1 Screen 1"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(10);
@@ -587,7 +582,7 @@ function WanderlyProcess() {
           <div className="column">
             <img
               src="wanderlyImages/2flow1.png"
-              alt="Wanderly Landscape"
+              alt="Flow 1 Screen 2"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(11);
@@ -599,7 +594,7 @@ function WanderlyProcess() {
           <div className="column">
             <img
               src="wanderlyImages/3flow1.png"
-              alt="Wanderly Landscape"
+              alt="Flow 1 Screen 3"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(12);
@@ -609,7 +604,7 @@ function WanderlyProcess() {
           <div className="column">
             <img
               src="wanderlyImages/4flow1.png"
-              alt="Wanderly Landscape"
+              alt="Flow 1 Screen 4"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(13);
@@ -621,7 +616,7 @@ function WanderlyProcess() {
           <div className="column">
             <img
               src="wanderlyImages/5flow1.png"
-              alt="Wanderly Landscape"
+              alt="Flow 1 Screen 5"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(14);
@@ -631,7 +626,7 @@ function WanderlyProcess() {
           <div className="column">
             <img
               src="wanderlyImages/6flow1.png"
-              alt="Wanderly Landscape"
+              alt="Flow 1 Screen 6"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(15);
@@ -646,7 +641,7 @@ function WanderlyProcess() {
           <div className="column">
             <img
               src="wanderlyImages/1flow2.png"
-              alt="Wanderly Landscape"
+              alt="Flow 2 Screen 1"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(16);
@@ -656,7 +651,7 @@ function WanderlyProcess() {
           <div className="column">
             <img
               src="wanderlyImages/2flow2.png"
-              alt="Wanderly Landscape"
+              alt="Flow 2 Screen 2"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(17);
@@ -668,7 +663,7 @@ function WanderlyProcess() {
           <div className="column">
             <img
               src="wanderlyImages/3flow2.png"
-              alt="Wanderly Landscape"
+              alt="Flow 2 Screen 3"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(18);
@@ -678,7 +673,7 @@ function WanderlyProcess() {
           <div className="column">
             <img
               src="wanderlyImages/4flow2.png"
-              alt="Wanderly Landscape"
+              alt="Flow 2 Screen 4"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(19);
@@ -691,7 +686,7 @@ function WanderlyProcess() {
           <div className="column">
             <img
               src="wanderlyImages/1flow3.png"
-              alt="Wanderly Landscape"
+              alt="Flow 3 Screen 1"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(20);
@@ -701,7 +696,7 @@ function WanderlyProcess() {
           <div className="column">
             <img
               src="wanderlyImages/2flow3.png"
-              alt="Wanderly Landscape"
+              alt="Flow 3 Screen 2"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(21);
@@ -713,22 +708,20 @@ function WanderlyProcess() {
           <div className="column">
             <img
               src="wanderlyImages/3flow3.png"
-              alt="Wanderly Landscape"
+              alt="Flow 3 Screen 3"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(22);
               }}
             />
-          </div>{" "}
+          </div>
           <div className="column"></div>
-        </div>{" "}
+        </div>
         <br />
-       
       </section>
       <Lightbox
         open={open}
         close={() => setOpen(false)}
-        // opens associated image lightbox
         index={selectedImageIndex}
         slides={[
           { src: "/wanderlyImages/handdrawnwireframes.png" },
@@ -736,14 +729,11 @@ function WanderlyProcess() {
           { src: "/wanderlyImages/sitemap.svg" },
           { src: "/wanderlyImages/type.svg" },
           { src: "/wanderlyImages/color.png" },
-
           { src: "/wanderlyImages/lowfis.png" },
           { src: "/wanderlyImages/midfis.png" },
-
           { src: "/wanderlyImages/iteration1.png" },
           { src: "/wanderlyImages/iteration2.png" },
           { src: "/wanderlyImages/iteration3.png" },
-
           { src: "/wanderlyImages/1flow1.png" },
           { src: "/wanderlyImages/2flow1.png" },
           { src: "/wanderlyImages/3flow1.png" },

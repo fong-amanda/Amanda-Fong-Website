@@ -1,44 +1,4 @@
 
-.flex-images {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-  text-align: center;
-}
-
-.flex-images img {
-  width: calc(50% - 10px);
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-}
-
-
-
-.dearly h1 {
-  color: #1C1A1A;
-}
-
-.dearly h2 {
-  color: #1C1A1A;
-}
-
-.dearly h3 {
-  font-size: 20px;
-}
-
-.dearly h4 {
-  font-size: 16.5px;
-
-}
-
-.table-first {
-  font-weight: 15px;
-  color: 334E3D;
-}
-
-
 .showcase-columns-container {
   display: flex;
   gap: 10px; /* Optional: adds some space between columns */

@@ -1,10 +1,12 @@
 import Nav from "../../../NavigationBar";
-import "./dearly.css";
+import "../projects.css";
+import "../main.css";
 import Footer from "../../../Footer/footer";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import React, { useEffect, useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
+import "./dearly.css";
 
 function DearlyProcess() {
   useEffect(() => {
@@ -23,23 +25,23 @@ function DearlyProcess() {
             <img
               style={{ cursor: "auto" }}
               src="dearlyImages/dearlyLandscape.jpg"
-              alt="Cherry Landscape"
+              alt="Dearly Landscape"
             />
           </div>
         </div>
       </section>
 
       <section id="header" className="title-header">
-        <h1 style={{ color: "#1C1A1A" }}>Dearly</h1>
+        <h1>Dearly</h1>
         <h2>
-          Mobile Application Design, Branding, Accessibility, UI/UX Design{" "}
+          Mobile Application Design, Branding, Accessibility, UI/UX Design
         </h2>
       </section>
 
-      <section id="overview-section" className="overview-section">
+<section id="overview-section" className="overview-section">
         <div className="overview">
-          <div className="overviewLeft dearly">
-            <h5 style={{ color: "#1C1A1A" }}>Project Overview</h5>
+          <div className="overviewLeft">
+            <h5>Project Overview</h5>
             <p>
               A mobile app that helps families stay intimately connected across
               generations by sharing moments, memories, and conversations.
@@ -50,7 +52,7 @@ function DearlyProcess() {
               younger users.
             </p>
             <br />
-            <h5 style={{ color: "#1C1A1A" }} className="dearly">
+            <h5>
               <a
                 href="https://www.figma.com/proto/XqqgGBwLIwgJrpJ2iYxvlU/Dearly?page-id=1%3A31&node-id=4203-41006&viewport=-5603%2C-6186%2C0.14&t=UsBu2edEIo5KFFHH-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4203%3A41006&show-proto-sidebar=1"
                 target="_blank"
@@ -61,59 +63,62 @@ function DearlyProcess() {
             </h5>
           </div>
 
-          <div className="overviewRight dearly">
-            <h5 style={{ color: "#1C1A1A" }}>Role</h5>
+          <div className="overviewRight">
+            <h5>Role</h5>
             <p>Software Designer</p>
 
-            <h5 style={{ color: "#1C1A1A" }}>Team</h5>
+            <h5>Team</h5>
             <div className="three-columns-container">
               <div className="column">
                 <h6>Project Lead:</h6>
                 <p>Melody Yu</p>
-              </div>
-              <div className="column">
+                
                 <h6>Design Lead:</h6>
                 <p>Liana Zhang</p>
-                <h6>Designers:</h6>
-                <p>Amanda Fong, Traci Lu, Zahra Wibisana, Audrey Wong</p>
               </div>
               <div className="column">
+                <h6>Designers:</h6>
+                <p>Amanda Fong, Traci Lu, Zahra Wibisana, Audrey Wong</p>
+                
                 <h6>Tech Leads:</h6>
                 <p>Stone Liu, Mai Nguyen</p>
-
+              </div>
+              <div className="column">
                 <h6>Developers:</h6>
                 <p>
                   Zainab Imadulla, Tyler Kim, Megan Lai, Aahil Nishad, Josh
-                  Torre{" "}
+                  Torre
                 </p>
               </div>
             </div>
-            <h5 style={{ color: "#1C1A1A" }}>Timeline</h5>
+            <h5>Timeline</h5>
             <p>January 2025 - April 2025</p>
 
-            <h5 style={{ color: "#1C1A1A" }}>Tools</h5>
+            <h5>Tools</h5>
             <p>Figma</p>
           </div>
         </div>
       </section>
 
-      <section className="summary dearly">
+      <section className="summary">
+        <h1>Project Context</h1>
+        <hr></hr>
         <h2>What is Dearly?</h2>
         <p>
           Dearly is a private social platform that helps users stay connected
           across generations. Designed with accessibility in mind, it caters to
           users across a range of technological experience. Dearly offers two
           distinct user modes: a simplified basic interface and a feature-rich
-          advanced interface.{" "}
+          advanced interface.
         </p>
-        <h3>Our Client</h3>
+        <h2>Our Client</h2>
         <p>
           Caroline Xiong is a fifth-year student at Northeastern University
           studying Business Administration & Design with a concentration in
           Marketing Analytics and Interaction Design. With a passion for
           blending user-centered design with meaningful solutions, Caroline
           developed Dearly, a family-focused platform that enhances connection,
-          accessibility, and engagement across diverse users. 
+          accessibility, and engagement across diverse users.
         </p>
         <p>
           Inspired by the challenges intergenerational families face in
@@ -121,13 +126,13 @@ function DearlyProcess() {
           technological divide between younger and older family members. The app
           evokes emotions of warmth, belonging, and shared joy, offering
           features that allow users to share heartfelt moments and create new
-          memories, no matter the distance or level of technological illiteracy.{" "}
+          memories, no matter the distance or level of technological illiteracy.
         </p>
         <p>
           Caroline envisions success stories like grandparents feeling more
-          involved in their grandchildren’s lives or busy young adults finding
+          involved in their grandchildren's lives or busy young adults finding
           easy, consistent ways to connect with their families.
-        </p>{" "}
+        </p>
         <br />
         <h1>Branding</h1>
         <hr></hr>
@@ -142,34 +147,32 @@ function DearlyProcess() {
           connection feel effortless, warm, and accessible to everyone from
           tech-savvy teenagers to less-experienced elderly users.
         </p>
-        <h3>Moodboarding</h3>
-        <div className="">
-          <div className="lightbox-images">
-            <img
-              src="dearlyImages/moodboard.jpg"
-              alt="Moodboard"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(0);
-              }}
-            />
-          </div>
+        <h2>Moodboarding</h2>
+        <div className="lightbox-images">
+          <img
+            src="dearlyImages/moodboard.png"
+            alt="Moodboard"
+            onClick={() => {
+              setOpen(true);
+              setSelectedImageIndex(0);
+            }}
+          />
         </div>
         <br />
         <h2>2 | Creating an Identity</h2>
-        <h3>Color Palette</h3>
+        <h2>Color Palette</h2>
         <div className="two-columns-container">
           <div className="column">
             <img
               src="dearlyImages/colorpal.png"
-              alt="color scheme"
+              alt="Color Scheme"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(1);
               }}
             />
           </div>
-          <div className="column lavan">
+          <div className="column">
             <p>
               Dearly's colors are warm and inviting, reflecting the app's
               mission of fostering intimate family connections. The palette of
@@ -179,28 +182,26 @@ function DearlyProcess() {
               the app's inclusive design. Honey and Ink act as vibrant accents,
               adding warmth and trust to create a truly welcoming digital
               experience that feels both modern and familiar.
-              <br />
-              <br />
             </p>
           </div>
         </div>
         <br />
-        <h3>Typeface</h3>
+        <h2>Typeface</h2>
         <div className="two-columns-container">
           <div className="column">
             <img
-              src="dearlyImages/typeface.jpg"
-              alt="type"
+              src="dearlyImages/typeface.png"
+              alt="Typeface"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(2);
               }}
             />
           </div>
-          <div className="column lavan">
+          <div className="column">
             <img
-              src="dearlyImages/typeface2.jpg"
-              alt="type"
+              src="dearlyImages/typeface2.png"
+              alt="Typeface Details"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(3);
@@ -209,23 +210,22 @@ function DearlyProcess() {
           </div>
         </div>
         <br />
-        <h3 style={{ marginBottom: -13 }}>Final Logo</h3>
-        <br />
+        <h2>Final Logo</h2>
         <div className="two-columns-container">
           <div className="column">
             <img
-              src="dearlyImages/logo2.jpg"
-              alt="final logo"
+              src="dearlyImages/logo2.png"
+              alt="Final Logo"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(4);
               }}
             />
           </div>
-          <div className="column lavan">
+          <div className="column">
             <img
-              src="dearlyImages/logo.jpg"
-              alt="final logo"
+              src="dearlyImages/logo.png"
+              alt="Final Logo Variations"
               onClick={() => {
                 setOpen(true);
                 setSelectedImageIndex(5);
@@ -238,23 +238,25 @@ function DearlyProcess() {
         <h1>Mobile Application Revamp</h1>
         <hr></hr>
         <h2>Streamlined Design Approach</h2>
-        <h3>
+        <p>
           The existing project materials provided us with a significant head
           start, allowing us to concentrate on three critical areas:
-        </h3>
+        </p>
         <ol>
           <li>Sitemap Refinement</li>
-          <li>User Flows</li>
+          <li>Userflows</li>
           <li>Wireframes</li>
         </ol>
         <h2>1 | Sitemap Refinement</h2>
         <p>
-          {" "}
           Instead of a complete information architecture overhaul, we focused on
           optimizing the existing sitemap to better support our two-mode user
           experience, simplifying the interface for elderly users while
           maintaining robust features for younger family members.
         </p>
+                <div className="two-columns-container">
+                  <div className="column">
+                    <h4>Advanced Sitemap</h4>
         <img
           src="dearlyImages/AdvancedSitemap.jpg"
           alt="Advanced Sitemap"
@@ -262,9 +264,9 @@ function DearlyProcess() {
             setOpen(true);
             setSelectedImageIndex(6);
           }}
-        />
-        <br />
-        <img
+        /></div>
+<div className="column">                     <h4>Basic Sitemap</h4>
+ <img 
           src="dearlyImages/BasicSitemap.jpg"
           alt="Basic Sitemap"
           onClick={() => {
@@ -272,6 +274,8 @@ function DearlyProcess() {
             setSelectedImageIndex(7);
           }}
         />
+        </div>
+        </div>
         <h2>2 | Userflows</h2>
         <p>
           We mapped intricate user journeys through engineering collaboration,
@@ -289,80 +293,85 @@ function DearlyProcess() {
           customize their Dearly experience from the very first interaction.
         </p>
         <img
-          src="dearlyImages/userflows.jpg"
-          alt="site map"
+          src="dearlyImages/userflow1.jpg"
+          alt="Detailed User Flow"
           onClick={() => {
             setOpen(true);
             setSelectedImageIndex(8);
           }}
         />
-        <br />
-        <img
-          src="dearlyImages/userflow1.jpg"
-          alt="site map"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(9);
-          }}
-        />
+
         <h2>3 | Onboarding Wireframes</h2>
-        <h4>Low-Fidelity Wireframes</h4>
+
+        <div className="two-columns-container">
+          
+          <div className="column">
+                                <h4>Low-Fidelity Wireframes</h4>
+
+            <img
+              src="dearlyImages/lofi1.png"
+              alt="Low Fidelity Wireframes 1"
+              onClick={() => {
+                setOpen(true);
+                setSelectedImageIndex(9);
+              }}
+            />
+        <br />
+           
+          </div>
+          <div className="column">
+             <h4>Mid-Fidelity Wireframes</h4>
         <img
-          src="dearlyImages/lofi1.jpg"
-          alt="final logo"
+          src="dearlyImages/midfi.png"
+          alt="Mid Fidelity Wireframes"
           onClick={() => {
             setOpen(true);
             setSelectedImageIndex(10);
           }}
         />
-        <br />
+          </div>
+        </div>
+      
+        <h4>High-Fidelity Wireframes</h4>
+              <div className="two-columns-container">
+          <div className="column">
+        <h5>Landing Pages</h5>
         <img
-          src="dearlyImages/lofi2.jpg"
-          alt="final logo"
+          src="dearlyImages/hifi1.jpg"
+          alt="High Fidelity Landing Pages"
           onClick={() => {
             setOpen(true);
             setSelectedImageIndex(11);
           }}
         />
-        <h4>Mid-Fidelity Wireframes</h4>
+                <br />
+
+                <h5 style={{ marginTop: '20px' }}>Forgot Password Pages</h5>
         <img
-          src="dearlyImages/midfi.jpg"
-          alt="final logo"
+          src="dearlyImages/hifi3.jpg"
+          alt="High Fidelity Forgot Password Pages"
           onClick={() => {
             setOpen(true);
             setSelectedImageIndex(12);
           }}
         />
-        <h4>High-Fidelity Wireframes</h4>
-        <h5>Landing Pages</h5>
+        </div>
+        <br />
+                  <div className="column">
+
+        <h5>Sign Up Pages</h5>
         <img
-          src="dearlyImages/hifi1.jpg"
-          alt="hifi3"
+          src="dearlyImages/hifi2.jpg"
+          alt="High Fidelity Sign Up Pages"
           onClick={() => {
             setOpen(true);
             setSelectedImageIndex(13);
           }}
         />
         <br />
-        <h5>Sign Up Pages</h5>
-        <img
-          src="dearlyImages/hifi2.jpg"
-          alt="hifi2"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(14);
-          }}
-        />
-        <br />
-        <h5>Forgot Password Pages</h5>
-        <img
-          src="dearlyImages/hifi3.jpg"
-          alt="hifi3"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(15);
-          }}
-        />
+        </div>
+        </div>
+
         <h2>4 | Presentation</h2>
         <p>
           Check out the{" "}
@@ -371,20 +380,17 @@ function DearlyProcess() {
             target="_blank"
             rel="noreferrer"
           >
-            high-fis
+            high-fidelity prototype
           </a>
           !
         </p>
         <h4>Showcase</h4>
         <p>
-          The last step was presenting our work at the <a
-            href="https://generatenu.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          The last step was presenting our work at the{" "}
+          <a href="https://generatenu.com/" target="_blank" rel="noreferrer">
             Generate
-          </a>
-        &nbsp;Spring 2025 showcase!
+          </a>{" "}
+          Spring 2025 showcase!
         </p>
         <div className="showcase-columns-container">
           <div className="showcase-column">
@@ -393,7 +399,7 @@ function DearlyProcess() {
               alt="showcase"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(16);
+                setSelectedImageIndex(14);
               }}
             />
           </div>
@@ -403,7 +409,7 @@ function DearlyProcess() {
               alt="showcase"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(17);
+                setSelectedImageIndex(15);
               }}
             />
           </div>
@@ -413,43 +419,35 @@ function DearlyProcess() {
               alt="showcase"
               onClick={() => {
                 setOpen(true);
-                setSelectedImageIndex(18);
+                setSelectedImageIndex(16);
               }}
             />
           </div>
         </div>
-        {/* </>
-                )} */}
         <br />
       </section>
       <Lightbox
         open={open}
         close={() => setOpen(false)}
-        // opens associated image lightbox
         index={selectedImageIndex}
         slides={[
-          { src: "/dearlyImages/moodboard.jpg" },
+          { src: "/dearlyImages/moodboard.png" },
           { src: "/dearlyImages/colorpal.png" },
-          { src: "/dearlyImages/typeface.jpg" },
-          { src: "/dearlyImages/typeface2.jpg" },
-          { src: "/dearlyImages/logo2.jpg" },
-          { src: "/dearlyImages/logo.jpg" },
+          { src: "/dearlyImages/typeface.png" },
+          { src: "/dearlyImages/typeface2.png" },
+          { src: "/dearlyImages/logo2.png" },
+          { src: "/dearlyImages/logo.png" },
           { src: "/dearlyImages/AdvancedSitemap.jpg" },
           { src: "/dearlyImages/BasicSitemap.jpg" },
-          { src: "/dearlyImages/userflows.jpg" },
           { src: "/dearlyImages/userflow1.jpg" },
-          { src: "/dearlyImages/lofi1.jpg" },
-          { src: "/dearlyImages/lofi2.jpg" },
-          { src: "/dearlyImages/midfi.jpg" },
-
-          // 11
+          { src: "/dearlyImages/lofi1.png" },
+          { src: "/dearlyImages/midfi.png" },
           { src: "/dearlyImages/hifi1.jpg" },
           { src: "/dearlyImages/hifi2.jpg" },
           { src: "/dearlyImages/hifi3.jpg" },
-                    { src: "/dearlyImages/showcase1.jpg" },
+          { src: "/dearlyImages/showcase1.jpg" },
           { src: "/dearlyImages/showcase2.jpg" },
           { src: "/dearlyImages/showcase3.jpg" },
-
         ]}
       />
       <Footer />

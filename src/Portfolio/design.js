@@ -110,30 +110,30 @@ const PROJECTS = [
     alt: "Student-Activity-Calendar-Cover",
     tags: "UI/UX Design | Mobile Application Design",
   },
-  {
-    name: "Disrupt",
-    coverImageSrc: "disruptImages/cover.jpg",
-    tags: "UI/UX Design | Web Design | Branding",
-    customClass: "Disrupt",
-  },
+  // {
+  //   name: "Disrupt",
+  //   coverImageSrc: "disruptImages/cover.jpg",
+  //   tags: "UI/UX Design | Web Design | Branding",
+  //   customClass: "Disrupt",
+  // },
   {
     name: "Cherry Crisis",
     coverImageSrc: "cherryImages/cover.png",
     alt: "Cherry Crisis Cover Image",
     tags: "UI/UX Design | Web Design | Branding",
   },
-  {
-    name: "Fix-A-Leak",
-    coverImageSrc: "fixALeak Images/Cover Page.jpg",
-    alt: "Fix a leak cover Image",
-    tags: "UI/UX Design | Mobile Application Design",
-  },
-  {
-    name: "Social Spotify",
-    coverImageSrc: "spotifyImages/cover.jpg",
-    alt: "Social-Spotify-Cover",
-    tags: "UI/UX Design | Mobile Application Design",
-  },
+  // {
+  //   name: "Fix-A-Leak",
+  //   coverImageSrc: "fixALeak Images/Cover Page.jpg",
+  //   alt: "Fix a leak cover Image",
+  //   tags: "UI/UX Design | Mobile Application Design",
+  // },
+  // {
+  //   name: "Social Spotify",
+  //   coverImageSrc: "spotifyImages/cover.jpg",
+  //   alt: "Social-Spotify-Cover",
+  //   tags: "UI/UX Design | Mobile Application Design",
+  // },
   // {
   //   name: "Cosmic Finances",
   //   coverImageSrc: "financesImages/cover.jpg",
@@ -150,12 +150,12 @@ const PROJECTS = [
 ];
 
 const WORKS_IN_PROGRESS = [
-  {
-    name: "Three Stones",
-    description:
-      "Designing a mobile app that connects real estate developers with investors by allowing developers to post crowdfunding projects and investors to explore listings, contribute small amounts, and build a real estate portfolio for potential profit.",
-    tags: "Mobile Application Design | Accessibility | UI/UX Design",
-  }
+  // {
+  //   name: "Three Stones",
+  //   description:
+  //     "Designing a mobile app that connects real estate developers with investors by allowing developers to post crowdfunding projects and investors to explore listings, contribute small amounts, and build a real estate portfolio for potential profit.",
+  //   tags: "Mobile Application Design | Accessibility | UI/UX Design",
+  // }
 ];
 
 function Design() {
@@ -417,7 +417,7 @@ function Design() {
           })}
         </div>
 
-        {(filteredWIP.length > 0 || activeFilters.length === 0) && (
+        {/* {(filteredWIP.length > 0 || activeFilters.length === 0) && (
           <div>
             <h1
               
@@ -459,7 +459,7 @@ function Design() {
               })}
             </div>
           </div>
-        )}
+        )} */}
 
         {activeFilters.length > 0 &&
           filteredProjects.length === 0 &&
