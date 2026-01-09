@@ -206,15 +206,15 @@ function Design() {
     });
   }, [activeFilters]);
 
-  // Pad WIP projects to maintain two-column grid
-  const paddedWIP = useMemo(() => {
-    const padded = [...filteredWIP];
-    // If odd number of projects, add a placeholder div
-    if (padded.length % 2 !== 0) {
-      padded.push({ name: "placeholder", placeholder: true });
-    }
-    return padded;
-  }, [filteredWIP]);
+  // // Pad WIP projects to maintain two-column grid
+  // const paddedWIP = useMemo(() => {
+  //   const padded = [...filteredWIP];
+  //   // If odd number of projects, add a placeholder div
+  //   if (padded.length % 2 !== 0) {
+  //     padded.push({ name: "placeholder", placeholder: true });
+  //   }
+  //   return padded;
+  // }, [filteredWIP]);
 
   // Create refs using useMemo to ensure they're only created once
   const refs = useMemo(
