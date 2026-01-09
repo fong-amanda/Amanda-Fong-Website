@@ -40,7 +40,7 @@ function CherryProcess() {
       <section id="overview-section" className="overview-section">
         <div className="overview">
           <div className="overviewLeft cherry">
-            <h5 style={{ color: "#1C1A1A" }}>Project Overview</h5>
+            <h5 >Project Overview</h5>
             <p>
               As part of{" "}
               <a
@@ -86,10 +86,10 @@ function CherryProcess() {
           </div>
 
           <div className="overviewRight cherry">
-            <h5 style={{ color: "#1C1A1A" }}>Role</h5>
+            <h5>Role</h5>
             <p>Developer & UI/UX Designer</p>
 
-            <h5 style={{ color: "#1C1A1A" }}>Team</h5>
+            <h5>Team</h5>
             <div className="three-columns-container">
               <div className="column">
                 <h6>Project Lead:</h6>
@@ -110,10 +110,10 @@ function CherryProcess() {
                 <p>Ananya Radhakrishnan, Ivan Rudyakov, Amanda Fong</p>
               </div>
             </div>
-            <h5 style={{ color: "#1C1A1A" }}>Timeline</h5>
+            <h5 >Timeline</h5>
             <p>January 2024 - April 2024</p>
 
-            <h5 style={{ color: "#1C1A1A" }}>Tools</h5>
+            <h5 >Tools</h5>
             <p>Figma, JavaScript (React.js), CSS, Git</p>
           </div>
         </div>
