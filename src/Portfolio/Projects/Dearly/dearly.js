@@ -284,13 +284,14 @@ function DearlyProcess() {
           seamlessly bridged innovative concepts with practical implementation.
         </p>
         <p>
-          Specifically, I focused on creating two distinct onboarding
-          experiences: one allowing users to choose their preferred mode of
-          interaction based on their comfort level with technology. Users could
-          self-select between a simplified interface tailored for less
-          tech-experienced family members or a more comprehensive experience for
-          those seeking advanced features. This approach empowered users to
-          customize their Dearly experience from the very first interaction.
+          Specifically, I focused on creating a unified onboarding experience 
+that welcomed all users equally, regardless of their technological 
+comfort level. Rather than immediately splitting users into separate 
+paths, the onboarding introduced Dearly's core value before allowing 
+users to choose between a simplified interface tailored for less 
+tech-experienced family members or a more comprehensive experience 
+for those seeking advanced features. This approach ensured no user 
+felt alienated from the very first interaction.
         </p>
         <img
           src="dearlyImages/userflow1.jpg"
