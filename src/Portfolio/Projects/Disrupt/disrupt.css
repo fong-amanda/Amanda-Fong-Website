@@ -1,82 +1,15 @@
-.flex-images {
-  display: flex;
-}
-
-.flex-images img {
-  width: calc(33.333% - 10px);
-  width: 100%; 
-  max-width: 100%;
-  height: auto;
-}
-
-.two-columns-container {
-  display: flex;
-  margin-left: -10px;
-  margin-bottom: -20px;
-}
-
-.column {
-  flex: 1;
-  padding: 10px;
-}
-
-.three-columns-container {
-  display: flex;
-  margin-left: -10px;
-  margin-bottom: -20px;
-  width: 100%;
-}
-
-.column {
-  flex: 1;
-  padding: 10px;
-} 
-
-
-.disrupt h1 {
-  color: #1C1A1A;
-}
-
-.disrupt h2 {
-  color: #1C1A1A;
-}
-
-.disrupt h3 {
-  color: #404040;
-  font-size: 20px;
-}
-
-.disrupt h4 {
-  color: #4B4B4D;
-  font-size: 16.5px;
-
-}
-
-.disrupt h5 {
-  color: #535456;
-}
-
-
-
-.disrupt a:hover {
-  color: #009AFF;
-}
-
-.table-first {
-  font-weight: 15px;
-  color: pink;
-}
-
-
+/* Disrupt only needs one page-specific rule: the wrapping image grid used in a
+   couple of sections. Everything else (two-column layouts, heading sizes and
+   colors) now uses the shared case-study styles in projects.css / caseStudy.css
+   so this page matches the rest of the portfolio. */
 .disrupt .flex-images {
   display: flex;
-  flex-wrap: wrap;  
-  gap: 10px; 
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .disrupt .flex-images img {
-  width: 100%; 
-  height: auto;
+  width: 100%;
   max-width: 100%;
-} 
- 
+  height: auto;
+}

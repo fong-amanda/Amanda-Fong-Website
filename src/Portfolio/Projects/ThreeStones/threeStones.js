@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Nav from "../../../NavigationBar";
-import './threeStones.css';
 import Footer from "../../../Footer/footer";
 // import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";

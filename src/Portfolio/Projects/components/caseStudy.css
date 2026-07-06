@@ -1,0 +1,42 @@
+/*
+ * Normalization styles for the shared case-study components. Structural
+ * classes (title-header, overview, summary, two-columns-container, ...) are
+ * defined in projects.css / main.css; these rules only cover the pieces the
+ * components standardize across every page.
+ */
+
+
+/* Consistent subtitle (skills / disciplines line) under the title. */
+.case-subtitle {
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+/* Team layout: wraps to as many groups as needed, consistent everywhere. */
+.case-team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 40px;
+  margin-bottom: 0.5rem;
+}
+
+.case-team-group {
+  flex: 1 1 40%;
+  min-width: 150px;
+}
+
+.case-team-group h6 {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.case-team-group p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .case-team-group {
+    flex: 1 1 100%;
+  }
+}

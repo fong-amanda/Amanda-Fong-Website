@@ -1,108 +1,50 @@
-import React, { useState, useEffect } from "react";
-import Nav from "../../../NavigationBar";
-import "./../projects.css";
-import Footer from "../../../Footer/footer";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
-import "yet-another-react-lightbox/plugins/captions.css";
+import React from "react";
+import {
+  CaseStudyLayout,
+  CaseCover,
+  CaseHeader,
+  CaseOverview,
+  CaseBody,
+  SectionHeading,
+  CaseImage,
+  Columns,
+} from "../components";
 
 function LavanProcess() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  const [open, setOpen] = React.useState(false);
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-
   return (
-    <>
-      <Nav />
-      <br />
-      <section className="cover-image">
-        <div className="image-background">
-          <div className="image-background-container">
-            <img
-              style={{ cursor: "auto" }}
-              src="lavanImages/cover.png"
-              alt="Cherry Landscape"
-            />
-          </div>
-        </div>
-      </section>
+    <CaseStudyLayout>
+      <CaseCover src="lavanImages/cover.png" alt="Cherry Landscape" />
 
-      <section id="header" className="title-header">
-        <h1 className="lavan">Lavan Beauty</h1>
-        <h4>
-          Web Design, UX Research, Prototyping, User Testing, User Interviews,
-          Branding
-        </h4>
-      </section>
+      <CaseHeader
+        title="Lavan Beauty"
+        subtitle="Web Design, UX Research, Prototyping, User Testing, User Interviews, Branding"
+      />
 
-      <section id="overview-section" className="overview-section">
-        <div className="overview">
-          <div className="overviewLeft lavan">
-            <h5>Project Overview</h5>
-            <p>
-              Designing a user-friendly website for Lavan Beauty that simplifies
-              skincare routines while establishing a strong brand identity. The
-              website will feature a streamlined selection of products developed
-              by a pharmacist, highlighting the commitment to natural
-              ingredients and scientific efficacy.
-            </p>
-            <br />
-            <h5 className="lavan">
-              <a
-                href="https://www.figma.com/proto/Dn5jK3GW8zHeYwOI9MdF1l/Lavan-Beauty-Wireframes?page-id=1157%3A2756&node-id=1157-4937&viewport=128%2C487%2C0.09&t=KuRPdoNn4MDquZgW-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1157%3A4937"
-                target="_blank"
-                rel="noreferrer"
-              >
-                High-Fidelity Prototype
-              </a>
-            </h5>
-            <h5 className="lavan">
-              <a
-                href="https://drive.google.com/file/d/1d5mjqeBoFbFrbIt6hQJEWEey2CRjHKhT/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Brandbook{" "}
-              </a>
-            </h5>
-          </div>
+      <CaseOverview
+        overview="Designing a user-friendly website for Lavan Beauty that simplifies skincare routines while establishing a strong brand identity. The website will feature a streamlined selection of products developed by a pharmacist, highlighting the commitment to natural ingredients and scientific efficacy."
+        links={[
+          {
+            label: "High-Fidelity Prototype",
+            href: "https://www.figma.com/proto/Dn5jK3GW8zHeYwOI9MdF1l/Lavan-Beauty-Wireframes?page-id=1157%3A2756&node-id=1157-4937&viewport=128%2C487%2C0.09&t=KuRPdoNn4MDquZgW-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1157%3A4937",
+          },
+          {
+            label: "Brandbook ",
+            href: "https://drive.google.com/file/d/1d5mjqeBoFbFrbIt6hQJEWEey2CRjHKhT/view?usp=sharing",
+          },
+        ]}
+        role="Design Lead"
+        team={[
+          { role: "Project Lead", people: "Valerie Irawan" },
+          { role: "Design Lead", people: "Amanda Fong" },
+          { role: "Designers", people: "Heidy Hur, Andrea Lee, Caroline Xiong" },
+          { role: "Tech Lead", people: "Ananya Radhakrishnan" },
+          { role: "Developers", people: "Emily Lin, Alizeh Zaidi" },
+        ]}
+        timeline="September 2024 - December 2024"
+        tools="Figma"
+      />
 
-          <div className="overviewRight lavan">
-            <h5>Role</h5>
-            <p>Design Lead</p>
-
-            <h5>Team</h5>
-            <div className="three-columns-container">
-              <div className="column">
-                <h6>Project Lead:</h6>
-                <p>Valerie Irawan</p>
-              </div>
-              <div className="column">
-                <h6>Design Lead:</h6>
-                <p>Amanda Fong</p>
-                <h6>Designers:</h6>
-                <p>Heidy Hur, Andrea Lee, Caroline Xiong</p>
-              </div>
-              <div className="column">
-                <h6>Tech Lead:</h6>
-                <p>Ananya Radhakrishnan</p>
-
-                <h6>Developers:</h6>
-                <p>Emily Lin, Alizeh Zaidi</p>
-              </div>
-            </div>
-            <h5>Timeline</h5>
-            <p>September 2024 - December 2024</p>
-
-            <h5>Tools</h5>
-            <p>Figma</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="summary lavan">
+      <CaseBody className="lavan">
         <h2>What is Lavan Beauty?</h2>
         <p>
           Lavan Beauty is a timeless and luxurious skincare brand. It offers a
@@ -116,8 +58,8 @@ function LavanProcess() {
           This mission stands out in an era of overconsumption and consumerism.
         </p>
         <br />
-        <h1>Branding</h1>
-        <hr />
+
+        <SectionHeading title="Branding" />
         <h2>1 | Discovering the brand</h2>
         <p>
           We began the project by exploring and defining the ideal direction for
@@ -126,162 +68,75 @@ function LavanProcess() {
         </p>
         <br />
         <h3>Personality Levels</h3>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="lavanImages/personalityLevels.png"
-              alt="Moodboard"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(0);
-              }}
-            />
-          </div>
-          <div className="column">
-            <p>
-              Brands need to have a clear personality in order for consumers to
-              easily interact and identify with them. In this activity, our
-              client and team indicated where they believe that the client's
-              company falls (or think that it should fall) within the following
-              sets of traits. This exercise was very helpful in establishing a
-              thoughtful brand identity.
-            </p>
-          </div>
-        </div>
+        <Columns>
+          <CaseImage src="lavanImages/personalityLevels.png" alt="Moodboard" />
+          <p>
+            Brands need to have a clear personality in order for consumers to
+            easily interact and identify with them. In this activity, our
+            client and team indicated where they believe that the client's
+            company falls (or think that it should fall) within the following
+            sets of traits. This exercise was very helpful in establishing a
+            thoughtful brand identity.
+          </p>
+        </Columns>
         <h3>Moodboarding</h3>
         <div className="moodboarding">
-          <div className="two-columns-container">
-            <div className="column">
-              <img
-                src="lavanImages/Caro.png"
-                alt="Moodboard"
-                onClick={() => {
-                  setOpen(true);
-                  setSelectedImageIndex(1);
-                }}
-              />
+          <Columns>
+            <>
+              <CaseImage src="lavanImages/Caro.png" alt="Moodboard" />
               <br />
               <br />
-
-              <img
-                src="lavanImages/Heidy.png"
-                alt="Moodboard"
-                onClick={() => {
-                  setOpen(true);
-                  setSelectedImageIndex(2);
-                }}
-              />
-            </div>
-            <div className="column">
-              <img
-                src="lavanImages/Andrea.png"
-                alt="Moodboard"
-                onClick={() => {
-                  setOpen(true);
-                  setSelectedImageIndex(3);
-                }}
-              />
+              <CaseImage src="lavanImages/Heidy.png" alt="Moodboard" />
+            </>
+            <>
+              <CaseImage src="lavanImages/Andrea.png" alt="Moodboard" />
               <br />
               <br />
-              <img
-                src="lavanImages/Amanda.png"
-                alt="Moodboard"
-                onClick={() => {
-                  setOpen(true);
-                  setSelectedImageIndex(4);
-                }}
-              />
-            </div>
-          </div>
+              <CaseImage src="lavanImages/Amanda.png" alt="Moodboard" />
+            </>
+          </Columns>
         </div>
         <br />
         <h2>2 | Creating an Identity</h2>
         <h3>Color Palette</h3>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="lavanImages/colorpal.png"
-              alt="color scheme"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(5);
-              }}
-            />
-          </div>
-          <div className="column">
-            <p>
-              Lavan Beauty's colors are elegant and timeless, reflecting the
-              brand's luxurious and floral essence. The colors to be used in
-              print and digital materials are Ivory Petal, Bronze Orchid, Green
-              Quartz, and Marigold Silk. Ivory Petal and Bronze Orchid form the
-              foundation, offering a balance of softness and depth that speaks
-              to understated sophistication. Green Quartz and Marigold Silk act
-              as refined accents, adding vibrancy and opulence to create a truly
-              high-end aesthetic.
-            </p>
-          </div>
-        </div>
+        <Columns>
+          <CaseImage src="lavanImages/colorpal.png" alt="color scheme" />
+          <p>
+            Lavan Beauty's colors are elegant and timeless, reflecting the
+            brand's luxurious and floral essence. The colors to be used in
+            print and digital materials are Ivory Petal, Bronze Orchid, Green
+            Quartz, and Marigold Silk. Ivory Petal and Bronze Orchid form the
+            foundation, offering a balance of softness and depth that speaks
+            to understated sophistication. Green Quartz and Marigold Silk act
+            as refined accents, adding vibrancy and opulence to create a truly
+            high-end aesthetic.
+          </p>
+        </Columns>
         <br />
         <h3>Typeface</h3>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="lavanImages/typeface.jpg"
-              alt="type"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(6);
-              }}
-            />
-          </div>
-          <div className="column">
-            <img
-              src="lavanImages/typography.jpg"
-              alt="type"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(7);
-              }}
-            />
-          </div>
-        </div>
+        <Columns>
+          <CaseImage src="lavanImages/typeface.jpg" alt="type" />
+          <CaseImage src="lavanImages/typography.jpg" alt="type" />
+        </Columns>
         <br />
         <h3>Final Logo</h3>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="lavanImages/logo.jpg"
-              alt="final logo"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(8);
-              }}
-            />
-          </div>
-          <div className="column">
-            <p>
-              The Lavan Beauty logo features a sleek, luxurious font that
-              embodies the brand's high quality. On the website, it appears
-              off-white on a green background for a clean, modern look. The
-              night cream packaging uses a gold logo on green for elegance,
-              while the day cream showcases green on off-white for a fresh,
-              simple design. These variations ensure versatility while
-              maintaining a sophisticated brand identity.
-            </p>
-          </div>
-        </div>
+        <Columns>
+          <CaseImage src="lavanImages/logo.jpg" alt="final logo" />
+          <p>
+            The Lavan Beauty logo features a sleek, luxurious font that
+            embodies the brand's high quality. On the website, it appears
+            off-white on a green background for a clean, modern look. The
+            night cream packaging uses a gold logo on green for elegance,
+            while the day cream showcases green on off-white for a fresh,
+            simple design. These variations ensure versatility while
+            maintaining a sophisticated brand identity.
+          </p>
+        </Columns>
         <br />
         <h3>Packaging</h3>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="lavanImages/sun.png"
-              alt="type"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(9);
-              }}
-            />
+        <Columns>
+          <>
+            <CaseImage src="lavanImages/sun.png" alt="type" />
             <br />
             <br />
             <center>
@@ -291,16 +146,9 @@ function LavanProcess() {
                 start.
               </p>
             </center>
-          </div>
-          <div className="column">
-            <img
-              src="lavanImages/moon.png"
-              alt="type"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(10);
-              }}
-            />
+          </>
+          <>
+            <CaseImage src="lavanImages/moon.png" alt="type" />
             <br />
             <br />
             <center>
@@ -310,71 +158,36 @@ function LavanProcess() {
                 for nighttime skincare.
               </p>
             </center>
-          </div>
-        </div>
+          </>
+        </Columns>
         <br />
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="lavanImages/boxPackaging.jpg"
-              alt="type"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(11);
-              }}
-            />
-          </div>
-
-          <div className="column">
-            <img
-              src="lavanImages/packaging.jpg"
-              alt="type"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(12);
-              }}
-            />
-          </div>
-        </div>
+        <Columns>
+          <CaseImage src="lavanImages/boxPackaging.jpg" alt="type" />
+          <CaseImage src="lavanImages/packaging.jpg" alt="type" />
+        </Columns>
         <br />
         <br />
-        <h1>Website Revamp</h1>
-        <hr />
+        <SectionHeading title="Website Revamp" />
         <h2>1 | UX Research</h2>
         <h3>Competitor Analysis</h3>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
+        <Columns>
+          <>
+            <CaseImage
               src="lavanImages/CompetitorAnalysis1.png"
               alt="Features Brainstorm"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(13);
-              }}
             />
             <br />
             <br />
-
-            <img
+            <CaseImage
               src="lavanImages/CompetitorAnalysis3.png"
               alt="Features Brainstorm"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(15);
-              }}
             />
-          </div>
-          <div className="column">
-            <img
-              src="lavanImages/CompetitorAnalysis2.png"
-              alt="Features Brainstorm"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(14);
-              }}
-            />
-          </div>
-        </div>
+          </>
+          <CaseImage
+            src="lavanImages/CompetitorAnalysis2.png"
+            alt="Features Brainstorm"
+          />
+        </Columns>
         <br />
         <h3>Common Themes</h3>
         <ul>
@@ -411,54 +224,24 @@ function LavanProcess() {
           consumerism.
         </p>
         <h3>Personas</h3>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="lavanImages/persona1.png"
-              alt="site map"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(16);
-              }}
-            />
-          </div>
-          <div className="column">
-            <img
-              src="lavanImages/persona2.png"
-              alt="site map"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(17);
-              }}
-            />
-          </div>
-        </div>
-        <div className="two-columns-container">
-          <div className="column">
+        <Columns>
+          <CaseImage src="lavanImages/persona1.png" alt="site map" />
+          <CaseImage src="lavanImages/persona2.png" alt="site map" />
+        </Columns>
+                <br />
+
+        <Columns>
+          <>
             <h3>User Stories</h3>
-
-            <img
-              src="lavanImages/userstory.png"
-              alt="site map"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(18);
-              }}
-            />
-          </div>
-          <div className="column">
+            <CaseImage src="lavanImages/userstory.png" alt="site map" />
+          </>
+          <>
             <h3>Finding Common Themes</h3>
+            <CaseImage src="lavanImages/commonThemes.png" alt="site map" />
+          </>
+        </Columns>
+                <br />
 
-            <img
-              src="lavanImages/commonThemes.png"
-              alt="site map"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(19);
-              }}
-            />
-          </div>
-        </div>
         <h3>Refine Statements</h3>
         <ol>
           <li>
@@ -480,61 +263,18 @@ function LavanProcess() {
         </ol>
         <h2>3 | Make</h2>
         <h3>Sitemap</h3>
-        <img
-          src="lavanImages/sitemap.png"
-          alt="site map"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(20);
-          }}
-        />
+        <CaseImage src="lavanImages/sitemap.png" alt="site map" />
         <h2>4 | Design</h2>
         <h3>Low-Fidelity Wireframes</h3>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="lavanImages/lofi1.png"
-              alt="lo-fi"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(21);
-              }}
-            />
-          </div>
-          <div className="column">
-            <img
-              src="lavanImages/lofi2.png"
-              alt="lo-fi"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(22);
-              }}
-            />
-          </div>
-        </div>
+        <Columns>
+          <CaseImage src="lavanImages/lofi1.png" alt="lo-fi" />
+          <CaseImage src="lavanImages/lofi2.png" alt="lo-fi" />
+        </Columns>
         <br /> <h3>Mid-Fidelity Wireframes</h3>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="lavanImages/midfi1.png"
-              alt="mid-fi"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(23);
-              }}
-            />
-          </div>{" "}
-          <div className="column">
-            <img
-              src="lavanImages/midfi2.png"
-              alt="mid-fi"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(24);
-              }}
-            />
-          </div>
-        </div>
+        <Columns>
+          <CaseImage src="lavanImages/midfi1.png" alt="mid-fi" />
+          <CaseImage src="lavanImages/midfi2.png" alt="mid-fi" />
+        </Columns>
         <br />
         <h3>High-Fidelity Wireframes</h3>
         <p>
@@ -546,74 +286,19 @@ function LavanProcess() {
             Click Here to see High-Fis!
           </a>
         </p>{" "}
-        <div className="two-columns-container">
-          <div className="column">
+        <Columns>
+          <>
             <h4>Home, About Us, and Product Pages</h4>
-            <img
-              src="lavanImages/hifi1.png"
-              alt="hi-fi"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(25);
-              }}
-            />
-          </div>{" "}
-          <div className="column">
+            <CaseImage src="lavanImages/hifi1.png" alt="hi-fi" />
+          </>
+          <>
             <h4>View Product, Ingredients, Science Pages</h4>
-            <img
-              src="lavanImages/hifi2.png"
-              alt="hi-fi"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(26);
-              }}
-            />
-          </div>
-        </div>
-    
+            <CaseImage src="lavanImages/hifi2.png" alt="hi-fi" />
+          </>
+        </Columns>
         <br />
-      </section>
-
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        index={selectedImageIndex}
-        slides={[
-          { src: "/lavanImages/personalityLevels.png" },
-          { src: "/lavanImages/Caro.png" },
-          { src: "/lavanImages/Heidy.png" },
-          { src: "/lavanImages/Andrea.png" },
-          { src: "/lavanImages/Amanda.png" },
-          { src: "/lavanImages/colorpal.png" },
-          { src: "/lavanImages/typeface.jpg" },
-          { src: "/lavanImages/typography.jpg" },
-          { src: "/lavanImages/logo.jpg" },
-          { src: "/lavanImages/sun.png" },
-          { src: "/lavanImages/moon.png" },
-          { src: "/lavanImages/boxPackaging.jpg" },
-          { src: "/lavanImages/Packaging.jpg" },
-          { src: "/lavanImages/CompetitorAnalysis1.png" },
-
-          { src: "/lavanImages/CompetitorAnalysis2.png" },
-          { src: "/lavanImages/CompetitorAnalysis3.png" },
-
-          { src: "/lavanImages/persona1.png" },
-          { src: "/lavanImages/persona2.png" },
-          { src: "/lavanImages/userstory.png" },
-          { src: "/lavanImages/commonthemes.png" },
-
-          { src: "/lavanImages/sitemap.png" },
-          { src: "/lavanImages/lofi1.png" },
-          { src: "/lavanImages/lofi2.png" },
-          { src: "/lavanImages/midfi1.png" },
-          { src: "/lavanImages/midfi2.png" },
-          { src: "/lavanImages/hifi1.png" },
-          { src: "/lavanImages/hifi2.png" },
-        ]}
-      />
-
-      <Footer />
-    </>
+      </CaseBody>
+    </CaseStudyLayout>
   );
 }
 

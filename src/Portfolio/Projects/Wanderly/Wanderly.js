@@ -1,87 +1,42 @@
-import React, { useState, useEffect } from "react";
-import "./../projects.css";
-import "../main.css";
-import "./wanderly.css"
-import Lightbox from "yet-another-react-lightbox";
-import Nav from "../../../NavigationBar";
-import Footer from "../../../Footer/footer";
-import "yet-another-react-lightbox/styles.css";
-import "yet-another-react-lightbox/plugins/captions.css";
+import React from "react";
+import {
+  CaseStudyLayout,
+  CaseCover,
+  CaseHeader,
+  CaseOverview,
+  CaseBody,
+  SectionHeading,
+  CaseImage,
+  Columns,
+} from "../components";
+
+const PROTOTYPE_URL =
+  "https://www.figma.com/proto/baYzQWkP6EDsjUKMwo4GNq/Journey-Project?page-id=43%3A189&node-id=300-17131&viewport=-1251%2C-667%2C0.11&t=ZXsp6VYPpSwrJWOG-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=422%3A10607&show-proto-sidebar=1";
 
 function WanderlyProcess() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  const [open, setOpen] = React.useState(false);
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-
   return (
-    <>
-      <Nav />
-      <br />
-      <section className="cover-image">
-        <div className="image-background">
-          <div className="image-background-container">
-            <img
-              style={{ cursor: "auto" }}
-              src="wanderlyImages/wanderlyLandscape.jpg"
-              alt="Wanderly Landscape"
-            />
-          </div>
-        </div>
-      </section>
+    <CaseStudyLayout>
+      <CaseCover
+        src="wanderlyImages/wanderlyLandscape.jpg"
+        alt="Wanderly Landscape"
+      />
 
-      <section id="header" className="title-header">
-        <h1 className="">Wanderly</h1>
-        <h4>Mobile App Design, Prototyping, User Interviews, UX Research </h4>
-      </section>
+      <CaseHeader
+        title="Wanderly"
+        subtitle="Mobile App Design, Prototyping, User Interviews, UX Research "
+      />
 
-      <section id="overview-section" className="overview-section">
-        <div className="overview">
-          <div className="overviewLeft">
-            <h5>Project Overview</h5>
-            <p>
-              Wanderly is a travel companion that blends creative documentation,
-              planning, and social connection. With personalized bucket lists,
-              auto-generated scrapbooks, and a curated traveler network,
-              Wanderly enhances your meaningful moments on your journey.
-            </p>
-            <br />
-            <h5>
-              <a
-                href="https://www.figma.com/proto/baYzQWkP6EDsjUKMwo4GNq/Journey-Project?page-id=43%3A189&node-id=300-17131&viewport=-1251%2C-667%2C0.11&t=ZXsp6VYPpSwrJWOG-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=422%3A10607&show-proto-sidebar=1"
-                target="_blank"
-                rel="noreferrer"
-              >
-                High-Fidelity Prototype
-              </a>
-            </h5>
-          </div>
+      <CaseOverview
+        overview="Wanderly is a travel companion that blends creative documentation, planning, and social connection. With personalized bucket lists, auto-generated scrapbooks, and a curated traveler network, Wanderly enhances your meaningful moments on your journey."
+        links={[{ label: "High-Fidelity Prototype", href: PROTOTYPE_URL }]}
+        role="Software Designer"
+        team="Solo Project!"
+        timeline="January 2025 - April 2025"
+        tools="Figma"
+      />
 
-          <div className="overviewRight">
-            <div className="two-columns-container">
-              <div className="column">
-                <h5>Role</h5>
-                <p>Software Designer</p>
-
-                <h5>Team</h5>
-                <p>Solo Project!</p>
-              </div>
-              <div className="column">
-                <h5>Timeline</h5>
-                <p>January 2025 - April 2025</p>
-
-                <h5>Tools</h5>
-                <p>Figma</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="summary">
-        <h1>Research Overview</h1>
-        <hr></hr>
+      <CaseBody>
+        <SectionHeading title="Research Overview" />
         <h2>1 | The Problem statement</h2>
         <p>
           Travelers struggle to <strong>seamlessly plan</strong>,{" "}
@@ -232,41 +187,18 @@ function WanderlyProcess() {
         </div>
         <br />
         <br />
-        <h1>Design Process</h1>
-        <hr></hr>
+        <SectionHeading title="Design Process" />
         <h2>1 | Hand-drawn Wireframes</h2>
-        <img
+        <CaseImage
           src="wanderlyImages/handdrawnwireframes.png"
           alt="handdrawnwireframes"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(0);
-          }}
         />
         <br />
         <h2> 2 | Sitemap</h2>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="wanderlyImages/sitemapdrawn.jpg"
-              alt="sitemapdrawn"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(1);
-              }}
-            />
-          </div>
-          <div className="column">
-            <img
-              src="wanderlyImages/sitemap.svg"
-              alt="sitemap"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(2);
-              }}
-            />
-          </div>
-        </div>
+        <Columns>
+          <CaseImage src="wanderlyImages/sitemapdrawn.jpg" alt="sitemapdrawn" />
+          <CaseImage src="wanderlyImages/sitemap.svg" alt="sitemap" />
+        </Columns>
 
         <br />
 
@@ -423,7 +355,7 @@ function WanderlyProcess() {
 
             <div className="takeaway-item">
               <div className="takeaway-title">
-               <h6>Workflow 2: Making collages/videos</h6> 
+               <h6>Workflow 2: Making collages/videos</h6>
               </div>
               <div className="takeaway-divider"></div>
               <p className="takeaway-text">
@@ -438,7 +370,7 @@ function WanderlyProcess() {
 
             <div className="takeaway-item">
               <div className="takeaway-title">
-               <h6>Workflow 3: Connecting with others</h6> 
+               <h6>Workflow 3: Connecting with others</h6>
               </div>
               <div className="takeaway-divider"></div>
               <p className="takeaway-text">
@@ -452,305 +384,113 @@ function WanderlyProcess() {
             </div>
           </div>
           <h2>4 | Color Palette + Typography</h2>
-          <div className="two-columns-container">
-            <div className="column">
-              <img
-                src="wanderlyImages/type.svg"
-                alt="Wanderly Typography"
-                onClick={() => {
-                  setOpen(true);
-                  setSelectedImageIndex(3);
-                }}
-              />
-            </div>
-
-            <div className="column">
-              <img
-                src="wanderlyImages/color.png"
-                alt="Wanderly Colors"
-                onClick={() => {
-                  setOpen(true);
-                  setSelectedImageIndex(4);
-                }}
-              />
-            </div>
-          </div>
+          <Columns>
+            <CaseImage src="wanderlyImages/type.svg" alt="Wanderly Typography" />
+            <CaseImage src="wanderlyImages/color.png" alt="Wanderly Colors" />
+          </Columns>
           <h2>5 | Wireframes</h2>
-          <div className="two-columns-container">
-            <div className="column">
+          <Columns>
+            <>
               <h4>Low-Fidelity Wireframes</h4>
-              <img
+              <CaseImage
                 src="wanderlyImages/lowfis.png"
                 alt="Low Fidelity Wireframes"
-                onClick={() => {
-                  setOpen(true);
-                  setSelectedImageIndex(5);
-                }}
               />
-            </div>
-            <div className="column">
+            </>
+            <>
               <h4>Mid-Fidelity Wireframes</h4>
-              <img
+              <CaseImage
                 src="wanderlyImages/midfis.png"
                 alt="Mid Fidelity Wireframes"
-                onClick={() => {
-                  setOpen(true);
-                  setSelectedImageIndex(6);
-                }}
               />
-            </div>
-          </div>
+            </>
+          </Columns>
           <h2>6 | Design Iterations</h2>
-          <div className="two-columns-container">
-            <div className="column">
-              <img
+          <Columns>
+            <>
+              <CaseImage
                 src="wanderlyImages/iteration1.png"
                 alt="Design Iteration 1"
-                onClick={() => {
-                  setOpen(true);
-                  setSelectedImageIndex(7);
-                }}
               />
               <p className="iteration-comments">
                 <strong>Iteration:</strong> Explored card layouts with 6, 2, and
                 3 photos, settling on 3 photos to balance profile information
                 with card compactness.
               </p>
-            </div>
-            <div className="column">
-              <img
+            </>
+            <>
+              <CaseImage
                 src="wanderlyImages/iteration2.png"
                 alt="Design Iteration 2"
-                onClick={() => {
-                  setOpen(true);
-                  setSelectedImageIndex(8);
-                }}
               />
               <p className="iteration-comments">
                 <strong>Iteration:</strong> Tested different column
                 configurations and text positioning to optimize content
                 discovery and visual hierarchy.
               </p>
-            </div>
-          </div>
-          <div className="two-columns-container">
-            <div className="column">
-              <img
+            </>
+          </Columns>
+          <Columns>
+            <>
+              <CaseImage
                 src="wanderlyImages/iteration3.png"
                 alt="Design Iteration 3"
-                onClick={() => {
-                  setOpen(true);
-                  setSelectedImageIndex(9);
-                }}
               />
               <p className="iteration-comments">
                 <strong>Iteration:</strong> User feedback revealed that filled
                 tags overshadowed other profile content, leading to the decision
                 to use outlined tags for better visual balance.
               </p>
-            </div>
-            <div className="column"></div>
-          </div>
+            </>
+            <></>
+          </Columns>
         </div>
         <br />
         <br />
-        <h1>The Prototype</h1>
-        <hr></hr>
+        <SectionHeading title="The Prototype" />
         <h2>
           Check out the{" "}
-          <a
-            href="https://www.figma.com/proto/baYzQWkP6EDsjUKMwo4GNq/Journey-Project?page-id=43%3A189&node-id=300-17131&viewport=-1251%2C-667%2C0.11&t=ZXsp6VYPpSwrJWOG-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=422%3A10607&show-proto-sidebar=1"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={PROTOTYPE_URL} target="_blank" rel="noreferrer">
             prototype
           </a>
           !
         </h2>
         <h2>Flow 1: Creating your Profile + Connecting with Others</h2>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="wanderlyImages/1flow1.png"
-              alt="Flow 1 Screen 1"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(10);
-              }}
-            />
-          </div>
-          <div className="column">
-            <img
-              src="wanderlyImages/2flow1.png"
-              alt="Flow 1 Screen 2"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(11);
-              }}
-            />
-          </div>
-        </div>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="wanderlyImages/3flow1.png"
-              alt="Flow 1 Screen 3"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(12);
-              }}
-            />
-          </div>
-          <div className="column">
-            <img
-              src="wanderlyImages/4flow1.png"
-              alt="Flow 1 Screen 4"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(13);
-              }}
-            />
-          </div>
-        </div>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="wanderlyImages/5flow1.png"
-              alt="Flow 1 Screen 5"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(14);
-              }}
-            />
-          </div>
-          <div className="column">
-            <img
-              src="wanderlyImages/6flow1.png"
-              alt="Flow 1 Screen 6"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(15);
-              }}
-            />
-          </div>
-        </div>
+        <Columns>
+          <CaseImage src="wanderlyImages/1flow1.png" alt="Flow 1 Screen 1" />
+          <CaseImage src="wanderlyImages/2flow1.png" alt="Flow 1 Screen 2" />
+        </Columns>
+        <Columns>
+          <CaseImage src="wanderlyImages/3flow1.png" alt="Flow 1 Screen 3" />
+          <CaseImage src="wanderlyImages/4flow1.png" alt="Flow 1 Screen 4" />
+        </Columns>
+        <Columns>
+          <CaseImage src="wanderlyImages/5flow1.png" alt="Flow 1 Screen 5" />
+          <CaseImage src="wanderlyImages/6flow1.png" alt="Flow 1 Screen 6" />
+        </Columns>
         <h2>
           Flow 2: Saving an item to your bucket list + creating your own item
         </h2>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="wanderlyImages/1flow2.png"
-              alt="Flow 2 Screen 1"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(16);
-              }}
-            />
-          </div>
-          <div className="column">
-            <img
-              src="wanderlyImages/2flow2.png"
-              alt="Flow 2 Screen 2"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(17);
-              }}
-            />
-          </div>
-        </div>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="wanderlyImages/3flow2.png"
-              alt="Flow 2 Screen 3"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(18);
-              }}
-            />
-          </div>
-          <div className="column">
-            <img
-              src="wanderlyImages/4flow2.png"
-              alt="Flow 2 Screen 4"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(19);
-              }}
-            />
-          </div>
-        </div>
+        <Columns>
+          <CaseImage src="wanderlyImages/1flow2.png" alt="Flow 2 Screen 1" />
+          <CaseImage src="wanderlyImages/2flow2.png" alt="Flow 2 Screen 2" />
+        </Columns>
+        <Columns>
+          <CaseImage src="wanderlyImages/3flow2.png" alt="Flow 2 Screen 3" />
+          <CaseImage src="wanderlyImages/4flow2.png" alt="Flow 2 Screen 4" />
+        </Columns>
         <h2>Flow 3: Creating a scrapbook</h2>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="wanderlyImages/1flow3.png"
-              alt="Flow 3 Screen 1"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(20);
-              }}
-            />
-          </div>
-          <div className="column">
-            <img
-              src="wanderlyImages/2flow3.png"
-              alt="Flow 3 Screen 2"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(21);
-              }}
-            />
-          </div>
-        </div>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="wanderlyImages/3flow3.png"
-              alt="Flow 3 Screen 3"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(22);
-              }}
-            />
-          </div>
-          <div className="column"></div>
-        </div>
+        <Columns>
+          <CaseImage src="wanderlyImages/1flow3.png" alt="Flow 3 Screen 1" />
+          <CaseImage src="wanderlyImages/2flow3.png" alt="Flow 3 Screen 2" />
+        </Columns>
+        <Columns>
+          <CaseImage src="wanderlyImages/3flow3.png" alt="Flow 3 Screen 3" />
+          <></>
+        </Columns>
         <br />
-      </section>
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        index={selectedImageIndex}
-        slides={[
-          { src: "/wanderlyImages/handdrawnwireframes.png" },
-          { src: "/wanderlyImages/sitemapdrawn.jpg" },
-          { src: "/wanderlyImages/sitemap.svg" },
-          { src: "/wanderlyImages/type.svg" },
-          { src: "/wanderlyImages/color.png" },
-          { src: "/wanderlyImages/lowfis.png" },
-          { src: "/wanderlyImages/midfis.png" },
-          { src: "/wanderlyImages/iteration1.png" },
-          { src: "/wanderlyImages/iteration2.png" },
-          { src: "/wanderlyImages/iteration3.png" },
-          { src: "/wanderlyImages/1flow1.png" },
-          { src: "/wanderlyImages/2flow1.png" },
-          { src: "/wanderlyImages/3flow1.png" },
-          { src: "/wanderlyImages/4flow1.png" },
-          { src: "/wanderlyImages/5flow1.png" },
-          { src: "/wanderlyImages/6flow1.png" },
-          { src: "/wanderlyImages/1flow2.png" },
-          { src: "/wanderlyImages/2flow2.png" },
-          { src: "/wanderlyImages/3flow2.png" },
-          { src: "/wanderlyImages/4flow2.png" },
-          { src: "/wanderlyImages/1flow3.png" },
-          { src: "/wanderlyImages/2flow3.png" },
-          { src: "/wanderlyImages/3flow3.png" },
-        ]}
-      />
-      <Footer />
-    </>
+      </CaseBody>
+    </CaseStudyLayout>
   );
 }
 

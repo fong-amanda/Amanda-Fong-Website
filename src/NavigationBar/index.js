@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
-import homeImage from "../Images/AFongLogo2.png";
 import "./nav.css";
+const homeImage = "/Images/AFongLogo2.png";
+
 
 function NavigationBar() {
   const [activeLink, setActiveLink] = useState("Home");

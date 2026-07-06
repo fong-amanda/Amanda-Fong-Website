@@ -1,108 +1,53 @@
-import Nav from "../../../NavigationBar";
-import "../projects.css";
-import "../main.css";
-import Footer from "../../../Footer/footer";
-import "yet-another-react-lightbox/styles.css";
-import "yet-another-react-lightbox/plugins/captions.css";
-import React, { useEffect, useState } from "react";
-import Lightbox from "yet-another-react-lightbox";
+import React from "react";
+import {
+  CaseStudyLayout,
+  CaseCover,
+  CaseHeader,
+  CaseOverview,
+  CaseBody,
+  SectionHeading,
+  CaseImage,
+  Columns,
+} from "../components";
 import "./dearly.css";
 
+const PROTOTYPE_URL =
+  "https://www.figma.com/proto/XqqgGBwLIwgJrpJ2iYxvlU/Dearly?page-id=1%3A31&node-id=4203-41006&viewport=-5603%2C-6186%2C0.14&t=UsBu2edEIo5KFFHH-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4203%3A41006&show-proto-sidebar=1";
+
 function DearlyProcess() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  const [open, setOpen] = React.useState(false);
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-
   return (
-    <>
-      <Nav />
-      <br />
-      <section className="cover-image">
-        <div className="image-background">
-          <div className="image-background-container">
-            <img
-              style={{ cursor: "auto" }}
-              src="dearlyImages/dearlyLandscape.jpg"
-              alt="Dearly Landscape"
-            />
-          </div>
-        </div>
-      </section>
+    <CaseStudyLayout>
+      <CaseCover src="dearlyImages/dearlyLandscape.jpg" alt="Dearly Landscape" />
 
-      <section id="header" className="title-header">
-        <h1>Dearly</h1>
-        <h2>
-          Mobile Application Design, Branding, Accessibility, UI/UX Design
-        </h2>
-      </section>
+      <CaseHeader
+        title="Dearly"
+        subtitle="Mobile Application Design, Branding, Accessibility, UI/UX Design"
+      />
 
-<section id="overview-section" className="overview-section">
-        <div className="overview">
-          <div className="overviewLeft">
-            <h5>Project Overview</h5>
-            <p>
-              A mobile app that helps families stay intimately connected across
-              generations by sharing moments, memories, and conversations.
-              Designed with accessibility and simplicity in mind, it bridges the
-              technological divide between younger and older family members by
-              offering two distinct user modes: a streamlined, simplified
-              interface for elderly users and a feature-rich experience for
-              younger users.
-            </p>
-            <br />
-            <h5>
-              <a
-                href="https://www.figma.com/proto/XqqgGBwLIwgJrpJ2iYxvlU/Dearly?page-id=1%3A31&node-id=4203-41006&viewport=-5603%2C-6186%2C0.14&t=UsBu2edEIo5KFFHH-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4203%3A41006&show-proto-sidebar=1"
-                target="_blank"
-                rel="noreferrer"
-              >
-                High-Fidelity Prototype
-              </a>
-            </h5>
-          </div>
+      <CaseOverview
+        overview="A mobile app that helps families stay intimately connected across generations by sharing moments, memories, and conversations. Designed with accessibility and simplicity in mind, it bridges the technological divide between younger and older family members by offering two distinct user modes: a streamlined, simplified interface for elderly users and a feature-rich experience for younger users."
+        links={[{ label: "High-Fidelity Prototype", href: PROTOTYPE_URL }]}
+        role="Software Designer"
+        team={[
+          { role: "Project Lead", people: "Melody Yu" },
+          { role: "Design Lead", people: "Liana Zhang" },
+          {
+            role: "Designers",
+            people: "Amanda Fong, Traci Lu, Zahra Wibisana, Audrey Wong",
+          },
+          { role: "Tech Leads", people: "Stone Liu, Mai Nguyen" },
+          {
+            role: "Developers",
+            people:
+              "Zainab Imadulla, Tyler Kim, Megan Lai, Aahil Nishad, Josh Torre",
+          },
+        ]}
+        timeline="January 2025 - April 2025"
+        tools="Figma"
+      />
 
-          <div className="overviewRight">
-            <h5>Role</h5>
-            <p>Software Designer</p>
-
-            <h5>Team</h5>
-            <div className="three-columns-container">
-              <div className="column">
-                <h6>Project Lead:</h6>
-                <p>Melody Yu</p>
-                
-                <h6>Design Lead:</h6>
-                <p>Liana Zhang</p>
-              </div>
-              <div className="column">
-                <h6>Designers:</h6>
-                <p>Amanda Fong, Traci Lu, Zahra Wibisana, Audrey Wong</p>
-                
-                <h6>Tech Leads:</h6>
-                <p>Stone Liu, Mai Nguyen</p>
-              </div>
-              <div className="column">
-                <h6>Developers:</h6>
-                <p>
-                  Zainab Imadulla, Tyler Kim, Megan Lai, Aahil Nishad, Josh
-                  Torre
-                </p>
-              </div>
-            </div>
-            <h5>Timeline</h5>
-            <p>January 2025 - April 2025</p>
-
-            <h5>Tools</h5>
-            <p>Figma</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="summary">
-        <h1>Project Context</h1>
-        <hr></hr>
+      <CaseBody>
+        <SectionHeading title="Project Context" />
         <h2>What is Dearly?</h2>
         <p>
           Dearly is a private social platform that helps users stay connected
@@ -134,8 +79,8 @@ function DearlyProcess() {
           easy, consistent ways to connect with their families.
         </p>
         <br />
-        <h1>Branding</h1>
-        <hr></hr>
+
+        <SectionHeading title="Branding" />
         <h2>1 | Discovering the brand</h2>
         <p>
           We began the project by exploring and defining the ideal direction for
@@ -149,94 +94,40 @@ function DearlyProcess() {
         </p>
         <h2>Moodboarding</h2>
         <div className="lightbox-images">
-          <img
-            src="dearlyImages/moodboard.png"
-            alt="Moodboard"
-            onClick={() => {
-              setOpen(true);
-              setSelectedImageIndex(0);
-            }}
-          />
+          <CaseImage src="dearlyImages/moodboard.png" alt="Moodboard" />
         </div>
         <br />
         <h2>2 | Creating an Identity</h2>
         <h2>Color Palette</h2>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="dearlyImages/colorpal.png"
-              alt="Color Scheme"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(1);
-              }}
-            />
-          </div>
-          <div className="column">
-            <p>
-              Dearly's colors are warm and inviting, reflecting the app's
-              mission of fostering intimate family connections. The palette of
-              Pearl, Honey, Ink, and Espresso creates a visual language that
-              bridges generations. Pearl and Espresso form the foundational
-              colors, offering a balance of lightness and depth that speaks to
-              the app's inclusive design. Honey and Ink act as vibrant accents,
-              adding warmth and trust to create a truly welcoming digital
-              experience that feels both modern and familiar.
-            </p>
-          </div>
-        </div>
+        <Columns>
+          <CaseImage src="dearlyImages/colorpal.png" alt="Color Scheme" />
+          <p>
+            Dearly's colors are warm and inviting, reflecting the app's mission
+            of fostering intimate family connections. The palette of Pearl,
+            Honey, Ink, and Espresso creates a visual language that bridges
+            generations. Pearl and Espresso form the foundational colors,
+            offering a balance of lightness and depth that speaks to the app's
+            inclusive design. Honey and Ink act as vibrant accents, adding
+            warmth and trust to create a truly welcoming digital experience that
+            feels both modern and familiar.
+          </p>
+        </Columns>
         <br />
         <h2>Typeface</h2>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="dearlyImages/typeface.png"
-              alt="Typeface"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(2);
-              }}
-            />
-          </div>
-          <div className="column">
-            <img
-              src="dearlyImages/typeface2.png"
-              alt="Typeface Details"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(3);
-              }}
-            />
-          </div>
-        </div>
+        <Columns>
+          <CaseImage src="dearlyImages/typeface.png" alt="Typeface" />
+          <CaseImage src="dearlyImages/typeface2.png" alt="Typeface Details" />
+        </Columns>
         <br />
         <h2>Final Logo</h2>
-        <div className="two-columns-container">
-          <div className="column">
-            <img
-              src="dearlyImages/logo2.png"
-              alt="Final Logo"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(4);
-              }}
-            />
-          </div>
-          <div className="column">
-            <img
-              src="dearlyImages/logo.png"
-              alt="Final Logo Variations"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(5);
-              }}
-            />
-          </div>
-        </div>
+        <Columns>
+          <CaseImage src="dearlyImages/logo2.png" alt="Final Logo" />
+          <CaseImage src="dearlyImages/logo.png" alt="Final Logo Variations" />
+        </Columns>
         <br />
         <br />
-        <h1>Mobile Application Revamp</h1>
-        <hr></hr>
+
+        <SectionHeading title="Mobile Application Revamp" />
         <h2>Streamlined Design Approach</h2>
         <p>
           The existing project materials provided us with a significant head
@@ -254,28 +145,19 @@ function DearlyProcess() {
           experience, simplifying the interface for elderly users while
           maintaining robust features for younger family members.
         </p>
-                <div className="two-columns-container">
-                  <div className="column">
-                    <h4>Advanced Sitemap</h4>
-        <img
-          src="dearlyImages/AdvancedSitemap.jpg"
-          alt="Advanced Sitemap"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(6);
-          }}
-        /></div>
-<div className="column">                     <h4>Basic Sitemap</h4>
- <img 
-          src="dearlyImages/BasicSitemap.jpg"
-          alt="Basic Sitemap"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(7);
-          }}
-        />
-        </div>
-        </div>
+        <Columns>
+          <>
+            <h4>Advanced Sitemap</h4>
+            <CaseImage
+              src="dearlyImages/AdvancedSitemap.jpg"
+              alt="Advanced Sitemap"
+            />
+          </>
+          <>
+            <h4>Basic Sitemap</h4>
+            <CaseImage src="dearlyImages/BasicSitemap.jpg" alt="Basic Sitemap" />
+          </>
+        </Columns>
         <h2>2 | Userflows</h2>
         <p>
           We mapped intricate user journeys through engineering collaboration,
@@ -284,103 +166,65 @@ function DearlyProcess() {
           seamlessly bridged innovative concepts with practical implementation.
         </p>
         <p>
-          Specifically, I focused on creating a unified onboarding experience 
-that welcomed all users equally, regardless of their technological 
-comfort level. Rather than immediately splitting users into separate 
-paths, the onboarding introduced Dearly's core value before allowing 
-users to choose between a simplified interface tailored for less 
-tech-experienced family members or a more comprehensive experience 
-for those seeking advanced features. This approach ensured no user 
-felt alienated from the very first interaction.
+          Specifically, I focused on creating a unified onboarding experience
+          that welcomed all users equally, regardless of their technological
+          comfort level. Rather than immediately splitting users into separate
+          paths, the onboarding introduced Dearly's core value before allowing
+          users to choose between a simplified interface tailored for less
+          tech-experienced family members or a more comprehensive experience for
+          those seeking advanced features. This approach ensured no user felt
+          alienated from the very first interaction.
         </p>
-        <img
-          src="dearlyImages/userflow1.jpg"
-          alt="Detailed User Flow"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(8);
-          }}
-        />
+        <CaseImage src="dearlyImages/userflow1.jpg" alt="Detailed User Flow" />
 
         <h2>3 | Onboarding Wireframes</h2>
-
-        <div className="two-columns-container">
-          
-          <div className="column">
-                                <h4>Low-Fidelity Wireframes</h4>
-
-            <img
+        <Columns>
+          <>
+            <h4>Low-Fidelity Wireframes</h4>
+            <CaseImage
               src="dearlyImages/lofi1.png"
               alt="Low Fidelity Wireframes 1"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(9);
-              }}
             />
-        <br />
-           
-          </div>
-          <div className="column">
-             <h4>Mid-Fidelity Wireframes</h4>
-        <img
-          src="dearlyImages/midfi.png"
-          alt="Mid Fidelity Wireframes"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(10);
-          }}
-        />
-          </div>
-        </div>
-      
+            <br />
+          </>
+          <>
+            <h4>Mid-Fidelity Wireframes</h4>
+            <CaseImage
+              src="dearlyImages/midfi.png"
+              alt="Mid Fidelity Wireframes"
+            />
+          </>
+        </Columns>
+
         <h4>High-Fidelity Wireframes</h4>
-              <div className="two-columns-container">
-          <div className="column">
-        <h5>Landing Pages</h5>
-        <img
-          src="dearlyImages/hifi1.jpg"
-          alt="High Fidelity Landing Pages"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(11);
-          }}
-        />
-                <br />
-
-                <h5 style={{ marginTop: '20px' }}>Forgot Password Pages</h5>
-        <img
-          src="dearlyImages/hifi3.jpg"
-          alt="High Fidelity Forgot Password Pages"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(12);
-          }}
-        />
-        </div>
-        <br />
-                  <div className="column">
-
-        <h5>Sign Up Pages</h5>
-        <img
-          src="dearlyImages/hifi2.jpg"
-          alt="High Fidelity Sign Up Pages"
-          onClick={() => {
-            setOpen(true);
-            setSelectedImageIndex(13);
-          }}
-        />
-        <br />
-        </div>
-        </div>
+        <Columns>
+          <>
+            <h5>Landing Pages</h5>
+            <CaseImage
+              src="dearlyImages/hifi1.jpg"
+              alt="High Fidelity Landing Pages"
+            />
+            <br />
+            <h5 style={{ marginTop: "20px" }}>Forgot Password Pages</h5>
+            <CaseImage
+              src="dearlyImages/hifi3.jpg"
+              alt="High Fidelity Forgot Password Pages"
+            />
+          </>
+          <>
+            <h5>Sign Up Pages</h5>
+            <CaseImage
+              src="dearlyImages/hifi2.jpg"
+              alt="High Fidelity Sign Up Pages"
+            />
+            <br />
+          </>
+        </Columns>
 
         <h2>4 | Presentation</h2>
         <p>
           Check out the{" "}
-          <a
-            href="https://www.figma.com/proto/XqqgGBwLIwgJrpJ2iYxvlU/Dearly?page-id=1%3A31&node-id=4203-41006&viewport=-5603%2C-6186%2C0.14&t=UsBu2edEIo5KFFHH-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4203%3A41006&show-proto-sidebar=1"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href={PROTOTYPE_URL} target="_blank" rel="noreferrer">
             high-fidelity prototype
           </a>
           !
@@ -393,66 +237,17 @@ felt alienated from the very first interaction.
           </a>{" "}
           Spring 2025 showcase!
         </p>
-        <div className="showcase-columns-container">
-          <div className="showcase-column">
-            <img
-              src="dearlyImages/showcase1.jpg"
-              alt="showcase"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(14);
-              }}
-            />
-          </div>
-          <div className="showcase-column">
-            <img
-              src="dearlyImages/showcase2.jpg"
-              alt="showcase"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(15);
-              }}
-            />
-          </div>
-          <div className="showcase-column">
-            <img
-              src="dearlyImages/showcase3.jpg"
-              alt="showcase"
-              onClick={() => {
-                setOpen(true);
-                setSelectedImageIndex(16);
-              }}
-            />
-          </div>
-        </div>
+        <Columns
+          className="showcase-columns-container"
+          columnClassName="showcase-column"
+        >
+          <CaseImage src="dearlyImages/showcase1.jpg" alt="showcase" />
+          <CaseImage src="dearlyImages/showcase2.jpg" alt="showcase" />
+          <CaseImage src="dearlyImages/showcase3.jpg" alt="showcase" />
+        </Columns>
         <br />
-      </section>
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        index={selectedImageIndex}
-        slides={[
-          { src: "/dearlyImages/moodboard.png" },
-          { src: "/dearlyImages/colorpal.png" },
-          { src: "/dearlyImages/typeface.png" },
-          { src: "/dearlyImages/typeface2.png" },
-          { src: "/dearlyImages/logo2.png" },
-          { src: "/dearlyImages/logo.png" },
-          { src: "/dearlyImages/AdvancedSitemap.jpg" },
-          { src: "/dearlyImages/BasicSitemap.jpg" },
-          { src: "/dearlyImages/userflow1.jpg" },
-          { src: "/dearlyImages/lofi1.png" },
-          { src: "/dearlyImages/midfi.png" },
-          { src: "/dearlyImages/hifi1.jpg" },
-          { src: "/dearlyImages/hifi2.jpg" },
-          { src: "/dearlyImages/hifi3.jpg" },
-          { src: "/dearlyImages/showcase1.jpg" },
-          { src: "/dearlyImages/showcase2.jpg" },
-          { src: "/dearlyImages/showcase3.jpg" },
-        ]}
-      />
-      <Footer />
-    </>
+      </CaseBody>
+    </CaseStudyLayout>
   );
 }
 

@@ -118,10 +118,9 @@ function Home() {
         <div className="textHome fade1">
   <h4>I'm a Boston based product designer passionate about crafting inclusive <br></br>digital solutions through <span className="green-libre">code & creativity</span></h4>
   <hr className="green-line" />
+  <h4>Studying HCI @ Carnegie Mellon</h4>
 
-  <p>Currently designing experiences @ <a href="https://s2nhealth.com" target="_blank" rel="noopener noreferrer">S2N Health</a></p>
-  <p>Previous software engineer intern @ <a href="https://www.cboe.com" target="_blank" rel="noopener noreferrer">Cboe</a> & cloud O365 developer co-op @ <a href="https://www.coverys.com" target="_blank" rel="noopener noreferrer">Coverys</a></p>
-</div>
+<p>Former Software Engineer Intern @ <a href="https://www.cboe.com" target="_blank" rel="noopener noreferrer">Cboe</a>, Product Design Co-op @ <a href="https://s2nhealth.com" target="_blank" rel="noopener noreferrer">S2N Health</a>, <br></br>& Cloud O365 Developer Co-op @ <a href="https://www.coverys.com" target="_blank" rel="noopener noreferrer">Coverys</a>.</p></div>
       </div>
 
       <div id="my-work" className="my-work">
