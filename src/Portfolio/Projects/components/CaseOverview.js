@@ -1,8 +1,11 @@
 import React from "react";
+import "./caseBlocks.css";
 
 /*
  * The overview block: project summary + prototype/asset links on the left,
  * and structured metadata (Role / Team / Timeline / Tools) on the right.
+ * Labels use the small green case-label style; the right-hand metadata rows
+ * are separated by thin rules.
  *
  * Props:
  *   overview  - string or JSX for the project summary
@@ -24,31 +27,30 @@ export default function CaseOverview({
     <section id="overview-section" className="overview-section">
       <div className="overview">
         <div className="overviewLeft">
-          <h5>Project Overview</h5>
+          <p className="case-label">Project Overview</p>
           {typeof overview === "string" ? <p>{overview}</p> : overview}
-          {links.length > 0 && <br />}
           {links.map((link, i) => (
-            <h5 key={i}>
+            <p className="case-ov-link" key={i}>
               <a href={link.href} target="_blank" rel="noreferrer">
-                {link.label}
+                {link.label} <span aria-hidden="true">↗</span>
               </a>
-            </h5>
+            </p>
           ))}
         </div>
 
         <div className="overviewRight">
           {role && (
-            <>
-              <h5>Role</h5>
-              <p>{role}</p>
-            </>
+            <div className="case-ov-row">
+              <p className="case-label">Role</p>
+              <p className="case-ov-value">{role}</p>
+            </div>
           )}
 
           {team && (
-            <>
-              <h5>Team</h5>
+            <div className="case-ov-row">
+              <p className="case-label">Team</p>
               {typeof team === "string" ? (
-                <p>{team}</p>
+                <p className="case-ov-value">{team}</p>
               ) : (
                 <div className="case-team">
                   {team.map((group, i) => (
@@ -59,21 +61,21 @@ export default function CaseOverview({
                   ))}
                 </div>
               )}
-            </>
+            </div>
           )}
 
           {timeline && (
-            <>
-              <h5>Timeline</h5>
-              <p>{timeline}</p>
-            </>
+            <div className="case-ov-row">
+              <p className="case-label">Timeline</p>
+              <p className="case-ov-value">{timeline}</p>
+            </div>
           )}
 
           {tools && (
-            <>
-              <h5>Tools</h5>
-              <p>{tools}</p>
-            </>
+            <div className="case-ov-row">
+              <p className="case-label">Tools</p>
+              <p className="case-ov-value">{tools}</p>
+            </div>
           )}
         </div>
       </div>

@@ -96,7 +96,7 @@ p {
   display: flex;
   gap: 20px;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 32px auto;
 }
 
 .two-columns-container .column {
@@ -127,13 +127,13 @@ p {
   background-color: transparent;
   padding: 30px;
   border-radius: 8px;
-  border: 0.5px dotted #382E25;
+  border: 0.5px dotted #4d453e;
 }
 
 .item-number {
   font-size: 48px;
   font-weight: bold;
-  color: #382E25;
+  color: #4d453e;
   margin-bottom: 10px;
   line-height: 1;
 }
@@ -141,13 +141,13 @@ p {
 .item-title {
   font-size: 22px;
   font-weight: 600;
-  color: #382E25;
+  color: #4d453e;
   margin-bottom: 15px;
 }
 
 .item-divider {
   height: 0.5px;
-  background-color: #382E25;
+  background-color: #4d453e;
   margin-bottom: 20px;
 }
 
@@ -176,15 +176,15 @@ p {
 /* Competitive analysis table */
 .analysis-container {
   max-width: 100%;
-  margin: 0 auto;
+  margin: 32px auto;
 }
 
 .comparison-table {
   display: grid;
   grid-template-columns: 1fr 1.5fr repeat(3, 1.5fr);
   gap: 2px;
-  background-color: #382E25;
-  border: 2px solid #382E25;
+  background-color: #4d453e;
+  border: 2px solid #4d453e;
   border-radius: 8px;
   overflow: hidden;
   width: 100%;
@@ -195,7 +195,7 @@ p {
 }
 
 .table-header {
-  background-color: #382E25;
+  background-color: #4d453e;
   color: white;
   padding: 20px;
   font-weight: 600;
@@ -210,7 +210,7 @@ p {
   background-color: #f9f9f9;
   padding: 20px;
   font-weight: 600;
-  color: #382E25;
+  color: #4d453e;
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -220,7 +220,7 @@ p {
   background-color: #f0ebe6;
   padding: 20px;
   font-style: italic;
-  color: #555;
+  color: #4d453e;
   display: flex;
   align-items: center;
   font-size: 15px;
@@ -234,13 +234,13 @@ p {
 
 .app-name {
   font-weight: 600;
-  color: #382E25;
+  color: #4d453e;
   margin-bottom: 10px;
   font-size: 17px;
 }
 
 .app-takeaway {
-  color: #555;
+  color: #4d453e;
   line-height: 1.5;
   font-size: 15px;
 }
@@ -273,25 +273,25 @@ p {
   }
 
   .workflow-cell {
-    background-color: #382E25;
+    background-color: #4d453e;
     color: white;
     font-size: 18px;
     padding: 15px;
-    border: 2px solid #382E25;
+    border: 2px solid #4d453e;
     border-radius: 8px 8px 0 0;
     border-bottom: none;
   }
 
   .user-story-cell {
     background-color: #f0ebe6;
-    border-left: 2px solid #382E25;
-    border-right: 2px solid #382E25;
+    border-left: 2px solid #4d453e;
+    border-right: 2px solid #4d453e;
   }
 
   .app-cell {
-    border-left: 2px solid #382E25;
-    border-right: 2px solid #382E25;
-    border-bottom: 2px solid #382E25;
+    border-left: 2px solid #4d453e;
+    border-right: 2px solid #4d453e;
+    border-bottom: 2px solid #4d453e;
   }
 
   .workflow-group .app-cell:last-child {
@@ -301,7 +301,7 @@ p {
 
 /* Overall takeaways section */
 .overall-takeaways-section {
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .overall-takeaways-section h4 {
@@ -321,7 +321,7 @@ p {
   background-color: transparent;
   padding: 30px;
   border-radius: 8px;
-  border: 0.5px dotted #382E25;
+  border: 0.5px dotted #4d453e;
 }
 
 .takeaway-title {
@@ -330,19 +330,19 @@ p {
 
 .takeaway-title h6 {
   font-weight: 600;
-  color: #382E25;
+  color: #4d453e;
   margin-bottom: 15px;
   font-size: 18px;
 }
 
 .takeaway-divider {
   height: 0.5px;
-  background-color: #382E25;
+  background-color: #4d453e;
   margin-bottom: 20px;
 }
 
 .takeaway-text {
-  color: #555;
+  color: #4d453e;
   line-height: 1.6;
   font-size: 15px;
 }
@@ -376,34 +376,33 @@ p {
 .iteration-comments {
   margin-left: 12px;
   font-size: 15px;
-  color: #555;
+  color: #4d453e;
   line-height: 1.6;
   margin-top: 12px;
 }
 
 /* Link styles */
 a {
-  color: #382E25;
+  color: #4d453e;
   text-decoration: underline;
   font-weight: 400;
 }
 
 a:hover {
   font-weight: 600;
-  color: #382E25;
+  color: #4d453e;
 }
 
 /* Strong text */
 strong {
   font-weight: 600;
-  color: #382E25;
 }
 
 /* Horizontal rule */
 hr {
   border: none;
   height: 1px;
-  background-color: #382E25;
+  background-color: #4d453e;
   margin: 30px 0;
   opacity: 0.3;
 }

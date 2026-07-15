@@ -1,5 +1,7 @@
 import React from "react";
 import {
+  AccentHeading,
+  LabeledText,
   CaseStudyLayout,
   CaseCover,
   CaseHeader,
@@ -12,12 +14,12 @@ import {
 
 function CherryProcess() {
   return (
-    <CaseStudyLayout>
+    <CaseStudyLayout accent="var(--accent-lilac)">
       <CaseCover src="cherryImages/cherryLandscape.png" alt="Cherry Landscape" />
 
       <CaseHeader
         title="Cherry Crisis"
-        subtitle="Web Development, Web Design, Prototyping, User Testing & Research, Branding"
+        tags={["Web Development", "Web Design", "Prototyping", "User Testing & Research", "Branding"]}
       />
 
       <CaseOverview
@@ -59,6 +61,7 @@ function CherryProcess() {
         role="Developer & UI/UX Designer"
         team={[
           { role: "Project Lead", people: "Emma Wong" },
+          {},
           { role: "Design Lead", people: "Emlyn Griffiths" },
           {
             role: "Designers",
@@ -75,8 +78,7 @@ function CherryProcess() {
       />
 
       <CaseBody>
-        <h2>What is Cherry Crisis?</h2>
-        <p>
+        <LabeledText label="What is Cherry Crisis?">
           Cherry Crisis is a genre-bending group of 4 non-male identifying
           musicians based in Boston. They're all about bringing more queer,
           feminine energy to the music scene. As big fans of Boston and DIY
@@ -84,12 +86,12 @@ function CherryProcess() {
           everyone. By being upfront about who they are and putting our
           experiences into their music, they hope to start conversations and
           build a real sense of connection with the local music community.
-        </p>
+        </LabeledText>
         <br />
 
         <SectionHeading title="Branding" />
 
-        <h2>1 | Discovering the brand</h2>
+        <AccentHeading number="1" title="Discovering the brand" />
         <p>
           We began the project by exploring and defining the ideal direction for
           the brand. It was important for us to understand how Cherry Crisis
@@ -97,7 +99,7 @@ function CherryProcess() {
         </p>
         <br />
 
-        <h3>Personality Levels</h3>
+        <p className="case-sub-label">Personality Levels</p>
         <Columns>
           <CaseImage
             src="cherryImages/personalityLevels.png"
@@ -114,7 +116,7 @@ function CherryProcess() {
         </Columns>
         <br />
 
-        <h3>Moodboarding</h3>
+        <p className="case-sub-label">Moodboarding</p>
         <Columns>
           <CaseImage src="cherryImages/moodboarding.png" alt="Moodboard" />
           
@@ -128,7 +130,7 @@ function CherryProcess() {
         </Columns>
         <br />
 
-        <h3>Logo Iterations</h3>
+        <p className="case-sub-label">Logo Iterations</p>
         <Columns>
           <>
             <CaseImage src="cherryImages/logo1.png" alt="logo iterations" />
@@ -150,41 +152,41 @@ function CherryProcess() {
           </>
         </Columns>
         <br />
-        <h2>2 | Creating an Identity</h2>
+        <AccentHeading number="2" title="Creating an Identity" />
         <Columns>
           <>
-            <h3>Color Palette</h3>
+            <p className="case-sub-label">Color Palette</p>
             <CaseImage src="cherryImages/colorpalette.png" alt="color scheme" />
           </>
           <>
-            <h3>Typeface</h3>
+            <p className="case-sub-label">Typeface</p>
             <CaseImage src="cherryImages/typography.png" alt="type" />
           </>
         </Columns>
         <br />
-        <h3>Final Logo</h3>
+        <p className="case-sub-label">Final Logo</p>
         <CaseImage src="cherryImages/finalLogo.png" alt="type" />
         <br />
         <br />
 
         <SectionHeading title="Website Revamp" />
-        <h2>1 | UX Research</h2>
-        <h4>User Story Brainstorm</h4>
+        <AccentHeading number="1" title="UX Research" />
+        <p className="case-sub-label">User Story Brainstorm</p>
         <p>If Cherry Crisis were a person...</p>
         <CaseImage
           src="cherryImages/asaperson.png"
           alt="Cherry Crisis as a person"
         />
 
-        <h2>2 | Interpret</h2>
-        <h3>Elevator Pitch</h3>
-        <p>
-          Cherry Crisis is the only band that slays effortlessly for the queer
+        <AccentHeading number="2" title="Interpret" />
+
+        <LabeledText label="Elevator Pitch">
+                 Cherry Crisis is the only band that slays effortlessly for the queer
           community in the Boston music scene who resonate with the
           sound/message in an era of this terrifying DIY music scene in boston
           right now
-        </p>
-        <h3>Refine Statements</h3>
+                </LabeledText>
+        <p className="case-sub-label">Refine Statements</p>
         <ol>
           <li>
             As a user of Cherry Crisis' website, I want easy access to external
@@ -202,12 +204,12 @@ function CherryProcess() {
             their message, music, and community impact.
           </li>
         </ol>
-        <h2>3 | Make</h2>
-        <h3>Sitemap</h3>
+        <AccentHeading number="3" title="Make" />
+        <p className="case-sub-label">Sitemap</p>
         <CaseImage src="cherryImages/sitemap.png" alt="site map" />
 
-        <h2>4 | Design</h2>
-        <h3>Low-Fidelity Wireframes</h3>
+        <AccentHeading number="4" title="Design" />
+        <p className="case-sub-label">Low-Fidelity Wireframes</p>
         <Columns>
           <>
             <p>Homepage & Blog Pages</p>
@@ -219,7 +221,7 @@ function CherryProcess() {
           </>
         </Columns>
         <br />
-        <h3>Mid-Fidelity Wireframes</h3>
+        <p className="case-sub-label">Mid-Fidelity Wireframes</p>
         <Columns>
           <>
             <p>Homepage & Blog Pages</p>
@@ -232,14 +234,15 @@ function CherryProcess() {
         </Columns>
         <br />
 
-        <h3>High-Fidelity Wireframes</h3>
+        <p className="case-sub-label">High-Fidelity Wireframes</p>
         <p>
           <a
+            className="case-link"
             href="https://www.figma.com/proto/YqIyjmyv9lejZ5vgWVlGG5/Cherry-Crisis-Final-Prototype?page-id=0%3A1&node-id=0-44&node-type=frame&viewport=729%2C508%2C0.05&t=GEnkDjlwKRiZKxg8-1&scaling=min-zoom&content-scaling=fixed"
             target="_blank"
             rel="noreferrer"
           >
-            Click Here to see High-Fis!
+            High-Fidelity Prototype
           </a>
         </p>
         <Columns>
@@ -253,7 +256,7 @@ function CherryProcess() {
           </>
         </Columns>
         <br />
-        <h2>5 | Presentation</h2>
+        <AccentHeading number="5" title="Presentation" />
         <p>
           See the deployed site{" "}
           <a

@@ -8,6 +8,8 @@ import {
   SectionHeading,
   CaseImage,
   Columns,
+  AccentHeading,
+  LabeledText,
 } from "../components";
 
 function LavanProcess() {
@@ -17,11 +19,11 @@ function LavanProcess() {
 
       <CaseHeader
         title="Lavan Beauty"
-        subtitle="Web Design, UX Research, Prototyping, User Testing, User Interviews, Branding"
+        tags={["Web Design", "UX Research", "Prototyping", "User Testing", "User Interviews", "Branding"]}
       />
 
       <CaseOverview
-        overview="Designing a user-friendly website for Lavan Beauty that simplifies skincare routines while establishing a strong brand identity. The website will feature a streamlined selection of products developed by a pharmacist, highlighting the commitment to natural ingredients and scientific efficacy."
+        overview="Lavan Beauty is a skincare brand built around simplicity and clarity. The website presents a curated line of products developed by a pharmacist, each formulated with natural ingredients and grounded in scientific efficacy. The site offers a streamlined selection that reflects the brand's core identity: elegant, honest skincare backed by real expertise."
         links={[
           {
             label: "High-Fidelity Prototype",
@@ -35,7 +37,7 @@ function LavanProcess() {
         role="Design Lead"
         team={[
           { role: "Project Lead", people: "Valerie Irawan" },
-          { role: "Design Lead", people: "Amanda Fong" },
+          {},          { role: "Design Lead", people: "Amanda Fong" },
           { role: "Designers", people: "Heidy Hur, Andrea Lee, Caroline Xiong" },
           { role: "Tech Lead", people: "Ananya Radhakrishnan" },
           { role: "Developers", people: "Emily Lin, Alizeh Zaidi" },
@@ -45,8 +47,7 @@ function LavanProcess() {
       />
 
       <CaseBody className="lavan">
-        <h2>What is Lavan Beauty?</h2>
-        <p>
+        <LabeledText label="What is Lavan Beauty?">
           Lavan Beauty is a timeless and luxurious skincare brand. It offers a
           traditional experience while relying on modern-day science to craft
           its products. The brand caters to high-end consumers in the USA and
@@ -56,18 +57,18 @@ function LavanProcess() {
           with effective, natural, and rich ingredients. They are designed for
           individuals who wish to treat their skin with proper love and respect.
           This mission stands out in an era of overconsumption and consumerism.
-        </p>
+        </LabeledText>
         <br />
 
         <SectionHeading title="Branding" />
-        <h2>1 | Discovering the brand</h2>
+        <AccentHeading number="1" title="Discovering the brand" />
         <p>
           We began the project by exploring and defining the ideal direction for
           the brand. It was important for us to understand the audience and how
           Lavan wants their brand to be portrayed.
         </p>
         <br />
-        <h3>Personality Levels</h3>
+        <p className="case-sub-label">Personality Levels</p>
         <Columns>
           <CaseImage src="lavanImages/personalityLevels.png" alt="Moodboard" />
           <p>
@@ -79,7 +80,7 @@ function LavanProcess() {
             thoughtful brand identity.
           </p>
         </Columns>
-        <h3>Moodboarding</h3>
+        <p className="case-sub-label">Moodboarding</p>
         <div className="moodboarding">
           <Columns>
             <>
@@ -97,8 +98,8 @@ function LavanProcess() {
           </Columns>
         </div>
         <br />
-        <h2>2 | Creating an Identity</h2>
-        <h3>Color Palette</h3>
+        <AccentHeading number="2" title="Creating an Identity" />
+        <p className="case-sub-label">Color Palette</p>
         <Columns>
           <CaseImage src="lavanImages/colorpal.png" alt="color scheme" />
           <p>
@@ -113,13 +114,13 @@ function LavanProcess() {
           </p>
         </Columns>
         <br />
-        <h3>Typeface</h3>
+        <p className="case-sub-label">Typeface</p>
         <Columns>
           <CaseImage src="lavanImages/typeface.jpg" alt="type" />
           <CaseImage src="lavanImages/typography.jpg" alt="type" />
         </Columns>
         <br />
-        <h3>Final Logo</h3>
+        <p className="case-sub-label">Final Logo</p>
         <Columns>
           <CaseImage src="lavanImages/logo.jpg" alt="final logo" />
           <p>
@@ -133,7 +134,7 @@ function LavanProcess() {
           </p>
         </Columns>
         <br />
-        <h3>Packaging</h3>
+        <p className="case-sub-label">Packaging</p>
         <Columns>
           <>
             <CaseImage src="lavanImages/sun.png" alt="type" />
@@ -168,8 +169,8 @@ function LavanProcess() {
         <br />
         <br />
         <SectionHeading title="Website Revamp" />
-        <h2>1 | UX Research</h2>
-        <h3>Competitor Analysis</h3>
+        <AccentHeading number="1" title="UX Research" />
+        <p className="case-sub-label">Competitor Analysis</p>
         <Columns>
           <>
             <CaseImage
@@ -189,7 +190,7 @@ function LavanProcess() {
           />
         </Columns>
         <br />
-        <h3>Common Themes</h3>
+        <p className="case-sub-label">Common Themes</p>
         <ul>
           <li>A focus on main products, feels scientifically proven</li>
           <li>
@@ -211,9 +212,8 @@ function LavanProcess() {
           </li>
           <li>Easily accessible links + CTAs</li>
         </ul>
-        <h2>2 | Interpret</h2>
-        <h3>Elevator Pitch</h3>
-        <p>
+        <AccentHeading number="2" title="Interpret" />
+        <LabeledText label="Elevator Pitch">
           Lavan Beauty is the only luxurious and timeless skincare brand that
           blends traditional experiences with modern-day science as the backbone
           for high-end consumers who value and have experience investing in both
@@ -222,8 +222,9 @@ function LavanProcess() {
           sustainable, effective, natural, and rich ingredients to treat their
           skin with proper love and respect in an era of overconsumption and
           consumerism.
-        </p>
-        <h3>Personas</h3>
+        </LabeledText>
+       
+        <p className="case-sub-label">Personas</p>
         <Columns>
           <CaseImage src="lavanImages/persona1.png" alt="site map" />
           <CaseImage src="lavanImages/persona2.png" alt="site map" />
@@ -232,17 +233,17 @@ function LavanProcess() {
 
         <Columns>
           <>
-            <h3>User Stories</h3>
+            <p className="case-sub-label">User Stories</p>
             <CaseImage src="lavanImages/userstory.png" alt="site map" />
           </>
           <>
-            <h3>Finding Common Themes</h3>
+            <p className="case-sub-label">Finding Common Themes</p>
             <CaseImage src="lavanImages/commonThemes.png" alt="site map" />
           </>
         </Columns>
                 <br />
 
-        <h3>Refine Statements</h3>
+        <p className="case-sub-label">Refine Statements</p>
         <ol>
           <li>
             As a person with sensitive skin, I want a skincare brand that is
@@ -261,29 +262,30 @@ function LavanProcess() {
             have skincare that suits my skin well
           </li>
         </ol>
-        <h2>3 | Make</h2>
-        <h3>Sitemap</h3>
+        <AccentHeading number="3" title="Make" />
+        <p className="case-sub-label">Sitemap</p>
         <CaseImage src="lavanImages/sitemap.png" alt="site map" />
-        <h2>4 | Design</h2>
-        <h3>Low-Fidelity Wireframes</h3>
+        <AccentHeading number="4" title="Design" />
+        <p className="case-sub-label">Low-Fidelity Wireframes</p>
         <Columns>
           <CaseImage src="lavanImages/lofi1.png" alt="lo-fi" />
           <CaseImage src="lavanImages/lofi2.png" alt="lo-fi" />
         </Columns>
-        <br /> <h3>Mid-Fidelity Wireframes</h3>
+        <br /> <p className="case-sub-label">Mid-Fidelity Wireframes</p>
         <Columns>
           <CaseImage src="lavanImages/midfi1.png" alt="mid-fi" />
           <CaseImage src="lavanImages/midfi2.png" alt="mid-fi" />
         </Columns>
         <br />
-        <h3>High-Fidelity Wireframes</h3>
+        <p className="case-sub-label">High-Fidelity Wireframes</p>
         <p>
           <a
+            className="case-link"
             href="https://www.figma.com/proto/ldXYpkEbm49gv0sqzXp0pF/Disrupt-Hi-Fis?page-id=0%3A1&type=design&node-id=1-634&viewport=5733%2C1774%2C0.52&t=VyQre3zkxeZbS3LF-1&scaling=min-zoom&starting-point-node-id=1%3A50&mode=design"
             target="_blank"
             rel="noreferrer"
           >
-            Click Here to see High-Fis!
+            High-Fidelity Prototype
           </a>
         </p>{" "}
         <Columns>

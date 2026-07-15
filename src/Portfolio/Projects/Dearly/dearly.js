@@ -8,6 +8,9 @@ import {
   SectionHeading,
   CaseImage,
   Columns,
+  AccentHeading,
+  LabeledText,
+  InfoColumnsNoBrownHeader,
 } from "../components";
 import "./dearly.css";
 
@@ -16,20 +19,21 @@ const PROTOTYPE_URL =
 
 function DearlyProcess() {
   return (
-    <CaseStudyLayout>
+    <CaseStudyLayout accent="var(--accent-gold)">
       <CaseCover src="dearlyImages/dearlyLandscape.jpg" alt="Dearly Landscape" />
 
       <CaseHeader
         title="Dearly"
-        subtitle="Mobile Application Design, Branding, Accessibility, UI/UX Design"
+        tags={["Mobile Application Design", "Branding", "Accessibility", "UI/UX Design"]}
       />
 
       <CaseOverview
-        overview="A mobile app that helps families stay intimately connected across generations by sharing moments, memories, and conversations. Designed with accessibility and simplicity in mind, it bridges the technological divide between younger and older family members by offering two distinct user modes: a streamlined, simplified interface for elderly users and a feature-rich experience for younger users."
+        overview="A mobile application that helps families stay intimately connected across generations by sharing moments, memories, and conversations. Designed with accessibility and simplicity in mind, it bridges the technological divide between younger and older family members by offering two distinct user modes: a streamlined, simplified interface for elderly users and a feature-rich experience for younger users."
         links={[{ label: "High-Fidelity Prototype", href: PROTOTYPE_URL }]}
         role="Software Designer"
         team={[
           { role: "Project Lead", people: "Melody Yu" },
+          {},
           { role: "Design Lead", people: "Liana Zhang" },
           {
             role: "Designers",
@@ -48,15 +52,14 @@ function DearlyProcess() {
 
       <CaseBody>
         <SectionHeading title="Project Context" />
-        <h2>What is Dearly?</h2>
-        <p>
+        <LabeledText label="What is Dearly?">
           Dearly is a private social platform that helps users stay connected
           across generations. Designed with accessibility in mind, it caters to
           users across a range of technological experience. Dearly offers two
           distinct user modes: a simplified basic interface and a feature-rich
           advanced interface.
-        </p>
-        <h2>Our Client</h2>
+        </LabeledText>
+        <AccentHeading title="Our Client" />
         <p>
           Caroline Xiong is a fifth-year student at Northeastern University
           studying Business Administration & Design with a concentration in
@@ -81,7 +84,7 @@ function DearlyProcess() {
         <br />
 
         <SectionHeading title="Branding" />
-        <h2>1 | Discovering the brand</h2>
+        <AccentHeading number="1" title="Discovering the brand" />
         <p>
           We began the project by exploring and defining the ideal direction for
           Dearly. It was crucial for us to understand our target audience:
@@ -92,13 +95,13 @@ function DearlyProcess() {
           connection feel effortless, warm, and accessible to everyone from
           tech-savvy teenagers to less-experienced elderly users.
         </p>
-        <h2>Moodboarding</h2>
+        <p className="case-sub-label">Moodboarding</p>
         <div className="lightbox-images">
           <CaseImage src="dearlyImages/moodboard.png" alt="Moodboard" />
         </div>
         <br />
-        <h2>2 | Creating an Identity</h2>
-        <h2>Color Palette</h2>
+        <AccentHeading number="2" title="Creating an Identity" />
+        <p className="case-sub-label">Color Palette</p>
         <Columns>
           <CaseImage src="dearlyImages/colorpal.png" alt="Color Scheme" />
           <p>
@@ -113,13 +116,13 @@ function DearlyProcess() {
           </p>
         </Columns>
         <br />
-        <h2>Typeface</h2>
+        <p className="case-sub-label">Typeface</p>
         <Columns>
           <CaseImage src="dearlyImages/typeface.png" alt="Typeface" />
           <CaseImage src="dearlyImages/typeface2.png" alt="Typeface Details" />
         </Columns>
         <br />
-        <h2>Final Logo</h2>
+        <p className="case-sub-label">Final Logo</p>
         <Columns>
           <CaseImage src="dearlyImages/logo2.png" alt="Final Logo" />
           <CaseImage src="dearlyImages/logo.png" alt="Final Logo Variations" />
@@ -128,17 +131,18 @@ function DearlyProcess() {
         <br />
 
         <SectionHeading title="Mobile Application Revamp" />
-        <h2>Streamlined Design Approach</h2>
-        <p>
+        <LabeledText label="Streamlined Design Approach">
           The existing project materials provided us with a significant head
           start, allowing us to concentrate on three critical areas:
-        </p>
-        <ol>
-          <li>Sitemap Refinement</li>
-          <li>Userflows</li>
-          <li>Wireframes</li>
-        </ol>
-        <h2>1 | Sitemap Refinement</h2>
+        </LabeledText>
+        <InfoColumnsNoBrownHeader
+          columns={[
+            { eyebrow: "01", title: "Sitemap Refinement" },
+            { eyebrow: "02", title: "Userflows" },
+            { eyebrow: "03", title: "Wireframes" },
+          ]}
+        />
+        <AccentHeading number="1" title="Sitemap Refinement" />
         <p>
           Instead of a complete information architecture overhaul, we focused on
           optimizing the existing sitemap to better support our two-mode user
@@ -147,18 +151,18 @@ function DearlyProcess() {
         </p>
         <Columns>
           <>
-            <h4>Advanced Sitemap</h4>
+            <p className="case-sub-label">Advanced Sitemap</p>
             <CaseImage
               src="dearlyImages/AdvancedSitemap.jpg"
               alt="Advanced Sitemap"
             />
           </>
           <>
-            <h4>Basic Sitemap</h4>
+            <p className="case-sub-label">Basic Sitemap</p>
             <CaseImage src="dearlyImages/BasicSitemap.jpg" alt="Basic Sitemap" />
           </>
         </Columns>
-        <h2>2 | Userflows</h2>
+        <AccentHeading number="2" title="Userflows" />
         <p>
           We mapped intricate user journeys through engineering collaboration,
           strategically aligning design vision with technical feasibility. Our
@@ -177,10 +181,10 @@ function DearlyProcess() {
         </p>
         <CaseImage src="dearlyImages/userflow1.jpg" alt="Detailed User Flow" />
 
-        <h2>3 | Onboarding Wireframes</h2>
+        <AccentHeading number="3" title="Onboarding Wireframes" />
         <Columns>
           <>
-            <h4>Low-Fidelity Wireframes</h4>
+            <p className="case-sub-label">Low-Fidelity Wireframes</p>
             <CaseImage
               src="dearlyImages/lofi1.png"
               alt="Low Fidelity Wireframes 1"
@@ -188,7 +192,7 @@ function DearlyProcess() {
             <br />
           </>
           <>
-            <h4>Mid-Fidelity Wireframes</h4>
+            <p className="case-sub-label">Mid-Fidelity Wireframes</p>
             <CaseImage
               src="dearlyImages/midfi.png"
               alt="Mid Fidelity Wireframes"
@@ -196,7 +200,7 @@ function DearlyProcess() {
           </>
         </Columns>
 
-        <h4>High-Fidelity Wireframes</h4>
+        <p className="case-sub-label">High-Fidelity Wireframes</p>
         <Columns>
           <>
             <h5>Landing Pages</h5>
@@ -221,15 +225,13 @@ function DearlyProcess() {
           </>
         </Columns>
 
-        <h2>4 | Presentation</h2>
+        <AccentHeading number="4" title="Presentation" />
         <p>
-          Check out the{" "}
-          <a href={PROTOTYPE_URL} target="_blank" rel="noreferrer">
-            high-fidelity prototype
+          <a className="case-link" href={PROTOTYPE_URL} target="_blank" rel="noreferrer">
+            Check out the high-fidelity prototype!
           </a>
-          !
         </p>
-        <h4>Showcase</h4>
+        <p className="case-sub-label">Showcase</p>
         <p>
           The last step was presenting our work at the{" "}
           <a href="https://generatenu.com/" target="_blank" rel="noreferrer">

@@ -6,6 +6,7 @@ import {
   CaseOverview,
   CaseBody,
   CaseImage,
+  AccentHeading,
 } from "../components";
 
 function FinancesProcess() {
@@ -18,7 +19,7 @@ function FinancesProcess() {
 
       <CaseHeader
         title="Cosmic Finances"
-        subtitle="Web Design, UX Research, Prototyping, User Testing, User Interviews"
+        tags={["Web Design", "UX Research", "Prototyping", "User Testing", "User Interviews"]}
       />
 
       <CaseOverview
@@ -36,7 +37,7 @@ function FinancesProcess() {
       />
 
       <CaseBody className="finances">
-        <h2>1 | UX Research</h2>
+        <AccentHeading number="1" title="UX Research" />
         <h3>Social-UX task analysis</h3>
         <h4>Money Manager:</h4>
         <CaseImage
@@ -198,7 +199,7 @@ function FinancesProcess() {
             </ul>
           </ol>
         </p>
-        <h2>2 | Interpret</h2>
+        <AccentHeading number="2" title="Interpret" />
         <h3>“How Might We...”</h3>
         <h5>
           “Create a way for users to clearly see and be able to track their
@@ -269,7 +270,7 @@ function FinancesProcess() {
         />
 
         <p></p>
-        <h2>3 | Design</h2>
+        <AccentHeading number="3" title="Design" />
         <h3>Low-Fidelity Wireframes</h3>
 
         <br />
@@ -326,7 +327,7 @@ function FinancesProcess() {
           src="financesImages/spreadsheetHifi.png"
           alt="High-Fidelity Wireframes"
         />
-        <h2>4 | Presentation</h2>
+        <AccentHeading number="4" title="Presentation" />
         <p>
           See{" "}
           <a

@@ -5,7 +5,7 @@ function TouringCover() {
         <div className="artPiece">
               <img src="fusionOfCulturesIndividual/fusionOfCulturesPhotos/touring.jpg" alt="Touring" />
               <div className="title">
-                <span>Touring</span>
+                Touring
               </div>
         </div >
     );

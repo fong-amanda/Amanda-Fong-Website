@@ -8,6 +8,8 @@ import {
   SectionHeading,
   CaseImage,
   Columns,
+  AccentHeading,
+  LabeledText
 } from "../components";
 
 const PROTOTYPE_URL =
@@ -20,7 +22,7 @@ function HippoProcess() {
 
       <CaseHeader
         title="Student Activity Calendar"
-        subtitle="Mobile App Design, Prototyping, User Testing & Research, Branding"
+        tags={["Mobile App Design", "Prototyping", "User Testing & Research", "Branding"]}
       />
 
       <CaseOverview
@@ -65,13 +67,14 @@ function HippoProcess() {
 
       <CaseBody>
         <SectionHeading title="Research Overview" />
-        <h2>1 | The Problem Statement</h2>
-        <p>
-          How can we streamline the process for undergraduate students to join
+        <AccentHeading number="1" title="The Problem" />
+         <LabeledText label="Problem Statement">
+                   How can we streamline the process for undergraduate students to join
           clubs and manage their extracurricular activities more efficiently?
-        </p>
+                </LabeledText>
+     
 
-        <h2>2 | Moodboarding</h2>
+        <AccentHeading number="2" title="Moodboarding" />
         <Columns>
           <>
             <CaseImage src="sacImages/moodboard1.png" alt="Moodboard" />
@@ -83,16 +86,16 @@ function HippoProcess() {
         </Columns>
         <br />
 
-        <h4>Final Moodboard</h4>
+        <p className="case-sub-label">Final Moodboard</p>
         <CaseImage src="sacImages/finalmoodboard.png" alt="Final Moodboard" />
 
-        <h2>3 | Competitor Analysis</h2>
+        <AccentHeading number="3" title="Competitor Analysis" />
         <CaseImage
           src="sacImages/competitoranalysis.png"
           alt="Competitor Analysis"
         />
 
-        <h2>4 | Key User Interview Insights</h2>
+        <AccentHeading number="4" title="Key User Interview Insights" />
         <ul>
           <li>Students had trouble keeping up with clubs from fall fest</li>
           <li>Fall fest was overwhelming and students didn't know which ones they actually wanted to join</li>
@@ -108,7 +111,7 @@ function HippoProcess() {
         <br />
         <SectionHeading title="Design Process" />
 
-        <h2>1 | Personas</h2>
+        <AccentHeading number="1" title="Personas" />
         <Columns>
           <>
             <CaseImage src="sacImages/persona1.png" alt="User Persona" />
@@ -124,7 +127,7 @@ function HippoProcess() {
           </>
         </Columns>
 
-        <h2>2 | Elevator Pitch</h2>
+        <AccentHeading number="2" title="Elevator Pitch" />
         <p>
           Student Activity Calendar is the only solution that empowers
           Northeastern undergrads and club executives to seamlessly engage with
@@ -134,7 +137,7 @@ function HippoProcess() {
           student involvement and streamlines club operations.
         </p>
 
-        <h2>3 | Refine Statements</h2>
+        <AccentHeading number="3" title="Refine Statements" />
         <ol>
           <li>
             As a student using the platform, I want to easily access and view all upcoming campus events so that I can stay informed and participate in activities of interest.
@@ -150,23 +153,23 @@ function HippoProcess() {
           </li>
         </ol>
 
-        <h2>4 | Sitemap</h2>
+        <AccentHeading number="4" title="Sitemap" />
         <CaseImage src="sacImages/sitemap.png" alt="Site Map" />
 
-        <h2>5 | Wireframes</h2>
+        <AccentHeading number="5" title="Wireframes" />
         <Columns>
           <>
-            <h4>Low-Fidelity Wireframes</h4>
+            <p className="case-sub-label">Low-Fidelity Wireframes</p>
             <CaseImage src="sacImages/lofis.png" alt="Low-Fi Login" />
             <br />
           </>
           <>
-            <h4>Mid-Fidelity Wireframes</h4>
+            <p className="case-sub-label">Mid-Fidelity Wireframes</p>
             <CaseImage src="sacImages/midfis.png" alt="Mid-Fi Wireframes" />
           </>
         </Columns>
 
-        <h2>6 | High-Fidelity Wireframes</h2>
+        <AccentHeading number="6" title="High-Fidelity Wireframes" />
         <Columns>
           <>
             <p>Home Page</p>
@@ -180,13 +183,16 @@ function HippoProcess() {
 
         <br />
         <br />
-        <h2>
-          Check out the{" "}
-          <a href={PROTOTYPE_URL} target="_blank" rel="noreferrer">
-            prototype
+        <p>
+          <a
+            className="case-link"
+            href={PROTOTYPE_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Check out the prototype!
           </a>
-          !
-        </h2>
+        </p>
         <br />
       </CaseBody>
     </CaseStudyLayout>

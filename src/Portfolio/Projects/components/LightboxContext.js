@@ -7,6 +7,7 @@ import React, {
   useState,
 } from "react";
 import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
@@ -73,6 +74,8 @@ export function LightboxProvider({ children }) {
         close={() => setOpen(false)}
         index={index}
         slides={slides}
+        plugins={[Zoom]}
+        zoom={{ maxZoomPixelRatio: 3, scrollToZoom: true }}
       />
     </LightboxContext.Provider>
   );

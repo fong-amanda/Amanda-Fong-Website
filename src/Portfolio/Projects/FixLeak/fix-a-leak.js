@@ -6,6 +6,8 @@ import {
   CaseOverview,
   CaseBody,
   CaseImage,
+  AccentHeading,
+  LabeledText,
 } from "../components";
 
 function FixLeakProcess() {
@@ -15,7 +17,7 @@ function FixLeakProcess() {
 
       <CaseHeader
         title="Fix-A-Leak"
-        subtitle="Mobile Design, UX Research, Prototyping, User Testing, User Interviews"
+        tags={["Mobile Design", "UX Research", "Prototyping", "User Testing", "User Interviews"]}
       />
 
       <CaseOverview
@@ -33,8 +35,8 @@ function FixLeakProcess() {
       />
 
       <CaseBody className="leak">
-        <h2>Problem Statement</h2>
-        <p>Building repairs and maintenance can be extremely expensive and damaging if not done on time. Although it
+        <LabeledText label="Problem Statement">
+          Building repairs and maintenance can be extremely expensive and damaging if not done on time. Although it
           would be
           optimal to have an engineer on sight at all times, the cost of doing so would overweigh the benefits. This
           leaves
@@ -75,16 +77,17 @@ function FixLeakProcess() {
           becomes
           extremely user-friendly as it allows the user to easily track their progress and focus on each task without
           being bombarded by
-          information.</p>
+          information.
+        </LabeledText>
 
-        <h2>Challenges</h2>
+        <AccentHeading title="Challenges" />
         <ol>
           <li>What are residents or even visitors supposed to do when they encounter a maintenance issue?</li>
           <li>An app that allows users to easily report an issue</li>
           <li>Easy for people of all different backgrounds to use</li>
         </ol>
 
-        <h2>Design Process</h2>
+        <AccentHeading title="Design Process" />
         <p>Used the Design Thinking approach for solving this problem. To practice design thinking we followed the below
           process.</p>
         <CaseImage src="fixALeak Images/designProcess.png" alt="Design Process" />
@@ -156,7 +159,7 @@ function FixLeakProcess() {
         <CaseImage src="fixALeak Images/paperSketch3.png" alt="paper sketch" />
 
         <h4>Low-Fidelity Wireframes</h4>
-        <h5><a href="https://balsamiq.cloud/svhx3ll/pn0lifi">Click Here to see on Balsamiq!</a></h5>
+        <h5><a className="case-link" href="https://balsamiq.cloud/svhx3ll/pn0lifi" target="_blank" rel="noreferrer">Click Here to see on Balsamiq!</a></h5>
         <h5>Resident Interfaces</h5>
 
         <CaseImage src="fixALeak Images/LF1.png" alt="Low-fidelity1" />
@@ -171,8 +174,8 @@ function FixLeakProcess() {
 
         <h5>Engineer Interfaces</h5>
         <CaseImage src="fixALeak Images/MF2.png" alt="Medium-fidelity2" />
-        <h2>Final Design</h2>
-        <h5><a href="https://ihlp9w.axshare.com/?id=h5upi9&p=intro">Click Here to see on Axure!</a></h5>
+        <AccentHeading title="Final Design" />
+        <h5><a className="case-link" href="https://ihlp9w.axshare.com/?id=h5upi9&p=intro" target="_blank" rel="noreferrer">Click Here to see on Axure!</a></h5>
 
         <h5>Start/Login Interfaces</h5>
         <CaseImage src="fixALeak Images/loginInterface.png" alt="Login Interface" />
@@ -183,10 +186,10 @@ function FixLeakProcess() {
         <h5>Engineer Interfaces</h5>
         <CaseImage src="fixALeak Images/engineerInterface.png" alt="Engineer Interface" />
 
-        <h2>Presentation</h2>
+        <AccentHeading title="Presentation" />
         <p>See <a href="https://docs.google.com/presentation/d/1KMLKFvJxZyMVsiU0NrcO0XqTdfgBQ3U9CIGj6BBp6p0/edit#slide=id.p">Google Slides Presentation</a> for more information about the project.</p>
 
-        <h2>Results</h2>
+        <AccentHeading title="Results" />
         <h5>Observed Results</h5>
         <CaseImage src="fixALeak Images/observedResults.png" alt="Observed Results" />
         <h3>Task Completion Rates</h3>
@@ -223,7 +226,7 @@ function FixLeakProcess() {
           possible.
         </p>
         <CaseImage src="fixALeak Images/systemUsabilityScoreChart.png" alt="Overall Perceived Usability" />
-        <h2>Discussion</h2>
+        <AccentHeading title="Discussion" />
         <p>Overall, our results were fairly positive for this stage of the project. We found that our app
           was extremely effective as we received a 100% task completion from all four of our participants
           in the usability testing. In terms of efficiency, we found that some tasks were very easy to complete
@@ -248,7 +251,7 @@ function FixLeakProcess() {
           these changes.
         </p>
 
-        <h2>Conclusion</h2>
+        <AccentHeading title="Conclusion" />
         <p>As we near the final iteration of our project, it is important to look back at the entire life cycle of our
           product to learn what we need to include for our final prototype. The process of receiving human feedback on
           the actual real-world usability of our app has been crucial to this process. From our summative evaluation,

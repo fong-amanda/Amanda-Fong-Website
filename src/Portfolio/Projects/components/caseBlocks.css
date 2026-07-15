@@ -1,0 +1,859 @@
+/*
+ * Reusable content building-blocks for case-study pages, styled to match the
+ * Wanderly layout mockup: warm brown ink (#382E25), sage-green accents
+ * (#60946e), Kulim Park / Libre Bodoni type.
+ *
+ * Blocks: tag chips, AccentHeading, LabeledText, QuoteColumns, InfoColumns,
+ * FeatureIcons, ThreeColumns, CaseTable, plus the chart family
+ * (StatCallout, BarChart, DonutChart) and TextBox callout.
+ */
+
+:root {
+  /* ================================================================
+   * CASE-STUDY DESIGN TOKENS — single source of truth.
+   * Change a value here and it updates across every block/component.
+   * ================================================================ */
+
+  /* Palette — only three type colors */
+  --color-green: #60946e;
+  --color-brown: #4d453e;
+  --color-grey: #999999;
+
+  /* ----------------------------------------------------------------
+   * PER-PROJECT ACCENT PRESETS
+   * Named heading/accent colors a case study can opt into. To recolor
+   * a project, pass one to its layout:
+   *     <CaseStudyLayout accent="var(--accent-blue)"> … </CaseStudyLayout>
+   * or pass any raw color:  accent="#c0563b".
+   * With no `accent` prop a project stays on the default green below.
+   * ---------------------------------------------------------------- */
+  --accent-green: #60946e; /* default */
+  --accent-blue: #4a6f8a;
+  --accent-plum: #7b5378;
+  --accent-rust: #b5623c;
+  --accent-gold: #b08a3e;
+  --accent-teal: #3f8480;
+  --accent-navy: #3a4a6b;
+  --accent-lilac: #685B76;
+  
+
+  /* Fonts */
+  --font-sans: "Kulim Park", sans-serif; /* headings + body */
+  --font-label: "Atkinson Hyperlegible Next", "Kulim Park", sans-serif; /* h5 labels */
+
+  /* Type scale */
+  --text-title: 50px; /* page title (Wanderly) */
+  --text-section: 36px; /* section heading (Research Overview) */
+  --text-subhead: 23px; /* subsection + persona title */
+  --text-body: 19px; /* body copy + lists */
+  --text-label: 15px; /* uppercase h5 labels */
+
+  /* Lines / surfaces */
+  --case-rule: rgba(28, 27, 24, 0.1); /* #1C1B18 @ 10% */
+  --case-surface: #f6f5f1;
+
+  /* Semantic aliases referenced by the blocks below */
+  --case-accent: var(--color-green);
+  --case-ink: var(--color-brown);
+  --case-body: var(--color-brown);
+  --case-muted: var(--color-grey);
+  --case-heading-font: var(--font-sans);
+  --case-label-font: var(--font-label);
+}
+
+/* ---- CaseNav: floating scroll-spy navigation (left side) ---- */
+
+/* Collapse toggle — small control at the very top-left. */
+.case-nav-toggle {
+  position: fixed;
+  top: 24px;
+  left: 34px;
+  z-index: 51;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--case-muted);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.case-nav-toggle.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.case-nav-toggle:hover {
+  color: var(--case-ink);
+  background: rgba(28, 27, 24, 0.05);
+}
+
+.case-nav {
+  position: fixed;
+  top: 20px; /* top-left, below the collapse toggle */
+  left: 34px;
+  z-index: 50;
+  width: 300px;
+  height: 30vh;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain; /* don't chain scroll to the page */
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  /* one light faded gradient behind the whole list so labels stay legible over
+   * content on narrower screens; solid across the labels, fading out to the
+   * right with no clear boundary */
+  background: linear-gradient(
+    to right,
+    rgba(254, 254, 248, 1) 0%,
+    rgba(254, 254, 248, 1) 68%,
+    rgba(254, 254, 248, 0.9) 78%,
+    rgba(254, 254, 248, 0.55) 88%,
+    rgba(254, 254, 248, 0) 100%
+  );
+  /* focus window: crisp in the middle, fading toward the top/bottom edges */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 4%,
+    #000 32%,
+    #000 68%,
+    transparent 96%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 4%,
+    #000 32%,
+    #000 68%,
+    transparent 96%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.case-nav::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.case-nav.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* The list auto-scrolls so the current section stays centered; hovering lets
+ * you scroll it up/down yourself. Top/bottom padding lets the first/last
+ * items reach the center focus band. */
+.case-nav-track {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px; /* generous spacing */
+  padding: 220px 0 220px 30px; /* left padding = room for the hover arrow */
+}
+
+.case-nav-item {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  font-family: var(--font-label);
+  font-size: var(--text-label); /* same size as the Overall Takeaways label */
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+  text-decoration: none;
+  color: var(--case-muted);
+}
+
+/* Main headings sit flush and a touch heavier; sub-headings are indented. */
+.case-nav-item.main {
+  font-weight: 500;
+}
+
+.case-nav-item.sub {
+  margin-left: 18px;
+  font-weight: 400;
+}
+
+
+/* Subtle bold on current/hovered (one step) — never larger. */
+.case-nav-item.sub.active,
+.case-nav-item.sub:hover {
+  font-weight: 500;
+}
+
+.case-nav-item.active {
+  color: var(--case-accent);
+}
+
+.case-nav-item:hover {
+  color: var(--case-ink);
+}
+
+/* Override the site navbar's broad `nav a:hover` (font-size:1.13em + scale),
+ * which otherwise enlarges these links on hover. Keep them the same size. */
+.case-nav-item:hover {
+  font-size: var(--text-label);
+  transform: none;
+}
+
+/* Truncate labels that are too long for the (narrow) nav; full text on hover
+ * via the link's title tooltip. Applied to the label span so the arrow (which
+ * sits in the left margin) is never clipped. */
+.case-nav-label {
+  display: inline-block;
+  max-width: 226px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+.case-nav-arrow {
+  position: absolute;
+  left: -22px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.case-nav-item.active .case-nav-arrow,
+.case-nav-item:hover .case-nav-arrow {
+  opacity: 1;
+}
+
+.case-nav-item.active .case-nav-arrow {
+  color: var(--case-accent);
+}
+
+/* Hide only on small screens where it can't sit without crowding content. */
+/* @media (max-width: 500px) {
+  .case-nav {
+    display: none;
+  }
+} */
+
+/* Base type for all case-study content: brown Kulim Park by default, so nothing
+ * falls back to black. Only labels/accents opt into green or grey below. */
+.title-header,
+.overview,
+.summary {
+  color: var(--color-brown);
+  font-family: var(--font-sans);
+}
+
+/* ---- SectionHeading: full-width rule ABOVE a top-level heading ---- */
+.case-section-heading {
+  margin: 56px 0 40px;
+}
+
+.case-section-rule {
+  border: none;
+  border-top: 1px solid var(--case-rule);
+  width: 100vw;
+  /* extra room between the rule and the heading below it */
+  margin: 0 0 72px calc(50% - 50vw);
+}
+
+.case-section-heading h1 {
+  font-family: var(--font-sans);
+  font-size: var(--text-section);
+  margin: 0;
+}
+
+/* Blocks sit inside .summary, which already applies the page inset, so they
+ * fill their container (no extra width constraint) and align with the overview. */
+.case-block {
+  margin: 32px 0;
+}
+
+/* Standalone case images (direct children of .summary) share the rhythm. */
+.summary > img {
+  margin: 32px 0;
+}
+
+/* Small green h5 label used throughout (PAIN POINTS, ROLE, etc.) — Atkinson. */
+.case-label {
+  font-family: var(--font-label);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--case-accent);
+  margin: 0 0 6px;
+}
+
+/* ---- Overview metadata (green labels + divided rows) ---- */
+.case-ov-value {
+  margin: 0;
+}
+
+.case-ov-row {
+  padding: 14px 0;
+  border-top: 1px solid var(--case-rule);
+}
+
+.case-ov-row:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.case-ov-link {
+  margin-top: 20px;
+}
+
+.case-ov-link a {
+  color: var(--case-ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.case-ov-link a:hover {
+  color: var(--case-accent);
+}
+
+/* The trailing ↗ on the link: Inter bold, not underlined */
+.case-ov-link a span {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.9em;
+  margin-left: 3px;
+  text-decoration: none;
+}
+
+/* Inline body link for prototype / live-site CTAs — matches the overview link
+ * (brown, underlined, with a trailing ↗). Add className="case-link" to an <a>. */
+.case-link {
+  color: var(--case-ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.case-link:hover {
+  color: var(--case-accent);
+}
+
+.case-link::after {
+  content: "↗";
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.9em;
+  margin-left: 4px;
+  text-decoration: none;
+}
+
+/* ---- Tag chips (skills line under the case title) ---- */
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* Matches the home-page .tag: tan outlined pill, text + outline same color. */
+.case-tag {
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: transparent;
+  border: 1px solid var(--color-brown);
+  color:var(--color-brown);
+}
+
+/* ---- AccentHeading: green numbered heading with a trailing rule ---- */
+.case-accent-heading {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 32px 0; /* uniform rhythm: equal above and below */
+}
+
+.case-accent-heading .case-accent-title {
+  font-family: var(--font-sans);
+  color: var(--case-accent);
+  font-weight: 500;
+  font-size: var(--text-subhead);
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.case-accent-heading .case-accent-num {
+  font-weight: 500;
+}
+
+.case-accent-heading .case-accent-rule {
+  flex: 1 1 auto;
+  border: none;
+  border-top: 1px solid var(--case-rule);
+  margin: 0;
+}
+
+/* ---- LabeledText: left label + right body paragraph ---- */
+.case-labeled {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 40px;
+  margin: 32px 0;
+  align-items: start; /* top-align the label with its body text */
+}
+
+.case-labeled-label {
+  font-family: var(--font-label);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--case-muted);
+  margin: 0;
+  line-height: 1.6;
+  /* short labels (e.g. "Problem Statement") stay on one line; longer ones
+   * (e.g. "What is Cherry Crisis?") wrap gracefully in the label column */
+}
+
+.case-labeled-body {
+  margin: 0;
+  font-size: var(--text-body);
+  line-height: 1.6;
+}
+
+/* Standalone grey uppercase label — same style as the Problem Statement label,
+ * for headings like the prototype Flow labels. */
+.case-sub-label {
+  font-family: var(--font-label);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--case-muted);
+  margin: 32px 0; /* uniform rhythm: equal above and below */
+}
+
+/* When the label is a column header (first child of its column), hug the top. */
+.case-sub-label:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .case-labeled {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+/* ---- QuoteColumns: three bordered italic quotes with attribution ---- */
+.case-quotes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 32px 0;
+}
+
+.case-quote {
+  border-left: 2px solid var(--case-accent);
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.case-quote-text {
+  font-style: italic;
+  font-size: var(--text-body);
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
+
+.case-quote-attr {
+  font-family: var(--case-label-font);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--case-accent);
+  margin-top: auto; /* bottom-align so attributions line up across columns */
+}
+
+@media (max-width: 768px) {
+  .case-quotes {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* ---- InfoColumns: personas / workflows (top rule, eyebrow, labeled lists) ---- */
+.case-info-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 32px 0;
+}
+
+
+
+.case-info-col {
+  border-top: 2px solid #1c1b18;
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.nocase-info-col {
+  padding-top: 18px;
+  border-right: .5px solid var(--color-grey);
+  display: flex;
+  flex-direction: column;
+
+}
+
+.case-info-eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--case-accent);
+  margin: 0 0 10px;
+}
+
+.case-info-title {
+  font-family: var(--font-sans);
+  font-size: var(--text-subhead);
+  font-weight: 600;
+  margin: 0 0 18px;
+}
+
+.case-info-section {
+  margin-bottom: 28px; /* min gap between pain points and the Task/Goal block */
+}
+
+/* When a list section is the last thing in a column (no Task/Goal after it,
+ * e.g. Workflows / Takeaways), drop the trailing gap so the column ends clean. */
+.case-info-section:last-child {
+  margin-bottom: 0;
+}
+
+/* PAIN POINTS / WORKFLOWS label: grey, 15px (matching Task/Goal), still bold,
+ * with extra spacing below before the list. (Overrides .case-info-section p.) */
+.case-info-section .case-label {
+  font-size: var(--text-label);
+  color: var(--case-muted);
+  margin-bottom: 14px;
+}
+
+.case-info-section p {
+  margin: 0;
+  font-size: var(--text-body);
+  line-height: 1.6;
+}
+
+/* Task / Goal block: green left rule, quieter (non-bold) labels.
+ * margin-top:auto bottom-aligns it so Task/Goal line up across persona columns
+ * (with a min gap below the pain-points list). */
+.case-info-meta {
+  border-left: 2px solid var(--case-accent);
+  padding-left: 16px;
+  margin-top: auto; /* bottom-align so Task/Goal line up across columns */
+}
+
+.case-info-meta-item {
+  margin-bottom: 16px;
+}
+
+.case-info-meta-item:last-child {
+  margin-bottom: 0;
+}
+
+.case-info-meta-item p:last-child {
+  margin: 0;
+  font-size: var(--text-body);
+  line-height: 1.6;
+}
+
+.case-label-quiet {
+  font-weight: 400;
+}
+
+/* Arrow-bullet list used inside info columns */
+.case-arrow-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.case-arrow-list li {
+  position: relative;
+  padding-left: 24px; /* 16px arrow + 8px gap */
+  margin-bottom: 12px;
+  font-size: var(--text-body); /* match body text */
+  line-height: 1.6;
+}
+
+/* No trailing gap after the last bullet, so an arrow-list column ends at the
+ * same point an image column does (keeps heading spacing uniform). */
+.case-arrow-list li:last-child {
+  margin-bottom: 0;
+}
+
+.case-arrow-list li::before {
+  content: "\2197"; /* ↗ */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--case-accent);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  /* Match the first line's height (19px × 1.6) so the arrow centers with it. */
+  line-height: 30.4px;
+}
+
+@media (max-width: 768px) {
+  .case-info-columns {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* ---- FeatureIcons: icon + caption row (the Solution) ---- */
+.case-features {
+  display: grid;
+  grid-template-columns: repeat(var(--case-feature-count, 4), 1fr);
+  gap: 40px;
+  margin: 32px 0;
+}
+
+.case-feature {
+  text-align: center;
+}
+
+.case-feature svg {
+  width: 44px;
+  height: 44px;
+  color: var(--case-accent);
+  margin-bottom: 16px;
+}
+
+.case-feature-label {
+  font-family: "Kulim Park", sans-serif;
+  font-size: 17px;
+  color: var(--case-body);
+  line-height: 1.5;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .case-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+/* ---- TextBox: single-paragraph callout ---- */
+.case-textbox {
+  background-color: var(--case-surface);
+  border-left: 4px solid var(--case-accent);
+  border-radius: 8px;
+  padding: 18px 24px;
+  margin: 24px 0;
+}
+
+.case-textbox p {
+  margin: 0;
+  color: var(--case-body);
+  line-height: 1.6;
+}
+
+.case-textbox.accent {
+  background-color: #eef3ef;
+}
+
+/* ---- ThreeColumns: generic three columns each with a header ---- */
+.case-three-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin: 28px 0;
+}
+
+.case-column-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.case-column-card .case-column-header {
+  font-family: "Kulim Park", sans-serif;
+  font-weight: 600;
+  color: var(--case-ink);
+  margin: 0 0 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--case-accent);
+}
+
+.case-column-card .case-column-body {
+  color: var(--case-body);
+  line-height: 1.55;
+}
+
+@media (max-width: 780px) {
+  .case-three-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- CaseTable ---- */
+.case-table-wrap {
+  margin: 28px 0;
+  overflow-x: auto;
+}
+
+.case-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Kulim Park", sans-serif;
+}
+
+.case-table caption {
+  caption-side: top;
+  text-align: left;
+  color: var(--case-muted);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.case-table thead th {
+  background-color: var(--case-accent);
+  color: #fff;
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 600;
+}
+
+.case-table tbody td {
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--case-rule);
+  color: var(--case-body);
+  vertical-align: top;
+}
+
+.case-table tbody tr:nth-child(even) {
+  background-color: var(--case-surface);
+}
+
+/* ---- StatCallout: big-number metric cards ---- */
+.case-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 28px 0;
+}
+
+.case-stat-card {
+  flex: 1 1 180px;
+  max-width: 260px;
+  background-color: var(--case-surface);
+  border-radius: 12px;
+  padding: 22px 20px;
+  text-align: center;
+}
+
+.case-stat-value {
+  font-family: "Libre Bodoni", serif;
+  font-weight: 600;
+  color: var(--case-accent);
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.1;
+}
+
+.case-stat-label {
+  color: var(--case-muted);
+  margin-top: 8px;
+  font-size: clamp(12px, 1.3vw, 15px);
+}
+
+/* ---- Charts (shared) ---- */
+.case-chart {
+  max-width: 760px;
+  margin: 28px auto;
+}
+
+.case-chart-title {
+  font-family: "Kulim Park", sans-serif;
+  font-weight: 600;
+  color: var(--case-ink);
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.case-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  justify-content: center;
+  margin-top: 16px;
+  font-family: "Kulim Park", sans-serif;
+  font-size: clamp(12px, 1.3vw, 14px);
+  color: var(--case-body);
+}
+
+.case-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.case-legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.case-bar-row {
+  display: grid;
+  grid-template-columns: minmax(80px, 28%) 1fr auto;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-family: "Kulim Park", sans-serif;
+}
+
+.case-bar-label {
+  color: var(--case-body);
+  font-size: clamp(12px, 1.4vw, 15px);
+  text-align: right;
+}
+
+.case-bar-track {
+  background-color: #eceae4;
+  border-radius: 4px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.case-bar-fill {
+  height: 100%;
+  background-color: var(--case-accent);
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+.case-bar-value {
+  color: var(--case-muted);
+  font-size: clamp(12px, 1.3vw, 14px);
+  min-width: 32px;
+  text-align: left;
+}

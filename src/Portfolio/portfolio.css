@@ -1,3 +1,14 @@
+:root {
+
+  --color-brown: #4d453e; /* default */
+  --color-grey: #ededed;
+  --color-brown2: rgba(139, 115, 85, 0.25);
+  --color-brown1:  rgba(197, 165, 114, 0.13);
+
+
+}
+
+
 img {
   cursor: pointer;
 }
@@ -94,26 +105,31 @@ img {
 
 .tag {
   padding: 0.3rem 0.8rem;
-  border-radius: 12px;
+  border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: all 0.2s ease;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid;
-  color: #8b7355;
-  border-color: #c5a572;
+  background-color: var(--color-brown1);
+
+  border: 0 solid;
+  color: var(--color-brown);
+  opacity: 70%;
+  border-color: var(--color-brown);
+  
 }
 
 .tag:hover {
   transform: translateY(-2px);
-  background-color: rgba(139, 115, 85, 0.05);
+  background-color: var(--color-brown2)
+
 }
 
 .tag.selected {
-  background-color: rgba(197, 165, 114, 0.13);
+  background-color: var(--color-brown2)
+
 }
 
 /* Filter Controls - Simplified and left-aligned */
@@ -132,19 +148,20 @@ img {
 
 .clear-filters {
   background: none;
-  border: 1.5px solid #c5a572;
-  color: #8b7355;
+  border: none;
+  color: var(--color-brown);
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: 6px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
+  background-color: var(--color-brown1);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .clear-filters:hover {
-  background-color: #c5a572;
-  color: white;
+  transform: translateY(-2px);
+  background-color: rgba(139, 115, 85, 0.05);
   transform: translateY(-2px);
 }
 
@@ -202,7 +219,7 @@ img {
 .no-results {
   text-align: center;
   padding: 4rem 2rem;
-  color: #8b7355;
+  color: var(--color-brown);
 }
 
 .no-results h3 {
@@ -527,7 +544,7 @@ background-color: rgb(246, 246, 230, 0.2);
 }
 
 .modal-content p {
-  color: #8b7355;
+  color: var(--color-brown);
   margin-bottom: 20px;
 }
 
@@ -559,8 +576,8 @@ background-color: rgb(246, 246, 230, 0.2);
 
 .close-btn {
   background-color: transparent;
-  border: 1px solid #8b7355;
-  color: #8b7355;
+  border: 1px solid var(--color-brown);
+  color: var(--color-brown);
 }
 
 .close-btn:hover {

@@ -8,6 +8,11 @@ import {
   SectionHeading,
   CaseImage,
   Columns,
+  AccentHeading,
+  LabeledText,
+  QuoteColumns,
+  InfoColumns,
+  FeatureIcons,
 } from "../components";
 
 const PROTOTYPE_URL =
@@ -23,7 +28,12 @@ function WanderlyProcess() {
 
       <CaseHeader
         title="Wanderly"
-        subtitle="Mobile App Design, Prototyping, User Interviews, UX Research "
+        tags={[
+          "Mobile App Design",
+          "Prototyping",
+          "User Interviews",
+          "UX Research",
+        ]}
       />
 
       <CaseOverview
@@ -37,174 +47,195 @@ function WanderlyProcess() {
 
       <CaseBody>
         <SectionHeading title="Research Overview" />
-        <h2>1 | The Problem statement</h2>
-        <p>
-          Travelers struggle to <strong>seamlessly plan</strong>,{" "}
-          <strong>creatively document</strong>, and <strong>connect</strong>{" "}
-          with like-minded individuals, as existing platforms fail to offer a{" "}
-          <strong>unified</strong>, personalized solution for enhancing their
-          travel experiences.
-        </p>
-        <h2>2 | Key User Interview Quotes </h2>
-        <ul>
-          <li>
-            "Travel enables cultural exploration, but{" "}
-            <strong>constant itinerary edits and logistics</strong> detract from
-            the joy of making memories. I also often <strong>forget</strong>{" "}
-            activities I want to do." - Female 21 year old (Travel-Documenter +
-            Planner)
-          </li>
-          <li>
-            "I love capturing moments through photos, balancing{" "}
-            <strong>planned</strong> and{" "}
-            <strong>spontaneous experiences</strong> to truly enjoy each trip."
-            - Male 22 year old (Social Traveler + Documenter)
-          </li>
-          <li>
-            "Solo travel lets me <strong>meet new people</strong> and{" "}
-            <strong>create incredible memories</strong>, but navigating
-            unfamiliar places alone can be daunting and{" "}
-            <strong>keeping track of plans</strong> and logistics is often{" "}
-            <strong>overwhelming</strong>." - Female 22 year old (Solo Traveler)
-          </li>
-        </ul>
-        <h2>3 | Identified Primary Users</h2>
-        <br />
-        <div className="three-column-container">
-          <div className="three-column-item">
-            <div className="item-number">1</div>
-            <div className="item-title">Travel-Documenters</div>
-            <div className="item-divider"></div>
-            <p>
-              <strong>Pain Points:</strong>
-            </p>
-            <ul className="workflows-list">
-              <li>Lack of flexibility and creativity</li>
-              <li>Lack of a consolidated app</li>
-              <li>Tedious</li>
-            </ul>
-            <p>
-              <strong>Task: </strong>Create + keep track of travel memories{" "}
-            </p>
-            <p>
-              <strong>Goal: </strong>To creatively capture and revisit
-              meaningful memories
-            </p>
-          </div>
 
-          <div className="three-column-item">
-            <div className="item-number">2</div>
-            <div className="item-title">Social Travelers</div>
-            <div className="item-divider"></div>
-            <p>
-              <strong>Pain Points:</strong>
-            </p>
-            <ul className="workflows-list">
-              <li>Difficulty connecting with like-minded travelers</li>
-              <li>Tedious</li>
-            </ul>
-            <p>
-              <strong>Task: </strong>Connect with like-minded travelers
-            </p>
-            <p>
-              <strong>Goal: </strong>To meet others and share experiences
-              effortlessly
-            </p>
-          </div>
+        <AccentHeading number="01" title="The Problem" />
+        <LabeledText label="Problem Statement">
+          Travelers struggle to <strong>seamlessly plan, coordinate,</strong> document and
+          <strong>connect</strong> with like-minded individuals as existing platforms fail to
+          offer a unified, personalized solution for enhancing their travel
+          experiences.
+        </LabeledText>
+        <AccentHeading number="02" title="Key User Interview Quotes" />
+        <QuoteColumns
+          quotes={[
+            {
+              quote: (
+                <>
+                  Travel enables cultural exploration, but{" "}
+                  <strong>constant itinerary edits </strong>
+                  detract from the joy of making memories. I also often{" "}
+                  <strong>forget</strong> activities I want to do.
+                </>
+              ),
+              attribution: "Female, 21 yrs old, Travel-Documenter + Planner",
+            },
+            {
+              quote: (
+                <>
+                  I love capturing moments through photos, balancing{" "}
+                  <strong>planned</strong> and{" "}
+                  <strong>spontaneous experiences</strong> to truly enjoy each
+                  trip.
+                </>
+              ),
 
-          <div className="three-column-item">
-            <div className="item-number">3</div>
-            <div className="item-title">Travel-Planners</div>
-            <div className="item-divider"></div>
-            <p>
-              <strong>Pain Points:</strong>
-            </p>
-            <ul className="workflows-list">
-              <li>Multiple apps for planning, documenting, and connecting</li>
-              <li>Lack of a consolidated app</li>
-              <li>Weather</li>
-            </ul>
-            <p>
-              <strong>Task: </strong>Discover new activities and experiences
-            </p>
-            <p>
-              <strong>Goal: </strong>To stay organized and reduce planning
-              stress traveling
-            </p>
-          </div>
-        </div>
-        <h2>4 | The Solution</h2>
-        <p>Wanderly provides:</p>
-        <ul className="workflows-list">
-          <li>Personal bucket lists</li>
-          <li>Auto-generated scrapbooks </li>
-          <li>A curated traveler community </li>
-          <li>A unified space for planning, documenting and connecting </li>
-        </ul>
-        <h2>
-          5 | Workflows - <em>How do the users go about doing it?</em>
-        </h2>
-        <br />
-        <div className="three-column-container">
-          <div className="three-column-item">
-            <div className="item-title">Travel-Documenter</div>
-            <div className="item-divider"></div>
-
-            <p>
-              <strong>Workflows:</strong>
-            </p>
-            <ul className="workflows-list">
-              <li>Create collages</li>
-              <li>Preserve memories creatively</li>
-              <li>Bucket lists</li>
-            </ul>
-          </div>
-
-          <div className="three-column-item">
-            <div className="item-title">Social Travelers</div>
-            <div className="item-divider"></div>
-            <p>
-              <strong>Workflows:</strong>
-            </p>
-            <ul className="workflows-list">
-              <li>Discover and connect with like-minded travelers</li>
-              <li>Share experiences and get recommendations</li>
-            </ul>
-          </div>
-
-          <div className="three-column-item">
-            <div className="item-title">Travel-Planners</div>
-            <div className="item-divider"></div>
-            <p>
-              <strong>Workflows:</strong>
-            </p>
-            <ul className="workflows-list">
-              <li>Create and manage bucket lists</li>
-              <li>Organize ideas </li>
-              <li>Easily access and use them when planning trips</li>
-            </ul>
-          </div>
-        </div>
-        <br />
-        <br />
+              attribution: "Male, 22 yrs old, Social Traveler + Travel-Documenter",
+            },
+            {
+              quote: (
+                <>
+                  Solo travel lets me <strong>meet new people</strong> and{" "}
+                  <strong>create incredible memories</strong>, but navigating
+                  unfamiliar places alone can be daunting and{" "}
+                  <strong>keeping track of plans</strong> and logistics is often{" "}
+                  <strong>overwhelming</strong>.
+                </>
+              ),
+              attribution: "Female, 22 yrs old, Solo Traveler",
+            },
+          ]}
+        />
+        <AccentHeading number="03" title="User Personas" />
+        <InfoColumns
+          columns={[
+            {
+              eyebrow: "User Type 1",
+              title: "Travel-Documenters",
+              sections: [
+                {
+                  label: "Pain Points",
+                  items: [
+                    "Lack of flexibility and creativity",
+                    "Lack of a consolidated app",
+                    "Tedious",
+                  ],
+                },
+                {
+                  label: "Task",
+                  text: "Create + keep track of travel memories",
+                },
+                {
+                  label: "Goal",
+                  text: "To creatively capture and revisit meaningful memories",
+                },
+              ],
+            },
+            {
+              eyebrow: "User Type 2",
+              title: "Social Travelers",
+              sections: [
+                {
+                  label: "Pain Points",
+                  items: [
+                    "Difficulty connecting with like-minded travelers",
+                    "Tedious",
+                  ],
+                },
+                {
+                  label: "Task",
+                  text: "Connect with like-minded travelers",
+                },
+                {
+                  label: "Goal",
+                  text: "To meet others and share experiences effortlessly",
+                },
+              ],
+            },
+            {
+              eyebrow: "User Type 3",
+              title: "Travel-Planners",
+              sections: [
+                {
+                  label: "Pain Points",
+                  items: [
+                    "Multiple apps for planning, documenting, and connecting",
+                    "Lack of a consolidated app",
+                    "Weather",
+                  ],
+                },
+                {
+                  label: "Task",
+                  text: "Discover new activities and experiences",
+                },
+                {
+                  label: "Goal",
+                  text: "To stay organized and reduce planning stress traveling",
+                },
+              ],
+            },
+          ]}
+        />
+        <AccentHeading number="04" title="The Solution" />
+        <p className="case-sub-label">Wanderly features...</p>
+        <FeatureIcons
+          features={[
+            { icon: "scrapbook", label: "Auto-generated scrapbooks" },
+            { icon: "glass", label: "Personal bucket lists" },
+            { icon: "community", label: "A curated traveler community" },
+            {
+              icon: "stack",
+              label: "A unified space for planning, documenting and connecting",
+            },
+          ]}
+        />
+        <AccentHeading number="05" title="Workflows" />
+        <InfoColumns
+          columns={[
+            {
+              eyebrow: "User Type 1",
+              title: "Travel-Documenters",
+              sections: [
+                {
+                  label: "Workflows",
+                  items: [
+                    "Create collages",
+                    "Preserve memories creatively",
+                    "Bucket lists",
+                  ],
+                },
+              ],
+            },
+            {
+              eyebrow: "User Type 2",
+              title: "Social Travelers",
+              sections: [
+                {
+                  label: "Workflows",
+                  items: [
+                    "Discover and connect with like-minded travelers",
+                    "Share experiences and get recommendations",
+                  ],
+                },
+              ],
+            },
+            {
+              eyebrow: "User Type 3",
+              title: "Travel-Planners",
+              sections: [
+                {
+                  label: "Workflows",
+                  items: [
+                    "Create and manage bucket lists",
+                    "Organize ideas",
+                    "Easily access and use them when planning trips",
+                  ],
+                },
+              ],
+            },
+          ]}
+        />
         <SectionHeading title="Design Process" />
-        <h2>1 | Hand-drawn Wireframes</h2>
+        <AccentHeading number="01" title="Hand-drawn Wireframes" />
         <CaseImage
           src="wanderlyImages/handdrawnwireframes.png"
           alt="handdrawnwireframes"
         />
-        <br />
-        <h2> 2 | Sitemap</h2>
+        <AccentHeading number="02" title="Sitemap" />
         <Columns>
           <CaseImage src="wanderlyImages/sitemapdrawn.jpg" alt="sitemapdrawn" />
           <CaseImage src="wanderlyImages/sitemap.svg" alt="sitemap" />
         </Columns>
-
-        <br />
-
-        <br />
-        <h2>3 | Competitive Analysis</h2>
-        <br />
+        <AccentHeading number="03" title="Competitive Analysis" />
         <div className="analysis-container">
           <div className="comparison-table">
             <div className="table-header">Workflow</div>
@@ -335,77 +366,82 @@ function WanderlyProcess() {
             </div>
           </div>
         </div>
-        <div className="overall-takeaways-section">
-          <h4>Overall Takeaways</h4>
-          <div className="takeaways-grid">
-            <div className="takeaway-item">
-              <div className="takeaway-title">
-                <h6>Workflow 1: Saving posts/videos</h6>
-              </div>
-              <div className="takeaway-divider"></div>
-              <p className="takeaway-text">
-                <ul>
-                  <li>Confirm saves with clear feedback</li>
-                  <li>Keep UI elements unobtrusive</li>
-                  <li>Suggest organization names</li>
-                  <li>Show saved state persistently</li>
-                </ul>
-              </p>
-            </div>
-
-            <div className="takeaway-item">
-              <div className="takeaway-title">
-               <h6>Workflow 2: Making collages/videos</h6>
-              </div>
-              <div className="takeaway-divider"></div>
-              <p className="takeaway-text">
-                <ul>
-                  <li>Reserve primary buttons for final actions</li>
-                  <li>Allow editing at multiple stages</li>
-                  <li>Provide layout suggestions</li>
-                  <li>Enable easy reordering and bulk edits</li>
-                </ul>
-              </p>
-            </div>
-
-            <div className="takeaway-item">
-              <div className="takeaway-title">
-               <h6>Workflow 3: Connecting with others</h6>
-              </div>
-              <div className="takeaway-divider"></div>
-              <p className="takeaway-text">
-                <ul>
-                  <li>Use clear button hierarchy</li>
-                  <li>Show notification indicators</li>
-                  <li>Provide collapsible organization</li>
-                  <li>Make content types easily identifiable</li>
-                </ul>
-              </p>
-            </div>
-          </div>
-          <h2>4 | Color Palette + Typography</h2>
+        <p className="case-sub-label">Overall Takeaways</p>
+        <InfoColumns
+            columns={[
+              {
+                eyebrow: "Workflow 1",
+                title: "Saving posts/videos",
+                sections: [
+                  {
+                    label: "Takeaways",
+                    items: [
+                      "Confirm saves with clear feedback",
+                      "Keep UI elements unobtrusive",
+                      "Suggest organization names",
+                      "Show saved state persistently",
+                    ],
+                  },
+                ],
+              },
+              {
+                eyebrow: "Workflow 2",
+                title: "Making collages/videos",
+                sections: [
+                  {
+                    label: "Takeaways",
+                    items: [
+                      "Reserve primary buttons for final actions",
+                      "Allow editing at multiple stages",
+                      "Provide layout suggestions",
+                      "Enable easy reordering and bulk edits",
+                    ],
+                  },
+                ],
+              },
+              {
+                eyebrow: "Workflow 3",
+                title: "Connecting with others",
+                sections: [
+                  {
+                    label: "Takeaways",
+                    items: [
+                      "Use clear button hierarchy",
+                      "Show notification indicators",
+                      "Provide collapsible organization",
+                      "Make content types easily identifiable",
+                    ],
+                  },
+                ],
+              },
+            ]}
+          />
+        <AccentHeading number="04" title="Color Palette + Typography" />
           <Columns>
-            <CaseImage src="wanderlyImages/type.svg" alt="Wanderly Typography" />
-            <CaseImage src="wanderlyImages/color.png" alt="Wanderly Colors" />
+            <CaseImage
+              src="wanderlyImages/type.svg"
+              alt="Wanderly Typography"
+            />
+            <CaseImage src="wanderlyImages/colors.png" alt="Wanderly Colors" />
           </Columns>
-          <h2>5 | Wireframes</h2>
+          <AccentHeading number="05" title="Wireframes" />
           <Columns>
             <>
-              <h4>Low-Fidelity Wireframes</h4>
+              <p className="case-sub-label">Low-Fidelity Wireframes</p>
               <CaseImage
                 src="wanderlyImages/lowfis.png"
                 alt="Low Fidelity Wireframes"
               />
             </>
             <>
-              <h4>Mid-Fidelity Wireframes</h4>
+              <p className="case-sub-label">Mid-Fidelity Wireframes</p>
               <CaseImage
                 src="wanderlyImages/midfis.png"
                 alt="Mid Fidelity Wireframes"
               />
             </>
           </Columns>
-          <h2>6 | Design Iterations</h2>
+          <AccentHeading number="06" title="Design Iterations" />
           <Columns>
             <>
               <CaseImage
@@ -444,18 +480,15 @@ function WanderlyProcess() {
             </>
             <></>
           </Columns>
-        </div>
-        <br />
-        <br />
         <SectionHeading title="The Prototype" />
-        <h2>
-          Check out the{" "}
+        <p className="case-ov-link">
           <a href={PROTOTYPE_URL} target="_blank" rel="noreferrer">
-            prototype
+            Check out the prototype <span aria-hidden="true">↗</span>
           </a>
-          !
-        </h2>
-        <h2>Flow 1: Creating your Profile + Connecting with Others</h2>
+        </p>
+        <p className="case-sub-label">
+          Flow 1: Creating your Profile + Connecting with Others
+        </p>
         <Columns>
           <CaseImage src="wanderlyImages/1flow1.png" alt="Flow 1 Screen 1" />
           <CaseImage src="wanderlyImages/2flow1.png" alt="Flow 1 Screen 2" />
@@ -468,9 +501,9 @@ function WanderlyProcess() {
           <CaseImage src="wanderlyImages/5flow1.png" alt="Flow 1 Screen 5" />
           <CaseImage src="wanderlyImages/6flow1.png" alt="Flow 1 Screen 6" />
         </Columns>
-        <h2>
+        <p className="case-sub-label">
           Flow 2: Saving an item to your bucket list + creating your own item
-        </h2>
+        </p>
         <Columns>
           <CaseImage src="wanderlyImages/1flow2.png" alt="Flow 2 Screen 1" />
           <CaseImage src="wanderlyImages/2flow2.png" alt="Flow 2 Screen 2" />
@@ -479,7 +512,7 @@ function WanderlyProcess() {
           <CaseImage src="wanderlyImages/3flow2.png" alt="Flow 2 Screen 3" />
           <CaseImage src="wanderlyImages/4flow2.png" alt="Flow 2 Screen 4" />
         </Columns>
-        <h2>Flow 3: Creating a scrapbook</h2>
+        <p className="case-sub-label">Flow 3: Creating a scrapbook</p>
         <Columns>
           <CaseImage src="wanderlyImages/1flow3.png" alt="Flow 3 Screen 1" />
           <CaseImage src="wanderlyImages/2flow3.png" alt="Flow 3 Screen 2" />
@@ -488,7 +521,6 @@ function WanderlyProcess() {
           <CaseImage src="wanderlyImages/3flow3.png" alt="Flow 3 Screen 3" />
           <></>
         </Columns>
-        <br />
       </CaseBody>
     </CaseStudyLayout>
   );

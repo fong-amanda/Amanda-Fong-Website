@@ -21,6 +21,7 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import Captions from "yet-another-react-lightbox/plugins/captions";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 function Play() {
 
@@ -179,8 +180,9 @@ function Play() {
                 index={selectedImageIndex}
 
                 // add captions
-                plugins={[Captions]}
+                plugins={[Captions, Zoom]}
                 captions={{ ref: captionsRef }}
+                zoom={{ maxZoomPixelRatio: 3, scrollToZoom: true }}
                 on={{
                     click: () => {
                         (captionsRef.current?.visible

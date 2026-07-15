@@ -7,6 +7,8 @@ import {
   CaseBody,
   SectionHeading,
   CaseImage,
+  AccentHeading,
+  LabeledText,
 } from "../components";
 import "./disrupt.css";
 
@@ -20,7 +22,7 @@ function DisruptProcess() {
 
       <CaseHeader
         title="Disrupt"
-        subtitle="Web Design, Prototyping, User Testing & Research, Branding"
+        tags={["Web Design", "Prototyping", "User Testing & Research", "Branding"]}
       />
 
       <CaseOverview
@@ -28,7 +30,7 @@ function DisruptProcess() {
           <p>
             Northeastern’s Fintech Club,
             {' '}
-            <a href="https://www.disruptneu.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.disruptneu.com/" target="_blank" rel="noopener noreferrer" className="case-link">
               Disrupt
             </a>
             , sought a rebrand of their social media and revamp of their website. As a designer in
@@ -61,12 +63,13 @@ function DisruptProcess() {
       />
 
       <CaseBody className="disrupt">
-        <h2>What is Disrupt?</h2>
-        <p>Disrupt is the only Fintech organization that provides a community driving education, advancement, and engagement for computer science and business students at Northeastern who want to gain skills related to Fintech in an era of rapidly changing financial and tech industries. </p>
+        <LabeledText label="What is Disrupt?">
+          Disrupt is the only Fintech organization that provides a community driving education, advancement, and engagement for computer science and business students at Northeastern who want to gain skills related to Fintech in an era of rapidly changing financial and tech industries.{' '}
+        </LabeledText>
         <br />
         <SectionHeading title="Branding" />
 
-        <h2>1 | Discovering the brand</h2>
+        <AccentHeading number="1" title="Discovering the brand" />
         <p>We began the project by exploring and defining the ideal direction for the brand.
           It was important for us to understand how Disrupt wants their club to be portrayed to students on campus.</p>
         <h3>Personality Levels</h3>
@@ -96,7 +99,7 @@ function DisruptProcess() {
         <CaseImage src="disruptImages/logo2.png" alt="logo iterations" />
         <br />
         <CaseImage src="disruptImages/logo3.png" alt="logo iterations" />
-        <h2>2 | Creating an Identity</h2>
+        <AccentHeading number="2" title="Creating an Identity" />
         <h3>Color Palette</h3>
         <div className="two-columns-container">
           <div className="column">
@@ -154,7 +157,7 @@ function DisruptProcess() {
         <br></br>
 
         <SectionHeading title="Website Revamp" />
-        <h2>1 | UX Research</h2>
+        <AccentHeading number="1" title="UX Research" />
         <h3>Brainstorming</h3>
         <h4>User Story Brainstorm</h4>
         <CaseImage
@@ -347,7 +350,7 @@ function DisruptProcess() {
           <li>Need consistent branding that is cohesive across all platforms</li>
           <li>Easily accessible links + CTAs</li>
         </ul>
-        <h2>2 | Interpret</h2>
+        <AccentHeading number="2" title="Interpret" />
         <h3>Elevator Pitch</h3>
         <h4>Disrupt is the only organization that provides a high growth opportunity to consult for fintech startups for neu undergrads in neu who want to get to know an intimate group and learn more about consulting in an era of increased interest and demand for fintech products</h4>
         <h3>Refine Statements</h3>
@@ -364,7 +367,7 @@ function DisruptProcess() {
             </li>
           </ol>
         </h4>
-        <h2>3 | Make</h2>
+        <AccentHeading number="3" title="Make" />
         <h3>Sitemap</h3>
 
         <CaseImage src="disruptImages/sitemap.jpg" alt="site map" />
@@ -372,7 +375,7 @@ function DisruptProcess() {
         <CaseImage src="disruptImages/paperSketch1.jpg" alt="Paper Sketches" />
         <CaseImage src="disruptImages/paperSketch2.jpg" alt="Paper Sketches" />
 
-        <h2>4 | Design</h2>
+        <AccentHeading number="4" title="Design" />
         <h3>Low-Fidelity Wireframes</h3>
         <CaseImage src="disruptImages/lofi1.png" alt="lo-fi" />
         <br />
@@ -408,7 +411,7 @@ function DisruptProcess() {
           alt="hi-fi"
         />
         <br />
-        <h2>5 | Presentation</h2>
+        <AccentHeading number="5" title="Presentation" />
         <p>
           See the deployed site {' '}
           <a

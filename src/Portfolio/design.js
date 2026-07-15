@@ -104,12 +104,12 @@ const PROJECTS = [
       "dearlyImages/Cover.jpg",
     tags: "Accessibility | UI/UX Design | Branding | Mobile Application Design",
   },
-  {
-    name: "Student Activity Calendar",
-    coverImageSrc: "sacImages/Cover.png",
-    alt: "Student-Activity-Calendar-Cover",
-    tags: "UI/UX Design | Mobile Application Design",
-  },
+  // {
+  //   name: "Student Activity Calendar",
+  //   coverImageSrc: "sacImages/Cover.png",
+  //   alt: "Student-Activity-Calendar-Cover",
+  //   tags: "UI/UX Design | Mobile Application Design",
+  // },
   // {
   //   name: "Disrupt",
   //   coverImageSrc: "disruptImages/cover.jpg",

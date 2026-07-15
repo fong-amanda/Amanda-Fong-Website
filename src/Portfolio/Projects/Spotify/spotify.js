@@ -6,6 +6,7 @@ import {
   CaseOverview,
   CaseBody,
   CaseImage,
+  AccentHeading,
 } from "../components";
 
 function SpotifyProcess() {
@@ -18,7 +19,7 @@ function SpotifyProcess() {
 
       <CaseHeader
         title="Social Spotify"
-        subtitle="Mobile Design, UX Research, Prototyping, User Testing, User Interviews"
+        tags={["Mobile Design", "UX Research", "Prototyping", "User Testing", "User Interviews"]}
       />
 
       <CaseOverview
@@ -35,7 +36,7 @@ function SpotifyProcess() {
       />
 
       <CaseBody>
-        <h2>1 | UX Research</h2>
+        <AccentHeading number="1" title="UX Research" />
         <h3>Social-UX task analysis</h3>
         <h4>Instagram:</h4>
         <CaseImage
@@ -91,7 +92,7 @@ function SpotifyProcess() {
             </li>
           </ol>
         </p>
-        <h2>2 | Interpret</h2>
+        <AccentHeading number="2" title="Interpret" />
         <h3>“How Might We...”</h3>
         <CaseImage
           src="spotifyImages/hmw.png"
@@ -147,10 +148,10 @@ function SpotifyProcess() {
         />
 
         <p></p>
-        <h2>3 | Design</h2>
+        <AccentHeading number="3" title="Design" />
         <h3>Low-Fidelity Wireframes</h3>
         <h>
-          <a href="https://www.figma.com/proto/ENyrd84vC2k7ORePWwdnO6/TAmandaFong?page-id=0%3A1&type=design&node-id=139-14444&viewport=-580%2C-262%2C0.25&t=N8Hj994fimAg25o3-1&scaling=min-zoom&starting-point-node-id=1%3A330&mode=design"
+          <a className="case-link" href="https://www.figma.com/proto/ENyrd84vC2k7ORePWwdnO6/TAmandaFong?page-id=0%3A1&type=design&node-id=139-14444&viewport=-580%2C-262%2C0.25&t=N8Hj994fimAg25o3-1&scaling=min-zoom&starting-point-node-id=1%3A330&mode=design"
             target="_blank" rel="noreferrer">
             Click Here to see Lo-Fis!
           </a>
@@ -170,6 +171,7 @@ function SpotifyProcess() {
         <h3>High-Fidelity Wireframes</h3>
         <h>
           <a
+            className="case-link"
             href="https://www.figma.com/proto/ENyrd84vC2k7ORePWwdnO6/TAmandaFong?type=design&node-id=52-576&t=xKPmaVLKoFW6xSRC-1&scaling=min-zoom&page-id=52%3A575&starting-point-node-id=52%3A576&mode=design"
             target="_blank" rel="noreferrer"
           >
@@ -186,7 +188,7 @@ function SpotifyProcess() {
           alt="High-Fidelity Wireframe 2"
         />
 
-        <h2>4 | Presentation</h2>
+        <AccentHeading number="4" title="Presentation" />
         <p>
           See{' '}
           <a
