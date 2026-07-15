@@ -116,7 +116,7 @@ function Home() {
           )}
         </div>
         <div className="textHome fade1">
-  <h4>I'm a Boston based product designer passionate about crafting inclusive <br></br>digital solutions through <span className="green-libre">code & creativity</span></h4>
+  <h4>New York based product designer passionate about crafting inclusive <br></br>digital solutions through <span className="green-libre">code & creativity</span></h4>
   <hr className="green-line" />
   <h4>MHCI Candidate @ <a href="https://hcii.cmu.edu/academics/mhci" target="_blank" rel="noopener noreferrer">Carnegie Mellon University</a></h4>
 
